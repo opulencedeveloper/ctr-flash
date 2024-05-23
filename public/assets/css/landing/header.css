@@ -1,0 +1,125 @@
+
+
+img,
+a {
+    transition: transform 1s;
+}
+
+img:hover,
+a:hover {
+    transform: scale(1.1);
+}
+
+
+.header-container {
+    position: relative;
+    color: white;
+    background-color: var(--primary-color);
+    background-image: url('/assets/images/hero-background.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    overflow: hidden;
+}
+
+.header-container>div:first-child {
+    max-width: var(--max-width);
+    display: flex;
+    margin: auto;
+    padding-top: 32px;
+    padding-right: var(--global-desktop-padding);
+    padding-left: var(--global-desktop-padding);
+    justify-content: space-between;
+    height: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.logo img {
+    width: 38.17px;
+    height: 33.9px;
+}
+
+.logo p {
+    font-family: 'DMSans_36pt-Bold';
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'DMSans_18pt-Medium';
+    gap: 40px;
+    margin-left: 20px;
+
+
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+
+.auth-container {
+    font-family: 'DMSans_36pt-Bold';
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+
+}
+
+.auth-container a {
+    text-decoration: none;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 40px;
+}
+
+.auth-container>a:nth-child(1) {
+    border: 1px solid white;
+    color: white;
+}
+
+.auth-container>a:nth-child(2) {
+    background-color: white;
+    color: black;
+}
+
+@media only screen and (max-width: 750px) {
+
+    nav,
+    .auth-container {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .logo img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .logo p {
+        font-size: 14px;
+    }
+
+}

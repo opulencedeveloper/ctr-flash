@@ -1,0 +1,113 @@
+::-webkit-scrollbar {
+    width: 7px;
+    height: 5px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #718096;
+    border-radius: 4px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #4a5568;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f7fafc;
+    border-radius: 4px;
+}
+
+.chat {
+    height: 80px;
+    width: 80px;
+    box-shadow: 0px 10px 32px -4px #18274B1A;
+    box-shadow: 0px 6px 14px -6px #18274B1F;
+    position: fixed;
+    bottom: 44px;
+    right: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--tertiary-color);
+    z-index: 99999999999999999999;
+}
+
+.chat img {
+    height: 40px;
+    width: 40px;
+}
+
+.spinner-body {
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999999999999999999999;
+}
+
+
+.lds-facebook,
+.lds-facebook div {
+    
+  box-sizing: border-box;
+}
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: currentColor;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+  background-color: var(--tertiary-color);
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+  background-color: var(--tertiary-color);
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0s;
+  background-color: var(--tertiary-color);
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+
+
+@media only screen and (max-width: 500px) {
+    .chat {
+        height: 48px;
+        width: 48px;
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .chat img {
+        height: 24px;
+        width: 24px;
+    }
+}

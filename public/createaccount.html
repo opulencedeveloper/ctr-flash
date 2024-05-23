@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
+    <title>CTR Flash</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="CTR Flash" />
+    <meta property="og:description" content="" />
+    <link href="assets/css/global.css" rel="stylesheet" />
+    <link href="assets/css/font.css" rel="stylesheet" />
+    <link href="assets/css/variables.css" rel="stylesheet" />
+    <link href="assets/css/landing/auth.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="spinner-body" class="spinner-body">
+      <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div id="content" style="display: none">
+      <div class="signin-container">
+        <div class="auth-container-sect-one">
+          <div class="authform-wrapper">
+            <div class="auth-logo-otp">
+              <div class="auth-img-container">
+                <img src="/assets/logo/ctr-logo-colored.svg" />
+              </div>
+              <p>ctr flash</p>
+            </div>
+            <div class="create-acc-container">
+              <a href="/enterotp.html" class="otp-bk-btn">
+                <div><img src="assets/icons/back-icon.svg" /></div>
+                <p>Back</p>
+              </a>
+
+              <p>Set up your Account</p>
+              <p>
+                Please fill the details correctly. You can still change this in
+                settings
+              </p>
+              <div class="auth-linear-progess">
+                <div class="auth-progress auth-progress-full"></div>
+              </div>
+              <form class="auth-form create-auth-form">
+                <div class="form-item fst-name">
+                  <label for="firstName">First Name</label>
+                  <input
+                    id="firstName"
+                    required
+                    type="text"
+                    placeholder="John"
+                  />
+                </div>
+                <div class="form-item">
+                  <div class="form-item-inner">
+                    <label for="lastName">Last Name</label>
+                  </div>
+                  <div class="password-container">
+                    <input
+                      required
+                      type="text"
+                      placeholder="Doe"
+                      id="lastName"
+                    />
+                  </div>
+                </div>
+                <div class="agree-container">
+                  <input
+                    type="checkbox"
+                    id="checkbox3"
+                    name="option3"
+                    value="Option3"
+                  />
+                  <label for="checkbox3"
+                    >I agree to the
+                    <a class="term-cond" href="#"
+                      >Terms and Conditions</a
+                    ></label
+                  >
+                </div>
+                <button>Create Account</button>
+              </form>
+              <button id="openDialogBtn">
+                (Click me) This is a temporary button to show the signup success
+                message, please remove after adding php
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="signin-container-sect-two">
+          <div class="signin-container-sect-two-wrapper">
+            <p>Boost your online presence with CTR Flash</p>
+            <div class="signin-container-sect-two-inner">
+              <div class="signin-container-item">
+                <div>
+                  <img src="assets/icons/ic-baseline-start.svg" />
+                </div>
+                <div>
+                  <p>Sign Up</p>
+                  <p>SGet started by signing up for a free trial</p>
+                </div>
+              </div>
+              <div class="signin-container-item">
+                <div>
+                  <img src="assets/icons/settings-outline.svg" />
+                </div>
+                <div>
+                  <p>Configure your settings</p>
+                  <p>Once you're registered, configure your settings.</p>
+                </div>
+              </div>
+              <div class="signin-container-item">
+                <div>
+                  <img src="assets/icons/outline-optimize.svg" />
+                </div>
+                <div>
+                  <p>Monitor and Optimize</p>
+                  <p>
+                    With your settings in place, sit back and watch as your
+                    website's performance improves.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="overlay" class="overlay">
+        <div class="dialog-container">
+          <div class="dialog">
+            <div class="succ-img">
+              <img src="assets/images/account-created-success.svg" />
+            </div>
+            <p>Your account was created successfully</p>
+            <p>Please tap the button below to view dashboard</p>
+            <a href="/dashboard/index.html">Continue</a>
+          </div>
+        </div>
+      </div>
+      <div class="chat">
+        <img src="/assets/icons/chat-line-linear.svg" />
+      </div>
+    </div>
+    <script src="/assets/js/global.js"></script>
+    <script src="assets/js/landing/signupsucess.js"></script>
+  </body>
+</html>
