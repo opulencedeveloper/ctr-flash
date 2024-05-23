@@ -40,7 +40,8 @@
     width: 100%;
 }
 
-.dash-title button {
+.dash-title button,
+.add-project-container button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,6 +55,7 @@
     border-radius: 32px;
     background: linear-gradient(136.9deg, #05A4C7 2.3%, #1ADBD4 96.52%);
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 .dash-card {
@@ -161,6 +163,11 @@
     background-color: white;
     padding: 20px 20px 0px 20px;
 
+}
+
+.proj-title {
+    background-color: transparent;
+    align-items: center;
 }
 
 .activity-header-border {
@@ -350,6 +357,186 @@ tr td {
     transition: all 0.3s ease;
 }
 
+.add-project-container {
+    box-shadow: 0px 8px 24px -4px #18274B14, 0px 6px 12px -6px #18274B1F;
+    height: 391px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+.add-proj-img-container {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-proj-img-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.add-project-container>p:nth-child(2) {
+    font-size: 20px;
+    font-family: 'DMSans_36pt-Bold';
+    color: var(--custom-five);
+    margin: 0px 0px 16px 0px;
+}
+
+.add-project-container button {
+    width: 200px;
+}
+
+.add-project-dialog-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.add-project-dialog-container {
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    animation: fadeIn 0.5s;
+    margin: auto;
+    width: 574px;
+    box-shadow: 0px 18px 88px -4px #18274B24, 0px 8px 28px -6px #18274B1F;
+    padding: 40px 20px;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fadeOut {
+    animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+.add-project-sectone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.add-project-sectone>p:first-child {
+    font-size: 20px;
+    font-family: 'DMSans_36pt-Bold';
+    color: var(--custom-five);
+    margin: 0px;
+}
+
+.add-project-sectone>button {
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.add-project-sectone>img {
+    height: 100%;
+    width: 100%;
+}
+
+.add-project-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: start;
+}
+
+
+.add-project-item>label {
+    font-size: 16px;
+    font-family: 'DMSans-Regular';
+    color: var(--custom-five);
+}
+
+.add-project-item>input,
+.add-project-item>textarea {
+    width: 100%;
+    font-size: 16px;
+    border-radius: 8px;
+    font-family: 'DMSans-Regular';
+    border: 1px solid var(--custom-twenty);
+    box-sizing: border-box;
+    padding-left: 9px;
+    box-shadow: 0px 4px 4px -2px #18274B14;
+    box-shadow: 0px 2px 4px -2px #18274B1F;
+
+}
+
+.add-project-item>input {
+    height: 40px;
+}
+
+.add-project-item>textarea {
+    height: 100px;
+    resize: none;
+    padding-top: 9px;
+}
+
+.add-project-item>input:focus,
+.add-project-item>textarea:focus {
+    outline: 1px solid var(--tertiary-color);
+}
+
+#projectName {
+    margin-bottom: 20px;
+}
+
+
+.add-project-form button {
+    width: 100%;
+    height: 43px;
+    border-radius: 32px;
+    background: linear-gradient(136.9deg, #05A4C7 2.3%, #1ADBD4 96.52%);
+    color: var(--custom-seven);
+    border: none;
+    cursor: pointer;
+    margin-top: 40px;
+    font-family: 'DMSans_18pt-Medium';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+
+
+
 @media only screen and (max-width: 1190px) {
     .activity-container {
         flex-direction: column;
@@ -380,9 +567,40 @@ tr td {
         display: block;
         transform: scale(-1);
     }
+    .add-project-dialog-container{
+        width: 100%;
+        height: 100%;
+    }
+
+    .add-project-item>label {
+        font-size: 14px;
+    }
+
+    .add-project-form button {
+        height: 41px;
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
+    .add-project-container {
+        height: 252px;
+        margin-top: 0px;
+    }
+
+    .add-proj-img-container {
+        height: 120px;
+        width: 120px;
+    }
+
+    .add-project-container>p:nth-child(2) {
+        font-size: 16px;
+    }
+
+    .proje-container {
+        background-color: var(--secondary-color);
+    }
+
     .dashboard-content {
         padding-top: 0px;
         padding-right: 0px;
@@ -392,12 +610,23 @@ tr td {
 
     .dash-title {
         padding-top: 24px;
-        background-color: var(--custom-ninteen);
+        background-color: var(--secondary-color);
         padding-left: 16px;
         padding-right: 16px;
         padding-bottom: 16px;
         gap: 20px;
     }
+
+    .add-project-wrapper {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .proj-header {
+        background-color: var(--custom-ninteen);
+    }
+
+
 
     .dash-card-container {
         background-color: var(--custom-ninteen);
@@ -414,7 +643,8 @@ tr td {
         font-size: 12px;
     }
 
-    .dash-title button {
+    .dash-title button,
+    .add-project-container button {
         height: 42px;
         width: 134px;
         font-size: 14px;
@@ -527,8 +757,9 @@ tr td {
     .activity-sect-two {
         padding-bottom: 20px;
     }
+
     .activity-container {
         margin-top: 18px;
-    
+
     }
 }
