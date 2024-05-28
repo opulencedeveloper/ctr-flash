@@ -17,6 +17,7 @@
     <link href="/assets/css/dash/header.css" rel="stylesheet" />
     <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
     <link href="/assets/css/dash/project.css" rel="stylesheet" />
+    <link href="/assets/css/dash/campaign.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -136,16 +137,16 @@
               </a>
               <a
                 href="/dashboard/projects.html"
-                class="nav-item-mobile active-nav-item-mobile"
+                class="nav-item-mobile"
               >
                 <div class="nav-icon-mobile">
-                  <img src="/assets/icons/projects-active.svg" />
+                  <img src="/assets/icons/projects.svg" />
                 </div>
                 <p>projects</p>
               </a>
-              <a href="#" class="nav-item-mobile">
+              <a href="#" class="nav-item-mobile active-nav-item-mobile">
                 <div class="nav-icon-mobile">
-                  <img src="/assets/icons/campaign.svg" />
+                  <img src="/assets/icons/campaign-active.svg" />
                 </div>
                 <p>campaigns</p>
               </a>
@@ -186,15 +187,15 @@
               </div>
               <p>dashboard</p>
             </a>
-            <a href="/dashboard/projects.html" class="nav-item active-nav-item">
+            <a href="/dashboard/projects.html" class="nav-item">
               <div class="nav-icon">
-                <img src="/assets/icons/projects-active.svg" />
+                <img src="/assets/icons/projects.svg" />
               </div>
               <p>projects</p>
             </a>
-            <a href="/dashboard/campaigns.html" class="nav-item">
+            <a href="/dashboard/campaigns.html" class="nav-item active-nav-item">
               <div class="nav-icon">
-                <img src="/assets/icons/campaign.svg" />
+                <img src="/assets/icons/campaign-active.svg" />
               </div>
               <p>campaigns</p>
             </a>
@@ -323,114 +324,38 @@
             <div class="dash-title proj-title">
               <div class="dash-title-inner">
                 <p>My Projects</p>
-                <p id="active-project-tle"><span class="project-amt">1</span> Active Projects</p>
+                <p>16 active campaigns from 4 projects</p>
               </div>
-              <button class="openAddProjectDialogBtn">
-                <div class="add-icon">
-                  <img src="/assets/icons/circle-add.svg" />
-                </div>
-                <p>Add Project</p>
-              </button>
             </div>
             <!-- DashBoard Title End -->
 
-            <!-- Add Project Start -->
+            <!-- Campaign Start -->
             <div class="add-project-wrapper">
-              <!-- Empty Project State Start -->
-              <div class="add-project-container">
-                <div class="add-proj-img-container">
-                  <img src="/assets/images/add-project.svg" />
+             <div class="campaign-container">
+                <div class="campaign-inner-one">
+                    <div>
+                        <p>Dentist Client</p>
+                        <p>7 Active Campaigns</p>
+                    </div>
+                    <button>
+                        <div class="add-icon">
+                          <img src="/assets/icons/add-one-blue.svg" />
+                        </div>
+                        <p>Create Campaign</p>
+                      </button>
                 </div>
-                <p>No Projects</p>
-                <button class="openAddProjectDialogBtnII">
-                  <div class="add-icon">
-                    <img src="/assets/icons/circle-add.svg" />
-                  </div>
-                  <p>Add Project</p>
-                </button>
-              </div>
-              <!-- Empty Project State End -->
+                <div class="campaign-inner-two">
+                    <div class="campaign-inner-two-sect">
+                        <div></div> <p>Bright Smile Clinic</p>
+                    </div>
+                </div>
+             </div>
 
-              <div id="added-project-container" class="added-project-container">
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
-                  </div>
-                </div>
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
-                  </div>
-                </div>
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
-                  </div>
-                </div>
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
-                  </div>
-                </div>
-              </div>
             </div>
-            <!-- Add Project End -->
+            <!-- Campaign End -->
           </div>
         </div>
       </div>
-      <!-- Create New Project Overlay Start -->
-      <div id="overlay" class="overlay">
-        <div class="add-project-dialog-wrapper">
-          <div class="add-project-dialog-container">
-            <div class="add-project-sectone">
-              <p>Create New Project</p>
-              <button id="closeAddProjectDialogBtn">
-                <img src="/assets/icons/close-outline.svg" />
-              </button>
-            </div>
-            <form class="the-project-form">
-              <div class="the-project-item-input">
-                <label for="projectName">Project Name</label>
-                <input required id="projectName" placeholder="Dentist Client" />
-              </div>
-              <div class="the-project-item-input">
-                <label for="description">Description</label>
-                <textarea
-                  required
-                  id="description"
-                  placeholder="Enter Description"
-                ></textarea>
-              </div>
-              <button id="includeProjectButton" type="button">Continue</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- Create New Project Overlay End -->
 
       <div class="chat">
         <img src="/assets/icons/chat-line-linear.svg" />

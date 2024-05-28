@@ -55,12 +55,14 @@ dashhh.addEventListener("click", () => {
   mobileNotification.classList.toggle("active");
 });
 
-document
-  .querySelector(".openAddProjectDialogBtn")
-  .addEventListener("click", function () {
+const openAddProjectDialogBtn = document.querySelector(
+  ".openAddProjectDialogBtn"
+);
+if (openAddProjectDialogBtn) {
+  openAddProjectDialogBtn.addEventListener("click", function () {
     document.getElementById("overlay").style.display = "flex";
   });
-
+}
 const buttonII = document.querySelector(".openAddProjectDialogBtnII");
 if (buttonII) {
   buttonII.addEventListener("click", function () {
@@ -68,9 +70,12 @@ if (buttonII) {
   });
 }
 
-document
-  .getElementById("closeAddProjectDialogBtn")
-  .addEventListener("click", function () {
+const closeAddProjectDialogBtn = document.getElementById(
+  "closeAddProjectDialogBtn"
+);
+
+if (closeAddProjectDialogBtn) {
+  closeAddProjectDialogBtn.addEventListener("click", function () {
     const mobileNotification = document.querySelector(
       ".add-project-dialog-container"
     );
@@ -80,9 +85,10 @@ document
     mobileNotification.addEventListener(
       "animationend",
       function () {
-        document.getElementById("overlay").style.display = "none";
         mobileNotification.classList.remove("fadeOut");
+        document.getElementById("overlay").style.display = "none";
       },
       { once: true }
     );
   });
+}

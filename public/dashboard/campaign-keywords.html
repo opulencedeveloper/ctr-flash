@@ -16,7 +16,7 @@
     <link href="/assets/css/font.css" rel="stylesheet" />
     <link href="/assets/css/dash/header.css" rel="stylesheet" />
     <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
-    <link href="/assets/css/dash/project.css" rel="stylesheet" />
+    <link href="/assets/css/dash/campaign.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -319,125 +319,250 @@
           <!-- Header End -->
 
           <div class="dashboard-content">
-            <!-- DashBoard Title Start -->
-            <div class="dash-title proj-title">
-              <div class="dash-title-inner">
-                <p>My Projects</p>
-                <p id="active-project-tle"><span class="project-amt">1</span> Active Projects</p>
-              </div>
-              <button class="openAddProjectDialogBtn">
-                <div class="add-icon">
-                  <img src="/assets/icons/circle-add.svg" />
+            <p class="projec-detail-title">
+              <span> Projects</span> <span>/</span> <span>Dentist Client</span>
+              <span>/</span>
+              <span>Bright Smile Clinic</span>
+            </p>
+            <a
+              href="/dashboard/project-details.html"
+              class="projec-detail-bk-btn"
+            >
+              <div><img src="/assets/icons/back-icon.svg" /></div>
+              <p>Back</p>
+            </a>
+            <div class="view-camp-details-container">
+              <div class="camp-overview camp-overview-ky-wrd">
+                <div class="camp-overview-sect-one">
+                  <div>
+                    <img src="/assets/icons/google-icon.svg" />
+                  </div>
+                  <div>
+                    <p>Bright Smile Clinic</p>
+                    <div class="custom-select-wrapper">
+                      <p>Keywords:</p>
+                      <select class="custom-select">
+                        <option value="option1">Smile</option>
+                        <option value="option2">Smile</option>
+                        <option value="option3">Smile</option>
+                        <option value="option4">Smile</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
-                <p>Add Project</p>
-              </button>
-            </div>
-            <!-- DashBoard Title End -->
 
-            <!-- Add Project Start -->
-            <div class="add-project-wrapper">
-              <!-- Empty Project State Start -->
-              <div class="add-project-container">
-                <div class="add-proj-img-container">
-                  <img src="/assets/images/add-project.svg" />
-                </div>
-                <p>No Projects</p>
-                <button class="openAddProjectDialogBtnII">
-                  <div class="add-icon">
-                    <img src="/assets/icons/circle-add.svg" />
-                  </div>
-                  <p>Add Project</p>
-                </button>
-              </div>
-              <!-- Empty Project State End -->
+                <div class="camp-over-pts-wrapper">
+                  <div class="camp-over-lne">
+                    <div class="camp-over-pts-rnd"></div>
 
-              <div id="added-project-container" class="added-project-container">
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
+                    <div class="camp-over-pts-rnd"></div>
+
+                    <div class="camp-over-pts-rnd"></div>
+                    <div class="camp-over-pts-rnd"></div>
+                  </div>
+                  <div class="camp-over-lst">
+                    <div class="camp-over-lst-inner">
+                      <p>Most Visits:</p>
+                      <p>70</p>
+                    </div>
+                    <div class="camp-over-lst-inner">
+                      <p>Geolocation:</p>
+                      <p>Nigeria</p>
+                    </div>
+                    <div class="camp-over-lst-inner">
+                      <p>Searches per Day:</p>
+                      <p>24</p>
+                    </div>
+                    <div class="camp-over-lst-inner">
+                      <p>Sessions Duration:</p>
+                      <p>60</p>
+                    </div>
                   </div>
                 </div>
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
+              </div>
+
+              <!-- DashBoard Table Start -->
+              <div class="camp-kywrd-sect-wrapper">
+              <div class="activity-container">
+                  <div class="camp-kywrd-sect">
+                    <div class="activity-header cam-kwy-header">
+                      <p>Activities</p>
+                      <button class="header-button">
+                        <div class="header-img-cont">
+                          <img src="/assets/icons/filter.svg" />
+                        </div>
+                        <p>March 2024</p>
+                      </button>
+                    </div>
+                    <table>
+                      <thead class="t-head">
+                        <tr>
+                          <th>Campaign</th>
+                          <th style="width: 2000px" class="sec-tb-head">
+                            Ranks
+                          </th>
+                          <th>Date</th>
+                        </tr>
+                      </thead>
+                      <tbody class="t-body">
+                        <tr class="tb-row">
+                          <td>
+                            Dental Clinic Campaign found the keyword
+                            <span class="td-bold">Dentist</span>
+                          </td>
+                          <td>8th Position</td>
+                          <td>Today</td>
+                        </tr>
+                        <tr class="tb-row">
+                          <td>
+                            Dental Clinic Campaign found the keyword
+                            <span class="td-bold">Dentist</span>
+                          </td>
+                          <td>8th Position</td>
+                          <td>2 days ago</td>
+                        </tr>
+                        <tr class="tb-row">
+                          <td>
+                            Dental Clinic Campaign found the keyword
+                            <span class="td-bold">Dentist</span>
+                          </td>
+                          <td>8th Position</td>
+                          <td>Today</td>
+                        </tr>
+                        <tr class="tb-row">
+                          <td>
+                            Dental Clinic Campaign found the keyword
+                            <span class="td-bold">Dentist</span>
+                          </td>
+                          <td>8th Position</td>
+                          <td>Today</td>
+                        </tr>
+                        <tr class="tb-row">
+                          <td>
+                            Dental Clinic Campaign found the keyword
+                            <span class="td-bold">Dentist</span>
+                          </td>
+                          <td>8th Position</td>
+                          <td>Today</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                </div>
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
+
+                  <div class="camp-kywrd-sect-two">
+                    <div class="cam-kwy-header-II">
+                      <p>Statistics</p>
+                      <div>
+                        <button class="cam-kwy-header-btn cam-kwy-header-btn-active">
+                          <div>
+                            <img src="/assets/icons/baseline-laptop.svg" />
+                          </div>
+                          <p>Desktop Search</p>
+                        </button>
+                        <button class="cam-kwy-header-btn">
+                          <div>
+                            <img src="/assets/icons/phone-mobile-solid.svg" />
+                          </div>
+                          <p>Mobile Search</p>
+                        </button>
+                      </div>
+                    </div>
+                    <p>Recent Searches</p>
+                    <div class="chart-container">
+                      <canvas id="myChart"></canvas>
+                    </div>
+                    <p>Number of Searches</p>
                   </div>
-                </div>
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
-                  </div>
-                </div>
+               
               </div>
             </div>
-            <!-- Add Project End -->
+              <!-- DashBoard Table End -->
+            </div>
           </div>
         </div>
       </div>
-      <!-- Create New Project Overlay Start -->
-      <div id="overlay" class="overlay">
-        <div class="add-project-dialog-wrapper">
-          <div class="add-project-dialog-container">
-            <div class="add-project-sectone">
-              <p>Create New Project</p>
-              <button id="closeAddProjectDialogBtn">
-                <img src="/assets/icons/close-outline.svg" />
-              </button>
-            </div>
-            <form class="the-project-form">
-              <div class="the-project-item-input">
-                <label for="projectName">Project Name</label>
-                <input required id="projectName" placeholder="Dentist Client" />
-              </div>
-              <div class="the-project-item-input">
-                <label for="description">Description</label>
-                <textarea
-                  required
-                  id="description"
-                  placeholder="Enter Description"
-                ></textarea>
-              </div>
-              <button id="includeProjectButton" type="button">Continue</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- Create New Project Overlay End -->
 
       <div class="chat">
         <img src="/assets/icons/chat-line-linear.svg" />
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/assets/js/global.js"></script>
     <script src="/assets/js/dashboard/dashboard.js"></script>
-    <script src="/assets/js/dashboard/project.js"></script>
+    <script src="/assets/js/dashboard/createdcampaign.js"></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function () {
+        const ctx = document.getElementById("myChart").getContext("2d");
+        const data = {
+          labels: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+          ],
+          datasets: [
+            {
+              label: "My First dataset",
+              backgroundColor: "transparent",
+              borderColor: "#65D6AD",
+              data: [2, 2.5, 4.5, 3.5, 4.5, 2.7, 3.8, 2.6, 1.7, 2.3, 1.5],
+              fill: true,
+            },
+          ],
+        };
+        const config = {
+          type: "line",
+          data: data,
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+                display: false,
+              },
+            },
+            scales: {
+              x: {
+                display: false,
+                title: {
+                  display: true,
+                  text: "Month",
+                },
+              },
+              y: {
+                display: true,
+                title: {
+                  display: false,
+                  text: "Value",
+                },
+                ticks: {
+                  color: "#252525",
+                  font: {
+                    size: 16,
+                  },
+                },
+              },
+            },
+          },
+        };
+        const myChart = new Chart(ctx, config);
+
+        function adjustFontSize() {
+        if (myChart.options.scales && myChart.options.scales.y && myChart.options.scales.y.ticks) {
+          if (window.innerWidth <= 600) {
+            myChart.options.scales.y.ticks.font.size = 10;
+          } else {
+            myChart.options.scales.y.ticks.font.size = 16;
+          }
+          myChart.update();
+        }
+      }
+      adjustFontSize();
+
+      window.addEventListener('resize', adjustFontSize);
+    });
+    </script>
   </body>
 </html>

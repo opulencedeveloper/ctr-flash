@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
+    <title>CTR Flash</title>
+    <meta name="robots" content="index, follow" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="CTR Flash" />
+    <meta property="og:description" content="" />
+    <link href="/assets/css/global.css" rel="stylesheet" />
+    <link href="/assets/css/variables.css" rel="stylesheet" />
+    <link href="/assets/css/font.css" rel="stylesheet" />
+    <link href="/assets/css/dash/header.css" rel="stylesheet" />
+    <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dash/campaign.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Loading Spinner Start -->
+    <div id="spinner-body" class="spinner-body">
+      <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- Loading Spinner End -->
+
+    <div id="content" style="display: none">
+      <!-- Mobile Notification Start -->
+      <div id="mobile-notification" class="mobile-notification">
+        <div class="mobile-notification-wrapper">
+          <button id="notifyCloseBtn" class="close-notify">
+            <div><img src="/assets/icons/back-icon.svg" /></div>
+            <p>Back</p>
+          </button>
+          <div class="notification-header">
+            <div class="notification-title">
+              <p>Notification</p>
+              <div>0</div>
+            </div>
+            <button>Mark all as Read</button>
+          </div>
+          <div class="notification-content notification-content-mobile">
+            <!-- Empty Notification UI -->
+            <div class="empty-notify-state">
+              <div></div>
+              <p>No New Notification</p>
+              <div></div>
+            </div>
+
+            <!-- Has Notification UI -->
+            <!-- <div class="notification-state-container">
+          <div class="notification-item">
+            <div class="notification-item-inner">
+              <p>New Activity</p>
+              <div class="notify-time">
+                <p>2h ago</p>
+                <div></div>
+              </div>
+            </div>
+            <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+          </div>
+          <div class="notification-item">
+            <div class="notification-item-inner">
+              <p>New Activity</p>
+              <div class="notify-time">
+                <p>2h ago</p>
+                <div></div>
+              </div>
+            </div>
+            <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+          </div>
+          <div class="notification-item">
+            <div class="notification-item-inner">
+              <p>New Activity</p>
+              <div class="notify-time">
+                <p>2h ago</p>
+                <div></div>
+              </div>
+            </div>
+            <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+          </div>
+          <div class="notification-item">
+            <div class="notification-item-inner">
+              <p>New Activity</p>
+              <div class="notify-time">
+                <p>2h ago</p>
+                <div></div>
+              </div>
+            </div>
+            <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+          </div>
+          <div class="notification-item">
+            <div class="notification-item-inner">
+              <p>New Activity</p>
+              <div class="notify-time">
+                <p>2h ago</p>
+                <div></div>
+              </div>
+            </div>
+            <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+          </div>
+         
+        </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Notification End -->
+
+      <!-- Mobile Navigation Start -->
+      <div class="nav-menu">
+        <div class="nav-container">
+          <div>
+            <div class="mobile-nav-logo">
+              <div class="logo-mobile">
+                <div class="logo-img-container-mobile">
+                  <img src="/assets/logo/ctr-logo-colored.svg" />
+                </div>
+                <p>ctr flash</p>
+              </div>
+              <button class="btn-nav-close">
+                <img src="/assets/icons/round-close.svg" />
+              </button>
+            </div>
+            <nav class="moblie-nav">
+              <a href="/dashboard/index.html" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/dashboard-inactive.svg" />
+                </div>
+                <p>dashboard</p>
+              </a>
+              <a
+                href="/dashboard/projects.html"
+                class="nav-item-mobile active-nav-item-mobile"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/projects-active.svg" />
+                </div>
+                <p>projects</p>
+              </a>
+              <a href="#" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/campaign.svg" />
+                </div>
+                <p>campaigns</p>
+              </a>
+              <a href="#" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/subscription.svg" />
+                </div>
+                <p>my subscription</p>
+              </a>
+              <a href="#" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/settings.svg" />
+                </div>
+                <p>Settings</p>
+              </a>
+            </nav>
+          </div>
+          <p class="mobile-nav-footer">
+            Saturday 23 Mar, 2024. 10:00am (GMT+1)
+          </p>
+        </div>
+      </div>
+      <!-- Mobile Navigation End -->
+
+      <div class="dash-container proje-container">
+        <!-- Desktop Navigation Start -->
+        <div>
+          <div class="logo">
+            <div class="logo-img-container">
+              <img src="/assets/logo/ctr-logo-colored.svg" />
+            </div>
+            <p>ctr flash</p>
+          </div>
+          <nav class="desktop-nav">
+            <a href="/dashboard/index.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/dashboard-inactive.svg" />
+              </div>
+              <p>dashboard</p>
+            </a>
+            <a href="/dashboard/projects.html" class="nav-item active-nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/projects-active.svg" />
+              </div>
+              <p>projects</p>
+            </a>
+            <a href="/dashboard/campaigns.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/campaign.svg" />
+              </div>
+              <p>campaigns</p>
+            </a>
+            <a href="#" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/subscription.svg" />
+              </div>
+              <p>my subscription</p>
+            </a>
+            <a href="#" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/settings.svg" />
+              </div>
+              <p>Settings</p>
+            </a>
+          </nav>
+        </div>
+        <!-- Desktop Navigation End -->
+
+        <div>
+          <!-- Header Start -->
+          <header class="dash-head proj-header">
+            <div class="dash-head-container">
+              <div class="hamburger">
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+              </div>
+              <div class="dash-head-details">
+                <p>hello <span id="dashName">macdonald</span></p>
+                <p>Saturday 23 Mar, 2024. 10:00am (GMT+1)</p>
+              </div>
+            </div>
+
+            <div class="dash-notify-container">
+              <div class="dash-head-notify-wrapper">
+                <div id="dash-head-notify" class="dash-head-notify">
+                  <div id="notifyOpenBtn" class="dash-head-notify-container">
+                    <img id="bell-icon" src="/assets/icons/notification.svg" />
+                  </div>
+                  <p>notification</p>
+                  <div class="notification-container">
+                    <div class="notification-header">
+                      <div class="notification-title">
+                        <p>Notification</p>
+                        <div>0</div>
+                      </div>
+                      <button>Mark all as Read</button>
+                    </div>
+                    <div class="notification-content">
+                      <!-- Empty Notification UI -->
+                      <div class="empty-notify-state">
+                        <div></div>
+                        <p>No New Notification</p>
+                        <div></div>
+                      </div>
+
+                      <!-- Has Notification UI -->
+                      <!-- <div class="notification-state-container">
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                     
+                    </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile-avatar">
+                <div></div>
+              </div>
+            </div>
+          </header>
+          <!-- Header End -->
+
+          <div class="dashboard-content">
+            <p class="projec-detail-title">
+              <span> Projects</span> <span>/</span> <span>Dentist Client</span>
+              <span>/</span>
+              <span>Bright Smile Clinic</span>
+            </p>
+            <a
+              href="/dashboard/created-campaign.html"
+              class="projec-detail-bk-btn"
+            >
+              <div><img src="/assets/icons/back-icon.svg" /></div>
+              <p>Back</p>
+            </a>
+            <div class="view-camp-details-container">
+              <div class="camp-overview">
+                <div class="camp-overview-sect-one">
+                  <div>
+                    <img src="/assets/icons/google-icon.svg" />
+                  </div>
+                  <div>
+                    <p>Bright Smile Clinic</p>
+                    <p>Organic Search</p>
+                  </div>
+                </div>
+                <button id="open-overlay-btn" class="camp-overview-btn">
+                  <div>
+                    <img src="/assets/icons/circle-add.svg" />
+                  </div>
+                  <p>Add Keywords</p>
+                </button>
+              </div>
+
+              <div class="camp-overview-section">
+                <div class="camp-overview-section-header">
+                  <button
+                    onclick="showContent('camp-overview-section-one')"
+                    class="camp-overview-section-button camp-overview-section-active-button"
+                    id="camp-overview-section-button-one"
+                  >
+                    Overview
+                  </button>
+                  <button
+                    onclick="showContent('camp-overview-section-two')"
+                    class="camp-overview-section-button"
+                    id="camp-overview-section-button-two"
+                  >
+                    Keywords
+                  </button>
+                </div>
+
+                <!-- Overview Section Start -->
+                <div
+                  id="camp-overview-section-one"
+                  class="cp-ow-stn-one-inr camp-overview-animate dvisible"
+                >
+                  <form class="cp-ow-stn-one-inr-one">
+                    <p>Overview</p>
+                    <div class="campaign-overview-item">
+                      <div>
+                        <label for="campaign-name">Campaign Name</label>
+                        <div>
+                          <img src="/assets/icons/question-mark-rounded.svg" />
+                        </div>
+                      </div>
+                      <input
+                        required
+                        id="campaign-name"
+                        placeholder="Bright Smile Clinic"
+                      />
+                    </div>
+                    <div class="campaign-overview-item">
+                      <div>
+                        <label for="website-url">Website URL</label>
+                        <div>
+                          <img src="/assets/icons/question-mark-rounded.svg" />
+                        </div>
+                      </div>
+                      <input
+                        required
+                        id="website-url"
+                        type="url"
+                        placeholder="www.opulencedeveloper.com"
+                      />
+                    </div>
+                    <div class="campaign-overview-item">
+                      <div>
+                        <label for="mobile-search">Mobile Search %</label>
+                        <div>
+                          <img src="/assets/icons/question-mark-rounded.svg" />
+                        </div>
+                      </div>
+                      <input
+                        required
+                        id="mobile-search"
+                        type="number"
+                        placeholder="30"
+                      />
+                    </div>
+                    <div class="campaign-overview-item">
+                      <div>
+                        <label for="bounce-rate">Bounce Rate</label>
+                        <div>
+                          <img src="/assets/icons/question-mark-rounded.svg" />
+                        </div>
+                      </div>
+                      <input
+                        required
+                        type="number"
+                        id="bounce-rate"
+                        placeholder="Dentist Client"
+                      />
+                    </div>
+                    <div class="campaign-overview-item">
+                      <div>
+                        <label for="page-per-session">Page Per Session</label>
+                        <div>
+                          <img src="/assets/icons/question-mark-rounded.svg" />
+                        </div>
+                      </div>
+                      <input
+                        required
+                        id="page-per-session"
+                        type="number"
+                        placeholder="1"
+                      />
+                    </div>
+                    <div class="campaign-overview-item">
+                      <div>
+                        <label for="page-per-session">Average Session</label>
+                        <div>
+                          <img src="/assets/icons/question-mark-rounded.svg" />
+                        </div>
+                      </div>
+                      <input
+                        required
+                        id="page-per-session"
+                        type="number"
+                        placeholder="Session duration"
+                      />
+                    </div>
+                    <div class="campaign-overview-item">
+                      <div>
+                        <label for="page-per-session"
+                          >Campaign Description</label
+                        >
+                        <div>
+                          <img src="/assets/icons/question-mark-rounded.svg" />
+                        </div>
+                      </div>
+                      <textarea required id="page-per-session"></textarea>
+                    </div>
+                    <div class="checkbox-conatiner">
+                      <p>Status</p>
+                      <div class="checkbox-wrapper">
+                        <input
+                          type="checkbox"
+                          id="toggle"
+                          class="toggle-checkbox"
+                        />
+                        <label for="toggle" class="toggle-label">
+                          <div class="toggle-circle"></div>
+                        </label>
+                        <p>Active</p>
+                      </div>
+                    </div>
+                    <button>Save Changes</button>
+                  </form>
+                  <div class="cp-ow-stn-one-inr-two">
+                    <p>
+                      Date Created:
+                      <span class="cp-ow-stn-one-inr-bld"
+                        >March 21st 2024.</span
+                      >
+                    </p>
+                    <p>
+                      Total Searches:
+                      <span class="cp-ow-stn-one-inr-bld">0</span>
+                    </p>
+                    <p>
+                      Keywords: <span class="cp-ow-stn-one-inr-bld">0</span>
+                    </p>
+                  </div>
+                </div>
+                <!-- Overview Section End -->
+
+                <!--  Keywords Section Start -->
+                <div
+                  id="camp-overview-section-two"
+                  class="keywords-container-wrapper camp-overview-animate"
+                >
+                  <div class="keywords-container">
+                    <div class="keywords-sect-one">
+                      <div class="keywords-header">
+                        <p>25 Keywords</p>
+                        <button class="keywords-header-button">
+                          <div class="header-img-cont">
+                            <img src="/assets/icons/filter.svg" />
+                          </div>
+                          <p>March 2024</p>
+                        </button>
+                      </div>
+                      <div class="table-wrapper-outter">
+                      <table>
+                        <thead>
+                          <tr class="keywords-header-th">
+                            <th>Keywords</th>
+                            <th>Geolocation</th>
+                            <th>Search Interval</th>
+                            <th>Time</th>
+                          </tr>
+                        </thead>
+                        <tbody class="keywrd-tb-bdy">
+                          <tr>
+                            <td>Smile</td>
+                            <td>Nigeria (PH)</td>
+                            <td>1</td>
+                            <td>
+                              <div class="kewrd-time-conatiner">
+                                <p>1hr ago</p>
+                                <button class="info-button">
+                                  <img src="/assets/icons/vertical-fill.svg" />
+                                  <div id="overlayy" class="overlayy">
+                                    <div id="mobile-drawup" class="mobile-drawup">
+                                      <div></div>
+                                      <p>Smile Keyword</p>
+                                      <div class="mobile-tooltip">
+                                       <a href="/dashboard/campaign-keywords.html">
+                                         <div>
+                                           <img
+                                             src="/assets/icons/obscure-false.svg"
+                                           />
+                                         </div>
+                                         <p>View</p>
+                                        </a>
+                                       <a href="#">
+                                         <div>
+                                           <img
+                                             src="/assets/icons/edit-outline-gray.svg"
+                                           />
+                                         </div>
+                                         <p>Edit</p>
+                                        </a>
+                                       <a href="#">
+                                         <div>
+                                           <img
+                                             src="/assets/icons/delete-outline-gray.svg"
+                                           />
+                                         </div>
+                                         <p>Delete</p>
+                                        </a>
+                                     </div>
+                                     </div>
+                                </div>
+                                  
+                                
+                                  <div class="tooltip">
+                                    <a href="/dashboard/campaign-keywords.html">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/obscure-false.svg"
+                                        />
+                                      </div>
+                                      <p>View</p>
+                                     </a>
+                                    <a href="#">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/edit-outline-gray.svg"
+                                        />
+                                      </div>
+                                      <p>Edit</p>
+                                     </a>
+                                    <a href="#">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/delete-outline-gray.svg"
+                                        />
+                                      </div>
+                                      <p>Delete</p>
+                                     </a>
+                                  </div>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+
+
+                          <tr>
+                            <td>Dentist</td>
+                            <td>Nigeria (PH)</td>
+                            <td>1</td>
+                            <td>
+                              <div class="kewrd-time-conatiner">
+                                <p>1hr ago</p>
+                                <button class="info-button">
+                                  <img src="/assets/icons/vertical-fill.svg" />
+                                  <div id="overlayy" class="overlayy">
+                                    <div id="mobile-drawup" class="mobile-drawup">
+                                      <div></div>
+                                      <p><span>Dentist</span> Keyword</p>
+                                      <div class="mobile-tooltip">
+                                        <a href="/dashboard/campaign-keywords.html">
+                                          <div>
+                                            <img
+                                              src="/assets/icons/obscure-false.svg"
+                                            />
+                                          </div>
+                                          <p>View</p>
+                                         </a>
+                                        <a href="#">
+                                          <div>
+                                            <img
+                                              src="/assets/icons/edit-outline-gray.svg"
+                                            />
+                                          </div>
+                                          <p>Edit</p>
+                                         </a>
+                                        <a href="#">
+                                          <div>
+                                            <img
+                                              src="/assets/icons/delete-outline-gray.svg"
+                                            />
+                                          </div>
+                                          <p>Delete</p>
+                                         </a>
+                                     </div>
+                                     </div>
+                                </div>
+                                  
+                                
+                                  <div class="tooltip">
+                                    <a href="/dashboard/campaign-keywords.html">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/obscure-false.svg"
+                                        />
+                                      </div>
+                                      <p>View</p>
+                                     </a>
+                                    <a href="#">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/edit-outline-gray.svg"
+                                        />
+                                      </div>
+                                      <p>Edit</p>
+                                     </a>
+                                    <a href="#">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/delete-outline-gray.svg"
+                                        />
+                                      </div>
+                                      <p>Delete</p>
+                                     </a>
+                                  </div>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>                        
+                          <tr>
+                            <td>Bright Smile</td>
+                            <td>Nigeria (PH)</td>
+                            <td>1</td>
+                            <td>
+                              <div class="kewrd-time-conatiner">
+                                <p>1hr ago</p>
+                                <button class="info-button">
+                                  <img src="/assets/icons/vertical-fill.svg" />
+                                  <div id="overlayy" class="overlayy">
+                                    <div id="mobile-drawup" class="mobile-drawup">
+                                      <div></div>
+                                      <p><span>Bright Smile</span> Keyword</p>
+                                      <div class="mobile-tooltip">
+                                        <a href="/dashboard/campaign-keywords.html">
+                                          <div>
+                                            <img
+                                              src="/assets/icons/obscure-false.svg"
+                                            />
+                                          </div>
+                                          <p>View</p>
+                                         </a>
+                                        <a href="#">
+                                          <div>
+                                            <img
+                                              src="/assets/icons/edit-outline-gray.svg"
+                                            />
+                                          </div>
+                                          <p>Edit</p>
+                                         </a>
+                                        <a href="#">
+                                          <div>
+                                            <img
+                                              src="/assets/icons/delete-outline-gray.svg"
+                                            />
+                                          </div>
+                                          <p>Delete</p>
+                                         </a>
+                                     </div>
+                                     </div>
+                                </div>
+                                  
+                                
+                                  <div class="tooltip">
+                                    <a href="/dashboard/campaign-keywords.html">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/obscure-false.svg"
+                                        />
+                                      </div>
+                                      <p>View</p>
+                                     </a>
+                                    <a href="#">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/edit-outline-gray.svg"
+                                        />
+                                      </div>
+                                      <p>Edit</p>
+                                     </a>
+                                    <a href="#">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/delete-outline-gray.svg"
+                                        />
+                                      </div>
+                                      <p>Delete</p>
+                                     </a>
+                                  </div>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td>Teeth</td>
+                            <td>Nigeria (PH)</td>
+                            <td>1</td>
+                            <td>
+                              <div class="kewrd-time-conatiner">
+                                <p>1hr ago</p>
+                                <button class="info-button">
+                                  <img src="/assets/icons/vertical-fill.svg" />
+                                  <div id="overlayy" class="overlayy">
+                                    <div id="mobile-drawup" class="mobile-drawup">
+                                      <div></div>
+                                      <p><span>Teeth</span> Keyword</p>
+                                      <div class="mobile-tooltip">
+                                        <a href="/dashboard/campaign-keywords.html">
+                                          <div>
+                                            <img
+                                              src="/assets/icons/obscure-false.svg"
+                                            />
+                                          </div>
+                                          <p>View</p>
+                                         </a>
+                                        <a href="#">
+                                          <div>
+                                            <img
+                                              src="/assets/icons/edit-outline-gray.svg"
+                                            />
+                                          </div>
+                                          <p>Edit</p>
+                                         </a>
+                                        <a href="#">
+                                          <div>
+                                            <img
+                                              src="/assets/icons/delete-outline-gray.svg"
+                                            />
+                                          </div>
+                                          <p>Delete</p>
+                                         </a>
+                                     </div>
+                                     </div>
+                                </div>
+                                  
+                                
+                                  <div class="tooltip">
+                                    <a href="/dashboard/campaign-keywords.html">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/obscure-false.svg"
+                                        />
+                                      </div>
+                                      <p>View</p>
+                                     </a>
+                                    <a href="#">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/edit-outline-gray.svg"
+                                        />
+                                      </div>
+                                      <p>Edit</p>
+                                     </a>
+                                    <a href="#">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/delete-outline-gray.svg"
+                                        />
+                                      </div>
+                                      <p>Delete</p>
+                                     </a>
+                                  </div>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- Repeat for other rows -->
+                        </tbody>
+                      </table>
+                    </div>
+                    </div>
+
+                    <div class="keywords-sect-one">
+                      <div class="keywords-header">
+                        <p>All Activities</p>
+                        <button class="keywords-header-button">
+                          <div class="header-img-cont">
+                            <img src="/assets/icons/filter.svg" />
+                          </div>
+                          <p>March 2024</p>
+                        </button>
+                      </div>
+                      <table>
+                        <thead class="t-head">
+                          <tr>
+                            <th>Campaign</th>
+                            <th style="width: 2000px" class="sec-tb-head">
+                              Ranks
+                            </th>
+                            <th>Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="tb-row">
+                            <td>
+                              Dental Clinic Campaign found the keyword
+                              <span class="td-bold">Dentist</span>
+                            </td>
+                            <td>8th Position</td>
+                            <td>Today</td>
+                          </tr>
+                          <tr class="tb-row">
+                            <td>
+                              Dental Clinic Campaign found the keyword
+                              <span class="td-bold">Dentist</span>
+                            </td>
+                            <td>8th Position</td>
+                            <td>2 days ago</td>
+                          </tr>
+                          <tr class="tb-row">
+                            <td>
+                              Dental Clinic Campaign found the keyword
+                              <span class="td-bold">Dentist</span>
+                            </td>
+                            <td>8th Position</td>
+                            <td>Today</td>
+                          </tr>
+                          <tr class="tb-row">
+                            <td>
+                              Dental Clinic Campaign found the keyword
+                              <span class="td-bold">Dentist</span>
+                            </td>
+                            <td>8th Position</td>
+                            <td>Today</td>
+                          </tr>
+                          <tr class="tb-row">
+                            <td>
+                              Dental Clinic Campaign found the keyword
+                              <span class="td-bold">Dentist</span>
+                            </td>
+                            <td>8th Position</td>
+                            <td>Today</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!--  Keywords Section End -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Edit Campaign Overlay Start -->
+      <div id="overlay" class="overlay">
+        <div
+          id="overlay-dialog"
+          class="add-keyword-dialog-container overlay-animate"
+        >
+          <div id="overlay-dialog" class="add-keyword-dialog-wrapper">
+            <div>
+              <p>Add Keyword</p>
+              <button id="close-overlay-btn">
+                <img src="/assets/icons/close-outline.svg" />
+              </button>
+            </div>
+            <div id="dropdowns-container">
+              <!-- Add KeyWords Form Start -->
+              <form class="add-keyword-form">
+                <div class="the-project-item-input keyword-input-item">
+                  <label for="keyword">Keyword</label>
+                  <input required id="keyword" placeholder="Smile" />
+                </div>
+
+                <div class="the-project-item-input keyword-input-item">
+                  <label for="searches-per-interval"
+                    >Searches per Interval</label
+                  >
+                  <input
+                    required
+                    type="number"
+                    id="searches-per-interval"
+                    placeholder="1"
+                  />
+                </div>
+                <div class="add-keyword-radio-btn">
+                  <label for="opt-one" class="add-keyword-radio-item">
+                    <input
+                      id="opt-one"
+                      type="radio"
+                      name="option-one"
+                      value="Run Everyday"
+                      checked
+                    />
+                    <div class="radio-mark"></div>
+                    <p>Run Everyday</p>
+                    <div>
+                      <img src="/assets/icons/question-mark-rounded.svg" />
+                    </div>
+                  </label>
+                  <label for="opt-two" class="add-keyword-radio-item">
+                    <input
+                      id="opt-two"
+                      type="radio"
+                      name="option-one"
+                      value="Run Every Week"
+                    />
+                    <div class="radio-mark"></div>
+                    <p>Run Every Week</p>
+                    <div>
+                      <img src="/assets/icons/question-mark-rounded.svg" />
+                    </div>
+                  </label>
+                  <label for="opt-three" class="add-keyword-radio-item">
+                    <input
+                      id="opt-three"
+                      type="radio"
+                      name="option-one"
+                      value="Run Every Month"
+                    />
+                    <div class="radio-mark"></div>
+                    <p>Run Every Month</p>
+                    <div>
+                      <img src="/assets/icons/question-mark-rounded.svg" />
+                    </div>
+                  </label>
+                </div>
+
+                <div class="add-keyword-raido-btn_II">
+                  <label
+                    for="opt-four"
+                    class="add-keyword-radio-item add-keyword-radio-item-two"
+                  >
+                    <input
+                      id="opt-four"
+                      type="radio"
+                      name="option-two"
+                      value="Run Everyday"
+                      checked
+                    />
+                    <div class="radio-mark"></div>
+                    <div class="add-keyword-radio-item-inner">
+                      <p>Worldwide</p>
+                      <p>Keyword would be used in worldwide search</p>
+                    </div>
+                  </label>
+                  <label
+                    for="opt-five"
+                    class="add-keyword-radio-item add-keyword-radio-item-two"
+                  >
+                    <input
+                      id="opt-five"
+                      type="radio"
+                      name="option-two"
+                      value="Run Everyday"
+                      checked
+                    />
+                    <div class="radio-mark"></div>
+                    <div class="add-keyword-radio-item-inner">
+                      <p>Geotarget</p>
+                      <p>Target specific country and city</p>
+                    </div>
+                  </label>
+                </div>
+                <div id="campaign-address">
+                  <div
+                    data-dropdown
+                    class="dropdown-container the-project-item-input keyword-input-item aa"
+                  >
+                    <label for="country">Country</label>
+                    <input
+                      type="text"
+                      required
+                      id="country"
+                      class="dropdown-input"
+                      placeholder="Select Country."
+                      list="suggestions"
+                      oninput="filterOptions(event)"
+                    />
+                    <img
+                      src="/assets/icons/drop-down-line.svg"
+                      class="dropdown-icon"
+                      onclick="toggleDropdown(this)"
+                    />
+                    <div id="countryListContainer" class="datalist-container">
+                      <div onclick="selectOption(this,'Nigeria')">Nigeria</div>
+                      <div onclick="selectOption(this,'USA')">USA</div>
+                      <div onclick="selectOption(this,'Canada')">Canada</div>
+                    </div>
+                  </div>
+                  <div
+                    data-dropdown
+                    class="dropdown-container the-project-item-input keyword-input-item"
+                  >
+                    <label for="city">City</label>
+                    <input
+                      type="text"
+                      required
+                      id="city"
+                      class="dropdown-input"
+                      placeholder="Select City."
+                      list="suggestions"
+                      oninput="filterOptions(event)"
+                    />
+                    <img
+                      src="/assets/icons/drop-down-line.svg"
+                      class="dropdown-icon"
+                      onclick="toggleDropdown(this)"
+                    />
+                    <div id="cityListContainer" class="datalist-container">
+                      <div onclick="selectOption(this, 'Port Harcourt')">
+                        Port Harcourt
+                      </div>
+                      <div onclick="selectOption(this, 'Lagos')">Lagos</div>
+                      <div onclick="selectOption(this, 'Abuja')">Abuja</div>
+                    </div>
+                  </div>
+                </div>
+
+                <button type="button" class="sel-mul-con">
+                  Select Mutiple Countries
+                </button>
+                <button class="camp-overview-btn">Add Keyword</button>
+              </form>
+              <!-- Add KeyWords Form End -->
+
+              <!-- Add Multiple Country Form Start -->
+              <form class="select-mutlti-form">
+                <button
+                  type="button"
+                  id="notifyCloseBtn"
+                  class="close-notify close-multi-sel"
+                >
+                  <div><img src="/assets/icons/back-icon.svg" /></div>
+                  <p>Back</p>
+                </button>
+                <p>Select Multiple Countries</p>
+                <div
+                  id="keyword-input-item-wrapper"
+                  class="add-location-wrapper"
+                >
+                  <div class="keyword-input-item_wrapper">
+                    <div
+                      data-dropdown
+                      class="dropdown-container the-project-item-input keyword-input-item aa"
+                    >
+                      <label for="country">Country</label>
+                      <input
+                        type="text"
+                        required
+                        id="country"
+                        class="dropdown-input countryyyy"
+                        placeholder="Select Country."
+                        list="suggestions"
+                        oninput="filterOptions(event)"
+                      />
+                      <img
+                        src="/assets/icons/drop-down-line.svg"
+                        class="dropdown-icon"
+                        onclick="toggleDropdown(this)"
+                      />
+                      <div id="countryListContainer" class="datalist-container">
+                        <div onclick="selectOption(this,'Nigeria')">
+                          Nigeria
+                        </div>
+                        <div onclick="selectOption(this,'USA')">USA</div>
+                        <div onclick="selectOption(this,'Canada')">Canada</div>
+                      </div>
+                    </div>
+                    <div
+                      data-dropdown
+                      class="add-location dropdown-container the-project-item-input keyword-input-item"
+                    >
+                      <label for="city">City</label>
+                      <input
+                        type="text"
+                        required
+                        id="city"
+                        class="dropdown-input cityyyy"
+                        placeholder="Select City."
+                        list="suggestions"
+                        oninput="filterOptions(event)"
+                      />
+                      <img
+                        src="/assets/icons/drop-down-line.svg"
+                        class="dropdown-icon"
+                        onclick="toggleDropdown(this)"
+                      />
+                      <div id="cityListContainer" class="datalist-container">
+                        <div onclick="selectOption(this, 'Port Harcourt')">
+                          Port Harcourt
+                        </div>
+                        <div onclick="selectOption(this, 'Lagos')">Lagos</div>
+                        <div onclick="selectOption(this, 'Abuja')">Abuja</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="add-more-country-btn"
+                  type="button"
+                  onclick="generateDropdowns()"
+                >
+                  <div><img src="/assets/icons/add.svg" /></div>
+                  <p>Add another country</p>
+                </button>
+                <button
+                  id="oka-button"
+                  class="comm-btn-style"
+                  onclick="addCountry(event)"
+                >
+                  Submit
+                </button>
+              </form>
+              <!-- Add Multiple Country Form End -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Edit Campaign Overlay End -->
+
+      <div class="chat">
+        <img src="/assets/icons/chat-line-linear.svg" />
+      </div>
+    </div>
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/dashboard/dashboard.js"></script>
+    <script src="/assets/js/dashboard/createdcampaign.js"></script>
+  </body>
+</html>

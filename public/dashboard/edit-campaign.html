@@ -16,7 +16,7 @@
     <link href="/assets/css/font.css" rel="stylesheet" />
     <link href="/assets/css/dash/header.css" rel="stylesheet" />
     <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
-    <link href="/assets/css/dash/project.css" rel="stylesheet" />
+    <link href="/assets/css/dash/campaign.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -319,118 +319,72 @@
           <!-- Header End -->
 
           <div class="dashboard-content">
-            <!-- DashBoard Title Start -->
-            <div class="dash-title proj-title">
-              <div class="dash-title-inner">
-                <p>My Projects</p>
-                <p id="active-project-tle"><span class="project-amt">1</span> Active Projects</p>
-              </div>
-              <button class="openAddProjectDialogBtn">
-                <div class="add-icon">
-                  <img src="/assets/icons/circle-add.svg" />
-                </div>
-                <p>Add Project</p>
-              </button>
-            </div>
-            <!-- DashBoard Title End -->
-
-            <!-- Add Project Start -->
-            <div class="add-project-wrapper">
-              <!-- Empty Project State Start -->
-              <div class="add-project-container">
-                <div class="add-proj-img-container">
-                  <img src="/assets/images/add-project.svg" />
-                </div>
-                <p>No Projects</p>
-                <button class="openAddProjectDialogBtnII">
-                  <div class="add-icon">
-                    <img src="/assets/icons/circle-add.svg" />
+            <p class="projec-detail-title">
+              <span> Projects</span> <span>/</span> <span>Dentist Client</span>
+              <span>/</span>
+              <span>Edit Profile</span>
+            </p>
+            <div class="edit-camp-wrapper">
+              <div class="edit-camp-wrapper-inner">
+                <a
+                  href="/dashboard/project-details.html"
+                  class="projec-detail-bk-btn"
+                >
+                  <div><img src="/assets/icons/back-icon.svg" /></div>
+                  <p>Back</p>
+                </a>
+                <div class="edit-camp-container">
+                  <div class="edit-camp-title">
+                    <p>Edit Project</p>
+                    <button id="open-overlay-btn" class="delete-camp-btn">
+                      <div>
+                        <img src="/assets/icons/delete.svg" />
+                      </div>
+                      <p>Delete Project</p>
+                    </button>
                   </div>
-                  <p>Add Project</p>
-                </button>
-              </div>
-              <!-- Empty Project State End -->
-
-              <div id="added-project-container" class="added-project-container">
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
-                  </div>
-                </div>
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
-                  </div>
-                </div>
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
-                  </div>
-                </div>
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
-                  </div>
+                  <form class="the-project-form edit-project-form">
+                    <div class="the-project-item-input">
+                      <label for="projectName">Project Name</label>
+                      <input
+                        required
+                        id="projectName"
+                        placeholder="Dentist Client"
+                      />
+                    </div>
+                    <div class="the-project-item-input">
+                      <label for="description">Description</label>
+                      <textarea
+                        required
+                        id="description"
+                        placeholder="Enter Description"
+                      ></textarea>
+                    </div>
+                    <button>Save Changes</button>
+                  </form>
                 </div>
               </div>
             </div>
-            <!-- Add Project End -->
           </div>
         </div>
       </div>
-      <!-- Create New Project Overlay Start -->
+
+      <!-- Edit Campaign Overlay Start -->
       <div id="overlay" class="overlay">
-        <div class="add-project-dialog-wrapper">
-          <div class="add-project-dialog-container">
-            <div class="add-project-sectone">
-              <p>Create New Project</p>
-              <button id="closeAddProjectDialogBtn">
-                <img src="/assets/icons/close-outline.svg" />
-              </button>
-            </div>
-            <form class="the-project-form">
-              <div class="the-project-item-input">
-                <label for="projectName">Project Name</label>
-                <input required id="projectName" placeholder="Dentist Client" />
-              </div>
-              <div class="the-project-item-input">
-                <label for="description">Description</label>
-                <textarea
-                  required
-                  id="description"
-                  placeholder="Enter Description"
-                ></textarea>
-              </div>
-              <button id="includeProjectButton" type="button">Continue</button>
-            </form>
+        <div id="overlay-dialog" class="delete-camp-container">
+          <div class="delete-camp-wrapper overlay-animate">
+            <div><img src="/assets/icons/delete.svg" /></div>
+            <p>Delete Project?</p>
+            <p>
+              Are you sure you want to proceed?. Please note that once a project
+              is deleted, it is irreversible.
+            </p>
+            <button class="delete-camp-btn_II">Yes, Delete</button>
+            <button id="close-overlay-btn">No, Don't Delete</button>
           </div>
         </div>
       </div>
-      <!-- Create New Project Overlay End -->
+      <!-- Edit Campaign Overlay End -->
 
       <div class="chat">
         <img src="/assets/icons/chat-line-linear.svg" />
@@ -438,6 +392,5 @@
     </div>
     <script src="/assets/js/global.js"></script>
     <script src="/assets/js/dashboard/dashboard.js"></script>
-    <script src="/assets/js/dashboard/project.js"></script>
   </body>
 </html>

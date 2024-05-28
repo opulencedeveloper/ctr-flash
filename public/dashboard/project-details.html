@@ -16,7 +16,7 @@
     <link href="/assets/css/font.css" rel="stylesheet" />
     <link href="/assets/css/dash/header.css" rel="stylesheet" />
     <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
-    <link href="/assets/css/dash/project.css" rel="stylesheet" />
+    <link href="/assets/css/dash/project-details.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -319,125 +319,259 @@
           <!-- Header End -->
 
           <div class="dashboard-content">
-            <!-- DashBoard Title Start -->
-            <div class="dash-title proj-title">
-              <div class="dash-title-inner">
-                <p>My Projects</p>
-                <p id="active-project-tle"><span class="project-amt">1</span> Active Projects</p>
+            <div class="project-details-container">
+              <p class="projec-detail-title">
+                <span> Projects</span> <span>/</span>
+                <span>Dentist Client</span>
+              </p>
+              <a
+                href="/dashboard/project-details.html"
+                class="projec-detail-bk-btn"
+              >
+                <div><img src="/assets/icons/back-icon.svg" /></div>
+                <p>Back</p>
+              </a>
+              <div class="projec-detail-header">
+                <div class="projec-detail-header-sect-one">
+                  <div>dc</div>
+                  <p>Dentist Client</p>
+                </div>
+                <a href="/dashboard/edit-campaign.html">
+                  <div>
+                    <img src="/assets/icons/edit-outline.svg" />
+                  </div>
+                  <p>Edit Project</p>
+                </a>
               </div>
-              <button class="openAddProjectDialogBtn">
+            </div>
+            <div class="created-camp">
+              <div class="created-camp-one">
+                <p>12 Campaigns Created</p>
+                <a href="/dashboard/all-campaign.html">View all Campaigns</a>
+              </div>
+              <button id="open-overlay-btn">
                 <div class="add-icon">
                   <img src="/assets/icons/circle-add.svg" />
                 </div>
-                <p>Add Project</p>
+                <p>Create Campaign</p>
               </button>
             </div>
-            <!-- DashBoard Title End -->
 
-            <!-- Add Project Start -->
-            <div class="add-project-wrapper">
-              <!-- Empty Project State Start -->
-              <div class="add-project-container">
-                <div class="add-proj-img-container">
-                  <img src="/assets/images/add-project.svg" />
+            <!-- DashBoard Table Start -->
+            <div class="activity-container">
+              <div class="activity-sect-one">
+                <div class="activity-header">
+                  <p>My Activities on Dentist Client</p>
+                  <button class="header-button">
+                    <div class="header-img-cont">
+                      <img src="/assets/icons/filter.svg" />
+                    </div>
+                    <p>March 2024</p>
+                  </button>
                 </div>
-                <p>No Projects</p>
-                <button class="openAddProjectDialogBtnII">
-                  <div class="add-icon">
-                    <img src="/assets/icons/circle-add.svg" />
-                  </div>
-                  <p>Add Project</p>
-                </button>
+                <table>
+                  <thead class="t-head">
+                    <tr>
+                      <th>Campaign</th>
+                      <th style="width: 2000px" class="sec-tb-head">Ranks</th>
+                      <th>Date</th>
+                    </tr>
+                  </thead>
+                  <tbody class="t-body">
+                    <tr class="tb-row">
+                      <td>
+                        Dental Clinic Campaign found the keyword
+                        <span class="td-bold">Dentist</span>
+                      </td>
+                      <td>8th Position</td>
+                      <td>Today</td>
+                    </tr>
+                    <tr class="tb-row">
+                      <td>
+                        Dental Clinic Campaign found the keyword
+                        <span class="td-bold">Dentist</span>
+                      </td>
+                      <td>8th Position</td>
+                      <td>2 days ago</td>
+                    </tr>
+                    <tr class="tb-row">
+                      <td>
+                        Dental Clinic Campaign found the keyword
+                        <span class="td-bold">Dentist</span>
+                      </td>
+                      <td>8th Position</td>
+                      <td>Today</td>
+                    </tr>
+                    <tr class="tb-row">
+                      <td>
+                        Dental Clinic Campaign found the keyword
+                        <span class="td-bold">Dentist</span>
+                      </td>
+                      <td>8th Position</td>
+                      <td>Today</td>
+                    </tr>
+                    <tr class="tb-row">
+                      <td>
+                        Dental Clinic Campaign found the keyword
+                        <span class="td-bold">Dentist</span>
+                      </td>
+                      <td>8th Position</td>
+                      <td>Today</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <!-- Empty Project State End -->
 
-              <div id="added-project-container" class="added-project-container">
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
-                  </div>
+              <div class="activity-sect-two">
+                <div class="activity-header activity-header-border">
+                  <p>A40 Keyword Ranks</p>
+                  <button class="header-button">
+                    <div class="header-img-cont">
+                      <img src="/assets/icons/filter.svg" />
+                    </div>
+                    <p>Today</p>
+                  </button>
                 </div>
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
+                <div class="activity-sect-two-inner-container">
+                  <div class="activity-sect-two-inner-item">
+                    <p>Port Harcourt Dentist</p>
+                    <div class="activity-sect-two-inner-item-two">
+                      <div>
+                        <img src="/assets/icons/arrow-trending-up.svg" />
+                      </div>
+                      <p>246</p>
+                    </div>
                   </div>
-                </div>
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
+                  <div class="activity-sect-two-inner-item">
+                    <p>Port Harcourt Dentist</p>
+                    <div class="activity-sect-two-inner-item-two">
+                      <div>
+                        <img src="/assets/icons/arrow-trending-up.svg" />
+                      </div>
+                      <p>246</p>
+                    </div>
                   </div>
-                </div>
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
+                  <div class="activity-sect-two-inner-item">
+                    <p>Port Harcourt Dentist</p>
+                    <div class="activity-sect-two-inner-item-two">
+                      <div>
+                        <img src="/assets/icons/arrow-trending-up.svg" />
+                      </div>
+                      <p>246</p>
+                    </div>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p>Port Harcourt Dentist</p>
+                    <div class="activity-sect-two-inner-item-two">
+                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
+                      <p>246</p>
+                    </div>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p>Port Harcourt Dentist</p>
+                    <div class="activity-sect-two-inner-item-two">
+                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
+                      <p>246</p>
+                    </div>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p>Port Harcourt Dentist</p>
+                    <div class="activity-sect-two-inner-item-two">
+                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
+                      <p>246</p>
+                    </div>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p>Port Harcourt Dentist</p>
+                    <div class="activity-sect-two-inner-item-two">
+                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
+                      <p>246</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- Add Project End -->
+            <!-- DashBoard Table End -->
           </div>
         </div>
       </div>
-      <!-- Create New Project Overlay Start -->
+
+      <!-- Create Campaign Overlay Start -->
       <div id="overlay" class="overlay">
-        <div class="add-project-dialog-wrapper">
-          <div class="add-project-dialog-container">
-            <div class="add-project-sectone">
-              <p>Create New Project</p>
-              <button id="closeAddProjectDialogBtn">
-                <img src="/assets/icons/close-outline.svg" />
-              </button>
-            </div>
-            <form class="the-project-form">
-              <div class="the-project-item-input">
-                <label for="projectName">Project Name</label>
-                <input required id="projectName" placeholder="Dentist Client" />
-              </div>
-              <div class="the-project-item-input">
-                <label for="description">Description</label>
-                <textarea
-                  required
-                  id="description"
-                  placeholder="Enter Description"
-                ></textarea>
-              </div>
-              <button id="includeProjectButton" type="button">Continue</button>
-            </form>
+        <div id="overlay-dialog" class="create-camp-container overlay-animate">
+          <div>
+            <p>Create New Campaign</p>
+            <button id="close-overlay-btn">
+              <img src="/assets/icons/close-outline.svg" />
+            </button>
           </div>
+          <p>Campaign Type</p>
+          <form class="the-project-form create-project-form">
+            <div class="create-camp-radio-btn">
+              <label for="opt-one" class="create-camp-item">
+                <input
+                  id="opt-one"
+                  type="radio"
+                  name="option"
+                  value="Organic Search"
+                  checked
+                />
+                <div class="radio-mark"></div>
+                <p>Organic Search</p>
+                <div><img src="/assets/icons/question-mark-rounded.svg" /></div>
+              </label>
+              <label for="opt-two" class="create-camp-item">
+                <input
+                  id="opt-two"
+                  type="radio"
+                  name="option"
+                  value="Google Search"
+                />
+                <div class="radio-mark"></div>
+                <p>Google Search</p>
+                <div><img src="/assets/icons/question-mark-rounded.svg" /></div>
+              </label>
+            </div>
+
+            <div class="create-project-form-inner">
+              <div class="the-project-item-input">
+                <label for="campaign-title">Campaign Title</label>
+                <input
+                  required
+                  id="campaign-title"
+                  placeholder="Dentist Client"
+                />
+              </div>
+              <div class="the-project-item-input">
+                <label for="web-url">Websiite Url</label>
+                <input
+                  required
+                  type="url"
+                  id="web-url"
+                  placeholder="opulencedeveloper.com"
+                />
+              </div>
+              <div class="the-project-item-input">
+                <label for="business-name">Business Name</label>
+                <input
+                  required
+                  type="text"
+                  id="business-name"
+                  placeholder="Dentistry"
+                />
+              </div>
+            </div>
+            <!-- This button leads to the "created-campaign.html" page -->
+            <button>Create Campaign</button>
+          </form>
         </div>
       </div>
-      <!-- Create New Project Overlay End -->
-
+      <!-- Create Campaign Overlay End -->
       <div class="chat">
         <img src="/assets/icons/chat-line-linear.svg" />
       </div>
     </div>
     <script src="/assets/js/global.js"></script>
     <script src="/assets/js/dashboard/dashboard.js"></script>
-    <script src="/assets/js/dashboard/project.js"></script>
   </body>
 </html>

@@ -29,7 +29,7 @@
     </div>
     <!-- Loading Spinner End -->
 
-    <div id="content" style="display: none">
+    <div id="content" style="display: none;">
       <!-- Mobile Notification Start -->
       <div id="mobile-notification" class="mobile-notification">
         <div class="mobile-notification-wrapper">
@@ -191,7 +191,7 @@
               </div>
               <p>projects</p>
             </a>
-            <a href="#" class="nav-item">
+            <a href="/dashboard/campaigns.html" class="nav-item">
               <div class="nav-icon">
                 <img src="/assets/icons/campaign.svg" />
               </div>
@@ -380,15 +380,15 @@
                   </button>
                 </div>
                 <table>
-                  <thead>
+                  <thead class="t-head">
                     <tr>
                       <th>Campaign</th>
                       <th style="width: 2000px" class="sec-tb-head">Ranks</th>
                       <th>Date</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
+                  <tbody class="t-body">
+                    <tr class="tb-row">
                       <td>
                         Dental Clinic Campaign found the keyword
                         <span class="td-bold">Dentist</span>
@@ -396,7 +396,7 @@
                       <td>8th Position</td>
                       <td>Today</td>
                     </tr>
-                    <tr>
+                    <tr class="tb-row">
                       <td>
                         Dental Clinic Campaign found the keyword
                         <span class="td-bold">Dentist</span>
@@ -404,7 +404,7 @@
                       <td>8th Position</td>
                       <td>2 days ago</td>
                     </tr>
-                    <tr>
+                    <tr class="tb-row">
                       <td>
                         Dental Clinic Campaign found the keyword
                         <span class="td-bold">Dentist</span>
@@ -412,7 +412,7 @@
                       <td>8th Position</td>
                       <td>Today</td>
                     </tr>
-                    <tr>
+                    <tr class="tb-row">
                       <td>
                         Dental Clinic Campaign found the keyword
                         <span class="td-bold">Dentist</span>
@@ -420,7 +420,7 @@
                       <td>8th Position</td>
                       <td>Today</td>
                     </tr>
-                    <tr>
+                    <tr class="tb-row">
                       <td>
                         Dental Clinic Campaign found the keyword
                         <span class="td-bold">Dentist</span>
@@ -514,16 +514,16 @@
                 <img src="/assets/icons/close-outline.svg" />
               </button>
             </div>
-            <form class="add-project-form">
-              <div class="add-project-item">
+            <form class="the-project-form">
+              <div class="the-project-item-input">
                 <label for="projectName">Project Name</label>
                 <input required id="projectName" placeholder="Dentist Client" />
               </div>
-              <div class="add-project-item">
+              <div class="the-project-item-input">
                 <label for="description">Description</label>
-                <textarea required id="description" placeholder="Dentist Client"></textarea>
+                <textarea required id="description" placeholder="Enter Description"></textarea>
               </div>
-              <button>Continue</a>
+              <button type="button">Continue</a>
             </form>
           </div>
         </div>
