@@ -16,6 +16,8 @@
     <link href="/assets/css/font.css" rel="stylesheet" />
     <link href="/assets/css/dash/header.css" rel="stylesheet" />
     <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dash/project.css" rel="stylesheet" />
+    <link href="/assets/css/dash/settings.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -29,7 +31,7 @@
     </div>
     <!-- Loading Spinner End -->
 
-    <div id="content" style="display: none;">
+    <div id="content" style="display: none">
       <!-- Mobile Notification Start -->
       <div id="mobile-notification" class="mobile-notification">
         <div class="mobile-notification-wrapper">
@@ -127,12 +129,9 @@
               </button>
             </div>
             <nav class="moblie-nav">
-              <a
-                href="/dashboard/index.html"
-                class="nav-item-mobile active-nav-item-mobile"
-              >
+              <a href="/dashboard/index.html" class="nav-item-mobile">
                 <div class="nav-icon-mobile">
-                  <img src="/assets/icons/dashboard.svg" />
+                  <img src="/assets/icons/dashboard-inactive.svg" />
                 </div>
                 <p>dashboard</p>
               </a>
@@ -154,9 +153,9 @@
                 </div>
                 <p>my subscription</p>
               </a>
-              <a href="/dashboard/settings/general.html" class="nav-item-mobile">
+              <a href="/dashboard/settings/general.html" class="nav-item-mobile active-nav-item-mobile">
                 <div class="nav-icon-mobile">
-                  <img src="/assets/icons/settings.svg" />
+                  <img src="/assets/icons/settings-active.svg" />
                 </div>
                 <p>Settings</p>
               </a>
@@ -169,7 +168,7 @@
       </div>
       <!-- Mobile Navigation End -->
 
-      <div class="dash-container">
+      <div class="dash-container proje-container">
         <!-- Desktop Navigation Start -->
         <div>
           <div class="logo">
@@ -179,9 +178,9 @@
             <p>ctr flash</p>
           </div>
           <nav class="desktop-nav">
-            <a href="/dashboard/index.html" class="nav-item active-nav-item">
+            <a href="/dashboard/index.html" class="nav-item">
               <div class="nav-icon">
-                <img src="/assets/icons/dashboard.svg" />
+                <img src="/assets/icons/dashboard-inactive.svg" />
               </div>
               <p>dashboard</p>
             </a>
@@ -203,9 +202,9 @@
               </div>
               <p>my subscription</p>
             </a>
-            <a href="/dashboard/settings/general.html" class="nav-item">
+            <a href="/dashboard/settings/general.html" class="nav-item active-nav-item">
               <div class="nav-icon">
-                <img src="/assets/icons/settings.svg" />
+                <img src="/assets/icons/settings-active.svg" />
               </div>
               <p>Settings</p>
             </a>
@@ -215,7 +214,7 @@
 
         <div>
           <!-- Header Start -->
-          <header class="dash-head">
+          <header class="dash-head proj-header">
             <div class="dash-head-container">
               <div class="hamburger">
                 <span class="bar bar_home"></span>
@@ -317,222 +316,111 @@
           </header>
           <!-- Header End -->
 
-          <div class="dashboard-content">
+          <div class="dashboard-content settings-dashboard-content">
             <!-- DashBoard Title Start -->
-            <div class="dash-title">
+            <div class="dash-title sub-title">
               <div class="dash-title-inner">
-                <p>Dashboard</p>
-                <p>This is the overall view of everything on your account</p>
+                <p>Settings</p>
               </div>
-              <button class="openAddProjectDialogBtn">
-                <div class="add-icon">
-                  <img src="/assets/icons/circle-add.svg" />
-                </div>
-                <p>Add Project</p>
-              </button>
             </div>
             <!-- DashBoard Title End -->
 
-            <!-- DashBoard Card Start -->
-            <div class="dash-card-container">
-              <div class="dash-card">
-                <div class="dash-card-item">
-                  <div class="dash-card-icon-container">
-                    <img src="/assets/icons/micro-phone.svg" />
-                  </div>
-                  <p>Total Campaigns</p>
-                </div>
-                <p>120</p>
+            <div class="settings-wrapper">
+              <div class="settings-navigation">
+                <a
+                  class="active-settings-navigation"
+                  href="/dashboard/settings/general.html"
+                  >general</a
+                >
+                <a href="/dashboard/settings/billing-history.html">billing history</a>
+                <a href="/dashboard/settings/change-password.html">change password</a>
+                <button id="open-overlay-btn">logout</button>
               </div>
-
-              <div class="dash-card">
-                <div class="dash-card-item">
-                  <div class="dash-card-icon-container">
-                    <img src="/assets/icons/project-filled.svg" />
+              <div class="settings-nav-content">
+                <form class="personal-info-form">
+                  <div class="settings-img-upld">
+                    <div class="profile-image">
+                      <img id="display-image" src="" alt="Selected Image" />
+                    </div>
+                    <div>
+                      <div class="change-img-container">
+                        <p id="upload-img" class="upload-img">
+                          Change Profile Picture
+                        </p>
+                        <input
+                          type="file"
+                          id="file-input"
+                          accept=".jpeg, .jpg, .png"
+                          style="display: none"
+                        />
+                      </div>
+                      <p>JPEG, JPG, PNG</p>
+                    </div>
                   </div>
-                  <p>Total Projects</p>
-                </div>
-                <p>6</p>
-              </div>
-
-              <div class="dash-card">
-                <div class="dash-card-item">
-                  <div class="dash-card-icon-container">
-                    <img src="/assets/icons/symbol-keyword.svg" />
+                  <div class="personal-info-section">
+                    <div class="the-project-item-input personal-info-item">
+                      <label for="first-name">First Name</label>
+                      <input required id="first-name" placeholder="Victor" />
+                    </div>
+                    <div class="the-project-item-input personal-info-item">
+                      <label for="last-name">Last Name</label>
+                      <input required id="last-name" placeholder="Opulence" />
+                    </div>
                   </div>
-                  <p>Keywords</p>
-                </div>
-                <p>1,490</p>
+                  <div class="personal-info-section">
+                    <div class="the-project-item-input personal-info-item">
+                      <label for="email">Email</label>
+                      <input
+                        required
+                        id="email"
+                        placeholder="Example: xyz@gmail.com"
+                      />
+                    </div>
+                    <div class="the-project-item-input personal-info-item">
+                      <label for="phone-number">Phone Number</label>
+                      <input
+                        type="tel"
+                        required
+                        id="phone-number"
+                        placeholder="+2348123456789"
+                      />
+                    </div>
+                  </div>
+
+                  <button class="comm-btn-style form-info-btn">Save</button>
+                </form>
+            
               </div>
             </div>
-            <!-- Dashboard card end -->
-
-            <!-- DashBoard Table Start -->
-            <div class="activity-container">
-              <div class="activity-sect-one">
-                <div class="activity-header">
-                  <p>All Activities</p>
-                  <button class="header-button">
-                    <div class="header-img-cont">
-                      <img src="/assets/icons/filter.svg" />
-                    </div>
-                    <p>March 2024</p>
-                  </button>
-                </div>
-                <table>
-                  <thead class="t-head">
-                    <tr>
-                      <th>Campaign</th>
-                      <th style="width: 2000px" class="sec-tb-head">Ranks</th>
-                      <th>Date</th>
-                    </tr>
-                  </thead>
-                  <tbody class="t-body">
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>2 days ago</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="activity-sect-two">
-                <div class="activity-header activity-header-border">
-                  <p>All Keyword Ranks</p>
-                  <button class="header-button">
-                    <div class="header-img-cont">
-                      <img src="/assets/icons/filter.svg" />
-                    </div>
-                    <p>March 2024</p>
-                  </button>
-                </div>
-                <div class="activity-sect-two-inner-container">
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div>
-                        <img src="/assets/icons/arrow-trending-up.svg" />
-                      </div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div>
-                        <img src="/assets/icons/arrow-trending-up.svg" />
-                      </div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div>
-                        <img src="/assets/icons/arrow-trending-up.svg" />
-                      </div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- DashBoard Table End -->
           </div>
         </div>
       </div>
-      <div id="overlay" class="overlay">
-        <div class="add-project-dialog-wrapper">
-          <div class="add-project-dialog-container">
-            <div class="add-project-sectone">
-              <p>Create New Project</p>
-              <button id="closeAddProjectDialogBtn">
-                <img src="/assets/icons/close-outline.svg" />
-              </button>
+
+       <!-- Logout Overlay Start -->
+       <div id="overlay" class="overlay">
+        <div
+          id="overlay-dialog"
+          class="change-pass-dialog-container overlay-animate"
+        >
+          <form id="overlay-dialog" class="change-pass-dialog-wrapper">
+            <div>
+              <img src="/assets/icons/logout.svg" />
             </div>
-            <form class="the-project-form">
-              <div class="the-project-item-input">
-                <label for="projectName">Project Name</label>
-                <input required id="projectName" placeholder="Dentist Client" />
-              </div>
-              <div class="the-project-item-input">
-                <label for="description">Description</label>
-                <textarea required id="description" placeholder="Enter Description"></textarea>
-              </div>
-              <button type="button">Continue</a>
-            </form>
-          </div>
+            <p>Confirm Log Out?</p>
+            <p>Are you sure you want to log out? We would love you to stay</p>
+            <button>Logout</button>
+            <button id="close-overlay-btn" type="button">Cancel</button>
+          </form>
         </div>
       </div>
+      <!-- Logout Overlay End -->
+
       <div class="chat">
         <img src="/assets/icons/chat-line-linear.svg" />
       </div>
     </div>
     <script src="/assets/js/global.js"></script>
     <script src="/assets/js/dashboard/dashboard.js"></script>
+    <script src="/assets/js/dashboard/settings.js"></script>
   </body>
 </html>

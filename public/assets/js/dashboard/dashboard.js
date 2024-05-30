@@ -2,6 +2,11 @@ const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const mobileNavCloseBtn = document.querySelector(".btn-nav-close");
 
+function goBack() {
+  window.history.back();
+}
+
+
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");

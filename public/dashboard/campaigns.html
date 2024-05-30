@@ -135,28 +135,25 @@
                 </div>
                 <p>dashboard</p>
               </a>
-              <a
-                href="/dashboard/projects.html"
-                class="nav-item-mobile"
-              >
+              <a href="/dashboard/projects.html" class="nav-item-mobile">
                 <div class="nav-icon-mobile">
                   <img src="/assets/icons/projects.svg" />
                 </div>
                 <p>projects</p>
               </a>
-              <a href="#" class="nav-item-mobile active-nav-item-mobile">
+              <a href="/dashboard/campaigns.html" class="nav-item-mobile active-nav-item-mobile">
                 <div class="nav-icon-mobile">
                   <img src="/assets/icons/campaign-active.svg" />
                 </div>
                 <p>campaigns</p>
               </a>
-              <a href="#" class="nav-item-mobile">
+              <a href="/dashboard/subscription.html" class="nav-item-mobile">
                 <div class="nav-icon-mobile">
                   <img src="/assets/icons/subscription.svg" />
                 </div>
                 <p>my subscription</p>
               </a>
-              <a href="#" class="nav-item-mobile">
+              <a href="/dashboard/settings/general.html" class="nav-item-mobile">
                 <div class="nav-icon-mobile">
                   <img src="/assets/icons/settings.svg" />
                 </div>
@@ -164,11 +161,11 @@
               </a>
             </nav>
           </div>
-          <p class="mobile-nav-footer">
-            Saturday 23 Mar, 2024. 10:00am (GMT+1)
-          </p>
+          <p id="mobile-nav-footer" class="mobile-nav-footer">
+            
+      </p>
         </div>
-      </div>
+      </div> 
       <!-- Mobile Navigation End -->
 
       <div class="dash-container proje-container">
@@ -193,19 +190,22 @@
               </div>
               <p>projects</p>
             </a>
-            <a href="/dashboard/campaigns.html" class="nav-item active-nav-item">
+            <a
+              href="/dashboard/campaigns.html"
+              class="nav-item active-nav-item"
+            >
               <div class="nav-icon">
                 <img src="/assets/icons/campaign-active.svg" />
               </div>
               <p>campaigns</p>
             </a>
-            <a href="#" class="nav-item">
+            <a href="/dashboard/subscription.html" class="nav-item">
               <div class="nav-icon">
                 <img src="/assets/icons/subscription.svg" />
               </div>
               <p>my subscription</p>
             </a>
-            <a href="#" class="nav-item">
+            <a href="/dashboard/settings/general.html" class="nav-item">
               <div class="nav-icon">
                 <img src="/assets/icons/settings.svg" />
               </div>
@@ -226,7 +226,7 @@
               </div>
               <div class="dash-head-details">
                 <p>hello <span id="dashName">macdonald</span></p>
-                <p>Saturday 23 Mar, 2024. 10:00am (GMT+1)</p>
+                <p id="header-date-time">Saturday 23 Mar, 2024. 10:00am (GMT+1)</p>
               </div>
             </div>
 
@@ -319,7 +319,7 @@
           </header>
           <!-- Header End -->
 
-          <div class="dashboard-content">
+          <div class="dashboard-content campaign-content">
             <!-- DashBoard Title Start -->
             <div class="dash-title proj-title">
               <div class="dash-title-inner">
@@ -330,27 +330,98 @@
             <!-- DashBoard Title End -->
 
             <!-- Campaign Start -->
-            <div class="add-project-wrapper">
-             <div class="campaign-container">
+            <div class="add-project-wrapper cm-wrapper">
+              <!-- Item 1 Start -->
+              <div class="campaign-container">
                 <div class="campaign-inner-one">
-                    <div>
-                        <p>Dentist Client</p>
-                        <p>7 Active Campaigns</p>
+                  <div>
+                    <p>Dentist Client</p>
+                    <p>7 Active Campaigns</p>
+                  </div>
+                  <button>
+                    <div class="add-icon">
+                      <img src="/assets/icons/add-one-blue.svg" />
                     </div>
-                    <button>
-                        <div class="add-icon">
-                          <img src="/assets/icons/add-one-blue.svg" />
-                        </div>
-                        <p>Create Campaign</p>
-                      </button>
+                    <p>Create Campaign</p>
+                  </button>
                 </div>
                 <div class="campaign-inner-two">
-                    <div class="campaign-inner-two-sect">
-                        <div></div> <p>Bright Smile Clinic</p>
+                  <div class="campaign-inner-two-section">
+                    <div class="campaign-inner-two-wrapper">
+                      <div class="campaign-inner-two-item">
+                        <div class="campaign-active-indicator"></div>
+                        <p>Bright Smile Clinic</p>
+                      </div>
+                      <div class="campaign-inner-two-item">
+                        <div class="campaign-active-indicator"></div>
+                        <p>Teeth Whitening</p>
+                      </div>
+                      <div class="campaign-inner-two-item">
+                        <div class="campaign-active-indicator"></div>
+                        <p>Family Dental Care</p>
+                      </div>
+                      <div class="campaign-inner-two-item">
+                        <div class="campaign-active-indicator"></div>
+                        <p>Dental Health</p>
+                      </div>
+                      <div class="campaign-inner-two-item">
+                        <div class="campaign-not-active-indicator"></div>
+                        <p>New Patient Welcome</p>
+                      </div>
+                      <div class="campaign-inner-two-item">
+                        <div class="campaign-active-indicator"></div>
+                        <p>Community Outreach</p>
+                      </div>
                     </div>
+                    <a href="/dashboard/all-campaign.html">
+                      <img src="/assets/icons/arrow-right.svg" />
+                    </a>
+                  </div>
                 </div>
-             </div>
+              </div>
+              <!-- Item 1 End -->
 
+              <!-- Item 2 Start -->
+              <div class="campaign-container">
+                <div class="campaign-inner-one">
+                  <div>
+                    <p>Test1</p>
+                    <p>3 Active Campaigns</p>
+                  </div>
+                  <button>
+                    <div class="add-icon">
+                      <img src="/assets/icons/add-one-blue.svg" />
+                    </div>
+                    <p>Create Campaign</p>
+                  </button>
+                </div>
+                <div class="campaign-inner-two">
+                  <div class="campaign-inner-two-section">
+                    <div class="campaign-inner-two-wrapper">
+                      <div class="campaign-inner-two-item">
+                        <div class="campaign-active-indicator"></div>
+                        <p>Test Campaign</p>
+                      </div>
+                      <div class="campaign-inner-two-item">
+                        <div class="campaign-active-indicator"></div>
+                        <p>Teeth Whitening</p>
+                      </div>
+                      <div class="campaign-inner-two-item">
+                        <div class="campaign-not-active-indicator"></div>
+                        <p>Test Campaign</p>
+                      </div>
+                      <div class="campaign-inner-two-item">
+                        <div class="campaign-active-indicator"></div>
+                        <p>Community Outreach</p>
+                      </div>
+                    </div>
+                    <a href="/dashboard/all-campaign.html">
+                      <img src="/assets/icons/arrow-right.svg" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Item 2 End -->
             </div>
             <!-- Campaign End -->
           </div>
@@ -363,6 +434,5 @@
     </div>
     <script src="/assets/js/global.js"></script>
     <script src="/assets/js/dashboard/dashboard.js"></script>
-    <script src="/assets/js/dashboard/project.js"></script>
   </body>
 </html>

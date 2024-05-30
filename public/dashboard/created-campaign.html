@@ -134,18 +134,15 @@
                 </div>
                 <p>dashboard</p>
               </a>
-              <a
-                href="/dashboard/projects.html"
-                class="nav-item-mobile active-nav-item-mobile"
-              >
+              <a href="/dashboard/projects.html" class="nav-item-mobile">
                 <div class="nav-icon-mobile">
-                  <img src="/assets/icons/projects-active.svg" />
+                  <img src="/assets/icons/projects.svg" />
                 </div>
                 <p>projects</p>
               </a>
-              <a href="#" class="nav-item-mobile">
+              <a href="#" class="nav-item-mobile active-nav-item-mobile">
                 <div class="nav-icon-mobile">
-                  <img src="/assets/icons/campaign.svg" />
+                  <img src="/assets/icons/campaign-active.svg" />
                 </div>
                 <p>campaigns</p>
               </a>
@@ -155,7 +152,7 @@
                 </div>
                 <p>my subscription</p>
               </a>
-              <a href="#" class="nav-item-mobile">
+              <a href="/dashboard/settings/general.html" class="nav-item-mobile">
                 <div class="nav-icon-mobile">
                   <img src="/assets/icons/settings.svg" />
                 </div>
@@ -163,9 +160,9 @@
               </a>
             </nav>
           </div>
-          <p class="mobile-nav-footer">
-            Saturday 23 Mar, 2024. 10:00am (GMT+1)
-          </p>
+          <p id="mobile-nav-footer" class="mobile-nav-footer">
+            
+      </p>
         </div>
       </div>
       <!-- Mobile Navigation End -->
@@ -186,25 +183,28 @@
               </div>
               <p>dashboard</p>
             </a>
-            <a href="/dashboard/projects.html" class="nav-item active-nav-item">
+            <a href="/dashboard/projects.html" class="nav-item">
               <div class="nav-icon">
                 <img src="/assets/icons/projects-active.svg" />
               </div>
               <p>projects</p>
             </a>
-            <a href="/dashboard/campaigns.html" class="nav-item">
+            <a
+              href="/dashboard/campaigns.html"
+              class="nav-item active-nav-item"
+            >
               <div class="nav-icon">
-                <img src="/assets/icons/campaign.svg" />
+                <img src="/assets/icons/campaign-active.svg" />
               </div>
               <p>campaigns</p>
             </a>
-            <a href="#" class="nav-item">
+            <a href="/dashboard/subscription.html" class="nav-item">
               <div class="nav-icon">
                 <img src="/assets/icons/subscription.svg" />
               </div>
               <p>my subscription</p>
             </a>
-            <a href="#" class="nav-item">
+            <a href="/dashboard/settings/general.html" class="nav-item">
               <div class="nav-icon">
                 <img src="/assets/icons/settings.svg" />
               </div>
@@ -225,7 +225,7 @@
               </div>
               <div class="dash-head-details">
                 <p>hello <span id="dashName">macdonald</span></p>
-                <p>Saturday 23 Mar, 2024. 10:00am (GMT+1)</p>
+                <p id="header-date-time">Saturday 23 Mar, 2024. 10:00am (GMT+1)</p>
               </div>
             </div>
 
@@ -320,17 +320,17 @@
 
           <div class="dashboard-content">
             <p class="projec-detail-title">
-              <span> Projects</span> <span>/</span> <span>Dentist Client</span>
+              <span>Campaign </span> <span>/</span> <span>Dentist Client</span>
               <span>/</span>
               <span>Bright Smile Clinic</span>
             </p>
-            <a
-              href="/dashboard/created-campaign.html"
+            <button
+             onclick="goBack()"
               class="projec-detail-bk-btn"
             >
               <div><img src="/assets/icons/back-icon.svg" /></div>
               <p>Back</p>
-            </a>
+          </button>
             <div class="view-camp-details-container">
               <div class="camp-overview">
                 <div class="camp-overview-sect-one">
@@ -520,315 +520,346 @@
                         </button>
                       </div>
                       <div class="table-wrapper-outter">
-                      <table>
-                        <thead>
-                          <tr class="keywords-header-th">
-                            <th>Keywords</th>
-                            <th>Geolocation</th>
-                            <th>Search Interval</th>
-                            <th>Time</th>
-                          </tr>
-                        </thead>
-                        <tbody class="keywrd-tb-bdy">
-                          <tr>
-                            <td>Smile</td>
-                            <td>Nigeria (PH)</td>
-                            <td>1</td>
-                            <td>
-                              <div class="kewrd-time-conatiner">
-                                <p>1hr ago</p>
-                                <button class="info-button">
-                                  <img src="/assets/icons/vertical-fill.svg" />
-                                  <div id="overlayy" class="overlayy">
-                                    <div id="mobile-drawup" class="mobile-drawup">
-                                      <div></div>
-                                      <p>Smile Keyword</p>
-                                      <div class="mobile-tooltip">
-                                       <a href="/dashboard/campaign-keywords.html">
-                                         <div>
-                                           <img
-                                             src="/assets/icons/obscure-false.svg"
-                                           />
-                                         </div>
-                                         <p>View</p>
-                                        </a>
-                                       <a href="#">
-                                         <div>
-                                           <img
-                                             src="/assets/icons/edit-outline-gray.svg"
-                                           />
-                                         </div>
-                                         <p>Edit</p>
-                                        </a>
-                                       <a href="#">
-                                         <div>
-                                           <img
-                                             src="/assets/icons/delete-outline-gray.svg"
-                                           />
-                                         </div>
-                                         <p>Delete</p>
-                                        </a>
-                                     </div>
-                                     </div>
-                                </div>
-                                  
-                                
-                                  <div class="tooltip">
-                                    <a href="/dashboard/campaign-keywords.html">
-                                      <div>
-                                        <img
-                                          src="/assets/icons/obscure-false.svg"
-                                        />
+                        <table>
+                          <thead>
+                            <tr class="keywords-header-th">
+                              <th>Keywords</th>
+                              <th>Geolocation</th>
+                              <th>Search Interval</th>
+                              <th>Time</th>
+                            </tr>
+                          </thead>
+                          <tbody class="keywrd-tb-bdy">
+                            <tr>
+                              <td>Smile</td>
+                              <td>Nigeria (PH)</td>
+                              <td>1</td>
+                              <td>
+                                <div class="kewrd-time-conatiner">
+                                  <p>1hr ago</p>
+                                  <button class="info-button">
+                                    <img
+                                      src="/assets/icons/vertical-fill.svg"
+                                    />
+                                    <div id="overlayy" class="overlayy">
+                                      <div
+                                        id="mobile-drawup"
+                                        class="mobile-drawup"
+                                      >
+                                        <div></div>
+                                        <p>Smile Keyword</p>
+                                        <div class="mobile-tooltip">
+                                          <a
+                                            href="/dashboard/campaign-keywords.html"
+                                          >
+                                            <div>
+                                              <img
+                                                src="/assets/icons/obscure-false.svg"
+                                              />
+                                            </div>
+                                            <p>View</p>
+                                          </a>
+                                          <a href="#">
+                                            <div>
+                                              <img
+                                                src="/assets/icons/edit-outline-gray.svg"
+                                              />
+                                            </div>
+                                            <p>Edit</p>
+                                          </a>
+                                          <a href="#">
+                                            <div>
+                                              <img
+                                                src="/assets/icons/delete-outline-gray.svg"
+                                              />
+                                            </div>
+                                            <p>Delete</p>
+                                          </a>
+                                        </div>
                                       </div>
-                                      <p>View</p>
-                                     </a>
-                                    <a href="#">
-                                      <div>
-                                        <img
-                                          src="/assets/icons/edit-outline-gray.svg"
-                                        />
-                                      </div>
-                                      <p>Edit</p>
-                                     </a>
-                                    <a href="#">
-                                      <div>
-                                        <img
-                                          src="/assets/icons/delete-outline-gray.svg"
-                                        />
-                                      </div>
-                                      <p>Delete</p>
-                                     </a>
-                                  </div>
-                                </button>
-                              </div>
-                            </td>
-                          </tr>
+                                    </div>
 
+                                    <div class="tooltip">
+                                      <a
+                                        href="/dashboard/campaign-keywords.html"
+                                      >
+                                        <div>
+                                          <img
+                                            src="/assets/icons/obscure-false.svg"
+                                          />
+                                        </div>
+                                        <p>View</p>
+                                      </a>
+                                      <a href="#">
+                                        <div>
+                                          <img
+                                            src="/assets/icons/edit-outline-gray.svg"
+                                          />
+                                        </div>
+                                        <p>Edit</p>
+                                      </a>
+                                      <a href="#">
+                                        <div>
+                                          <img
+                                            src="/assets/icons/delete-outline-gray.svg"
+                                          />
+                                        </div>
+                                        <p>Delete</p>
+                                      </a>
+                                    </div>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
 
-                          <tr>
-                            <td>Dentist</td>
-                            <td>Nigeria (PH)</td>
-                            <td>1</td>
-                            <td>
-                              <div class="kewrd-time-conatiner">
-                                <p>1hr ago</p>
-                                <button class="info-button">
-                                  <img src="/assets/icons/vertical-fill.svg" />
-                                  <div id="overlayy" class="overlayy">
-                                    <div id="mobile-drawup" class="mobile-drawup">
-                                      <div></div>
-                                      <p><span>Dentist</span> Keyword</p>
-                                      <div class="mobile-tooltip">
-                                        <a href="/dashboard/campaign-keywords.html">
-                                          <div>
-                                            <img
-                                              src="/assets/icons/obscure-false.svg"
-                                            />
-                                          </div>
-                                          <p>View</p>
-                                         </a>
-                                        <a href="#">
-                                          <div>
-                                            <img
-                                              src="/assets/icons/edit-outline-gray.svg"
-                                            />
-                                          </div>
-                                          <p>Edit</p>
-                                         </a>
-                                        <a href="#">
-                                          <div>
-                                            <img
-                                              src="/assets/icons/delete-outline-gray.svg"
-                                            />
-                                          </div>
-                                          <p>Delete</p>
-                                         </a>
-                                     </div>
-                                     </div>
+                            <tr>
+                              <td>Dentist</td>
+                              <td>Nigeria (PH)</td>
+                              <td>1</td>
+                              <td>
+                                <div class="kewrd-time-conatiner">
+                                  <p>1hr ago</p>
+                                  <button class="info-button">
+                                    <img
+                                      src="/assets/icons/vertical-fill.svg"
+                                    />
+                                    <div id="overlayy" class="overlayy">
+                                      <div
+                                        id="mobile-drawup"
+                                        class="mobile-drawup"
+                                      >
+                                        <div></div>
+                                        <p><span>Dentist</span> Keyword</p>
+                                        <div class="mobile-tooltip">
+                                          <a
+                                            href="/dashboard/campaign-keywords.html"
+                                          >
+                                            <div>
+                                              <img
+                                                src="/assets/icons/obscure-false.svg"
+                                              />
+                                            </div>
+                                            <p>View</p>
+                                          </a>
+                                          <a href="#">
+                                            <div>
+                                              <img
+                                                src="/assets/icons/edit-outline-gray.svg"
+                                              />
+                                            </div>
+                                            <p>Edit</p>
+                                          </a>
+                                          <a href="#">
+                                            <div>
+                                              <img
+                                                src="/assets/icons/delete-outline-gray.svg"
+                                              />
+                                            </div>
+                                            <p>Delete</p>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="tooltip">
+                                      <a
+                                        href="/dashboard/campaign-keywords.html"
+                                      >
+                                        <div>
+                                          <img
+                                            src="/assets/icons/obscure-false.svg"
+                                          />
+                                        </div>
+                                        <p>View</p>
+                                      </a>
+                                      <a href="#">
+                                        <div>
+                                          <img
+                                            src="/assets/icons/edit-outline-gray.svg"
+                                          />
+                                        </div>
+                                        <p>Edit</p>
+                                      </a>
+                                      <a href="#">
+                                        <div>
+                                          <img
+                                            src="/assets/icons/delete-outline-gray.svg"
+                                          />
+                                        </div>
+                                        <p>Delete</p>
+                                      </a>
+                                    </div>
+                                  </button>
                                 </div>
-                                  
-                                
-                                  <div class="tooltip">
-                                    <a href="/dashboard/campaign-keywords.html">
-                                      <div>
-                                        <img
-                                          src="/assets/icons/obscure-false.svg"
-                                        />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Bright Smile</td>
+                              <td>Nigeria (PH)</td>
+                              <td>1</td>
+                              <td>
+                                <div class="kewrd-time-conatiner">
+                                  <p>1hr ago</p>
+                                  <button class="info-button">
+                                    <img
+                                      src="/assets/icons/vertical-fill.svg"
+                                    />
+                                    <div id="overlayy" class="overlayy">
+                                      <div
+                                        id="mobile-drawup"
+                                        class="mobile-drawup"
+                                      >
+                                        <div></div>
+                                        <p><span>Bright Smile</span> Keyword</p>
+                                        <div class="mobile-tooltip">
+                                          <a
+                                            href="/dashboard/campaign-keywords.html"
+                                          >
+                                            <div>
+                                              <img
+                                                src="/assets/icons/obscure-false.svg"
+                                              />
+                                            </div>
+                                            <p>View</p>
+                                          </a>
+                                          <a href="#">
+                                            <div>
+                                              <img
+                                                src="/assets/icons/edit-outline-gray.svg"
+                                              />
+                                            </div>
+                                            <p>Edit</p>
+                                          </a>
+                                          <a href="#">
+                                            <div>
+                                              <img
+                                                src="/assets/icons/delete-outline-gray.svg"
+                                              />
+                                            </div>
+                                            <p>Delete</p>
+                                          </a>
+                                        </div>
                                       </div>
-                                      <p>View</p>
-                                     </a>
-                                    <a href="#">
-                                      <div>
-                                        <img
-                                          src="/assets/icons/edit-outline-gray.svg"
-                                        />
-                                      </div>
-                                      <p>Edit</p>
-                                     </a>
-                                    <a href="#">
-                                      <div>
-                                        <img
-                                          src="/assets/icons/delete-outline-gray.svg"
-                                        />
-                                      </div>
-                                      <p>Delete</p>
-                                     </a>
-                                  </div>
-                                </button>
-                              </div>
-                            </td>
-                          </tr>                        
-                          <tr>
-                            <td>Bright Smile</td>
-                            <td>Nigeria (PH)</td>
-                            <td>1</td>
-                            <td>
-                              <div class="kewrd-time-conatiner">
-                                <p>1hr ago</p>
-                                <button class="info-button">
-                                  <img src="/assets/icons/vertical-fill.svg" />
-                                  <div id="overlayy" class="overlayy">
-                                    <div id="mobile-drawup" class="mobile-drawup">
-                                      <div></div>
-                                      <p><span>Bright Smile</span> Keyword</p>
-                                      <div class="mobile-tooltip">
-                                        <a href="/dashboard/campaign-keywords.html">
-                                          <div>
-                                            <img
-                                              src="/assets/icons/obscure-false.svg"
-                                            />
-                                          </div>
-                                          <p>View</p>
-                                         </a>
-                                        <a href="#">
-                                          <div>
-                                            <img
-                                              src="/assets/icons/edit-outline-gray.svg"
-                                            />
-                                          </div>
-                                          <p>Edit</p>
-                                         </a>
-                                        <a href="#">
-                                          <div>
-                                            <img
-                                              src="/assets/icons/delete-outline-gray.svg"
-                                            />
-                                          </div>
-                                          <p>Delete</p>
-                                         </a>
-                                     </div>
-                                     </div>
+                                    </div>
+
+                                    <div class="tooltip">
+                                      <a
+                                        href="/dashboard/campaign-keywords.html"
+                                      >
+                                        <div>
+                                          <img
+                                            src="/assets/icons/obscure-false.svg"
+                                          />
+                                        </div>
+                                        <p>View</p>
+                                      </a>
+                                      <a href="#">
+                                        <div>
+                                          <img
+                                            src="/assets/icons/edit-outline-gray.svg"
+                                          />
+                                        </div>
+                                        <p>Edit</p>
+                                      </a>
+                                      <a href="#">
+                                        <div>
+                                          <img
+                                            src="/assets/icons/delete-outline-gray.svg"
+                                          />
+                                        </div>
+                                        <p>Delete</p>
+                                      </a>
+                                    </div>
+                                  </button>
                                 </div>
-                                  
-                                
-                                  <div class="tooltip">
-                                    <a href="/dashboard/campaign-keywords.html">
-                                      <div>
-                                        <img
-                                          src="/assets/icons/obscure-false.svg"
-                                        />
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>Teeth</td>
+                              <td>Nigeria (PH)</td>
+                              <td>1</td>
+                              <td>
+                                <div class="kewrd-time-conatiner">
+                                  <p>1hr ago</p>
+                                  <button class="info-button">
+                                    <img
+                                      src="/assets/icons/vertical-fill.svg"
+                                    />
+                                    <div id="overlayy" class="overlayy">
+                                      <div
+                                        id="mobile-drawup"
+                                        class="mobile-drawup"
+                                      >
+                                        <div></div>
+                                        <p><span>Teeth</span> Keyword</p>
+                                        <div class="mobile-tooltip">
+                                          <a
+                                            href="/dashboard/campaign-keywords.html"
+                                          >
+                                            <div>
+                                              <img
+                                                src="/assets/icons/obscure-false.svg"
+                                              />
+                                            </div>
+                                            <p>View</p>
+                                          </a>
+                                          <a href="#">
+                                            <div>
+                                              <img
+                                                src="/assets/icons/edit-outline-gray.svg"
+                                              />
+                                            </div>
+                                            <p>Edit</p>
+                                          </a>
+                                          <a href="#">
+                                            <div>
+                                              <img
+                                                src="/assets/icons/delete-outline-gray.svg"
+                                              />
+                                            </div>
+                                            <p>Delete</p>
+                                          </a>
+                                        </div>
                                       </div>
-                                      <p>View</p>
-                                     </a>
-                                    <a href="#">
-                                      <div>
-                                        <img
-                                          src="/assets/icons/edit-outline-gray.svg"
-                                        />
-                                      </div>
-                                      <p>Edit</p>
-                                     </a>
-                                    <a href="#">
-                                      <div>
-                                        <img
-                                          src="/assets/icons/delete-outline-gray.svg"
-                                        />
-                                      </div>
-                                      <p>Delete</p>
-                                     </a>
-                                  </div>
-                                </button>
-                              </div>
-                            </td>
-                          </tr>
-                          
-                          <tr>
-                            <td>Teeth</td>
-                            <td>Nigeria (PH)</td>
-                            <td>1</td>
-                            <td>
-                              <div class="kewrd-time-conatiner">
-                                <p>1hr ago</p>
-                                <button class="info-button">
-                                  <img src="/assets/icons/vertical-fill.svg" />
-                                  <div id="overlayy" class="overlayy">
-                                    <div id="mobile-drawup" class="mobile-drawup">
-                                      <div></div>
-                                      <p><span>Teeth</span> Keyword</p>
-                                      <div class="mobile-tooltip">
-                                        <a href="/dashboard/campaign-keywords.html">
-                                          <div>
-                                            <img
-                                              src="/assets/icons/obscure-false.svg"
-                                            />
-                                          </div>
-                                          <p>View</p>
-                                         </a>
-                                        <a href="#">
-                                          <div>
-                                            <img
-                                              src="/assets/icons/edit-outline-gray.svg"
-                                            />
-                                          </div>
-                                          <p>Edit</p>
-                                         </a>
-                                        <a href="#">
-                                          <div>
-                                            <img
-                                              src="/assets/icons/delete-outline-gray.svg"
-                                            />
-                                          </div>
-                                          <p>Delete</p>
-                                         </a>
-                                     </div>
-                                     </div>
+                                    </div>
+
+                                    <div class="tooltip">
+                                      <a
+                                        href="/dashboard/campaign-keywords.html"
+                                      >
+                                        <div>
+                                          <img
+                                            src="/assets/icons/obscure-false.svg"
+                                          />
+                                        </div>
+                                        <p>View</p>
+                                      </a>
+                                      <a href="#">
+                                        <div>
+                                          <img
+                                            src="/assets/icons/edit-outline-gray.svg"
+                                          />
+                                        </div>
+                                        <p>Edit</p>
+                                      </a>
+                                      <a href="#">
+                                        <div>
+                                          <img
+                                            src="/assets/icons/delete-outline-gray.svg"
+                                          />
+                                        </div>
+                                        <p>Delete</p>
+                                      </a>
+                                    </div>
+                                  </button>
                                 </div>
-                                  
-                                
-                                  <div class="tooltip">
-                                    <a href="/dashboard/campaign-keywords.html">
-                                      <div>
-                                        <img
-                                          src="/assets/icons/obscure-false.svg"
-                                        />
-                                      </div>
-                                      <p>View</p>
-                                     </a>
-                                    <a href="#">
-                                      <div>
-                                        <img
-                                          src="/assets/icons/edit-outline-gray.svg"
-                                        />
-                                      </div>
-                                      <p>Edit</p>
-                                     </a>
-                                    <a href="#">
-                                      <div>
-                                        <img
-                                          src="/assets/icons/delete-outline-gray.svg"
-                                        />
-                                      </div>
-                                      <p>Delete</p>
-                                     </a>
-                                  </div>
-                                </button>
-                              </div>
-                            </td>
-                          </tr>
-                          <!-- Repeat for other rows -->
-                        </tbody>
-                      </table>
-                    </div>
+                              </td>
+                            </tr>
+                            <!-- Repeat for other rows -->
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
 
                     <div class="keywords-sect-one">

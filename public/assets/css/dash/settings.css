@@ -1,0 +1,405 @@
+.settings-dashboard-content {
+    padding-top: 40px;
+}
+
+.settings-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin-top: 24px;
+}
+
+.settings-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 204px;
+    border-radius: 20px;
+}
+
+.settings-navigation a, .settings-navigation button {
+    font-family: 'DMSans-Regular';
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 35px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: var(--custom-twenty-two);
+    padding-left: 20px;
+    font-size: 16px;
+    border-radius: 32px;
+    text-transform: capitalize;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.active-settings-navigation {
+    font-family: 'DMSans_18pt-Medium';
+    background-color: var(--primary-color) !important;
+    color: var(--custom-seven) !important;
+}
+
+.profile-image {
+    height: 64px;
+    width: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid var(--custom-eleven);
+    overflow: hidden;
+}
+
+.profile-image>img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.settings-nav-content {
+    flex: 1;
+}
+
+.upload-img {
+    font-size: 16px;
+    font-family: 'DMSans-Regular';
+    color: var(--tertiary-color);
+    text-decoration: underline;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.settings-img-upld>div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.settings-img-upld>div:nth-child(2)>p:last-child {
+    font-size: 14px;
+    font-family: 'DMSans-Regular';
+    color: var(--custom-six);
+    margin: 0px;
+}
+
+.settings-img-upld {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 39px;
+}
+
+.personal-info-section {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.personal-info-item {
+    flex: 1;
+}
+
+.personal-info-section>div:nth-child(2) {
+    margin-bottom: 16px;
+}
+
+.personal-info-form,
+.change-pass-form {
+    box-shadow: 0px 8px 16px -6px #18274B14, 0px 6px 8px -6px #18274B1F;
+    background-color: var(--custom-seven);
+    border-radius: 8px;
+    padding: 58px 32px;
+}
+
+.form-info-btn {
+    margin-top: 15px;
+}
+
+.billing-history-conatiner {
+    width: 100%;
+    flex: 1;
+    overflow-x: auto;
+}
+
+.bh-header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 40px;
+    width: 100%;
+    flex: 1;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.bh-header>p {
+    white-space: nowrap;
+}
+
+.billing-renew-conatiner {
+    margin-top: 0px;
+}
+
+.billing-renew-conatiner>p {
+    font-family: 'DMSans_18pt-Medium';
+
+}
+
+.bill-histry-row>td,
+.bill-histry-row>th {
+    color: var(--custom-five) !important
+}
+
+.bill-histry-bder {
+    border-bottom: 1px solid var(--custom-eleven);
+}
+
+
+tbody:before {
+    margin-top: 0;
+}
+
+.bill-histry-row>td {
+    padding-bottom: 16px;
+    padding-top: 16px;
+}
+
+.change-pass-tle {
+    font-size: 16px;
+    font-family: 'DMSans-Regular';
+    color: var(--custom-five);
+    margin: 0px;
+    padding-bottom: 40px;
+}
+
+.change-pass-item {
+    margin-bottom: 16px;
+}
+
+.change-pass-button {
+    margin-top: 34px;
+}
+
+.change-pass-form {
+    padding: 42px 32px;
+}
+
+.change-pass-dialog-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 18px 88px -4px #18274B24, 0px 8px 28px -6px #18274B1F;
+    background-color: white;
+    border-radius: 8px;
+    padding: 40px;
+    max-width: 400px;
+}
+
+.change-pass-dialog-wrapper>div:first-child {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--custom-twenty-five);
+    margin-bottom: 37px;
+}
+
+.change-pass-dialog-wrapper>div:first-child>img {
+    height: 64px;
+    width: 64px;
+}
+
+.change-pass-dialog-wrapper>p:nth-child(2) {
+    font-size: 24px;
+    font-family: 'DMSans_36pt-Bold';
+    margin: 0px;
+    color: black;
+}
+
+.change-pass-dialog-wrapper>p:nth-child(3) {
+    font-size: 16px;
+    font-family: 'DMSans-Regular';
+    margin: 0px;
+    color: var(--custom-six);
+    line-height: 25.6px;
+}
+
+.change-pass-dialog-wrapper>p {
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+
+.change-pass-dialog-wrapper>button {
+    height: 51px;
+    width: 100%;
+    border-radius: 32px;
+    font-size: 16px;
+    font-family: 'DMSans_18pt-Medium';
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.change-pass-dialog-wrapper>button:nth-child(4) {
+    background-color: var(--error-color-shade);
+    color: var(--error-color);
+    margin-bottom: 16px;
+}
+
+.change-pass-dialog-wrapper>button:nth-child(5) {
+    color: var(--custom-five);
+}
+
+@media only screen and (max-width: 1059px) {
+    .personal-info-section {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .settings-navigation {
+        width: 160px;
+    }
+
+    .dash-container>div:first-child {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        transform: scale(-1);
+    }
+
+    .personal-info-form {
+        height: 100%;
+        flex: 1;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    .change-pass-dialog-container,
+    .change-pass-dialog-wrapper {
+        padding:30px;
+    }
+
+    .settings-wrapper {
+        flex-direction: column;
+        gap: 52px;
+    }
+
+    .settings-navigation {
+        flex-direction: row;
+        gap: 8px;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .settings-navigation a, .settings-navigation button {
+        white-space: nowrap;
+        text-align: center;
+        padding-left: 0px;
+        justify-content: center;
+        width: max-content;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: var(--custom-ninteen);
+    }
+
+    .active-settings-navigation {
+        background-color: var(--primary-color) !important;
+        color: var(--custom-seven) !important;
+    }
+
+    .settings-dashboard-content {
+        padding-top: 27px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .change-pass-dialog-container,
+    .change-pass-dialog-wrapper {
+        padding: 16px;
+    }
+
+    .change-pass-dialog-wrapper>button {
+        height: 41px;
+        font-size: 14px;
+    }
+
+    .change-pass-dialog-wrapper>button:nth-child(4) {
+        margin-bottom: 8px;
+    }
+
+    .change-pass-dialog-wrapper>p:nth-child(2) {
+        font-size: 20px;
+        padding-bottom: 8px;
+    }
+
+    .change-pass-dialog-wrapper>p:nth-child(3) {
+        font-size: 12px;
+        line-height: 19.2px;
+    }
+
+    .change-pass-dialog-wrapper>div:first-child {
+        height: 80px;
+        width: 80px;
+        margin-bottom: 16px;
+    }
+
+    .change-pass-dialog-wrapper>div:first-child>img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .change-pass-form {
+        padding: 0px;
+    }
+
+    .change-pass-tle {
+        font-size: 14px;
+        padding-bottom: 24px;
+    }
+
+    .change-pass-button {
+        margin-top: 8;
+    }
+
+    .bh-header {
+        padding-right: 0px;
+    }
+
+    .settings-wrapper {
+        margin-top: 18px;
+    }
+
+    .personal-info-form {
+        padding: 0px;
+    }
+
+    .settings-dashboard-content,
+    .sub-title {
+        background-color: white;
+    }
+
+    .dash-title {
+        padding: 0px;
+    }
+
+    .dash-title-inner>p:nth-child(1) {
+        font-size: 20px;
+    }
+
+    .dashboard-content {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

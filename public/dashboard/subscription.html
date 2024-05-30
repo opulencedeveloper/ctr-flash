@@ -16,6 +16,7 @@
     <link href="/assets/css/font.css" rel="stylesheet" />
     <link href="/assets/css/dash/header.css" rel="stylesheet" />
     <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dash/project.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -29,7 +30,7 @@
     </div>
     <!-- Loading Spinner End -->
 
-    <div id="content" style="display: none;">
+    <div id="content" style="display: none">
       <!-- Mobile Notification Start -->
       <div id="mobile-notification" class="mobile-notification">
         <div class="mobile-notification-wrapper">
@@ -127,12 +128,9 @@
               </button>
             </div>
             <nav class="moblie-nav">
-              <a
-                href="/dashboard/index.html"
-                class="nav-item-mobile active-nav-item-mobile"
-              >
+              <a href="/dashboard/index.html" class="nav-item-mobile">
                 <div class="nav-icon-mobile">
-                  <img src="/assets/icons/dashboard.svg" />
+                  <img src="/assets/icons/dashboard-inactive.svg" />
                 </div>
                 <p>dashboard</p>
               </a>
@@ -148,9 +146,9 @@
                 </div>
                 <p>campaigns</p>
               </a>
-              <a href="/dashboard/subscription.html" class="nav-item-mobile">
+              <a href="/dashboard/subscription.html" class="nav-item-mobile  active-nav-item-mobile">
                 <div class="nav-icon-mobile">
-                  <img src="/assets/icons/subscription.svg" />
+                  <img src="/assets/icons/subscription-active.svg" />
                 </div>
                 <p>my subscription</p>
               </a>
@@ -169,7 +167,7 @@
       </div>
       <!-- Mobile Navigation End -->
 
-      <div class="dash-container">
+      <div class="dash-container proje-container">
         <!-- Desktop Navigation Start -->
         <div>
           <div class="logo">
@@ -179,9 +177,9 @@
             <p>ctr flash</p>
           </div>
           <nav class="desktop-nav">
-            <a href="/dashboard/index.html" class="nav-item active-nav-item">
+            <a href="/dashboard/index.html" class="nav-item">
               <div class="nav-icon">
-                <img src="/assets/icons/dashboard.svg" />
+                <img src="/assets/icons/dashboard-inactive.svg" />
               </div>
               <p>dashboard</p>
             </a>
@@ -191,15 +189,18 @@
               </div>
               <p>projects</p>
             </a>
-            <a href="/dashboard/campaigns.html" class="nav-item">
+            <a
+              href="/dashboard/campaigns.html"
+              class="nav-item"
+            >
               <div class="nav-icon">
                 <img src="/assets/icons/campaign.svg" />
               </div>
               <p>campaigns</p>
             </a>
-            <a href="/dashboard/subscription.html" class="nav-item">
+            <a href="/dashboard/subscription.html" class="nav-item active-nav-item">
               <div class="nav-icon">
-                <img src="/assets/icons/subscription.svg" />
+                <img src="/assets/icons/subscription-active.svg" />
               </div>
               <p>my subscription</p>
             </a>
@@ -215,7 +216,7 @@
 
         <div>
           <!-- Header Start -->
-          <header class="dash-head">
+          <header class="dash-head proj-header">
             <div class="dash-head-container">
               <div class="hamburger">
                 <span class="bar bar_home"></span>
@@ -319,220 +320,198 @@
 
           <div class="dashboard-content">
             <!-- DashBoard Title Start -->
-            <div class="dash-title">
+            <div class="dash-title sub-title">
               <div class="dash-title-inner">
-                <p>Dashboard</p>
-                <p>This is the overall view of everything on your account</p>
+                <p>Subscriptions</p>
+                <p>You are currently on free mode</p>
               </div>
-              <button class="openAddProjectDialogBtn">
-                <div class="add-icon">
-                  <img src="/assets/icons/circle-add.svg" />
-                </div>
-                <p>Add Project</p>
-              </button>
+              <p class="sub-expiry">
+                Expires: <span class="sub-expiry-date">30th April, 2025</span>
+              </p>
             </div>
             <!-- DashBoard Title End -->
 
-            <!-- DashBoard Card Start -->
-            <div class="dash-card-container">
-              <div class="dash-card">
-                <div class="dash-card-item">
-                  <div class="dash-card-icon-container">
-                    <img src="/assets/icons/micro-phone.svg" />
-                  </div>
-                  <p>Total Campaigns</p>
+            <!-- Subscription Cards Start -->
+            <div class="subscription-grid">
+              <div class="subscription-card">
+                <div><p>100 Credits</p></div>
+                <div><p>Free</p></div>
+
+                <div class="curr-sub">
+                  <div><img src="/assets/icons/lucide-check.svg" /></div>
+                  <p>Current Subscription</p>
                 </div>
-                <p>120</p>
+                <div class="sub-items">
+                  <div class="sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>Unlimited Campaigns</p>
+                  </div>
+                  <div class="sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>Unlimited Keywords</p>
+                  </div>
+                  <div class="sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>70 Seconds time on site</p>
+                  </div>
+                  <div class="sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>2 Page Views</p>
+                  </div>
+                  <div class="sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>City-Level Geotargeting</p>
+                  </div>
+                  <div class="sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>0% - 100% Bounce Rate</p>
+                  </div>
+                  <div class="sub-item">
+                    <div>
+                      <img src="/assets/icons/carbon-close.svg" />
+                    </div>
+                    <p>White Label Reports</p>
+                  </div>
+                </div>
               </div>
 
-              <div class="dash-card">
-                <div class="dash-card-item">
-                  <div class="dash-card-icon-container">
-                    <img src="/assets/icons/project-filled.svg" />
-                  </div>
-                  <p>Total Projects</p>
+              <div class="subscription-card">
+                <div><p>1500 Credits</p></div>
+
+                <div>
+                  <p>$50</p>
+                  <p>per Month</p>
                 </div>
-                <p>6</p>
+                <button class="sub-amt">
+                  <p>Subscribe</p>
+                </button>
+                <div class="sub-items">
+                  <div class="sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>Unlimited Campaigns</p>
+                  </div>
+                  <div class="sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>Unlimited Keywords</p>
+                  </div>
+                  <div class="sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>70 Seconds time on site</p>
+                  </div>
+                  <div class="sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>2 Page Views</p>
+                  </div>
+                  <div class="sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>City-Level Geotargeting</p>
+                  </div>
+                  <div class="sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>0% - 100% Bounce Rate</p>
+                  </div>
+                  <div class="sub-item">
+                    <div>
+                      <img src="/assets/icons/carbon-close.svg" />
+                    </div>
+                    <p>White Label Reports</p>
+                  </div>
+                </div>
               </div>
 
-              <div class="dash-card">
-                <div class="dash-card-item">
-                  <div class="dash-card-icon-container">
-                    <img src="/assets/icons/symbol-keyword.svg" />
-                  </div>
-                  <p>Keywords</p>
+              <div class="subscription-card recom-card">
+                <div>
+                  <p>5200 Credits</p>
+                  <p>Recommended</p>
                 </div>
-                <p>1,490</p>
+                <div>
+                  <p>$140</p>
+                  <p>per Month</p>
+                </div>
+                <button class="sub-amt">
+                  <p>Subscribe</p>
+                </button>
+                <div class="sub-items">
+                  <div class="sub-item recom-sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>Unlimited Campaigns</p>
+                  </div>
+                  <div class="sub-item recom-sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>Unlimited Keywords</p>
+                  </div>
+                  <div class="sub-item recom-sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>70 Seconds time on site</p>
+                  </div>
+                  <div class="sub-item recom-sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>2 Page Views</p>
+                  </div>
+                  <div class="sub-item recom-sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>City-Level Geotargeting</p>
+                  </div>
+                  <div class="sub-item recom-sub-item">
+                    <div>
+                      <img src="/assets/icons/green-check.svg" />
+                    </div>
+                    <p>0% - 100% Bounce Rate</p>
+                  </div>
+                  <div class="sub-item recom-sub-item">
+                    <div>
+                      <img src="/assets/icons/carbon-close.svg" />
+                    </div>
+                    <p>White Label Reports</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- Dashboard card end -->
-
-            <!-- DashBoard Table Start -->
-            <div class="activity-container">
-              <div class="activity-sect-one">
-                <div class="activity-header">
-                  <p>All Activities</p>
-                  <button class="header-button">
-                    <div class="header-img-cont">
-                      <img src="/assets/icons/filter.svg" />
-                    </div>
-                    <p>March 2024</p>
-                  </button>
-                </div>
-                <table>
-                  <thead class="t-head">
-                    <tr>
-                      <th>Campaign</th>
-                      <th style="width: 2000px" class="sec-tb-head">Ranks</th>
-                      <th>Date</th>
-                    </tr>
-                  </thead>
-                  <tbody class="t-body">
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>2 days ago</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="activity-sect-two">
-                <div class="activity-header activity-header-border">
-                  <p>All Keyword Ranks</p>
-                  <button class="header-button">
-                    <div class="header-img-cont">
-                      <img src="/assets/icons/filter.svg" />
-                    </div>
-                    <p>March 2024</p>
-                  </button>
-                </div>
-                <div class="activity-sect-two-inner-container">
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div>
-                        <img src="/assets/icons/arrow-trending-up.svg" />
-                      </div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div>
-                        <img src="/assets/icons/arrow-trending-up.svg" />
-                      </div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div>
-                        <img src="/assets/icons/arrow-trending-up.svg" />
-                      </div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- DashBoard Table End -->
+            <!-- Subscription Cards End -->
           </div>
         </div>
       </div>
-      <div id="overlay" class="overlay">
-        <div class="add-project-dialog-wrapper">
-          <div class="add-project-dialog-container">
-            <div class="add-project-sectone">
-              <p>Create New Project</p>
-              <button id="closeAddProjectDialogBtn">
-                <img src="/assets/icons/close-outline.svg" />
-              </button>
-            </div>
-            <form class="the-project-form">
-              <div class="the-project-item-input">
-                <label for="projectName">Project Name</label>
-                <input required id="projectName" placeholder="Dentist Client" />
-              </div>
-              <div class="the-project-item-input">
-                <label for="description">Description</label>
-                <textarea required id="description" placeholder="Enter Description"></textarea>
-              </div>
-              <button type="button">Continue</a>
-            </form>
-          </div>
-        </div>
-      </div>
+
       <div class="chat">
         <img src="/assets/icons/chat-line-linear.svg" />
       </div>
     </div>
     <script src="/assets/js/global.js"></script>
     <script src="/assets/js/dashboard/dashboard.js"></script>
+    <script src="/assets/js/dashboard/project.js"></script>
   </body>
 </html>

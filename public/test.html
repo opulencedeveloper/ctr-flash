@@ -1,70 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Select Dropdown</title>
-  <style>
-    /* Hide default arrow */
-    .custom-select-wrapper {
-      position: relative;
-      display: inline-block;
-      width: 200px; /* Adjust width as needed */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Table with Header</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-    .custom-select {
-      width:max-content;
-      padding: 0px;
-      font-size: 16px;
-      appearance: none; /* Remove default arrow */
-      background-color: #f0f0f0; /* Adjust background color */
-      border: 1px solid #ccc; /* Adjust border */
-      border-radius: 4px; /* Adjust border radius */
-      background-image: url('/assets/icons/arrow-trending-up.svg'); /* Path to your custom arrow image */
-      background-repeat: no-repeat;
-      background-position: right 10px center; /* Adjust position of the arrow */
-      background-size: 20px; /* Adjust size of the arrow */
-    }
+        thead tr {
+            display: flex;
+            justify-content: space-between;
+        }
 
-    .custom-select:focus {
-      outline: none;
-      border-color: #007bff; /* Adjust border color on focus */
-    }
+        tbody tr {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 200px;
+        }
 
-    /* Optional: Add custom styles for options */
-    .custom-select option {
-      padding: 0px;
-    }
+        th, td {
+            flex: 1;
+            padding: 10px;
+            text-align: left;
+        }
 
-    /* Media query for smaller screens */
-    @media (max-width: 600px) {
-      .custom-select {
-        font-size: 14px; /* Adjust font size for smaller screens */
-      }
-    }
-  </style>
+        tbody tr:not(:last-child) td {
+            border-bottom: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-  <div class="custom-select-wrapper">
-    <select class="custom-select">
-      <option value="option1">Option 1</option>
-      <option value="option2">Option 233344488888888888884</option>
-      <option value="option3">Option 3</option>
-      <option value="option4">Option 4</option>
-    </select>
-  </div>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const customSelect = document.querySelector('.custom-select');
-      
-      customSelect.addEventListener('focus', function() {
-        this.classList.add('focused');
-      });
-      
-      customSelect.addEventListener('blur', function() {
-        this.classList.remove('focused');
-      });
-    });
-  </script>
-</body>
-</html>
+    <table>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 3, 

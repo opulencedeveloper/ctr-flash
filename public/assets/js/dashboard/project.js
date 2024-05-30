@@ -10,7 +10,10 @@ includeProjectButton.addEventListener("click", () => {
       );
       mobileNotification.classList.add("fadeOut");
       addProjectContainer.style.display = "none";
-      activeProjectTle.style.display = "block";
+      if(activeProjectTle) {
+        activeProjectTle.style.display = "block";
+      }
+      
   
       
   

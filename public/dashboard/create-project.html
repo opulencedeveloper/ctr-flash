@@ -16,6 +16,7 @@
     <link href="/assets/css/font.css" rel="stylesheet" />
     <link href="/assets/css/dash/header.css" rel="stylesheet" />
     <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dash/project.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -29,7 +30,7 @@
     </div>
     <!-- Loading Spinner End -->
 
-    <div id="content" style="display: none;">
+    <div id="content" style="display: none">
       <!-- Mobile Notification Start -->
       <div id="mobile-notification" class="mobile-notification">
         <div class="mobile-notification-wrapper">
@@ -127,24 +128,24 @@
               </button>
             </div>
             <nav class="moblie-nav">
-              <a
-                href="/dashboard/index.html"
-                class="nav-item-mobile active-nav-item-mobile"
-              >
+              <a href="/dashboard/index.html" class="nav-item-mobile">
                 <div class="nav-icon-mobile">
-                  <img src="/assets/icons/dashboard.svg" />
+                  <img src="/assets/icons/dashboard-inactive.svg" />
                 </div>
                 <p>dashboard</p>
               </a>
-              <a href="/dashboard/projects.html" class="nav-item-mobile">
+              <a
+                href="/dashboard/projects.html"
+                class="nav-item-mobile"
+              >
                 <div class="nav-icon-mobile">
                   <img src="/assets/icons/projects.svg" />
                 </div>
                 <p>projects</p>
               </a>
-              <a href="/dashboard/campaigns.html" class="nav-item-mobile">
+              <a href="#" class="nav-item-mobile active-nav-item-mobile">
                 <div class="nav-icon-mobile">
-                  <img src="/assets/icons/campaign.svg" />
+                  <img src="/assets/icons/campaign-active.svg" />
                 </div>
                 <p>campaigns</p>
               </a>
@@ -169,7 +170,7 @@
       </div>
       <!-- Mobile Navigation End -->
 
-      <div class="dash-container">
+      <div class="dash-container proje-container">
         <!-- Desktop Navigation Start -->
         <div>
           <div class="logo">
@@ -179,9 +180,9 @@
             <p>ctr flash</p>
           </div>
           <nav class="desktop-nav">
-            <a href="/dashboard/index.html" class="nav-item active-nav-item">
+            <a href="/dashboard/index.html" class="nav-item">
               <div class="nav-icon">
-                <img src="/assets/icons/dashboard.svg" />
+                <img src="/assets/icons/dashboard-inactive.svg" />
               </div>
               <p>dashboard</p>
             </a>
@@ -191,9 +192,9 @@
               </div>
               <p>projects</p>
             </a>
-            <a href="/dashboard/campaigns.html" class="nav-item">
+            <a href="/dashboard/campaigns.html" class="nav-item active-nav-item">
               <div class="nav-icon">
-                <img src="/assets/icons/campaign.svg" />
+                <img src="/assets/icons/campaign-active.svg" />
               </div>
               <p>campaigns</p>
             </a>
@@ -215,7 +216,7 @@
 
         <div>
           <!-- Header Start -->
-          <header class="dash-head">
+          <header class="dash-head proj-header">
             <div class="dash-head-container">
               <div class="hamburger">
                 <span class="bar bar_home"></span>
@@ -319,10 +320,10 @@
 
           <div class="dashboard-content">
             <!-- DashBoard Title Start -->
-            <div class="dash-title">
+            <div class="dash-title proj-title">
               <div class="dash-title-inner">
-                <p>Dashboard</p>
-                <p>This is the overall view of everything on your account</p>
+                <p>My Campaigns</p>
+                <p><span class="project-amt">0 </span>active campaigns from 0 projects</p>
               </div>
               <button class="openAddProjectDialogBtn">
                 <div class="add-icon">
@@ -333,178 +334,72 @@
             </div>
             <!-- DashBoard Title End -->
 
-            <!-- DashBoard Card Start -->
-            <div class="dash-card-container">
-              <div class="dash-card">
-                <div class="dash-card-item">
-                  <div class="dash-card-icon-container">
-                    <img src="/assets/icons/micro-phone.svg" />
+            <!-- Create Project Start -->
+            <div class="add-project-wrapper">
+              <!-- Empty Project State Start -->
+              <div class="add-project-container create-new-pj-container">
+                <p>You would need to create a project first</p>
+                <button class="openAddProjectDialogBtnII">
+                  <div class="add-icon">
+                    <img src="/assets/icons/circle-add.svg" />
                   </div>
-                  <p>Total Campaigns</p>
-                </div>
-                <p>120</p>
+                  <p>Create Project</p>
+                </button>
               </div>
+              <!-- Empty Project State End -->
 
-              <div class="dash-card">
-                <div class="dash-card-item">
-                  <div class="dash-card-icon-container">
-                    <img src="/assets/icons/project-filled.svg" />
+              <div id="added-project-container" class="added-project-container">
+                <div class="added-project-item">
+                  <div>dc</div>
+                  <p>Dentist Client</p>
+                  <p>
+                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
+                    soplasade båmånat.
+                  </p>
+                  <div class="added-project-button-wrapper">
+                    <a href="/dashboard/project-details.html">View Project</a>
                   </div>
-                  <p>Total Projects</p>
                 </div>
-                <p>6</p>
-              </div>
-
-              <div class="dash-card">
-                <div class="dash-card-item">
-                  <div class="dash-card-icon-container">
-                    <img src="/assets/icons/symbol-keyword.svg" />
+                <div class="added-project-item">
+                  <div>dc</div>
+                  <p>Dentist Client</p>
+                  <p>
+                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
+                    soplasade båmånat.
+                  </p>
+                  <div class="added-project-button-wrapper">
+                    <a href="/dashboard/project-details.html">View Project</a>
                   </div>
-                  <p>Keywords</p>
                 </div>
-                <p>1,490</p>
-              </div>
-            </div>
-            <!-- Dashboard card end -->
-
-            <!-- DashBoard Table Start -->
-            <div class="activity-container">
-              <div class="activity-sect-one">
-                <div class="activity-header">
-                  <p>All Activities</p>
-                  <button class="header-button">
-                    <div class="header-img-cont">
-                      <img src="/assets/icons/filter.svg" />
-                    </div>
-                    <p>March 2024</p>
-                  </button>
+                <div class="added-project-item">
+                  <div>dc</div>
+                  <p>Dentist Client</p>
+                  <p>
+                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
+                    soplasade båmånat.
+                  </p>
+                  <div class="added-project-button-wrapper">
+                    <a href="/dashboard/project-details.html">View Project</a>
+                  </div>
                 </div>
-                <table>
-                  <thead class="t-head">
-                    <tr>
-                      <th>Campaign</th>
-                      <th style="width: 2000px" class="sec-tb-head">Ranks</th>
-                      <th>Date</th>
-                    </tr>
-                  </thead>
-                  <tbody class="t-body">
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>2 days ago</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="activity-sect-two">
-                <div class="activity-header activity-header-border">
-                  <p>All Keyword Ranks</p>
-                  <button class="header-button">
-                    <div class="header-img-cont">
-                      <img src="/assets/icons/filter.svg" />
-                    </div>
-                    <p>March 2024</p>
-                  </button>
-                </div>
-                <div class="activity-sect-two-inner-container">
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div>
-                        <img src="/assets/icons/arrow-trending-up.svg" />
-                      </div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div>
-                        <img src="/assets/icons/arrow-trending-up.svg" />
-                      </div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div>
-                        <img src="/assets/icons/arrow-trending-up.svg" />
-                      </div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
+                <div class="added-project-item">
+                  <div>dc</div>
+                  <p>Dentist Client</p>
+                  <p>
+                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
+                    soplasade båmånat.
+                  </p>
+                  <div class="added-project-button-wrapper">
+                    <a href="/dashboard/project-details.html">View Project</a>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- DashBoard Table End -->
+            <!-- Create Project End -->
           </div>
         </div>
       </div>
+      <!-- Create New Project Overlay Start -->
       <div id="overlay" class="overlay">
         <div class="add-project-dialog-wrapper">
           <div class="add-project-dialog-container">
@@ -521,18 +416,25 @@
               </div>
               <div class="the-project-item-input">
                 <label for="description">Description</label>
-                <textarea required id="description" placeholder="Enter Description"></textarea>
+                <textarea
+                  required
+                  id="description"
+                  placeholder="Enter Description"
+                ></textarea>
               </div>
-              <button type="button">Continue</a>
+              <button id="includeProjectButton" type="button">Continue</button>
             </form>
           </div>
         </div>
       </div>
+      <!-- Create New Project Overlay End -->
+
       <div class="chat">
         <img src="/assets/icons/chat-line-linear.svg" />
       </div>
     </div>
     <script src="/assets/js/global.js"></script>
     <script src="/assets/js/dashboard/dashboard.js"></script>
+    <script src="/assets/js/dashboard/project.js"></script>
   </body>
 </html>
