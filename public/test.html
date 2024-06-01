@@ -3,55 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styled Table with Header</title>
+    <title>Animated Accordion with Rotating Icon</title>
     <style>
-        table {
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .accordion {
+            max-width: 600px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             width: 100%;
-            border-collapse: collapse;
-        }
-
-        thead tr {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        tbody tr {
-            display: flex;
-            justify-content: space-between;
-            margin-left: 20px;
-            margin-right: 200px;
-        }
-
-        th, td {
-            flex: 1;
-            padding: 10px;
+            background: #f7f7f7;
+            border: none;
+            padding: 15px;
             text-align: left;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            transition: background 0.3s;
         }
 
-        tbody tr:not(:last-child) td {
-            border-bottom: 1px solid black;
+        .accordion-button:hover {
+            background: #e7e7e7;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease-out;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            background: white;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .accordion-content p {
+            margin: 0;
+            padding: 15px;
+        }
+
+        .accordion-content.show {
+            max-height: 200px; /* Adjust this value based on your content height */
+        }
+
+        .accordion-button.active .accordion-icon {
+            transform: rotate(180deg);
         }
     </style>
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Header 1</th>
-                <th>Header 2</th>
-                <th>Header 3</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Row 1, Cell 1</td>
-                <td>Row 1, Cell 2</td>
-                <td>Row 1, Cell 3</td>
-            </tr>
-            <tr>
-                <td>Row 2, Cell 1</td>
-                <td>Row 2, Cell 2</td>
-                <td>Row 2, Cell 3</td>
-            </tr>
-            <tr>
-                <td>Row 3, 
+    <div class="accordion">
+        <div class="accordion-item">
+            <button class="accordion-button">
+                Section 1
+                <span class="accordion-icon">&#9660;</span> <!-- Down arrow icon -->
+            </button>
+            <div class="accordion-content">
+                <p>Content for section 1.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">
+                Section 2
+                <span class="accordion-icon">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                <p>Content for section 2.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <button class="accordion-button">
+                Section 3
+                <span class="accordion-icon">&#9660;</span>
+            </button>
+            <div class="accordion-content">
+                <p>Content for section 3.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+
+                    // Toggle the display of the content with animation
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        this.classList.remove('active');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        this.classList.add('active');
+                    }
+
+                    // Close other open accordion contents and reset icons
+                    accordionButtons.forEach(otherButton => {
+                        if (otherButton !== this) {
+                            const otherContent = otherButton.nextElementSibling;
+                            otherContent.style.maxHeight = null;
+                            otherButton.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

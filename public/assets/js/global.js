@@ -10,9 +10,9 @@ window.addEventListener("load", function () {
 });
 
 if (overlay) {
-    openOverLayBtn.addEventListener("click", () => {
-        overlay.style.display = "flex";
-    });
+  openOverLayBtn.addEventListener("click", () => {
+    overlay.style.display = "flex";
+  });
 
   closeOverLayBtn.addEventListener("click", () => {
     overlayDialog.classList.add("fadeOut");
@@ -28,31 +28,34 @@ if (overlay) {
   });
 }
 
-
-
-
 function getFormattedDateTime() {
-  const date = new Date(); 
+  const date = new Date();
 
-  const options = { weekday: 'long', day: 'numeric', month: 'short' };
-  const formattedDate = new Intl.DateTimeFormat('en-GB', options).format(date);
+  const options = { weekday: "long", day: "numeric", month: "short" };
+  const formattedDate = new Intl.DateTimeFormat("en-GB", options).format(date);
 
   const year = date.getFullYear();
 
   const hours = date.getHours();
-  const minutes = date.getMinutes().toString().padStart(2, '0');
-  const period = hours >= 12 ? 'pm' : 'am';
-  const formattedHours = (hours % 12) || 12;
+  const minutes = date.getMinutes().toString().padStart(2, "0");
+  const period = hours >= 12 ? "pm" : "am";
+  const formattedHours = hours % 12 || 12;
   const formattedTime = `${formattedHours}:${minutes}${period}`;
 
   const timezoneOffset = -date.getTimezoneOffset() / 60;
-  const timezoneString = `GMT${timezoneOffset >= 0 ? '+' : ''}${timezoneOffset}`;
+  const timezoneString = `GMT${
+    timezoneOffset >= 0 ? "+" : ""
+  }${timezoneOffset}`;
 
   const formattedDateTime = `${formattedDate}, ${year}. ${formattedTime} (${timezoneString})`;
 
   return formattedDateTime;
 }
-
-document.getElementById('mobile-nav-footer').textContent = getFormattedDateTime();
-document.getElementById('header-date-time').textContent = getFormattedDateTime();
-
+var mobileNavDateTime = document.getElementById("mobile-nav-footer");
+var desktopNavDateTime = document.getElementById("header-date-time");
+if (mobileNavDateTime) {
+  mobileNavDateTime.textContent = getFormattedDateTime();
+}
+if (desktopNavDateTime) {
+  desktopNavDateTime.textContent = getFormattedDateTime();
+}
