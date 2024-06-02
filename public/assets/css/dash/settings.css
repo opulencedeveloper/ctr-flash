@@ -266,6 +266,7 @@ tbody:before {
 
     .settings-navigation {
         width: 160px;
+        border-radius: 0px;
     }
 
     .dash-container>div:first-child {
