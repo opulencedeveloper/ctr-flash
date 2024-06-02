@@ -301,6 +301,9 @@ tbody:before {
         width: 100%;
         overflow-x: auto;
     }
+    .settings-navigation::-webkit-scrollbar {
+        display: none;
+    }
 
     .settings-navigation a, .settings-navigation button {
         white-space: nowrap;
