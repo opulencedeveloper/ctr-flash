@@ -88,19 +88,49 @@
     <!-- Loading Spinner End -->
 
     <div id="content" style="display: none">
+      <!-- Mobile Navigation Start -->
+      <div class="nav-menu">
+        <div class="nav-menu-inner">
+          <div>
+            <div class="mobile-logo">
+              <img src="assets/logo/ctr-logo.svg" />
+              <p>ctr flash</p>
+            </div>
+
+            <div class="hamburger-2">
+              <span class="bar bar_home"></span>
+              <span class="bar bar_home"></span>
+              <span class="bar bar_home"></span>
+            </div>
+          </div>
+          <nav>
+            <a class="active-nav-item" href="/products.html">Products</a>
+            <a href="/pricing.html">Pricing</a>
+            <a href="/contact.html">Contact</a>
+          </nav>
+          <a href="/signin.html">Sign In</a>
+          <a href="/signup.html">Get Started</a>
+        </div>
+      </div>
+      <!-- Mobile Navigation End -->
       <header class="header-container header-container-bg-2">
         <!-- Header Start -->
         <div>
           <div class="logo-container">
-            <div class="logo">
+            <a href="/" class="logo">
               <img src="assets/logo/ctr-logo.svg" />
               <p>ctr flash</p>
-            </div>
+            </a>
             <nav>
-              <a href="#">Products</a>
-              <a href="#">Pricing</a>
-              <a href="#">Contact</a>
+              <a class="active-nav-item" href="/products.html">Products</a>
+              <a href="/pricing.html">Pricing</a>
+              <a href="/contact.html">Contact</a>
             </nav>
+          </div>
+          <div class="hamburger">
+            <span class="bar bar_home"></span>
+            <span class="bar bar_home"></span>
+            <span class="bar bar_home"></span>
           </div>
           <div class="auth-container">
             <a href="/signin.html">Sign in</a>
@@ -111,7 +141,7 @@
 
         <!-- Hero Start -->
         <div class="products-header">
-          <div class="products-header-innner">
+          <div class="products-header-innner box animation4">
             <p>The most advanced CTR Platform</p>
             <p>
               Rise the ranks on search engines with undetectable human-like
@@ -123,9 +153,90 @@
         <!-- Hero End -->
       </header>
 
+      <!-- Features Start -->
+      <div class="product-features-wrapper">
+        <div class="features-header box animation1">
+          <p>A comprehensive array of features</p>
+          <p>
+            See why CTR Flash is the most used CTR service platform in the
+            world.
+          </p>
+        </div>
+
+        <div class="product-features-grid box animation1">
+          <!-- Features Item Start -->
+          <div class="product-features-grid-item">
+            <div><img src="/assets/icons/campaign-active.svg" /></div>
+            <p>Unlimited Campaigns</p>
+            <p>
+              Enhance your online presence in your target region by leveraging
+              insights and data-driven recommendations to optimize your local
+              SEO efforts.
+            </p>
+          </div>
+          <!-- Features Item End -->
+          <!-- Features Item Start -->
+          <div class="product-features-grid-item">
+            <div><img src="/assets/icons/symbol-keyword.svg" /></div>
+            <p>Unlimited Number of Keywords</p>
+            <p>
+              Enhance your online presence in your target region by leveraging
+              insights and data-driven recommendations to optimize your local
+              SEO efforts.
+            </p>
+          </div>
+          <!-- Features Item End -->
+          <!-- Features Item Start -->
+          <div class="product-features-grid-item">
+            <div><img src="/assets/icons/campaign-active.svg" /></div>
+            <p>Trackable on Analytics</p>
+            <p>
+              Enhance your online presence in your target region by leveraging
+              insights and data-driven recommendations to optimize your local
+              SEO efforts.
+            </p>
+          </div>
+          <!-- Features Item End -->
+          <!-- Features Item Start -->
+          <div class="product-features-grid-item">
+            <div><img src="/assets/icons/campaign-active.svg" /></div>
+            <p>Human-like Actions</p>
+            <p>
+              Enhance your online presence in your target region by leveraging
+              insights and data-driven recommendations to optimize your local
+              SEO efforts.
+            </p>
+          </div>
+          <!-- Features Item End -->
+          <!-- Features Item Start -->
+          <div class="product-features-grid-item">
+            <div><img src="/assets/icons/campaign-active.svg" /></div>
+            <p>Geotargeted Clicks</p>
+            <p>
+              Enhance your online presence in your target region by leveraging
+              insights and data-driven recommendations to optimize your local
+              SEO efforts.
+            </p>
+          </div>
+          <!-- Features Item End -->
+          <!-- Features Item Start -->
+          <div class="product-features-grid-item">
+            <div><img src="/assets/icons/campaign-active.svg" /></div>
+            <p>Organic Search</p>
+            <p>
+              Enhance your online presence in your target region by leveraging
+              insights and data-driven recommendations to optimize your local
+              SEO efforts.
+            </p>
+          </div>
+          <!-- Features Item End -->
+        </div>
+      </div>
+      <!-- Featues End -->
+
       <!-- Banner Start -->
       <div class="banner-wrapper">
-        <div class="banner-container">
+        <div class="banner-container box animation2">
           <p>Millions of users trust CTR Flash. You can too.</p>
           <a href="/signup.html">Get Started</a>
         </div>
@@ -134,7 +245,7 @@
 
       <!-- FAGS Start -->
       <div class="fags-wrapper">
-        <div class="fags-container">
+        <div class="fags-container box animation1">
           <p>Frequently Asked Questions</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
           <div class="all-fags">
@@ -217,7 +328,7 @@
       <div class="wct-wrapper">
         <div class="wct-container">
           <div class="wct-header">
-            <div class="wct-header-inner-one">
+            <div class="wct-header-inner-one box animation2">
               <p>What Our Customers Say</p>
               <p>
                 Don't just take our word for it - see what actual users of our
@@ -329,7 +440,7 @@
       <!-- Newsletter Start -->
       <div class="newsletter-wrapper">
         <div class="newsletter-container">
-          <div class="news-letter-img">guuu</div>
+          <div class="news-letter-img"><img src="/assets/images/news-letter.svg"/></div>
           <form class="news-letter-form">
             <p>Sign up to our Newsletter</p>
             <p>Get important messages straight to your inbox</p>
@@ -369,7 +480,10 @@
             <a href="#">Privacy Policy</a>
           </div>
         </div>
-        <p class="footer-btm-txt">Copyright 2024 All Rights Reserved</p>
+        <p class="footer-btm-txt">
+          Copyright <span id="footerYear"></span> All Rights ReservedCopyright
+          2024 All Rights Reserved
+        </p>
       </footer>
     </div>
     <script src="/assets/js/global.js"></script>

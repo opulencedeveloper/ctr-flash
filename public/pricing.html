@@ -88,19 +88,49 @@
     <!-- Loading Spinner End -->
 
     <div id="content" style="display: none">
+        <!-- Mobile Navigation Start -->
+        <div class="nav-menu">
+          <div class="nav-menu-inner">
+            <div>
+              <div class="mobile-logo">
+                <img src="assets/logo/ctr-logo.svg" />
+                <p>ctr flash</p>
+              </div>
+  
+              <div class="hamburger-2">
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+              </div>
+            </div>
+            <nav>
+              <a href="/products.html">Products</a>
+              <a class="active-nav-item" href="/pricing.html">Pricing</a>
+              <a href="/contact.html">Contact</a>
+            </nav>
+            <a href="/signin.html">Sign In</a>
+            <a href="/signup.html">Get Started</a>
+          </div>
+        </div>
+        <!-- Mobile Navigation End -->
       <header class="other-header-container">
         <!-- Header Start -->
         <div>
           <div class="logo-container">
-            <div class="logo">
+            <a href="/" class="logo">
               <img src="assets/logo/ctr-logo.svg" />
               <p>ctr flash</p>
-            </div>
+            </a>
             <nav>
-              <a href="#">Products</a>
-              <a href="#">Pricing</a>
-              <a href="#">Contact</a>
+              <a href="/products.html">Products</a>
+              <a class="active-nav-item" href="/pricing.html">Pricing</a>
+              <a href="/contact.html">Contact</a>
             </nav>
+          </div>
+          <div class="hamburger">
+            <span class="bar bar_home"></span>
+            <span class="bar bar_home"></span>
+            <span class="bar bar_home"></span>
           </div>
           <div class="auth-container">
             <a href="/signin.html">Sign in</a>
@@ -111,7 +141,7 @@
 
         <!-- Hero Start -->
         <div class="landing-pricing-container">
-          <div class="landing-pricing-sectone">
+          <div class="landing-pricing-sectone box animation4">
             <p>Choose The Perfect Plan For Your Needs.</p>
             <p>
               Have a look at our various packages. We have options of for
@@ -120,7 +150,7 @@
           </div>
           <!-- Subscription Cards Start -->
           <div class="landing-subscription-grid">
-            <div class="landing-subscription-card">
+            <div class="landing-subscription-card box animation1">
               <div><p>100 Credits</p></div>
               <div><p>Free</p></div>
 
@@ -174,7 +204,7 @@
               </div>
             </div>
 
-            <div class="landing-subscription-card">
+            <div class="landing-subscription-card box animation2">
               <div><p>1500 Credits</p></div>
 
               <div>
@@ -230,7 +260,7 @@
               </div>
             </div>
 
-            <div class="landing-subscription-card landing-recom-card">
+            <div class="landing-subscription-card landing-recom-card box animation3">
               <div>
                 <p>5200 Credits</p>
                 <p>Recommended</p>
@@ -295,7 +325,7 @@
 
       <!-- FAGS Start -->
       <div class="fags-wrapper">
-        <div class="fags-container">
+        <div class="fags-container box animation1">
           <p>Frequently Asked Questions</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
           <div class="all-fags">
@@ -378,7 +408,7 @@
       <div class="wct-wrapper">
         <div class="wct-container">
           <div class="wct-header">
-            <div class="wct-header-inner-one">
+            <div class="wct-header-inner-one box animation2">
               <p>What Our Customers Say</p>
               <p>
                 Don't just take our word for it - see what actual users of our
@@ -470,8 +500,8 @@
       <!-- Newsletter Start -->
       <div class="newsletter-wrapper">
         <div class="newsletter-container">
-          <div class="news-letter-img">guuu</div>
-          <form class="news-letter-form">
+          <div class="news-letter-img"><img src="/assets/images/news-letter.svg"/></div>
+          <form class="news-letter-form box animation1">
             <p>Sign up to our Newsletter</p>
             <p>Get important messages straight to your inbox</p>
             <input required placeholder="Email" id="email" />
@@ -510,7 +540,7 @@
             <a href="#">Privacy Policy</a>
           </div>
         </div>
-        <p class="footer-btm-txt">Copyright 2024 All Rights Reserved</p>
+        <p class="footer-btm-txt">Copyright <span id="footerYear"></span> All Rights ReservedCopyright 2024 All Rights Reserved</p>
       </footer>
     </div>
     <script src="/assets/js/global.js"></script>

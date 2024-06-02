@@ -3,125 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Accordion with Rotating Icon</title>
+    <title>Scroll Animation Example</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-        }
-
-        .accordion {
-            max-width: 600px;
-            margin: 20px auto;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .accordion-item {
-            border-bottom: 1px solid #ddd;
-        }
-
-        .accordion-button {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            background: #f7f7f7;
-            border: none;
-            padding: 15px;
-            text-align: left;
-            font-size: 16px;
-            cursor: pointer;
-            outline: none;
-            transition: background 0.3s;
-        }
-
-        .accordion-button:hover {
-            background: #e7e7e7;
-        }
-
-        .accordion-icon {
-            transition: transform 0.3s ease-out;
-        }
-
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            background: white;
-            transition: max-height 0.3s ease-out;
-        }
-
-        .accordion-content p {
             margin: 0;
-            padding: 15px;
+            padding: 0;
+            height: 300vh; /* Ensure there is enough content to scroll */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
         }
 
-        .accordion-content.show {
-            max-height: 200px; /* Adjust this value based on your content height */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
         }
 
-        .accordion-button.active .accordion-icon {
-            transform: rotate(180deg);
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px; /* Ensure content starts below header */
         }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 1s, transform 1s;
+        }
+
+        .box.visible {
+            opacity: 1;
+        }
+
+        /* Define 20 different animations */
+        @keyframes animation1 { from { transform: translateY(50px); } to { transform: translateY(0); } }
+        @keyframes animation2 { from { transform: scale(0.5); } to { transform: scale(1); } }
+        @keyframes animation3 { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes animation4 { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes animation5 { from { transform: translateX(-50px); } to { transform: translateX(0); } }
+        @keyframes animation6 { from { transform: translateX(50px); } to { transform: translateX(0); } }
+        @keyframes animation7 { from { transform: skewX(20deg); } to { transform: skewX(0); } }
+        @keyframes animation8 { from { transform: skewY(20deg); } to { transform: skewY(0); } }
+        @keyframes animation9 { from { transform: translateY(-50px); } to { transform: translateY(0); } }
+        @keyframes animation10 { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+        @keyframes animation11 { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+        @keyframes animation12 { from { transform: rotateY(0); } to { transform: rotateY(180deg); } }
+        @keyframes animation13 { from { transform: rotateX(0); } to { transform: rotateX(180deg); } }
+        @keyframes animation14 { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes animation15 { from { transform: scale(0.8); } to { transform: scale(1.2); } }
+        @keyframes animation16 { from { transform: translate(0, -50px); } to { transform: translate(0, 0); } }
+        @keyframes animation17 { from { transform: translate(0, 50px); } to { transform: translate(0, 0); } }
+        @keyframes animation18 { from { transform: translate(-50px, 0); } to { transform: translate(0, 0); } }
+        @keyframes animation19 { from { transform: translate(50px, 0); } to { transform: translate(0, 0); } }
+        @keyframes animation20 { from { transform: scale(0); } to { transform: scale(1); } }
+
+        /* Assign animations to different boxes */
+        .box.animation1.visible { animation: animation1 1s forwards; }
+        .box.animation2.visible { animation: animation2 1s forwards; }
+        .box.animation3.visible { animation: animation3 1s forwards; }
+        .box.animation4.visible { animation: animation4 1s forwards; }
+        .box.animation5.visible { animation: animation5 1s forwards; }
+        .box.animation6.visible { animation: animation6 1s forwards; }
+        .box.animation7.visible { animation: animation7 1s forwards; }
+        .box.animation8.visible { animation: animation8 1s forwards; }
+        .box.animation9.visible { animation: animation9 1s forwards; }
+        .box.animation10.visible { animation: animation10 1s forwards; }
+        .box.animation11.visible { animation: animation11 1s forwards; }
+        .box.animation12.visible { animation: animation12 1s forwards; }
+        .box.animation13.visible { animation: animation13 1s forwards; }
+        .box.animation14.visible { animation: animation14 1s forwards; }
+        .box.animation15.visible { animation: animation15 1s forwards; }
+        .box.animation16.visible { animation: animation16 1s forwards; }
+        .box.animation17.visible { animation: animation17 1s forwards; }
+        .box.animation18.visible { animation: animation18 1s forwards; }
+        .box.animation19.visible { animation: animation19 1s forwards; }
+        .box.animation20.visible { animation: animation20 1s forwards; }
     </style>
 </head>
 <body>
-    <div class="accordion">
-        <div class="accordion-item">
-            <button class="accordion-button">
-                Section 1
-                <span class="accordion-icon">&#9660;</span> <!-- Down arrow icon -->
-            </button>
-            <div class="accordion-content">
-                <p>Content for section 1.</p>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <button class="accordion-button">
-                Section 2
-                <span class="accordion-icon">&#9660;</span>
-            </button>
-            <div class="accordion-content">
-                <p>Content for section 2.</p>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <button class="accordion-button">
-                Section 3
-                <span class="accordion-icon">&#9660;</span>
-            </button>
-            <div class="accordion-content">
-                <p>Content for section 3.</p>
-            </div>
-        </div>
-    </div>
-
+    <header>
+        <h1>Scroll to Animate</h1>
+    </header>
+    <section class="content">
+        <!-- Generate 20 divs with the class "box" and individual animation classes -->
+        <div class="box animation1">Box 1</div>
+        <div class="box animation2">Box 2</div>
+        <div class="box animation3">Box 3</div>
+        <div class="box animation4">Box 4</div>
+        <div class="box animation5">Box 5</div>
+        <div class="box animation6">Box 6</div>
+        <div class="box animation7">Box 7</div>
+        <div class="box animation8">Box 8</div>
+        <div class="box animation9">Box 9</div>
+        <div class="box animation10">Box 10</div>
+        <div class="box animation11">Box 11</div>
+        <div class="box animation12">Box 12</div>
+        <div class="box animation13">Box 13</div>
+        <div class="box animation14">Box 14</div>
+        <div class="box animation15">Box 15</div>
+        <div class="box animation16">Box 16</div>
+        <div class="box animation17">Box 17</div>
+        <div class="box animation18">Box 18</div>
+        <div class="box animation19">Box 19</div>
+        <div class="box animation20">Box 20</div>
+    </section>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const accordionButtons = document.querySelectorAll('.accordion-button');
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
 
-            accordionButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const content = this.nextElementSibling;
-
-                    // Toggle the display of the content with animation
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null;
-                        this.classList.remove('active');
-                    } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                        this.classList.add('active');
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
                     }
-
-                    // Close other open accordion contents and reset icons
-                    accordionButtons.forEach(otherButton => {
-                        if (otherButton !== this) {
-                            const otherContent = otherButton.nextElementSibling;
-                            otherContent.style.maxHeight = null;
-                            otherButton.classList.remove('active');
-                        }
-                    });
                 });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+            const boxes = document.querySelectorAll('.box');
+            boxes.forEach(box => {
+                observer.observe(box);
             });
         });
     </script>

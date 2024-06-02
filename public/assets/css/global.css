@@ -19,6 +19,10 @@
     border-radius: 4px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .chat {
     height: 80px;
     width: 80px;

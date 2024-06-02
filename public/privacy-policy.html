@@ -15,65 +15,6 @@
     <link href="assets/css/landing/home.css" rel="stylesheet" />
     <link href="assets/css/variables.css" rel="stylesheet" />
     <link href="assets/css/landing/header.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <style>
-      .swiper {
-        width: 100%;
-      }
-
-      .swiper-slide {
-        overflow: hidden;
-        width: 360px;
-        height: 359px;
-        background-color: #ffffff0f;
-        border-radius: 6px;
-        color: white;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-shrink: 0;
-        align-items: center;
-      }
-
-      .swiper-slide .slide-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-shrink: 0;
-        align-items: center;
-      }
-
-      .swipper-text-one {
-        font-family: "DMSans-Regular";
-        line-height: 25.6px;
-        padding-left: 20px;
-        padding-right: 20px;
-        margin: 300px;
-        font-size: 16px;
-        padding-bottom: 25px;
-      }
-
-      .slide-content p {
-        margin: 0px;
-      }
-
-      @media only screen and (max-width: 500px) {
-        .swipper-text-one {
-          line-height: 22.4px;
-          font-size: 14px;
-          padding-bottom: 24px;
-        }
-
-        .swiper-slide {
-          width: 311px;
-          height: 275px;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -88,19 +29,50 @@
     <!-- Loading Spinner End -->
 
     <div id="content" style="display: none">
+      <!-- Mobile Navigation Start -->
+      <div class="nav-menu">
+        <div class="nav-menu-inner">
+          <div>
+            <div class="mobile-logo">
+              <img src="assets/logo/ctr-logo.svg" />
+              <p>ctr flash</p>
+            </div>
+
+            <div class="hamburger-2">
+              <span class="bar bar_home"></span>
+              <span class="bar bar_home"></span>
+              <span class="bar bar_home"></span>
+            </div>
+          </div>
+          <nav>
+            <a href="/products.html">Products</a>
+            <a href="/pricing.html">Pricing</a>
+            <a href="/contact.html">Contact</a>
+          </nav>
+          <a href="/signin.html">Sign In</a>
+          <a href="/signup.html">Get Started</a>
+        </div>
+      </div>
+      <!-- Mobile Navigation End -->
+
       <header class="header-container header-container-bg-pvpo">
         <!-- Header Start -->
         <div>
           <div class="logo-container">
-            <div class="logo">
+            <a href="/" class="logo">
               <img src="assets/logo/ctr-logo.svg" />
               <p>ctr flash</p>
-            </div>
+            </a>
             <nav>
-              <a href="#">Products</a>
-              <a href="#">Pricing</a>
-              <a href="#">Contact</a>
+              <a href="/products.html">Products</a>
+              <a href="/pricing.html">Pricing</a>
+              <a href="/contact.html">Contact</a>
             </nav>
+          </div>
+          <div class="hamburger">
+            <span class="bar bar_home"></span>
+            <span class="bar bar_home"></span>
+            <span class="bar bar_home"></span>
           </div>
           <div class="auth-container">
             <a href="/signin.html">Sign in</a>
@@ -128,15 +100,45 @@
           <p>Table of contents</p>
           <div class="privacy-content-inner">
             <div class="privacy-content-nav">
-              <button>Information We Collect</button>
-              <button>How We Use Your Information</button>
-              <button>Data Sharing</button>
-              <button>Data Security</button>
-              <button>Your Rights</button>
-              <button>Changes to this Privacy Policy</button>
+              <button
+                policy-data-target="privacy-item1"
+                class="privacyScrollButton active-privacy-list-item"
+              >
+                Information We Collect
+              </button>
+              <button
+                policy-data-target="privacy-item2"
+                class="privacyScrollButton"
+              >
+                How We Use Your Information
+              </button>
+              <button
+                policy-data-target="privacy-item3"
+                class="privacyScrollButton"
+              >
+                Data Sharing
+              </button>
+              <button
+                policy-data-target="privacy-item4"
+                class="privacyScrollButton"
+              >
+                Data Security
+              </button>
+              <button
+                policy-data-target="privacy-item5"
+                class="privacyScrollButton"
+              >
+                Your Rights
+              </button>
+              <button
+                policy-data-target="privacy-item6"
+                class="privacyScrollButton"
+              >
+                Changes to this Privacy Policy
+              </button>
             </div>
-            <div class="privacy-content-list">
-              <div class="privacy-content-item-one">
+            <div style="overflow-y: scroll" class="privacy-content-list">
+              <div id="privacy-item1" class="privacy-content-item-one">
                 <p>Information We Collect</p>
                 <p>
                   Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum,
@@ -152,7 +154,7 @@
                   tincidunt. At feugiat sapien varius id.
                 </p>
               </div>
-              <div class="privacy-content-item-two">
+              <div id="privacy-item2" class="privacy-content-item-two">
                 <p>How We Use Your Information</p>
                 <p>
                   Eget quis mi enim, leo lacinia pharetra, semper. Eget in
@@ -171,7 +173,7 @@
                   sed mauris vestibulum.
                 </p>
               </div>
-              <div class="privacy-content-item-three">
+              <div id="privacy-item3" class="privacy-content-item-three">
                 <p>Data Sharing</p>
                 <p>
                   Morbi sed imperdiet in ipsum, adipiscing elit dui lectus.
@@ -181,8 +183,39 @@
                   habitasse.
                 </p>
               </div>
-              <div class="privacy-content-item-three">
+              <div id="privacy-item4" class="privacy-content-item-four">
                 <p>Data Security</p>
+                <p>
+                  Morbi sed imperdiet in ipsum, adipiscing elit dui lectus.
+                  Tellus id scelerisque est ultricies ultricies. Duis est sit
+                  sed leo nisl, blandit elit sagittis. Quisque tristique
+                  consequat quam sed. Nisl at scelerisque amet nulla purus
+                  habitasse.
+                </p>
+                <p>
+                  "Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim
+                  mauris id. Non pellentesque congue eget consectetur turpis.
+                  Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt
+                  aenean tempus."
+                </p>
+              </div>
+              <div id="privacy-item5" class="privacy-content-item-five">
+                <p>Your Rights</p>
+                <p>
+                  Nunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas
+                  condimentum mi massa. In tincidunt pharetra consectetur sed
+                  duis facilisis metus. Etiam egestas in nec sed et. Quis
+                  lobortis at sit dictum eget nibh tortor commodo cursus.
+                </p>
+              </div>
+              <div id="privacy-item6" class="privacy-content-item-five">
+                <p>Changes to this Privacy Policy</p>
+                <p>
+                  Nunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas
+                  condimentum mi massa. In tincidunt pharetra consectetur sed
+                  duis facilisis metus. Etiam egestas in nec sed et. Quis
+                  lobortis at sit dictum eget nibh tortor commodo cursus.
+                </p>
               </div>
             </div>
           </div>
@@ -197,222 +230,6 @@
         </div>
       </div>
       <!-- Banner End -->
-
-      <!-- FAGS Start -->
-      <div class="fags-wrapper">
-        <div class="fags-container">
-          <p>Frequently Asked Questions</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
-          <div class="all-fags">
-            <div class="faq-item">
-              <div class="faq-question">
-                <p>1. What is CTR</p>
-                <button class="fag-button">
-                  <img src="/assets/icons/blue-drop-down.svg" />
-                </button>
-              </div>
-              <p class="faq-answer">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit,
-              </p>
-            </div>
-            <div class="faq-item">
-              <div class="faq-question">
-                <p>2. What is CTR Flash for?</p>
-                <button class="fag-button">
-                  <img src="/assets/icons/blue-drop-down.svg" />
-                </button>
-              </div>
-              <p class="faq-answer">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit,
-              </p>
-            </div>
-            <div class="faq-item">
-              <div class="faq-question">
-                <p>3. Does CTR show analytics?</p>
-                <button class="fag-button">
-                  <img src="/assets/icons/blue-drop-down.svg" />
-                </button>
-              </div>
-              <p class="faq-answer">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit,
-              </p>
-            </div>
-            <div class="faq-item">
-              <div class="faq-question">
-                <p>4. What will be delivered? And When?</p>
-                <button class="fag-button">
-                  <img src="/assets/icons/blue-drop-down.svg" />
-                </button>
-              </div>
-              <p class="faq-answer">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit,
-              </p>
-            </div>
-            <div class="faq-item">
-              <div class="faq-question">
-                <p>5.What often will results be reported?</p>
-                <button class="fag-button">
-                  <img src="/assets/icons/blue-drop-down.svg" />
-                </button>
-              </div>
-              <p class="faq-answer">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit,
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- FAGS End -->
-
-      <!-- What Customers Says Start -->
-      <div class="wct-wrapper">
-        <div class="wct-container">
-          <div class="wct-header">
-            <div class="wct-header-inner-one">
-              <p>What Our Customers Say</p>
-              <p>
-                Don't just take our word for it - see what actual users of our
-                service have to say about their experience.
-              </p>
-            </div>
-            <div class="wct-header-inner-two desktop-review-btn">
-              <button onclick="prev()">
-                <img src="/assets/icons/arrow-left.svg" />
-              </button>
-              <button onclick="next()">
-                <img src="/assets/icons/arrow-right-2.svg" />
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Swiper -->
-        <div class="comment-wrapper">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide slide-content">
-                <p class="swipper-text-one">
-                  “Lörem ipsum berade pav kaktigt i mandatpingis. Tågenat
-                  intrangen poras. Semibåment post en nyde om isesk bemol.
-                  Satugisk infrade, medelfas dekall. ”
-                </p>
-                <div class="rating" id="star-rating-1" data-rating="3"></div>
-                <div class="user-rating-pic"></div>
-                <p class="commenter-name">Davis Mango</p>
-              </div>
-
-              <div class="swiper-slide slide-content">
-                <p class="swipper-text-one">
-                  “Lörem ipsum berade pav kaktigt i mandatpingis. Tågenat
-                  intrangen poras. Semibåment post en nyde om isesk bemol.
-                  Satugisk infrade, medelfas dekall. ”
-                </p>
-                <div class="rating" id="star-rating-2" data-rating="4"></div>
-                <div class="user-rating-pic"></div>
-                <p class="commenter-name">Davis Mango</p>
-              </div>
-
-              <div class="swiper-slide slide-content">
-                <p class="swipper-text-one">
-                  “Lörem ipsum berade pav kaktigt i mandatpingis. Tågenat
-                  intrangen poras. Semibåment post en nyde om isesk bemol.
-                  Satugisk infrade, medelfas dekall. ”
-                </p>
-                <div class="rating" id="star-rating-3" data-rating="5"></div>
-                <div class="user-rating-pic"></div>
-                <p class="commenter-name">Davis Mango</p>
-              </div>
-              <div class="swiper-slide slide-content">
-                <p class="swipper-text-one">
-                  “Lörem ipsum berade pav kaktigt i mandatpingis. Tågenat
-                  intrangen poras. Semibåment post en nyde om isesk bemol.
-                  Satugisk infrade, medelfas dekall. ”
-                </p>
-                <div class="rating" id="star-rating-4" data-rating="4"></div>
-                <div class="user-rating-pic"></div>
-                <p class="commenter-name">Davis Mango</p>
-              </div>
-
-              <div class="swiper-slide slide-content">
-                <p class="swipper-text-one">
-                  “Lörem ipsum berade pav kaktigt i mandatpingis. Tågenat
-                  intrangen poras. Semibåment post en nyde om isesk bemol.
-                  Satugisk infrade, medelfas dekall. ”
-                </p>
-                <div class="rating" id="star-rating-5" data-rating="5"></div>
-                <div class="user-rating-pic"></div>
-                <p class="commenter-name">Davis Mango</p>
-              </div>
-              <div class="swiper-slide slide-content">
-                <p class="swipper-text-one">
-                  “Lörem ipsum berade pav kaktigt i mandatpingis. Tågenat
-                  intrangen poras. Semibåment post en nyde om isesk bemol.
-                  Satugisk infrade, medelfas dekall. ”
-                </p>
-                <div class="rating" id="star-rating-5" data-rating="5"></div>
-                <div class="user-rating-pic"></div>
-                <p class="commenter-name">Davis Mango</p>
-              </div>
-              <div class="swiper-slide slide-content">
-                <p class="swipper-text-one">
-                  “Lörem ipsum berade pav kaktigt i mandatpingis. Tågenat
-                  intrangen poras. Semibåment post en nyde om isesk bemol.
-                  Satugisk infrade, medelfas dekall. ”
-                </p>
-                <div class="rating" id="star-rating-5" data-rating="5"></div>
-                <div class="user-rating-pic"></div>
-                <p class="commenter-name">Davis Mango</p>
-              </div>
-            </div>
-            <div class="wct-header-inner-two mobile-review-btn">
-              <button onclick="prev()">
-                <img src="/assets/icons/arrow-left.svg" />
-              </button>
-              <button onclick="next()">
-                <img src="/assets/icons/arrow-right-2.svg" />
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- Swipper End -->
-      </div>
-      <!-- What Customers Says End -->
-
-      <!-- Newsletter Start -->
-      <div class="newsletter-wrapper">
-        <div class="newsletter-container">
-          <div class="news-letter-img">guuu</div>
-          <form class="news-letter-form">
-            <p>Sign up to our Newsletter</p>
-            <p>Get important messages straight to your inbox</p>
-            <input required placeholder="Email" id="email" />
-            <div>
-              <label for="term-condition" class="custom-checkbox">
-                <input required type="checkbox" id="term-condition" />
-                <span class="checkmark"></span>
-                I accept all the
-                <a href="#" class="teandcd">Terms and Conditions</a>
-              </label>
-            </div>
-            <button class="tnc-btn">Submit</button>
-          </form>
-        </div>
-      </div>
-      <!-- Newsletter End -->
 
       <footer class="footer-wrapper">
         <div class="footer-container">
@@ -435,45 +252,12 @@
             <a href="#">Privacy Policy</a>
           </div>
         </div>
-        <p class="footer-btm-txt">Copyright 2024 All Rights Reserved</p>
+        <p class="footer-btm-txt">
+          Copyright <span id="footerYear"></span> All Rights Reserved
+        </p>
       </footer>
     </div>
     <script src="/assets/js/global.js"></script>
     <script src="/assets/js/landing/home.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        spaceBetween: 30,
-        freeMode: true,
-        freeModeSticky: false,
-        watchSlidesProgress: true,
-        watchSlidesVisibility: true,
-        coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false,
-        },
-        pagination: false,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        loop: true,
-      });
-
-      function next() {
-        swiper.slideNext();
-      }
-
-      function prev() {
-        swiper.slidePrev();
-      }
-    </script>
   </body>
 </html>
