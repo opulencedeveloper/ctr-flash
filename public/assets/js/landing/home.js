@@ -5,14 +5,19 @@ const navMenu = document.querySelector(".nav-menu");
 if (hamburger) {
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
-    hamburger2.classList.toggle("active");
+    if(hamburger2) {
+      hamburger2.classList.toggle("active");
+    }
+    
     navMenu.classList.toggle("active");
   });
 }
 
 if (hamburger2) {
   hamburger2.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
+    if(hamburger) {
+      hamburger.classList.toggle("active");
+    }
     hamburger2.classList.toggle("active");
     navMenu.classList.toggle("active");
   });
