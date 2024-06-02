@@ -943,10 +943,10 @@ body {
     margin: auto;
 }
 
-.newsletter-wrapper,
+/* .newsletter-wrapper,
 .footer-wrapper {
     margin-top: -2px;
-}
+} */
 
 .landing-pricing-sectone {
     max-width: 680px;
