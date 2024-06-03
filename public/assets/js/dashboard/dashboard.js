@@ -98,13 +98,37 @@ if (closeAddProjectDialogBtn) {
   });
 }
 
+let isExpanded = false;
 
-document.getElementById('dash-nav-toggle').addEventListener('click', () => {
+const dashBtnTgle = document.getElementById('dash-nav-toggle');
+const dashArrow = document.getElementById('dash-arrow');
+const navItem = document.querySelectorAll('.nav-item');
+
+dashBtnTgle.addEventListener('click', () => {
   const navBar = document.getElementById('desktop-nav');
-  const dashTitle = document.querySelectorAll('.dash-tle');
-  dashTitle.forEach((dashTle) => {
+  const dashTitle = document.querySelector('.dash-tle');
+  let navTitle = document.querySelectorAll('.ds-item');
+
+
+  navItem.forEach((dashTle) => {
+    dashTle.classList.toggle('hiddenna');
+  });
+  navTitle.forEach((dashTle) => {
     dashTle.classList.toggle('hide-title')
   });
-  
+
+ 
+  dashTitle.classList.toggle('hide-title')
   navBar.classList.toggle('hidden');
+ 
+
+    const passwordIconSrc =
+    isExpanded
+      ? "/assets/icons/tabler-arrow-left.svg"
+      : "/assets/icons/tabler-arrow-right.svg";
+
+      dashArrow.setAttribute("src", passwordIconSrc);
+  isExpanded = !isExpanded
+  
+  
 });

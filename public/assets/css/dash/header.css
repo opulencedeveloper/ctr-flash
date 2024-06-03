@@ -21,7 +21,7 @@ body {
 }
 
 .logo {
-
+overflow: hidden;
     display: flex;
     align-items: center;
     gap: 4px;
@@ -46,12 +46,16 @@ body {
     background-clip: text;
     color: transparent;
     white-space: nowrap;
+    margin: 0px;
 }
 
 .dash-tle.hide-title {
-    width: 0px;
+    display: none;
 }
 
+.ds-item.hide-title {
+    opacity: 0;
+}
 .dash-container nav {
     display: flex;
     flex-direction: column;
@@ -68,14 +72,15 @@ body {
     height: 48px;
     width: 100%;
     overflow: hidden;
-    box-sizing: content-box;
+    box-sizing: border-box;
     border-radius: 8px;
     color: var(--custom-seven);
     font-family: 'DMSans_18pt-Medium';
     background-color: transparent;
     padding-left: 20px;
     text-decoration: none;
-    box-sizing: border-box;
+    flex-shrink: 0;
+    transition: width 0.3s;
 }
 
 .nav-item p {
@@ -103,7 +108,7 @@ body {
 .dash-head {
     position: sticky;
     top: 0px;
-    z-index: 99999;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -342,7 +347,8 @@ body {
     height: 24px;
     display: flex;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;
+    flex-shrink: 0px;   
 }
 
 
