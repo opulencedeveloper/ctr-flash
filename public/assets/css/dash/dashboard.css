@@ -593,7 +593,6 @@ tr td {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 40px;
     height: fit-content;
     gap: 8px;
     justify-content: space-between;

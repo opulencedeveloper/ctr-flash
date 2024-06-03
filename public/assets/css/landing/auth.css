@@ -9,7 +9,7 @@ body {
 }
 
 .auth-container-sect-one {
-    padding-top: 123px;
+    padding-top: 70px;
     padding-left: 110px;
     width: 55%;
     overflow-y: auto;
@@ -24,7 +24,7 @@ body {
     display: flex;
     align-items: center;
     gap: 4px;
-    padding-bottom: 105.5px;
+    padding-bottom: 70px;
 }
 
 .auth-img-container {
@@ -274,7 +274,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
 
 .signin-container-item>div:nth-child(2)>p:nth-child(1) {
     color: var(--custom-seven);
-    font-size: 20px;
+    font-size: 19px;
     margin: 0px;
 }
 
