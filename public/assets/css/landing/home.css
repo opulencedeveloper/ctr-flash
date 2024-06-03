@@ -371,8 +371,6 @@ body {
     max-width: var(--max-width);
     margin: auto;
     gap: 72px;
-    padding-left: var(--global-desktop-padding);
-    padding-right: var(--global-desktop-padding);
 
 }
 
@@ -2031,6 +2029,11 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+    .few-easy-sect-two-inner {
+        padding: 24px 17px;
+    
+    }
+    
     .not-found-container>p:nth-child(2) {
         font-size: 14px;
         padding-top: 32px;
@@ -2591,13 +2594,6 @@ body {
         margin: 40px auto auto auto;
         padding-left: var(--global-mobile-padding);
         padding-right: var(--global-mobile-padding);
-    }
-
-    .few-easy-container {
-
-        padding-left: var(--global-mobile-padding);
-        padding-right: var(--global-mobile-padding);
-
     }
 
     .hero-img {
