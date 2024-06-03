@@ -308,7 +308,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const overlayy = button.querySelector(".overlayy");
         const mobileDrawup = button.querySelector(".mobile-drawup");
 
-        // Hide the current overlay if another button is clicked
         if (currentOverlay && currentOverlay !== overlayy) {
           currentOverlay.classList.remove("show");
           currentOverlay
@@ -320,11 +319,10 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileDrawup.classList.add("show");
         currentOverlay = overlayy;
 
-        event.stopPropagation(); // Prevent event bubbling
+        event.stopPropagation();
       });
     });
 
-    // Swipe down to close overlay
     document.addEventListener("touchstart", (e) => {
       if (currentOverlay && currentOverlay.classList.contains("show")) {
         startY = e.touches[0].clientY;
@@ -335,7 +333,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (currentOverlay && currentOverlay.classList.contains("show")) {
         const moveY = e.touches[0].clientY;
         if (moveY - startY > 50) {
-          // swipe down distance threshold
           currentOverlay.classList.remove("show");
           currentOverlay
             .querySelector(".mobile-drawup")
@@ -345,7 +342,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Close overlay on click outside or on overlay itself
     document.addEventListener("click", (e) => {
       if (
         currentOverlay &&

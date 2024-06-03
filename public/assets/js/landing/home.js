@@ -5,17 +5,17 @@ const navMenu = document.querySelector(".nav-menu");
 if (hamburger) {
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
-    if(hamburger2) {
+    if (hamburger2) {
       hamburger2.classList.toggle("active");
     }
-    
+
     navMenu.classList.toggle("active");
   });
 }
 
 if (hamburger2) {
   hamburger2.addEventListener("click", () => {
-    if(hamburger) {
+    if (hamburger) {
       hamburger.classList.toggle("active");
     }
     hamburger2.classList.toggle("active");
@@ -93,8 +93,11 @@ document.querySelectorAll(".privacyScrollButton").forEach((button) => {
 });
 
 const currentYear = new Date().getFullYear();
+const footerYear = document.getElementById("footerYear");
 
-document.getElementById("footerYear").textContent = currentYear;
+if (footerYear) {
+  footerYear.textContent = currentYear;
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const observerOptions = {

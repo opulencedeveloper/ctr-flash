@@ -279,8 +279,9 @@ tbody:before {
     }
 
     .personal-info-form {
-        height: 100%;
+        height: 100dvh;
         flex: 1;
+        box-shadow: none;
     }
 }
 
@@ -366,6 +367,14 @@ tbody:before {
 
     .change-pass-form {
         padding: 0px;
+        padding-bottom: 0px;
+        box-shadow: none;
+        height: 100%;
+        margin-left: -16px;
+        margin-right: -16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        border-radius: 0px;
     }
 
     .change-pass-tle {
@@ -385,13 +394,20 @@ tbody:before {
         margin-top: 18px;
     }
 
+    .chge-pass-cnt{
+        background-color: white;
+    }
+
     .personal-info-form {
         padding: 0px;
     }
 
+    .bill-histor-content{
+        background-color: white;
+    }
     .settings-dashboard-content,
     .sub-title {
-        background-color: white;
+        background-color: var(--custom-seven);
     }
 
     .dash-title {

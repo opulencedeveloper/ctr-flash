@@ -589,8 +589,35 @@ tr td {
     cursor: pointer;
 }
 
+.dashboard-nav-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+    overflow-x: hidden;
+    justify-content: space-between;
+}
 
+.dash-nav-toggle{
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--custom-seventeen);
+    border: none;
+    cursor: pointer;
+}
+.dash-nav-toggle>img{
+    height: 20px;
+    width: 20px;
+}
 
+.hidden {
+    width: 52px;
+}
 
 @media only screen and (max-width: 1190px) {
     .activity-container {

@@ -5,7 +5,6 @@ body {
 .dash-container {
     display: flex;
     height: 100dvh;
-
     margin: 0px;
     background-color: var(--secondary-color);
 }
@@ -13,15 +12,16 @@ body {
 .dash-container>div:first-child {
     background-color: var(--primary-color);
     border-radius: 8px;
-    height: 100%;
     margin: 0px;
     overflow-y: auto;
-    padding-right: 31px;
-    padding-left: 33px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 40px;
+
 }
 
 .logo {
-    margin-top: 40px;
+
     display: flex;
     align-items: center;
     gap: 4px;
@@ -45,6 +45,11 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    white-space: nowrap;
+}
+
+.dash-tle.hide-title {
+    width: 0px;
 }
 
 .dash-container nav {
@@ -61,22 +66,24 @@ body {
     gap: 10px;
     margin: 0px;
     height: 48px;
-    width: 270px;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: content-box;
     border-radius: 8px;
     color: var(--custom-seven);
     font-family: 'DMSans_18pt-Medium';
     background-color: transparent;
     padding-left: 20px;
-    padding-top: 1.9px;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 .nav-item p {
     font-size: 16px;
     text-transform: capitalize;
     margin: 0px;
-    padding-bottom: 1.7px;
     line-height: 19.2px;
+    white-space: nowrap;
 }
 
 .active-nav-item {
@@ -96,18 +103,18 @@ body {
 .dash-head {
     position: sticky;
     top: 0px;
-z-index: 999;
+    z-index: 99999;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 4px 4px -2px #18274B14;
     box-shadow: 0px 2px 4px -2px #18274B1F;
     border-radius: 8px;
-    background-color: white;
     padding-left: 20px;
     padding-right: 32px;
     padding-top: 24px;
     padding-bottom: 24px;
+    background-color: white;
 }
 
 .dash-head-container {
@@ -330,14 +337,24 @@ z-index: 999;
     flex: 1;
 }
 
+.nav-icon{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+
+
 .nav-icon-mobile {
     width: 20px;
     height: 20px;
 }
 
 .nav-icon-mobile img {
-    width: 100%;
-    height: 100%;
+    width: 20px;
+    height: 20px;
 }
 
 
@@ -547,12 +564,17 @@ z-index: 999;
     font-size: 16px;
     font-family: 'DMSans-Regular';
     color: var(--custom-five);
+    margin: 0px;
+}
+
+.desktop-nav {
+    width: 280px;
+    transition: width 0.3s;
 }
 
 
-
 @media only screen and (max-width: 1190px) {
-    .nav-item {
+    .desktop-nav {
 
         width: 170px;
     }
@@ -586,6 +608,7 @@ z-index: 999;
         height: 14px;
         width: 14px;
     }
+
     .close-notify>p {
         font-size: 14px;
     }
@@ -637,8 +660,9 @@ z-index: 999;
         height: 74px;
         padding: 0px;
         padding: 16px;
-        margin-top: 5px;
+        padding-top: 5px;
         padding-bottom: 0px;
+        border-radius: 0px;
     }
 
     .profile-avatar div {

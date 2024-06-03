@@ -10,22 +10,26 @@ window.addEventListener("load", function () {
 });
 
 if (overlay) {
-  openOverLayBtn.addEventListener("click", () => {
-    overlay.style.display = "flex";
-  });
+  if (openOverLayBtn) {
+    openOverLayBtn.addEventListener("click", () => {
+      overlay.style.display = "flex";
+    });
+  }
 
-  closeOverLayBtn.addEventListener("click", () => {
-    overlayDialog.classList.add("fadeOut");
+  if (closeOverLayBtn) {
+    closeOverLayBtn.addEventListener("click", () => {
+      overlayDialog.classList.add("fadeOut");
 
-    overlayDialog.addEventListener(
-      "animationend",
-      function () {
-        overlayDialog.classList.remove("fadeOut");
-        overlay.style.display = "none";
-      },
-      { once: true }
-    );
-  });
+      overlayDialog.addEventListener(
+        "animationend",
+        function () {
+          overlayDialog.classList.remove("fadeOut");
+          overlay.style.display = "none";
+        },
+        { once: true }
+      );
+    });
+  }
 }
 
 function getFormattedDateTime() {

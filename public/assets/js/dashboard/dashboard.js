@@ -97,3 +97,14 @@ if (closeAddProjectDialogBtn) {
     );
   });
 }
+
+
+document.getElementById('dash-nav-toggle').addEventListener('click', () => {
+  const navBar = document.getElementById('desktop-nav');
+  const dashTitle = document.querySelectorAll('.dash-tle');
+  dashTitle.forEach((dashTle) => {
+    dashTle.classList.toggle('hide-title')
+  });
+  
+  navBar.classList.toggle('hidden');
+});
