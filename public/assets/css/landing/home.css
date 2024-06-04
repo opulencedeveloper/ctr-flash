@@ -994,7 +994,7 @@ body {
 
 .footer-link a {
     font-family: 'DMSans_18pt-Medium';
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
     color: var(--secondary-color);
 }
