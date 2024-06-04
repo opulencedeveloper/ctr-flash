@@ -9,7 +9,7 @@ body {
 }
 
 .auth-container-sect-one {
-    padding-top: 70px;
+    padding-top: 100px;
     padding-left: 110px;
     width: 55%;
     overflow-y: auto;
@@ -24,7 +24,7 @@ body {
     display: flex;
     align-items: center;
     gap: 4px;
-    padding-bottom: 70px;
+    padding-bottom: 60px;
 }
 
 .auth-img-container {

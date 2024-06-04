@@ -269,7 +269,7 @@ tbody:before {
         border-radius: 0px;
     }
 
-    .dash-container>div:first-child {
+    .dash-nav {
         display: none;
     }
 

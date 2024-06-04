@@ -103,25 +103,20 @@ let isExpanded = false;
 const dashBtnTgle = document.getElementById('dash-nav-toggle');
 const dashArrow = document.getElementById('dash-arrow');
 const navItem = document.querySelectorAll('.nav-item');
+const dashLogo = document.querySelector('.dashboard-nav-header');
+const dashNavB = document.querySelector('.dash-nav');
 
 dashBtnTgle.addEventListener('click', () => {
   const navBar = document.getElementById('desktop-nav');
   const dashTitle = document.querySelector('.dash-tle');
   let navTitle = document.querySelectorAll('.ds-item');
 
-
-  navItem.forEach((dashTle) => {
-    dashTle.classList.toggle('hiddenna');
-  });
-  navTitle.forEach((dashTle) => {
-    dashTle.classList.toggle('hide-title')
-  });
-
  
   dashTitle.classList.toggle('hide-title')
   navBar.classList.toggle('hidden');
+  dashLogo.classList.toggle('shrink');
  
-
+  dashNavB.classList.toggle('mini');
     const passwordIconSrc =
     isExpanded
       ? "/assets/icons/tabler-arrow-left.svg"
@@ -129,6 +124,13 @@ dashBtnTgle.addEventListener('click', () => {
 
       dashArrow.setAttribute("src", passwordIconSrc);
   isExpanded = !isExpanded
+  navItem.forEach((dashTle) => {
+    dashTle.classList.toggle('hiddenna');
+  });
+  navTitle.forEach((dashTle) => {
+    dashTle.classList.toggle('hide-title')
+  });
+
   
   
 });

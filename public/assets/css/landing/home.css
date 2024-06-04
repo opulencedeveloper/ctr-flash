@@ -961,11 +961,6 @@ body {
     border-bottom: 1px solid var(--custom-six);
 }
 
-.footer-wrapper {
-    padding-top: 0px;
-    padding-right: var(--global-mobile-padding);
-    padding-left: var(--global-mobile-padding);
-}
 
 .footer-container p {
     margin: 0px;

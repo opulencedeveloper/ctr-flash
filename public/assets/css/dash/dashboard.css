@@ -590,12 +590,15 @@ tr td {
 }
 
 .dashboard-nav-header {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     height: fit-content;
     gap: 8px;
     justify-content: space-between;
+    width: 100%;
+    transition: width 0.4s ease;
 }
 
 .dash-nav-toggle{
@@ -609,6 +612,7 @@ tr td {
     background-color: var(--custom-seventeen);
     border: none;
     cursor: pointer;
+    flex-shrink: 0;
 }
 .dash-nav-toggle>img{
     height: 20px;
@@ -616,9 +620,12 @@ tr td {
 }
 .nav-item.hiddenna {
     width: 55px;
+    padding-left: 18px;
+    
 }
-.hidden {
-    width: 55px;
+
+.desktop-nav.hidden {
+    transition: width 0.4s ease;
 }
 
 @media only screen and (max-width: 1190px) {
