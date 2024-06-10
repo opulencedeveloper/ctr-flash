@@ -24,19 +24,19 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
-document
-  .querySelector(".dash-head-notify")
-  .addEventListener("mouseover", function () {
-    document.getElementById("bell-icon").src =
-      "../../assets/icons/notification-state.svg";
-  });
+// document
+//   .querySelector(".dash-head-notify")
+//   .addEventListener("mouseover", function () {
+//     document.getElementById("bell-icon").src =
+//       "../../assets/icons/notification-state.svg";
+//   });
 
-document
-  .querySelector(".dash-head-notify")
-  .addEventListener("mouseout", function () {
-    document.getElementById("bell-icon").src =
-      "../../assets/icons/notification.svg";
-  });
+// document
+//   .querySelector(".dash-head-notify")
+//   .addEventListener("mouseout", function () {
+//     document.getElementById("bell-icon").src =
+//       "../../assets/icons/notification.svg";
+//   });
 
 const mobileNotification = document.getElementById("mobile-notification");
 const notifyOpenBtn = document.getElementById("notifyOpenBtn");
@@ -54,11 +54,11 @@ notifyOpenBtn.addEventListener("click", () => {
 notifyCloseBtn.addEventListener("click", () => {
   mobileNotification.classList.toggle("active");
 });
-const dashhh = document.querySelector(".dash-head-notify");
+// const dashhh = document.querySelector(".dash-head-notify");
 
-dashhh.addEventListener("click", () => {
-  mobileNotification.classList.toggle("active");
-});
+// dashhh.addEventListener("click", () => {
+//   mobileNotification.classList.toggle("active");
+// });
 
 const openAddProjectDialogBtn = document.querySelector(
   ".openAddProjectDialogBtn"

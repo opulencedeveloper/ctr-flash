@@ -29,7 +29,7 @@
     </div>
     <!-- Loading Spinner End -->
 
-    <div id="content" style="display: none;">
+    <div id="content" style="display: none">
       <!-- Mobile Notification Start -->
       <div id="mobile-notification" class="mobile-notification">
         <div class="mobile-notification-wrapper">
@@ -154,17 +154,28 @@
                 </div>
                 <p>my subscription</p>
               </a>
-              <a href="/dashboard/settings/general.html" class="nav-item-mobile">
+              <a
+                href="/dashboard/settings/general.html"
+                class="nav-item-mobile"
+              >
                 <div class="nav-icon-mobile">
                   <img src="/assets/icons/settings.svg" />
                 </div>
                 <p>Settings</p>
               </a>
+
+              <a
+                href="/dashboard/settings/general.html"
+                class="nav-item-mobile logout-sect"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/logout-white.svg" />
+                </div>
+                <p>Log Out</p>
+              </a>
             </nav>
           </div>
-          <p id="mobile-nav-footer" class="mobile-nav-footer">
-            
-      </p>
+          <p id="mobile-nav-footer" class="mobile-nav-footer"></p>
         </div>
       </div>
       <!-- Mobile Navigation End -->
@@ -180,9 +191,11 @@
               <p id="dash-tle" class="dash-tle">ctr flash</p>
             </div>
 
-            <button id="dash-nav-toggle" class="dash-nav-toggle"><img id="dash-arrow" src="/assets/icons/tabler-arrow-left.svg" /></button>
+            <button id="dash-nav-toggle" class="dash-nav-toggle">
+              <img id="dash-arrow" src="/assets/icons/tabler-arrow-left.svg" />
+            </button>
           </div>
-          
+
           <nav id="desktop-nav" class="desktop-nav">
             <a href="/dashboard/index.html" class="nav-item active-nav-item">
               <div class="nav-icon">
@@ -229,17 +242,23 @@
               </div>
               <div class="dash-head-details">
                 <p>hello <span id="dashName">macdonald</span></p>
-                <p id="header-date-time">Saturday 23 Mar, 2024. 10:00am (GMT+1)</p>
+                <p id="header-date-time">
+                  Saturday 23 Mar, 2024. 10:00am (GMT+1)
+                </p>
               </div>
             </div>
 
             <div class="dash-notify-container">
               <div class="dash-head-notify-wrapper">
-                <div id="dash-head-notify" class="dash-head-notify">
+                <a
+                  href="/signin.html"
+                  id="dash-head-notify"
+                  class="dash-head-notify"
+                >
                   <div id="notifyOpenBtn" class="dash-head-notify-container">
-                    <img id="bell-icon" src="/assets/icons/notification.svg" />
+                    <img id="bell-icon" src="/assets/icons/mdi_logout.svg" />
                   </div>
-                  <p>notification</p>
+                  <p>Log Out</p>
                   <div class="notification-container">
                     <div class="notification-header">
                       <div class="notification-title">
@@ -312,11 +331,11 @@
                     </div> -->
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
 
               <div class="profile-avatar">
-                <div></div>
+                <img src="/assets/images/profile-avatar.svg" />
               </div>
             </div>
           </header>
@@ -526,7 +545,11 @@
               </div>
               <div class="the-project-item-input">
                 <label for="description">Description</label>
-                <textarea required id="description" placeholder="Enter Description"></textarea>
+                <textarea
+                  required
+                  id="description"
+                  placeholder="Enter Description"
+                ></textarea>
               </div>
               <button type="button">Continue</button>
             </form>

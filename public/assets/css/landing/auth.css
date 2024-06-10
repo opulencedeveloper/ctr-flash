@@ -317,7 +317,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
     display: flex;
     align-items: center;
     gap: 4px;
-    padding-bottom: 80px;
+    padding-bottom: 70px;
 }
 
 .auth-logo-otp>p {
@@ -345,7 +345,13 @@ input[type="password"]::-webkit-textfield-decoration-container {
     margin: 0px;
     margin-top: 2px;
 }
-
+.auth-create-new {
+    margin-top: 26px;
+    margin-bottom: 26px;
+}
+.auth-create-new-btn {
+    margin-top: 36px !important;
+}
 .auth-linear-progess {
     width: 100%;
     height: 5px;
@@ -408,6 +414,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
     border: none;
     font-size: 16px;
     color: var(--tertiary-color);
+    cursor: pointer;
 }
 
 .otp-proceed {
@@ -683,8 +690,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
         margin-top: 7px;
     }
 
-    .auth-linear-progess {
-
+    .auth-linear-progess, .auth-create-new {
         margin-bottom: 28px;
     }
 
@@ -695,8 +701,7 @@ input[type="password"]::-webkit-textfield-decoration-container {
         margin-top: 4px;
     }
 
-    .otp-container>p:nth-child(2),
-    .create-acc-container>p:nth-child(3) {
+    .otp-container>p:nth-child(2) {
         font-size: 20px;
 
     }

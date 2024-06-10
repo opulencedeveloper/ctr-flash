@@ -182,6 +182,10 @@ body {
     border-right: 1px solid var(--custom-six);
 }
 
+.dash-head-notify p{
+    white-space: nowrap;
+}
+
 .dash-head-notify {
     display: flex;
     align-items: center;
@@ -195,6 +199,7 @@ body {
     font-family: 'DMSans-Regular';
     font-size: 16px;
     color: black;
+    text-decoration: none;
     text-transform: capitalize;
 }
 
@@ -205,11 +210,12 @@ body {
 }
 
 .dash-head-notify-container img {
-    height: 100%;
-    width: 100%;
+    height: 20px;
+    width: 20px;
+    flex-shrink: 0;
 }
 
-.dash-head-notify:hover {
+/* .dash-head-notify:hover {
     background-color: var(--custom-twenty-three);
     color: var(--custom-ten);
 
@@ -222,24 +228,20 @@ body {
 .dash-head-notify:hover .notification-container {
     padding: 16px;
     max-height: 400px;
-}
+} */
 
 .profile-avatar {
-    position: relative;
-    height: 48px;
-    width: 48px;
+    height: 42px;
+    width: 42px;
     border-radius: 50%;
-    border: 1px solid var(--custom-eleven);
+    overflow: hidden;
+    border: 1px solid var(--tertiary-color);
 }
 
-.profile-avatar div {
-    height: 12px;
-    width: 12px;
-    background-color: var(--custom-fifteen);
-    position: absolute;
-    bottom: 0px;
-    right: 4px;
-    border-radius: 50%;
+.profile-avatar img {
+    height: 42px;
+    width: 42px;
+    object-fit: cover;
 }
 
 .dash-notify-container {
@@ -250,10 +252,12 @@ body {
 
 .nav-menu {
     position: fixed;
+    bottom: 0px;
+    top: 0px;
     left: -100%;
     gap: 0;
     padding-top: 13px;
-    height: 100dvh;
+    height: 100vh;
     background-color: var(--primary-color);
     text-decoration: none;
     display: flex;
@@ -295,6 +299,12 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+.logout-sect{
+    border-top: 0.3px solid var(--custom-six);
+    padding-top: 24px !important;
+    border-radius: 0 !important;
 }
 
 .nav-item-mobile {
@@ -361,6 +371,7 @@ body {
     padding-right: 16px;
     padding-bottom: 24px;
     flex: 1;
+    overflow-y: auto;
 }
 
 .nav-icon {
@@ -600,7 +611,7 @@ body {
 }
 
 .dash-nav {
-    width: 280px;
+    width: 200px;
     transition: width 0.4s ease;
 }
 
@@ -612,7 +623,7 @@ body {
 @media only screen and (max-width: 1190px) {
     .dash-nav {
 
-        width: 170px;
+        width: 190px;
     }
 
     .mobile-notification.active {
@@ -677,7 +688,7 @@ body {
         padding-right: 0px;
     }
 
-    .dash-head-notify p {
+    .dash-head-notify p, .dash-head-notify-container {
         display: none;
     }
 
@@ -701,10 +712,8 @@ body {
         border-radius: 0px;
     }
 
-    .profile-avatar div {
-        height: 8px;
-        width: 8px;
-        right: 0px;
-        bottom: 0px;
+    .profile-avatar img {
+        height: 32px;
+        width: 32px;
     }
 }

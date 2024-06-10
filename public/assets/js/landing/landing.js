@@ -53,6 +53,10 @@ if (toggleNewPassword) {
   });
 }
 
+function goBack() {
+  window.history.back();
+}
+
 
 
 
