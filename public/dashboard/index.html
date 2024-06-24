@@ -16,6 +16,11 @@
     <link href="/assets/css/font.css" rel="stylesheet" />
     <link href="/assets/css/dash/header.css" rel="stylesheet" />
     <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dash/settings.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.css"
+    />
   </head>
 
   <body>
@@ -252,9 +257,8 @@
 
             <div class="dash-notify-container">
               <div class="dash-head-notify-wrapper">
-                <a
-                  href="/signin.html"
-                  id="dash-head-notify"
+                <div
+                id="open-overlay-btn-logout"
                   class="dash-head-notify"
                 >
                   <div id="notifyOpenBtn" class="dash-head-notify-container">
@@ -333,7 +337,7 @@
                     </div> -->
                     </div>
                   </div>
-                </a>
+                </div>
               </div>
 
               <div class="profile-avatar">
@@ -345,17 +349,17 @@
 
           <div class="dashboard-content">
             <div class="dash-warn-wrapper">
-            <div class="dash-warn">
-              <div class="dash-warn-img">
-                <img src="/assets/icons/warning.svg" />
+              <div class="dash-warn">
+                <div class="dash-warn-img">
+                  <img src="/assets/icons/warning.svg" />
+                </div>
+                <p class="dash-warn-tle">
+                  Please note that your dashboard is currently displaying sample
+                  data. This will be replaced with real data once you start
+                  creating a project.
+                </p>
               </div>
-              <p class="dash-warn-tle">
-                Please note that your dashboard is currently displaying sample
-                data. This will be replaced with real data once you start
-                creating a project.
-              </p>
             </div>
-          </div>
             <!-- DashBoard Title Start -->
             <div class="dash-title">
               <div class="dash-title-inner">
@@ -404,6 +408,55 @@
               </div>
             </div>
             <!-- Dashboard card end -->
+
+            <!-- DashBoard Table Start -->
+            <div class="activity-container">
+              <div class="activity-sect-one">
+                <div class="dash-chart-container">
+                  <p class="chat-title">Searches for the last 30 days</p>
+                  <div class="statistics">
+                    <p>3,706</p>
+                    <div class="statistics-inner">
+                      <div><img src="/assets/icons/arrow-up.svg" /></div>
+                      <p>4.5%</p>
+                    </div>
+                  </div>
+                  <canvas id="searchChart"></canvas>
+                </div>
+              </div>
+
+              <div class="activity-sect-two">
+                <form class="sub-contain">
+                  <p>Subscription</p>
+                  <div class="prog-sect">
+                    <div
+                      role="progressbar"
+                      aria-valuenow="30"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="--value: 30"
+                    ></div>
+                    <div class="proge-indcator">
+                      <p>30%</p>
+                      <p>Used</p>
+                    </div>
+                  </div>
+                  <input style="display: none;" />
+                  <button class="sub-btn-style">Subscribe</button>
+                  <div class="prog-footer">
+                    <div class="prog-item">
+                      <div></div>
+                      <p>Used Credits - 40</p>
+                    </div>
+                    <div class="prog-item">
+                      <div></div>
+                      <p>Total Credits - 90</p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- DashBoard Table End -->
 
             <!-- DashBoard Table Start -->
             <div class="activity-container">
@@ -570,11 +623,105 @@
           </div>
         </div>
       </div>
+       <!-- Logout Overlay Start -->
+       <div id="overlay-logout" class="overlay">
+        <div
+          id="overlay-dialog-logout"
+          class="change-pass-dialog-container overlay-animate"
+        >
+          <form id="overlay-dialog-logout" class="change-pass-dialog-wrapper">
+            <div>
+              <img src="/assets/icons/logout.svg" />
+            </div>
+            <p>Confirm Log Out?</p>
+            <p>Are you sure you want to log out? We would love you to stay</p>
+            <button>Logout</button>
+            <button id="close-overlay-btn-log-out" type="button">Cancel</button>
+          </form>
+        </div>
+      </div>
+      <!-- Logout Overlay End -->
       <div class="chat">
         <img src="/assets/icons/chat-line-linear.svg" />
       </div>
     </div>
     <script src="/assets/js/global.js"></script>
     <script src="/assets/js/dashboard/dashboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script>
+      const ctx = document.getElementById("searchChart").getContext("2d");
+      const gradient = ctx.createLinearGradient(0, 0, 0, 250);
+      gradient.addColorStop(0.0524, "rgba(4, 131, 159, 1)");
+      gradient.addColorStop(0.9127, "rgba(4, 131, 159, 0)");
+
+      const data = {
+        labels: ["Apr 06", "Apr 10", "Apr 14", "Apr 18", "Apr 20", "Apr 22"],
+        datasets: [
+          {
+            data: [10, 13, 14, 7, 20, 10, 14],
+            fill: "start",
+            backgroundColor: gradient,
+            borderColor: "#04839F",
+            tension: 0.9,
+          },
+        ],
+      };
+
+      const config = {
+        type: "line",
+        data: data,
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+          scales: {
+            x: {
+              display: true,
+              grid: {
+                display: false, // Hide vertical grid lines
+              },
+              ticks: {
+                font: {
+                  size: 14,
+                  family: "DMSans_18pt-Medium",
+                },
+                color: "#404040",
+              },
+              title: {
+                display: false,
+                text: "Month",
+              },
+            },
+            y: {
+              beginAtZero: true,
+              max: 20,
+              ticks: {
+                callback: function (value) {
+                  return value + "K";
+                },
+                font: {
+                  size: 14,
+                  family: "DMSans_18pt-Medium",
+                },
+                color: "#404040",
+              },
+              grid: {
+                display: true, // Display horizontal grid lines
+              },
+              title: {
+                display: false,
+                text: "Value",
+              },
+            },
+          },
+        },
+      };
+
+      new Chart(ctx, config);
+    </script>
   </body>
 </html>

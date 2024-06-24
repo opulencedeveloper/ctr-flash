@@ -1,0 +1,265 @@
+<?php include('config_ctrflash.php');
+$pageTitle='Dashboard CTRFLash';
+include('header_css_and_metatags.php'); ?>
+
+
+
+  <body>
+    <!-- Loading Spinner Start -->
+    <div id="spinner-body" class="spinner-body">
+      <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- Loading Spinner End -->
+
+    <div id="content" style="display: none">
+      <!-- Mobile Notification Start -->
+      <div id="mobile-notification" class="mobile-notification">
+        <div class="mobile-notification-wrapper">
+          <button id="notifyCloseBtn" class="close-notify">
+            <div><img src="/assets/icons/back-icon.svg" /></div>
+            <p>Back</p>
+          </button>
+          <?php include ('header.php');   ?>
+
+               
+          <!-- Header End -->
+
+          <div class="dashboard-content">
+		   <div class="dash-warn-wrapper">
+            <div class="dash-warn">
+              <div class="dash-warn-img">
+                <img src="/assets/icons/warning.svg" />
+              </div>
+              <p class="dash-warn-tle">
+                Please note that your dashboard is currently displaying sample
+                data. This will be replaced with real data once you start
+                creating a project.
+              </p>
+            </div>
+          </div>
+            <!-- DashBoard Title Start -->
+            <div class="dash-title">
+              <div class="dash-title-inner">
+                <p>Dashboard</p>
+                <p>This is the overall view of everything on your account</p>
+              </div>
+              <button class="openAddProjectDialogBtn">
+                <div class="add-icon">
+                  <img src="/assets/icons/circle-add.svg" />
+                </div>
+                <p>Add Project</p>
+              </button>
+            </div>
+            <!-- DashBoard Title End -->
+
+            <!-- DashBoard Card Start -->
+            <div class="dash-card-container">
+              <div class="dash-card">
+                <div class="dash-card-item">
+                  <div class="dash-card-icon-container">
+                    <img src="/assets/icons/micro-phone.svg" />
+                  </div>
+                  <p>Total Campaigns</p>
+                </div>
+                <p>120</p>
+              </div>
+
+              <div class="dash-card">
+                <div class="dash-card-item">
+                  <div class="dash-card-icon-container">
+                    <img src="/assets/icons/project-filled.svg" />
+                  </div>
+                  <p>Total Projects</p>
+                </div>
+                <p>6</p>
+              </div>
+
+              <div class="dash-card">
+                <div class="dash-card-item">
+                  <div class="dash-card-icon-container">
+                    <img src="/assets/icons/symbol-keyword.svg" />
+                  </div>
+                  <p>Keywords</p>
+                </div>
+                <p>1,490</p>
+              </div>
+            </div>
+            <!-- Dashboard card end -->
+
+            <!-- DashBoard Table Start -->
+            <div class="activity-container">
+              <div class="activity-sect-one">
+                <div class="activity-header">
+                  <p>All Activities</p>
+                  <button class="header-button">
+                    <div class="header-img-cont">
+                      <img src="/assets/icons/filter.svg" />
+                    </div>
+                    <p>March 2024</p>
+                  </button>
+                </div>
+                <table>
+                  <thead class="t-head">
+                    <tr>
+                      <th>Campaign</th>
+                      <th style="width: 2000px" class="sec-tb-head">Ranks</th>
+                      <th>Date</th>
+                    </tr>
+                  </thead>
+                  <tbody class="t-body">
+                    <tr class="tb-row">
+                      <td>
+                        Dental Clinic Campaign found the keyword
+                        <span class="td-bold">Dentist</span>
+                      </td>
+                      <td>8th Position</td>
+                      <td>Today</td>
+                    </tr>
+                    <tr class="tb-row">
+                      <td>
+                        Dental Clinic Campaign found the keyword
+                        <span class="td-bold">Dentist</span>
+                      </td>
+                      <td>8th Position</td>
+                      <td>2 days ago</td>
+                    </tr>
+                    <tr class="tb-row">
+                      <td>
+                        Dental Clinic Campaign found the keyword
+                        <span class="td-bold">Dentist</span>
+                      </td>
+                      <td>8th Position</td>
+                      <td>Today</td>
+                    </tr>
+                    <tr class="tb-row">
+                      <td>
+                        Dental Clinic Campaign found the keyword
+                        <span class="td-bold">Dentist</span>
+                      </td>
+                      <td>8th Position</td>
+                      <td>Today</td>
+                    </tr>
+                    <tr class="tb-row">
+                      <td>
+                        Dental Clinic Campaign found the keyword
+                        <span class="td-bold">Dentist</span>
+                      </td>
+                      <td>8th Position</td>
+                      <td>Today</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="activity-sect-two">
+                <div class="activity-header activity-header-border">
+                  <p>All Keyword Ranks</p>
+                  <button class="header-button">
+                    <div class="header-img-cont">
+                      <img src="/assets/icons/filter.svg" />
+                    </div>
+                    <p>March 2024</p>
+                  </button>
+                </div>
+                <div class="activity-sect-two-inner-container">
+                  <div class="activity-sect-two-inner-item">
+                    <p>Port Harcourt Dentist</p>
+                    <div class="activity-sect-two-inner-item-two">
+                      <div>
+                        <img src="/assets/icons/arrow-trending-up.svg" />
+                      </div>
+                      <p>246</p>
+                    </div>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p>Port Harcourt Dentist</p>
+                    <div class="activity-sect-two-inner-item-two">
+                      <div>
+                        <img src="/assets/icons/arrow-trending-up.svg" />
+                      </div>
+                      <p>246</p>
+                    </div>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p>Port Harcourt Dentist</p>
+                    <div class="activity-sect-two-inner-item-two">
+                      <div>
+                        <img src="/assets/icons/arrow-trending-up.svg" />
+                      </div>
+                      <p>246</p>
+                    </div>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p>Port Harcourt Dentist</p>
+                    <div class="activity-sect-two-inner-item-two">
+                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
+                      <p>246</p>
+                    </div>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p>Port Harcourt Dentist</p>
+                    <div class="activity-sect-two-inner-item-two">
+                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
+                      <p>246</p>
+                    </div>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p>Port Harcourt Dentist</p>
+                    <div class="activity-sect-two-inner-item-two">
+                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
+                      <p>246</p>
+                    </div>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p>Port Harcourt Dentist</p>
+                    <div class="activity-sect-two-inner-item-two">
+                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
+                      <p>246</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- DashBoard Table End -->
+          </div>
+        </div>
+      </div>
+      <div id="overlay" class="overlay">
+        <div class="add-project-dialog-wrapper">
+          <div class="add-project-dialog-container">
+            <div class="add-project-sectone">
+              <p>Create New Project</p>
+              <button id="closeAddProjectDialogBtn">
+                <img src="/assets/icons/close-outline.svg" />
+              </button>
+            </div>
+            <form class="the-project-form">
+              <div class="the-project-item-input">
+                <label for="projectName">Project Name</label>
+                <input required id="projectName" placeholder="Dentist Client" />
+              </div>
+              <div class="the-project-item-input">
+                <label for="description">Description</label>
+                <textarea
+                  required
+                  id="description"
+                  placeholder="Enter Description"
+                ></textarea>
+              </div>
+              <button type="button">Continue</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="chat">
+        <img src="/assets/icons/chat-line-linear.svg" />
+      </div>
+    </div>
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/dashboard/dashboard.js"></script>
+  </body>
+</html>

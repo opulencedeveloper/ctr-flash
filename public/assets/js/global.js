@@ -3,11 +3,23 @@ const openOverLayBtn = document.getElementById("open-overlay-btn");
 const overlay = document.getElementById("overlay");
 const overlayDialog = document.getElementById("overlay-dialog");
 
+const closeOverLayBtnLogout = document.getElementById("close-overlay-btn-log-out");
+const openOverLayBtnLogout = document.getElementById("open-overlay-btn-logout");
+const overlayLogout = document.getElementById("overlay-logout");
+const overlayDialogLogout = document.getElementById("overlay-dialog-logout");
+
 window.addEventListener("load", function () {
   document.getElementById("spinner-body").style.display = "none";
 
   document.getElementById("content").style.display = "block";
 });
+
+if(openOverLayBtnLogout) {
+  openOverLayBtnLogout.addEventListener("click", () => {
+    overlayLogout.style.display = "flex";
+  });
+  
+}
 
 if (overlay) {
   if (openOverLayBtn) {
@@ -15,6 +27,23 @@ if (overlay) {
       overlay.style.display = "flex";
     });
   }
+
+  if(closeOverLayBtnLogout) {
+    closeOverLayBtnLogout.addEventListener("click", () => {
+      overlayDialogLogout.classList.add("fadeOut");
+  
+      overlayDialogLogout.addEventListener(
+        "animationend",
+        function () {
+          overlayDialogLogout.classList.remove("fadeOut");
+          overlayLogout.style.display = "none";
+        },
+        { once: true }
+      );
+    });
+  }
+
+  
 
   if (closeOverLayBtn) {
     closeOverLayBtn.addEventListener("click", () => {
