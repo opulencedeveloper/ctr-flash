@@ -356,3 +356,48 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+function generateHourOpList() {
+  const containerOP = document.querySelector('.gen-op-hr');
+  const periods = ['AM', 'PM'];
+
+  periods.forEach(period => {
+      for (let hour = 1; hour <= 12; hour++) {
+          const div = document.createElement('div');
+          div.textContent = `${hour} ${period}`;
+          div.onclick = function() {
+              selectOption(this, `${hour} ${period}`);
+          };
+          containerOP.appendChild(div);
+      }
+  });
+}
+
+function generateCloseHourList() {
+  const containerCl = document.querySelector('.gen-cl-hr');
+  const periods = ['AM', 'PM'];
+
+  periods.forEach(period => {
+      for (let hour = 1; hour <= 12; hour++) {
+          const div = document.createElement('div');
+          div.textContent = `${hour} ${period}`;
+          div.onclick = function() {
+              selectOption(this, `${hour} ${period}`);
+          };
+          containerCl.appendChild(div);
+      }
+  });
+}
+
+let selectedTimeCheckBox = document.querySelector('.closing-time');
+
+document.getElementById('time-check-button').addEventListener('change', function() {
+  selectedTimeCheckBox.classList.toggle("active");
+});
+
+
+
+window.addEventListener("load", function () {
+  generateHourOpList();
+  generateCloseHourList();
+});

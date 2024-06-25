@@ -882,7 +882,53 @@ margin-top: 5px;
     color: blue;
 } */
 
+.dash-cred-container, .dash-cred-container-mobile{
+width: 280px;
+margin-left: 15px;
+margin-right: 15px;
+}
+
+.dash-cred-sectone{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.dash-cred-sectone>p{
+    font-size: 16px;
+    color: var(--custom-five);
+    margin: 0px;
+}
+
+.dash-cred-sectone>p:first-child{
+    font-family: 'DMSans-Regular';
+}
+
+.dash-cred-sectone>p:nth-child(2){
+    font-family: 'DMSans_36pt-Bold';
+}
+
+.progress-container, .progress-container-mobile  {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--custom-eleven);
+}
+
+.progress-bar, .progress-mobile {
+    width: 0;
+    height: 8px;
+    background: linear-gradient(136.9deg, #05A4C7 2.3%, #1ADBD4 96.52%);
+    border-radius: 8px;
+    transition: width 0.4s ease;
+}
+
 @media only screen and (max-width: 1190px) {
+    
     .activity-container {
         flex-direction: column;
     }
@@ -894,6 +940,17 @@ margin-top: 5px;
 }
 
 @media only screen and (max-width: 1070px) {
+    .dash-cred-sectone>p{
+        font-size: 12px;
+        color: white;
+    }
+    
+    .dash-cred-container {
+        display: none;
+     }
+     .dash-cred-container-mobile{
+        width: 98%;
+    }
     .dash-card-container {
         grid-template-columns: repeat(2, 1fr);
 
@@ -907,11 +964,15 @@ margin-top: 5px;
     }
 }
 
-@media only screen and (max-width: 690px) {
+@media only screen and (max-width: 690px) {        
     .dash-warn {
         padding: 12px;
-        margin-bottom: 0px;
+        margin-bottom: 10px;
         margin-top: 24px;
+        }
+
+        .home-dash-tle{
+            margin-bottom: 15px;
         }
         
         .dash-warn-tle{
@@ -942,6 +1003,27 @@ margin-top: 5px;
 }
 
 @media only screen and (max-width: 500px) {
+    .prog-footer{
+        flex-direction: row;
+        justify-content: center;
+      }
+    
+      .prog-item>p{
+        font-size: 12px;
+      }
+
+
+    .sub-contain{
+        padding: 16px 8px;
+      }
+      .sub-contain>p:first-child{
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+
+    .dash-chart-container {
+        padding: 20px 16px;
+    }
     .chat-title {
         font-size: 14px;
     }
@@ -953,8 +1035,8 @@ margin-top: 5px;
         width: 20px;
     }
     .dash-warn-wrapper{
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
     thead tr th {
         font-size: 12px;
@@ -1011,8 +1093,8 @@ margin-top: 5px;
 
     .dash-card-container {
         background-color: var(--custom-ninteen);
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 0px;
+        padding-right: 0px;
         padding-top: 24px;
     }
 
@@ -1034,6 +1116,10 @@ margin-top: 5px;
         margin-bottom: 5px;
     }
 
+    .dash-title button{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
     .add-icon {
         height: 16px;
         width: 16px;

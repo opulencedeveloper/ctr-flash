@@ -967,6 +967,7 @@
                   <input required id="keyword" placeholder="Smile" />
                 </div>
 
+                
                 <div class="the-project-item-input keyword-input-item">
                   <label for="searches-per-interval"
                     >Searches per Interval</label
@@ -1019,6 +1020,88 @@
                       <img src="/assets/icons/question-mark-rounded.svg" />
                     </div>
                   </label>
+                </div>
+
+                <div class="open-close-hrs">
+                  <label for="time-check-button" class="campaign-checkbox">
+                    <input type="checkbox" id="time-check-button">
+                    <span class="campaign-checkmark"></span>
+                    Enable opening and closing hours
+                </label>
+
+                <div class="closing-time">
+                  <div
+                    data-dropdown
+                    class="dropdown-container the-project-item-input keyword-input-item aa"
+                  >
+                    <label for="opening-hr">Opening Hour</label>
+                    <input
+                      type="text"
+                      required
+                      id="opening-hr"
+                      class="dropdown-input"
+                      placeholder="Select Hour"
+                      list="suggestions"
+                      oninput="filterOptions(event)"
+                    />
+                    <img
+                      src="/assets/icons/drop-down-line.svg"
+                      class="dropdown-icon"
+                      onclick="toggleDropdown(this)"
+                    />
+                    <div id="countryListContainer" class="datalist-container gen-cl-hr">
+                    </div>
+                  </div>
+
+                  <div
+                    data-dropdown
+                    class="dropdown-container the-project-item-input keyword-input-item aa"
+                  >
+                    <label for="closing-hr">Closing Hour</label>
+                    <input
+                      type="text"
+                      required
+                      id="closin-hr"
+                      class="dropdown-input"
+                      placeholder="Select Hour"
+                      list="suggestions"
+                      oninput="filterOptions(event)"
+                    />
+                    <img
+                      src="/assets/icons/drop-down-line.svg"
+                      class="dropdown-icon"
+                      onclick="toggleDropdown(this)"
+                    />
+                    <div id="countryListContainer" class="datalist-container gen-op-hr">
+                      
+                    </div>
+                  </div>
+
+                  <div
+                    data-dropdown
+                    class="dropdown-container the-project-item-input keyword-input-item aa"
+                  >
+                    <label for="time-zone">Time Zone</label>
+                    <input
+                      type="text"
+                      required
+                      id="time-zone"
+                      class="dropdown-input"
+                      placeholder="Select Time Zone"
+                      list="suggestions"
+                      oninput="filterOptions(event)"
+                    />
+                    <img
+                      src="/assets/icons/drop-down-line.svg"
+                      class="dropdown-icon"
+                      onclick="toggleDropdown(this)"
+                    />
+                    <div id="countryListContainer" class="datalist-container">
+                      <div onclick="selectOption(this,'GMT+01')">GMT+01</div>
+                    </div>
+                  </div>
+                  
+                </div>
                 </div>
 
                 <div class="add-keyword-raido-btn_II">

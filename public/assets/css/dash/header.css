@@ -644,6 +644,10 @@ body {
 }
 
 @media only screen and (max-width: 690px) {
+    .dash-head-notify p, .dash-head-notify-container {
+        display: none;
+    }
+
     .dash-nav {
         display: none;
     }
@@ -688,10 +692,7 @@ body {
         padding-right: 0px;
     }
 
-    .dash-head-notify p, .dash-head-notify-container {
-        display: none;
-    }
-
+   
     .dash-head-notify-container {
         height: 24px;
         width: 24px;
@@ -710,6 +711,7 @@ body {
         padding-top: 5px;
         padding-bottom: 0px;
         border-radius: 0px;
+        background-color: var(--custom-ninteen);
     }
 
     .profile-avatar img {

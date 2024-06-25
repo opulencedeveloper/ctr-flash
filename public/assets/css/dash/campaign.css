@@ -964,7 +964,7 @@
 
 .add-keyword-raido-btn_II {
     padding-top: 24px;
-    margin-top: 24px;
+    margin-top: 5px;
     border-top: 1px solid var(--custom-eleven);
     box-sizing: border-box;
     display: flex;
@@ -1578,6 +1578,71 @@ body {
     width: 22px;
 }
 
+.campaign-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+
+.campaign-checkbox input {
+    display: none;
+}
+
+.campaign-checkmark {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    position: relative;
+    transition: background-color 0.2s;
+}
+
+.campaign-checkbox input:checked + .campaign-checkmark {
+    background-color: var(--tertiary-color);
+}
+
+.campaign-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 8px;
+    top: 3px;
+    width: 3px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.campaign-checkbox input:checked + .campaign-checkmark:after {
+    display: block;
+}
+
+.closing-time{
+    display: none;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 16px;
+    
+}
+
+.closing-time.active {
+    display: flex;
+}
+
+.open-close-hrs{
+    padding-top: 16px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    border-top: 1px solid var(--custom-eleven);
+}
+
+
+
 @media (min-width: 768px) {
     .info-button:hover .tooltip {
         display: block;
@@ -1645,6 +1710,16 @@ body {
 }
 
 @media only screen and (max-width: 690px) {
+    .campaign-checkbox {
+        font-size: 14px;
+    }
+    .closing-time{
+        display: none;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 16px;
+        
+    }
     .camp-kywrd-sect-two {
         width: auto;
     }
