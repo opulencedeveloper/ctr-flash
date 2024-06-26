@@ -1,5 +1,7 @@
 const closeOverLayBtn = document.getElementById("close-overlay-btn");
 const openOverLayBtn = document.getElementById("open-overlay-btn");
+const openOverlayBtns = document.querySelectorAll(".open-overlay-btn");
+
 const overlay = document.getElementById("overlay");
 const overlayDialog = document.getElementById("overlay-dialog");
 
@@ -40,12 +42,23 @@ window.addEventListener("load", function () {
   startProgress();
 });
 
+if(openOverlayBtns) {
+  openOverlayBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      overlay.style.display = "flex";
+    });
+  });
+}
+
+
+
 if(openOverLayBtnLogout) {
   openOverLayBtnLogout.addEventListener("click", () => {
     overlayLogout.style.display = "flex";
   });
   
 }
+
 
 if (overlay) {
   if (openOverLayBtn) {

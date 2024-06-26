@@ -16,8 +16,10 @@
     <link href="/assets/css/font.css" rel="stylesheet" />
     <link href="/assets/css/dash/header.css" rel="stylesheet" />
     <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dash/project-details.css" rel="stylesheet" />
     <link href="/assets/css/dash/project.css" rel="stylesheet" />
     <link href="/assets/css/dash/campaign.css" rel="stylesheet" />
+    
   </head>
 
   <body>
@@ -349,7 +351,7 @@
                     <p>Dentist Client</p>
                     <p>7 Active Campaigns</p>
                   </div>
-                  <button>
+                  <button class="open-overlay-btn">
                     <div class="add-icon">
                       <img src="/assets/icons/add-one-blue.svg" />
                     </div>
@@ -399,7 +401,7 @@
                     <p>Test1</p>
                     <p>3 Active Campaigns</p>
                   </div>
-                  <button>
+                  <button class="open-overlay-btn">
                     <div class="add-icon">
                       <img src="/assets/icons/add-one-blue.svg" />
                     </div>
@@ -438,6 +440,80 @@
           </div>
         </div>
       </div>
+
+
+
+      <!-- Create Campaign Overlay Start -->
+      <div id="overlay" class="overlay">
+        <div id="overlay-dialog" class="create-camp-container overlay-animate">
+          <div>
+            <p>Create New Campaign</p>
+            <button id="close-overlay-btn">
+              <img src="/assets/icons/close-outline.svg" />
+            </button>
+          </div>
+          <p>Campaign Type</p>
+          <form class="the-project-form create-project-form">
+            <div class="create-camp-radio-btn">
+              <label for="opt-one" class="create-camp-item">
+                <input
+                  id="opt-one"
+                  type="radio"
+                  name="option"
+                  value="Organic Search"
+                  checked
+                />
+                <div class="radio-mark"></div>
+                <p>Organic Search</p>
+                <div><img src="/assets/icons/question-mark-rounded.svg" /></div>
+              </label>
+              <label for="opt-two" class="create-camp-item">
+                <input
+                  id="opt-two"
+                  type="radio"
+                  name="option"
+                  value="Google Search"
+                />
+                <div class="radio-mark"></div>
+                <p>Google Search</p>
+                <div><img src="/assets/icons/question-mark-rounded.svg" /></div>
+              </label>
+            </div>
+
+            <div class="create-project-form-inner">
+              <div class="the-project-item-input">
+                <label for="campaign-title">Campaign Title</label>
+                <input
+                  required
+                  id="campaign-title"
+                  placeholder="Dentist Client"
+                />
+              </div>
+              <div class="the-project-item-input">
+                <label for="web-url">Websiite Url</label>
+                <input
+                  required
+                  type="url"
+                  id="web-url"
+                  placeholder="opulencedeveloper.com"
+                />
+              </div>
+              <div class="the-project-item-input">
+                <label for="business-name">Business Name</label>
+                <input
+                  required
+                  type="text"
+                  id="business-name"
+                  placeholder="Dentistry"
+                />
+              </div>
+            </div>
+            <!-- This button leads to the "created-campaign.html" page -->
+            <button>Create Campaign</button>
+          </form>
+        </div>
+      </div>
+      <!-- Create Campaign Overlay End -->
 
       <div class="chat">
         <img src="/assets/icons/chat-line-linear.svg" />

@@ -16,6 +16,7 @@
     <link href="/assets/css/font.css" rel="stylesheet" />
     <link href="/assets/css/dash/header.css" rel="stylesheet" />
     <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dash/campaign.css" rel="stylesheet" />
     <link href="/assets/css/dash/project.css" rel="stylesheet" />
   </head>
 
@@ -364,8 +365,13 @@
 
               <div id="added-project-container" class="added-project-container">
                 <div class="added-project-item">
+                  
                   <div>dc</div>
                   <p>Dentist Client</p>
+                  <div class="added-proj-label">
+                    <div></div>
+                    <p>3 Campaigns created</p>
+                  </div>
                   <p>
                     Lörem ipsum dode geoskap astrot anav mikrose. Teleker
                     soplasade båmånat.
@@ -373,40 +379,31 @@
                   <div class="added-project-button-wrapper">
                     <a href="/dashboard/project-details.html">View Project</a>
                   </div>
+                  <button class="added-project-item-btn info-button"><img src="/assets/icons/more-vert.svg" />
+                  
+                    <div class="tooltip prog-cardtooltip">
+                     
+                      <a href="#">
+                        <div>
+                          <img
+                            src="/assets/icons/edit-outline-gray.svg"
+                          />
+                        </div>
+                        <p>Edit</p>
+                      </a>
+                      <a href="#">
+                        <div>
+                          <img
+                            src="/assets/icons/delete.svg"
+                          />
+                        </div>
+                        <p class="proj-dele-text">Delete</p>
+                      </a>
+                      
+                    </div>
+                  </button>
                 </div>
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
-                  </div>
-                </div>
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
-                  </div>
-                </div>
-                <div class="added-project-item">
-                  <div>dc</div>
-                  <p>Dentist Client</p>
-                  <p>
-                    Lörem ipsum dode geoskap astrot anav mikrose. Teleker
-                    soplasade båmånat.
-                  </p>
-                  <div class="added-project-button-wrapper">
-                    <a href="/dashboard/project-details.html">View Project</a>
-                  </div>
-                </div>
+              
               </div>
             </div>
             <!-- Add Project End -->
@@ -449,6 +446,7 @@
     </div>
     <script src="/assets/js/global.js"></script>
     <script src="/assets/js/dashboard/dashboard.js"></script>
+    <script src="/assets/js/dashboard/createdcampaign.js"></script>
     <script src="/assets/js/dashboard/project.js"></script>
   </body>
 </html>

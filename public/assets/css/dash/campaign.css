@@ -60,6 +60,7 @@
 }
 
 .campaign-item {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1641,6 +1642,38 @@ body {
     border-top: 1px solid var(--custom-eleven);
 }
 
+.all-camp-item-btn{
+    position: absolute;
+    right: 20px;
+    top: 44px;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.all-camp-item-btn img{
+    height: 24px;
+    width: 24px;
+}
+
+.create-camp-hd-txt{
+    color: white !important;
+}
+
+.create-camp-hd{
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+.create-camp-hd>p{
+    margin: 0px;
+    font-family: 'DMSans_36pt-Bold';
+}
 
 
 @media (min-width: 768px) {
