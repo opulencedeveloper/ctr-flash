@@ -135,16 +135,16 @@
                 </div>
                 <p>dashboard</p>
               </a>
-              <a
-                href="/dashboard/projects.html"
-                class="nav-item-mobile"
-              >
+              <a href="/dashboard/projects.html" class="nav-item-mobile">
                 <div class="nav-icon-mobile">
                   <img src="/assets/icons/projects.svg" />
                 </div>
                 <p>projects</p>
               </a>
-              <a href="/dashboard/campaigns.html" class="nav-item-mobile active-nav-item-mobile">
+              <a
+                href="/dashboard/campaigns.html"
+                class="nav-item-mobile active-nav-item-mobile"
+              >
                 <div class="nav-icon-mobile">
                   <img src="/assets/icons/campaign-active.svg" />
                 </div>
@@ -156,14 +156,20 @@
                 </div>
                 <p>my subscription</p>
               </a>
-              <a href="/dashboard/settings/general.html" class="nav-item-mobile">
+              <a
+                href="/dashboard/settings/general.html"
+                class="nav-item-mobile"
+              >
                 <div class="nav-icon-mobile">
                   <img src="/assets/icons/settings.svg" />
                 </div>
                 <p>Settings</p>
               </a>
 
-              <a href="/dashboard/settings/general.html" class="nav-item-mobile logout-sect">
+              <a
+                href="/dashboard/settings/general.html"
+                class="nav-item-mobile logout-sect"
+              >
                 <div class="nav-icon-mobile">
                   <img src="/assets/icons/logout-white.svg" />
                 </div>
@@ -171,9 +177,7 @@
               </a>
             </nav>
           </div>
-          <p id="mobile-nav-footer" class="mobile-nav-footer">
-            
-      </p>
+          <p id="mobile-nav-footer" class="mobile-nav-footer"></p>
         </div>
       </div>
       <!-- Mobile Navigation End -->
@@ -189,7 +193,9 @@
               <p id="dash-tle" class="dash-tle">ctr flash</p>
             </div>
 
-            <button id="dash-nav-toggle" class="dash-nav-toggle"><img id="dash-arrow" src="/assets/icons/tabler-arrow-left.svg" /></button>
+            <button id="dash-nav-toggle" class="dash-nav-toggle">
+              <img id="dash-arrow" src="/assets/icons/tabler-arrow-left.svg" />
+            </button>
           </div>
           <nav id="desktop-nav" class="desktop-nav">
             <a href="/dashboard/index.html" class="nav-item">
@@ -204,7 +210,10 @@
               </div>
               <p class="ds-item">projects</p>
             </a>
-            <a href="/dashboard/campaigns.html" class="nav-item active-nav-item">
+            <a
+              href="/dashboard/campaigns.html"
+              class="nav-item active-nav-item"
+            >
               <div class="nav-icon">
                 <img src="/assets/icons/campaign-active.svg" />
               </div>
@@ -237,13 +246,19 @@
               </div>
               <div class="dash-head-details">
                 <p>hello <span id="dashName">macdonald</span></p>
-                <p id="header-date-time">Saturday 23 Mar, 2024. 10:00am (GMT+1)</p>
+                <p id="header-date-time">
+                  Saturday 23 Mar, 2024. 10:00am (GMT+1)
+                </p>
               </div>
             </div>
 
             <div class="dash-notify-container">
               <div class="dash-head-notify-wrapper">
-                <a href="/signin.html" id="dash-head-notify" class="dash-head-notify">
+                <a
+                  href="/signin.html"
+                  id="dash-head-notify"
+                  class="dash-head-notify"
+                >
                   <div id="notifyOpenBtn" class="dash-head-notify-container">
                     <img id="bell-icon" src="/assets/icons/mdi_logout.svg" />
                   </div>
@@ -323,8 +338,8 @@
                 </a>
               </div>
 
-               <div class="profile-avatar">
-                <img src="/assets/images/profile-avatar.svg"/>
+              <div class="profile-avatar">
+                <img src="/assets/images/profile-avatar.svg" />
               </div>
             </div>
           </header>
@@ -336,17 +351,13 @@
               <span>/</span>
               <span>View all Campaigns</span>
             </p>
-            <button
-              onclick="goBack()"
-              class="projec-detail-bk-btn"
-            >
+            <button onclick="goBack()" class="projec-detail-bk-btn">
               <div><img src="/assets/icons/back-icon.svg" /></div>
               <p>Back</p>
             </button>
             <div class="campaign-inner-one create-camp-hd">
-              
-                <p>2 Campaigns Created</p>
-              
+              <p>2 Campaigns Created</p>
+
               <button class="open-overlay-btn camp-overview-btn">
                 <div class="add-icon">
                   <img src="/assets/icons/circle-add.svg" />
@@ -382,7 +393,23 @@
                   <a href="/dashboard/project-details.html">View Campaign</a>
                 </div>
 
-                <button class="all-camp-item-btn open-overlay-btn"><img src="/assets/icons/more-vert.svg" /></button>
+                <button class="all-camp-item-btn info-button">
+                  <img src="/assets/icons/more-vert.svg" />
+                  <div class="tooltip prog-cardtooltip">
+                    <a href="#">
+                      <div>
+                        <img src="/assets/icons/edit-outline-gray.svg" />
+                      </div>
+                      <p>Edit</p>
+                    </a>
+                    <a href="#">
+                      <div>
+                        <img src="/assets/icons/delete.svg" />
+                      </div>
+                      <p class="camp-dele-text">Delete</p>
+                    </a>
+                  </div>
+                </button>
               </div>
               <!-- Item 1 End -->
 
@@ -413,17 +440,30 @@
                   <a href="/dashboard/project-details.html">View Campaign</a>
                 </div>
 
-                <button class="all-camp-item-btn open-overlay-btn"><img src="/assets/icons/more-vert.svg" /></button>
+                <button class="all-camp-item-btn info-button">
+                  <img src="/assets/icons/more-vert.svg" />
+                  <div class="tooltip prog-cardtooltip">
+                    <a href="#">
+                      <div>
+                        <img src="/assets/icons/edit-outline-gray.svg" />
+                      </div>
+                      <p>Edit</p>
+                    </a>
+                    <a href="#">
+                      <div>
+                        <img src="/assets/icons/delete.svg" />
+                      </div>
+                      <p class="camp-dele-text">Delete</p>
+                    </a>
+                  </div>
+                </button>
               </div>
               <!-- Item 2 End -->
-              
             </div>
           </div>
         </div>
       </div>
 
-
-      
       <!-- Create Campaign Overlay Start -->
       <div id="overlay" class="overlay">
         <div id="overlay-dialog" class="create-camp-container overlay-animate">
