@@ -314,9 +314,14 @@ document.addEventListener("DOMContentLoaded", () => {
             .querySelector(".mobile-drawup")
             .classList.remove("show");
         }
-
-        overlayy.classList.add("show");
-        mobileDrawup.classList.add("show");
+if(overlayy) {
+  overlayy.classList.add("show");
+}
+        
+if(mobileDrawup) {
+  mobileDrawup.classList.add("show");
+}
+        
         currentOverlay = overlayy;
 
         event.stopPropagation();
