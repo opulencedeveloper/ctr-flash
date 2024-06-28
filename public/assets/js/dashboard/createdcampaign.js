@@ -106,15 +106,14 @@ const addKeywordForm = document.querySelector(".add-keyword-form");
 const selectMutltiForm = document.querySelector(".select-mutlti-form");
 const closeMutltiFormBtn = document.querySelector(".close-multi-sel");
 
-if(selectionMutilpleCountryBtn) {
+if (selectionMutilpleCountryBtn) {
   selectionMutilpleCountryBtn.addEventListener("click", (event) => {
     addKeywordForm.style.display = "none";
     selectMutltiForm.style.display = "block";
   });
 }
 
-if(closeMutltiFormBtn) {
-
+if (closeMutltiFormBtn) {
   closeMutltiFormBtn.addEventListener("click", (event) => {
     addKeywordForm.style.display = "block";
     selectMutltiForm.style.display = "none";
@@ -279,7 +278,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function handleProgTooltip() {
+    const isDesktop = window.innerWidth >= 500;
+    const buttons = document.querySelectorAll(".info-button");
+
+    buttons.forEach((button) => {
+      const tooltip = button.querySelector(".prog-cardtooltip");
+      if (tooltip) {
+        button.addEventListener("mouseenter", () => {
+          tooltip.style.display = "block";
+          setTimeout(() => {
+            tooltip.style.opacity = "1";
+            tooltip.style.transform = "translateY(-50%) translateX(0)";
+          }, 0);
+        });
+
+        button.addEventListener("mouseleave", () => {
+          tooltip.style.opacity = "0";
+          tooltip.style.transform = "translateY(-50%) translateX(-10px)";
+          setTimeout(() => {
+            tooltip.style.display = "none";
+          }, 300);
+        });
+      }
+    });
+  }
+
   handleTooltip();
+  handleProgTooltip();
 
   window.addEventListener("resize", handleTooltip);
 });
@@ -314,14 +340,14 @@ document.addEventListener("DOMContentLoaded", () => {
             .querySelector(".mobile-drawup")
             .classList.remove("show");
         }
-if(overlayy) {
-  overlayy.classList.add("show");
-}
-        
-if(mobileDrawup) {
-  mobileDrawup.classList.add("show");
-}
-        
+        if (overlayy) {
+          overlayy.classList.add("show");
+        }
+
+        if (mobileDrawup) {
+          mobileDrawup.classList.add("show");
+        }
+
         currentOverlay = overlayy;
 
         event.stopPropagation();
@@ -363,49 +389,50 @@ if(mobileDrawup) {
 });
 
 function generateHourOpList() {
-  const containerOP = document.querySelector('.gen-op-hr');
-  const periods = ['AM', 'PM'];
+  const containerOP = document.querySelector(".gen-op-hr");
+  const periods = ["AM", "PM"];
 
-  if(containerOP) {
-  periods.forEach(period => {
+  if (containerOP) {
+    periods.forEach((period) => {
       for (let hour = 1; hour <= 12; hour++) {
-          const div = document.createElement('div');
-          div.textContent = `${hour} ${period}`;
-          div.onclick = function() {
-              selectOption(this, `${hour} ${period}`);
-          };
-          containerOP.appendChild(div);
+        const div = document.createElement("div");
+        div.textContent = `${hour} ${period}`;
+        div.onclick = function () {
+          selectOption(this, `${hour} ${period}`);
+        };
+        containerOP.appendChild(div);
       }
-  }); }
+    });
+  }
 }
 
 function generateCloseHourList() {
-  const containerCl = document.querySelector('.gen-cl-hr');
-  const periods = ['AM', 'PM'];
+  const containerCl = document.querySelector(".gen-cl-hr");
+  const periods = ["AM", "PM"];
 
-  if(containerCl) {
-  periods.forEach(period => {
+  if (containerCl) {
+    periods.forEach((period) => {
       for (let hour = 1; hour <= 12; hour++) {
-          const div = document.createElement('div');
-          div.textContent = `${hour} ${period}`;
-          div.onclick = function() {
-              selectOption(this, `${hour} ${period}`);
-          };
-          containerCl.appendChild(div);
+        const div = document.createElement("div");
+        div.textContent = `${hour} ${period}`;
+        div.onclick = function () {
+          selectOption(this, `${hour} ${period}`);
+        };
+        containerCl.appendChild(div);
       }
-  }); }
+    });
+  }
 }
 
-let selectedTimeCheckBox = document.querySelector('.closing-time');
+let selectedTimeCheckBox = document.querySelector(".closing-time");
 
 const timeCheckButton = document.getElementById("time-check-button");
 
-if(timeCheckButton) {
-timeCheckButton.addEventListener('change', function() {
-  selectedTimeCheckBox.classList.toggle("active");
-});
+if (timeCheckButton) {
+  timeCheckButton.addEventListener("change", function () {
+    selectedTimeCheckBox.classList.toggle("active");
+  });
 }
-
 
 window.addEventListener("load", function () {
   generateHourOpList();
