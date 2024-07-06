@@ -129,7 +129,7 @@ body {
 .dash-head {
     position: sticky;
     top: 0px;
-    z-index: 999;
+    z-index: 999999;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -268,7 +268,7 @@ body {
     width: 100%;
     text-align: center;
     transition: 0.3s;
-    z-index: 99999;
+    z-index: 9999999999;
 }
 
 .nav-menu.active {

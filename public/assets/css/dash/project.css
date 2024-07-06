@@ -139,6 +139,12 @@
 .subscription-card>div:first-child>p:first-child {
     font-size: 20px !important;
 }
+.subscription-card>p:first-child, .recom-card>div:first-child p:first-child {
+-webkit-flow-into: 16px;
+font-family: 'DMSans_36pt-Bold';
+margin: 0px;
+font-size: 16px !important;
+}
 
 .subscription-card>div:first-child>p:last-child {
     color: var(--custom-twenty-four);
@@ -146,14 +152,22 @@
     font-size: 14px;
 }
 
-.subscription-card>div:first-child>p:first-child {
-    color: var(--tertiary-color);
+.subscription-card>div:nth-child(3)>p:first-child {
+    color: var(--tertiary-color) !important; 
+    font-size: 20px;
+    font-family: 'DMSans_36pt-Bold';
+    padding-top: 8px;
+    margin: 0px;
+}
+
+.recom-card>div:nth-child(3)>p:first-child{
+color: var(--custom-seven) !important;
 }
 
 
 .subscription-card>div:nth-child(2) {
     display: flex;
-    margin-top: 28px;
+    margin-top: 24px;
     gap: 8px;
 }
 
@@ -170,6 +184,10 @@
     color: var(--custom-five);
     margin: 0px;
 
+}
+
+.recom-card>div:first-child{
+    margin-top: 0px;
 }
 
 .recom-card>div:first-child p:first-child,
@@ -311,6 +329,36 @@
     cursor: pointer;
 }
 
+.crea-proje-badge {
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 32px;
+    background-color: var(--custom-sixteen);
+}
+
+.crea-proje-badge>div:first-child {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: var(--tertiary-color);
+
+}
+
+.crea-proje-badge>p {
+    text-transform: capitalize;
+}
+
+.crea-proje-badge>p:last-child {
+    font-size: 14px;
+    color: var(--custom-ten);
+    font-family: 'DMSans_18pt-Medium';
+    margin: 0px;
+    
+}
+
 .added-project-item-btn img{
     height: 24px;
     width: 24px;
@@ -322,7 +370,7 @@
 
 .prog-cardtooltip {
     position: absolute;
-    top: 90px;
+    top: 90px !important;
 }
 
 .proj-dele-text{
@@ -396,6 +444,12 @@
 
     .subscription-card>div:nth-child(2)>p:first-child {
         font-size: 24px;
+    }
+
+    .subscription-card>div:nth-child(3)>p:first-child {
+        font-size: 17px;
+        padding-bottom: 4px;
+        padding-top: 9px;
     }
 
     .subscription-card>div:nth-child(2)>p:nth-child(2) {

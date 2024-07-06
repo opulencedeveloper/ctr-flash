@@ -1,39 +1,45 @@
 const closeOverLayBtn = document.getElementById("close-overlay-btn");
+const closeEditKeywordOverLayBtn = document.getElementById("close-overlay-key-word-btn");
 const openOverLayBtn = document.getElementById("open-overlay-btn");
 const openOverlayBtns = document.querySelectorAll(".open-overlay-btn");
+const openEditKeywordOverlayBtn = document.querySelectorAll(".open-edit-overlay-btn"); 
 
 const overlay = document.getElementById("overlay");
+const editKeyWordOverlay = document.getElementById("edit-key-word-overlay");
 const overlayDialog = document.getElementById("overlay-dialog");
+const editKeywordDialog  = document.getElementById("edit-key-word-dialog");
 
 const closeOverLayBtnLogout = document.getElementById("close-overlay-btn-log-out");
 const openOverLayBtnLogout = document.getElementById("open-overlay-btn-logout");
+
 const overlayLogout = document.getElementById("overlay-logout");
 const overlayDialogLogout = document.getElementById("overlay-dialog-logout");
 
-function startProgress() {
-  let progressBar = document.getElementById('progress-bar');
-  let progressBarMobile = document.getElementById('progress-bar-mobile');
-  let progressValue = progressBar.getAttribute('progress');
-  progressValue = parseInt(progressValue);
+function startProgress() {}
+// function startProgress() {
+//   let progressBar = document.getElementById('progress-bar');
+//   let progressBarMobile = document.getElementById('progress-bar-mobile');
+//   let progressValue = progressBar.getAttribute('progress');
+//   progressValue = parseInt(progressValue);
 
-  if (isNaN(progressValue) || progressValue < 0 || progressValue > 100) {
-      alert('Please set a valid progress value between 0 and 100 in the HTML.');
-      return;
-  }
+//   if (isNaN(progressValue) || progressValue < 0 || progressValue > 100) {
+//       alert('Please set a valid progress value between 0 and 100 in the HTML.');
+//       return;
+//   }
 
-  let width = 0;
-  let interval = setInterval(frame, 20);
+//   let width = 0;
+//   let interval = setInterval(frame, 20);
 
-  function frame() {
-      if (width >= progressValue) {
-          clearInterval(interval);
-      } else {
-          width++;
-          progressBarMobile.style.width = width + '%';
-          progressBar.style.width = width + '%';
-      }
-  }
-}
+//   function frame() {
+//       if (width >= progressValue) {
+//           clearInterval(interval);
+//       } else {
+//           width++;
+//           progressBarMobile.style.width = width + '%';
+//           progressBar.style.width = width + '%';
+//       }
+//   }
+// }
 
 window.addEventListener("load", function () {
   document.getElementById("spinner-body").style.display = "none";
@@ -50,6 +56,14 @@ if(openOverlayBtns) {
   });
 }
 
+if(openEditKeywordOverlayBtn) {
+  openEditKeywordOverlayBtn.forEach(btn => {
+    btn.addEventListener("click", () => {
+      editKeyWordOverlay.style.display = "flex";
+    });
+  });
+}
+
 
 
 if(openOverLayBtnLogout) {
@@ -59,6 +73,22 @@ if(openOverLayBtnLogout) {
   
 }
 
+if(editKeyWordOverlay) {
+  if (closeEditKeywordOverLayBtn) {
+    closeEditKeywordOverLayBtn.addEventListener("click", () => {
+      editKeywordDialog.classList.add("fadeOut");
+
+      editKeywordDialog.addEventListener(
+        "animationend",
+        function () {
+          editKeywordDialog.classList.remove("fadeOut");
+          editKeyWordOverlay.style.display = "none";
+        },
+        { once: true }
+      );
+    });
+  }
+}
 
 if (overlay) {
   if (openOverLayBtn) {

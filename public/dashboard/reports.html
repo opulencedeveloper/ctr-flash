@@ -16,7 +16,8 @@
     <link href="/assets/css/font.css" rel="stylesheet" />
     <link href="/assets/css/dash/header.css" rel="stylesheet" />
     <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
-    <link href="/assets/css/dash/settings.css" rel="stylesheet" />
+    <link href="/assets/css/dash/project.css" rel="stylesheet" />
+    <link href="/assets/css/dash/campaign.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.css"
@@ -132,12 +133,9 @@
               </button>
             </div>
             <nav class="moblie-nav">
-              <a
-                href="/dashboard/index.html"
-                class="nav-item-mobile active-nav-item-mobile"
-              >
+              <a href="/dashboard/index.html" class="nav-item-mobile">
                 <div class="nav-icon-mobile">
-                  <img src="/assets/icons/dashboard.svg" />
+                  <img src="/assets/icons/dashboard-inactive.svg" />
                 </div>
                 <p>dashboard</p>
               </a>
@@ -153,12 +151,9 @@
                 </div>
                 <p>campaigns</p>
               </a>
-              <a
-                href="/dashboard/reports.html"
-                class="nav-item-mobile nav-item-mobile"
-              >
+              <a href="/dashboard/campaigns.html" class="nav-item-mobile active-nav-item-mobile">
                 <div class="nav-icon-mobile">
-                  <img src="/assets/icons/reports-inactive.svg" />
+                  <img src="/assets/icons/reports-active.svg" />
                 </div>
                 <p>reports</p>
               </a>
@@ -189,23 +184,12 @@
               </a>
             </nav>
           </div>
-           <!-- Credit Start -->
-           <div class="dash-cred-container-mobile">
-            <div class="dash-cred-sectone">
-              <p>Credits</p>
-              <p><span>25</span> Remaining</p>
-            </div>
-            <div class="progress-container-mobile">
-              <div class="progress-mobile" id="progress-bar-mobile" progress="30"></div>
-          </div>           
-          </div>
-          <!-- Credit End -->
           <p id="mobile-nav-footer" class="mobile-nav-footer"></p>
         </div>
       </div>
       <!-- Mobile Navigation End -->
 
-      <div class="dash-container">
+      <div class="dash-container proje-container">
         <!-- Desktop Navigation Start -->
         <div class="dash-nav">
           <div class="dashboard-nav-header">
@@ -220,11 +204,10 @@
               <img id="dash-arrow" src="/assets/icons/tabler-arrow-left.svg" />
             </button>
           </div>
-
           <nav id="desktop-nav" class="desktop-nav">
-            <a href="/dashboard/index.html" class="nav-item active-nav-item">
+            <a href="/dashboard/index.html" class="nav-item">
               <div class="nav-icon">
-                <img src="/assets/icons/dashboard.svg" />
+                <img src="/assets/icons/dashboard-inactive.svg" />
               </div>
               <p class="ds-item">dashboard</p>
             </a>
@@ -240,9 +223,9 @@
               </div>
               <p class="ds-item">campaigns</p>
             </a>
-            <a href="/dashboard/reports.html" class="nav-item">
+            <a href="/dashboard/reports.html" class="nav-item active-nav-item">
               <div class="nav-icon">
-                <img src="/assets/icons/reports-inactive.svg" />
+                <img src="/assets/icons/reports-active.svg" />
               </div>
               <p class="ds-item">reports</p>
             </a>
@@ -252,7 +235,10 @@
               </div>
               <p class="ds-item">my subscription</p>
             </a>
-            <a href="/dashboard/settings/general.html" class="nav-item">
+            <a
+              href="/dashboard/settings/general.html"
+              class="nav-item"
+            >
               <div class="nav-icon">
                 <img src="/assets/icons/settings.svg" />
               </div>
@@ -264,8 +250,7 @@
 
         <div>
           <!-- Header Start -->
-          <header class="dash-head">
-            <!-- Warning Message Start -->
+          <header class="dash-head proj-header">
             <div class="dash-head-container">
               <div class="hamburger">
                 <span class="bar bar_home"></span>
@@ -279,24 +264,12 @@
                 </p>
               </div>
             </div>
-            <!-- Warning Message End  -->
-
-            <!-- Credit Start -->
-            <div class="dash-cred-container">
-              <div class="dash-cred-sectone">
-                <p>Credits</p>
-                <p><span>25</span> Remaining</p>
-              </div>
-              <div class="progress-container">
-                <div class="progress-bar" id="progress-bar" progress="30"></div>
-            </div>           
-            </div>
-            <!-- Credit End -->
 
             <div class="dash-notify-container">
               <div class="dash-head-notify-wrapper">
-                <div
-                id="open-overlay-btn-logout"
+                <a
+                  href="/signin.html"
+                  id="dash-head-notify"
                   class="dash-head-notify"
                 >
                   <div id="notifyOpenBtn" class="dash-head-notify-container">
@@ -375,7 +348,7 @@
                     </div> -->
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
 
               <div class="profile-avatar">
@@ -386,305 +359,250 @@
           <!-- Header End -->
 
           <div class="dashboard-content">
-            <div class="dash-warn-wrapper">
-              <div class="dash-warn">
-                <div class="dash-warn-img">
-                  <img src="/assets/icons/warning.svg" />
-                </div>
-                <p class="dash-warn-tle">
-                  Please note that your dashboard is currently displaying sample
-                  data. This will be replaced with real data once you start
-                  creating a project.
-                </p>
-              </div>
-            </div>
             <!-- DashBoard Title Start -->
-            <div class="dash-title home-dash-tle">
-              <div class="dash-title-inner">
-                <p>Dashboard</p>
-                <p>This is the overall view of everything on your account</p>
-              </div>
-              <button class="openAddProjectDialogBtn">
-                <div class="add-icon">
-                  <img src="/assets/icons/circle-add.svg" />
-                </div>
-                <p>Add Project</p>
-              </button>
+            <div class="report-title">
+                <p>Campaign Report</p>
             </div>
             <!-- DashBoard Title End -->
 
-            <!-- DashBoard Card Start -->
-            <div class="dash-card-container">
-              <div class="dash-card">
-                <div class="dash-card-item">
-                  <div class="dash-card-icon-container">
-                    <img src="/assets/icons/micro-phone.svg" />
-                  </div>
-                  <p>Total Campaigns</p>
+            <div class="report-cont">
+              <div class="report-cont-sect-one">
+                <div class="the-project-item-input keyword-input-item">
+                  <label for="pj-title">Project</label>
+                  <input required id="pj-title" placeholder="Dentist Client" />
                 </div>
-                <p>120</p>
-              </div>
 
-              <div class="dash-card">
-                <div class="dash-card-item">
-                  <div class="dash-card-icon-container">
-                    <img src="/assets/icons/project-filled.svg" />
-                  </div>
-                  <p>Total Projects</p>
-                </div>
-                <p>6</p>
-              </div>
-
-              <div class="dash-card">
-                <div class="dash-card-item">
-                  <div class="dash-card-icon-container">
-                    <img src="/assets/icons/symbol-keyword.svg" />
-                  </div>
-                  <p>Keywords</p>
-                </div>
-                <p>1,490</p>
-              </div>
-            </div>
-            <!-- Dashboard card end -->
-
-            <!-- DashBoard Table Start -->
-            <div class="activity-container">
-              <div class="activity-sect-one">
-                <div class="dash-chart-container">
-                  <p class="chat-title">Searches for the last 30 days</p>
-                  <div class="statistics">
-                    <p>3,706</p>
-                    <div class="statistics-inner">
-                      <div><img src="/assets/icons/arrow-up.svg" /></div>
-                      <p>4.5%</p>
+                <div
+                  data-dropdown
+                  style="z-index: 99999"
+                  class="dropdown-container the-project-item-input keyword-input-item"
+                >
+                  <label for="campaign-hd">Campaign</label>
+                  <input
+                    type="text"
+                    required
+                    id="campaign-hd"
+                    class="dropdown-input"
+                    placeholder="Bright Smile Clinic."
+                    list="suggestions"
+                    oninput="filterOptions(event)"
+                  />
+                  <img
+                    src="/assets/icons/drop-down-line.svg"
+                    class="dropdown-icon"
+                    onclick="toggleDropdown(this)"
+                  />
+                  <div id="cityListContainer" class="datalist-container">
+                    <div onclick="selectOption(this, 'Dentis Client')">
+                      Dentis Client
+                    </div>
+                    <div onclick="selectOption(this, 'Bright Smile Clinic')">
+                      Bright Smile Clinic
+                    </div>
+                    <div onclick="selectOption(this, 'Bright Smile Clinic')">
+                      Bright Smile Clinic
                     </div>
                   </div>
+                </div>
+
+                <div
+                  data-dropdown
+                  style="z-index: 9999"
+                  class="dropdown-container the-project-item-input keyword-input-item"
+                >
+                  <label for="key-camp">Keyword</label>
+                  <input
+                    type="text"
+                    required
+                    id="key-camp"
+                    class="dropdown-input"
+                    placeholder="Smile"
+                    list="suggestions"
+                    oninput="filterOptions(event)"
+                  />
+                  <img
+                    src="/assets/icons/drop-down-line.svg"
+                    class="dropdown-icon"
+                    onclick="toggleDropdown(this)"
+                  />
+                  <div id="cityListContainer" class="datalist-container">
+                    <div onclick="selectOption(this, 'Smile')">Smile</div>
+                    <div onclick="selectOption(this, 'Smile')">Smile</div>
+                    <div onclick="selectOption(this, 'Smile')">Smile</div>
+                  </div>
+                </div>
+
+                <div
+                  data-dropdown
+                  style="z-index: 999"
+                  class="dropdown-container the-project-item-input keyword-input-item"
+                >
+                  <label for="country">Country</label>
+                  <input
+                    type="country"
+                    required
+                    id="city"
+                    class="dropdown-input"
+                    placeholder="Select Country."
+                    list="suggestions"
+                    oninput="filterOptions(event)"
+                  />
+                  <img
+                    src="/assets/icons/drop-down-line.svg"
+                    class="dropdown-icon"
+                    onclick="toggleDropdown(this)"
+                  />
+                  <div id="cityListContainer" class="datalist-container">
+                    <div onclick="selectOption(this, 'Port Harcourt')">
+                      Nigeria
+                    </div>
+                    <div onclick="selectOption(this, 'England')">England</div>
+                    <div onclick="selectOption(this, 'France')">France</div>
+                  </div>
+                </div>
+
+                <div
+                  data-dropdown
+                  style="z-index: 99;"
+                  class="dropdown-container the-project-item-input keyword-input-item"
+                >
+                  <label for="city">City</label>
+                  <input
+                    type="text"
+                    required
+                    id="city"
+                    class="dropdown-input"
+                    placeholder="Select City."
+                    list="suggestions"
+                    oninput="filterOptions(event)"
+                  />
+                  <img
+                    src="/assets/icons/drop-down-line.svg"
+                    class="dropdown-icon"
+                    onclick="toggleDropdown(this)"
+                  />
+                  <div id="cityListContainer" class="datalist-container">
+                    <div onclick="selectOption(this, 'Port Harcourt')">
+                      Port Harcourt
+                    </div>
+                    <div onclick="selectOption(this, 'Lagos')">Lagos</div>
+                    <div onclick="selectOption(this, 'Abuja')">Abuja</div>
+                  </div>
+                </div>
+
+                <div class="rp-date-cont">
+                  <div style="flex: 1" class="the-project-item-input">
+                    <label for="st-date">Start Date</label>
+                    <input
+                      class="rp-dte"
+                      type="date"
+                      required
+                      id="st-date"
+                      placeholder="Dentist Client"
+                    />
+                  </div>
+                  <div style="flex: 1" class="the-project-item-input">
+                    <label for="st-date">End Date</label>
+                    <input
+                      class="rp-dte"
+                      type="date"
+                      required
+                      id="st-date"
+                      placeholder="Dentist Client"
+                    />
+                  </div>
+
+                  <!-- <div style="flex: 1" class="the-project-item-input">
+                        <label for="st-date">End Date</label>
+                        <input class="rp-dte" type="date" required id="st-date" placeholder="Dentist Client" />
+                      </div> -->
+                </div>
+
+                <button class="comm-btn-style">Search</button>
+              </div>
+
+              
+              <div class="report-cont-sect-two">
+                <!--  Keywords Section Start -->
+                <div
+                  id="camp-overview-section-two"
+                 
+                  class="keywords-container-wrapper"
+                >
+                  <div class="keywords-container">
+                    <div class="keywords-sect-one">
+                      <div class="keywords-header">
+                        <p style="margin: 0px; padding: 8px 0px">
+                          Report from 6th May 2024 - 7th June 2024
+                        </p>
+                      </div>
+                      <div class="table-wrapper-outter">
+                        <table >
+                          <thead>
+                            <tr>
+                              <th>Date</th>
+                              <th>Number of clicks</th>
+                              <th>Mobile Search</th>
+                              <th>Desktop Search</th>
+                              <th>Position</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>12-07-2024</td>
+                              <td class="report-cont-sect-two-num-clicks">20</td>
+                              <td>92</td>
+                              <td>12</td>
+                              <td>7th</td>
+                            </tr>
+
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dash-chart-container">
+                  <p class="rep-chat-title">Chart from 6th May 2024 - 7th June 2024</p>
+                 
+                  <p class="rep-chat-title-2">Position vs Date</p>
                   <canvas id="searchChart"></canvas>
                 </div>
-              </div>
-
-              <div class="activity-sect-two">
-                <form class="sub-contain">
-                  <p>Subscription</p>
-                  <div class="prog-sect">
-                    <div
-                      role="progressbar"
-                      aria-valuenow="30"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      style="--value: 30"
-                    ></div>
-                    <div class="proge-indcator">
-                      <p>30%</p>
-                      <p>Used</p>
-                    </div>
-                  </div>
-                  <input style="display: none;" />
-                  <button class="sub-btn-style">Subscribe</button>
-                  <div class="prog-footer">
-                    <div class="prog-item">
-                      <div></div>
-                      <p>Used Credits - 40</p>
-                    </div>
-                    <div class="prog-item">
-                      <div></div>
-                      <p>Total Credits - 90</p>
-                    </div>
-                  </div>
-                </form>
+                <!--  Keywords Section End -->
               </div>
             </div>
-            <!-- DashBoard Table End -->
-
-            <!-- DashBoard Table Start -->
-            <div class="activity-container">
-              <div class="activity-sect-one">
-                <div class="activity-header">
-                  <p>All Activities</p>
-                  <button class="header-button">
-                    <div class="header-img-cont">
-                      <img src="/assets/icons/filter.svg" />
-                    </div>
-                    <p>March 2024</p>
-                  </button>
-                </div>
-                <table>
-                  <thead class="t-head">
-                    <tr>
-                      <th>Campaign</th>
-                      <th style="width: 2000px" class="sec-tb-head">Ranks</th>
-                      <th>Date</th>
-                    </tr>
-                  </thead>
-                  <tbody class="t-body">
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>2 days ago</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                    <tr class="tb-row">
-                      <td>
-                        Dental Clinic Campaign found the keyword
-                        <span class="td-bold">Dentist</span>
-                      </td>
-                      <td>8th Position</td>
-                      <td>Today</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="activity-sect-two">
-                <div class="activity-header activity-header-border">
-                  <p>All Keyword Ranks</p>
-                  <button class="header-button">
-                    <div class="header-img-cont">
-                      <img src="/assets/icons/filter.svg" />
-                    </div>
-                    <p>March 2024</p>
-                  </button>
-                </div>
-                <div class="activity-sect-two-inner-container">
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div>
-                        <img src="/assets/icons/arrow-trending-up.svg" />
-                      </div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div>
-                        <img src="/assets/icons/arrow-trending-up.svg" />
-                      </div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div>
-                        <img src="/assets/icons/arrow-trending-up.svg" />
-                      </div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                  <div class="activity-sect-two-inner-item">
-                    <p>Port Harcourt Dentist</p>
-                    <div class="activity-sect-two-inner-item-two">
-                      <div><img src="/assets/icons/fast-arrow-up.svg" /></div>
-                      <p>246</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- DashBoard Table End -->
           </div>
         </div>
       </div>
+
+      <!-- Logout Overlay Start -->
       <div id="overlay" class="overlay">
-        <div class="add-project-dialog-wrapper">
-          <div class="add-project-dialog-container">
-            <div class="add-project-sectone">
-              <p>Create New Project</p>
-              <button id="closeAddProjectDialogBtn">
-                <img src="/assets/icons/close-outline.svg" />
-              </button>
-            </div>
-            <form class="the-project-form">
-              <div class="the-project-item-input">
-                <label for="projectName">Project Name</label>
-                <input required id="projectName" placeholder="Dentist Client" />
-              </div>
-              <div class="the-project-item-input">
-                <label for="description">Description</label>
-                <textarea
-                  required
-                  id="description"
-                  placeholder="Enter Description"
-                ></textarea>
-              </div>
-              <button type="button">Continue</button>
-            </form>
-          </div>
-        </div>
-      </div>
-       <!-- Logout Overlay Start -->
-       <div id="overlay-logout" class="overlay">
         <div
-          id="overlay-dialog-logout"
+          id="overlay-dialog"
           class="change-pass-dialog-container overlay-animate"
         >
-          <form id="overlay-dialog-logout" class="change-pass-dialog-wrapper">
+          <form id="overlay-dialog" class="change-pass-dialog-wrapper">
             <div>
               <img src="/assets/icons/logout.svg" />
             </div>
             <p>Confirm Log Out?</p>
             <p>Are you sure you want to log out? We would love you to stay</p>
             <button>Logout</button>
-            <button id="close-overlay-btn-log-out" type="button">Cancel</button>
+            <button id="close-overlay-btn" type="button">Cancel</button>
           </form>
         </div>
       </div>
       <!-- Logout Overlay End -->
+
       <div class="chat">
         <img src="/assets/icons/chat-line-linear.svg" />
       </div>
     </div>
     <script src="/assets/js/global.js"></script>
     <script src="/assets/js/dashboard/dashboard.js"></script>
+    <script src="/assets/js/dashboard/createdcampaign.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script>
@@ -738,9 +656,9 @@
               beginAtZero: true,
               max: 20,
               ticks: {
-                callback: function (value) {
-                  return value + "K";
-                },
+                // callback: function (value) {
+                //   return value + "K";
+                // },
                 font: {
                   size: 14,
                   family: "DMSans_18pt-Medium",

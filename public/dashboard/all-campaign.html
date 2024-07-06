@@ -150,6 +150,15 @@
                 </div>
                 <p>campaigns</p>
               </a>
+              <a
+                href="/dashboard/reports.html"
+                class="nav-item-mobile nav-item-mobile"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/reports-active.svg" />
+                </div>
+                <p>reports</p>
+              </a>
               <a href="/dashboard/subscription.html" class="nav-item-mobile">
                 <div class="nav-icon-mobile">
                   <img src="/assets/icons/subscription.svg" />
@@ -367,62 +376,27 @@
             </div>
             <div class="view-camp-container">
               <!-- Item 1 Start -->
-              <div class="campaign-item">
-                <div>
-                  <img src="/assets//icons/google-icon.svg" />
-                </div>
-                <p>bright smile clinic</p>
-                <p>Organic Search</p>
-                <div class="campa-state campa-state-success">
-                  <div></div>
-                  <p>active</p>
-                </div>
-                <div>
-                  <p>Date Created:</p>
-                  <p>March 21st 2024.</p>
-                </div>
-                <div>
-                  <p>Total Searches:</p>
-                  <p>0</p>
-                </div>
-                <div class="campaign-total-search">
-                  <p>Keywords:</p>
-                  <p>0</p>
-                </div>
-                <div class="view-campaign-button-wrapper">
-                  <a href="/dashboard/project-details.html">View Campaign</a>
-                </div>
-
-                <button class="all-camp-item-btn info-button">
-                  <img src="/assets/icons/more-vert.svg" />
-                  <div class="tooltip prog-cardtooltip">
-                    <a href="#">
-                      <div>
-                        <img src="/assets/icons/edit-outline-gray.svg" />
-                      </div>
-                      <p>Edit</p>
-                    </a>
-                    <a href="#">
-                      <div>
-                        <img src="/assets/icons/delete.svg" />
-                      </div>
-                      <p class="camp-dele-text">Delete</p>
-                    </a>
-                  </div>
-                </button>
-              </div>
-              <!-- Item 1 End -->
-
-              <!-- Item 2 Start -->
-              <div class="campaign-item">
+              <form class="campaign-item">
                 <div>
                   <img src="/assets//icons/google-icon.svg" />
                 </div>
                 <p>bright smile clinic</p>
                 <p>Organic Search</p>
                 <div class="campa-state campa-state-error">
-                  <div></div>
                   <p>Not Active</p>
+                  <div class="all-cam-check-wrapper">
+                    <input
+                      type="checkbox"
+                      id="all-camp-toggle-1"
+                      class="toggle-checkbox all-camp-toggle"
+                    />
+                    <label
+                      for="all-camp-toggle-1"
+                      class="toggle-label all-camp-toggle-label"
+                    >
+                      <div class="toggle-circle"></div>
+                    </label>
+                  </div>
                 </div>
                 <div>
                   <p>Date Created:</p>
@@ -436,19 +410,20 @@
                   <p>Keywords:</p>
                   <p>0</p>
                 </div>
+                <a href="#" class="camp-item-act">Activitiess</a>
                 <div class="view-campaign-button-wrapper">
                   <a href="/dashboard/project-details.html">View Campaign</a>
                 </div>
 
-                <button class="all-camp-item-btn info-button">
+                <button type="button" class="all-camp-item-btn info-button">
                   <img src="/assets/icons/more-vert.svg" />
                   <div class="tooltip prog-cardtooltip">
-                    <a href="#">
+                    <div class="open-edit-overlay-btn">
                       <div>
                         <img src="/assets/icons/edit-outline-gray.svg" />
                       </div>
                       <p>Edit</p>
-                    </a>
+                    </div>
                     <a href="#">
                       <div>
                         <img src="/assets/icons/delete.svg" />
@@ -457,7 +432,67 @@
                     </a>
                   </div>
                 </button>
-              </div>
+              </form>
+              <!-- Item 1 End -->
+
+              <!-- Item 2 Start -->
+              <form class="campaign-item">
+                <div>
+                  <img src="/assets//icons/google-icon.svg" />
+                </div>
+                <p>bright smile clinic</p>
+                <p>Organic Search</p>
+                <div class="campa-state campa-state-error">
+                  <p>Not Active</p>
+                  <div class="all-cam-check-wrapper">
+                    <input
+                      type="checkbox"
+                      id="all-camp-toggle-2"
+                      class="toggle-checkbox all-camp-toggle"
+                    />
+                    <label
+                      for="all-camp-toggle-2"
+                      class="toggle-label all-camp-toggle-label"
+                    >
+                      <div class="toggle-circle"></div>
+                    </label>
+                  </div>
+                </div>
+                <div>
+                  <p>Date Created:</p>
+                  <p>March 21st 2024.</p>
+                </div>
+                <div>
+                  <p>Total Searches:</p>
+                  <p>0</p>
+                </div>
+                <div class="campaign-total-search">
+                  <p>Keywords:</p>
+                  <p>0</p>
+                </div>
+                <a href="#" class="camp-item-act">Activities</a>
+                <div class="view-campaign-button-wrapper">
+                  <a href="/dashboard/project-details.html">View Campaign</a>
+                </div>
+
+                <button type="button" class="all-camp-item-btn info-button">
+                  <img src="/assets/icons/more-vert.svg" />
+                  <div class="tooltip prog-cardtooltip">
+                    <div class="open-edit-overlay-btn">
+                      <div>
+                        <img src="/assets/icons/edit-outline-gray.svg" />
+                      </div>
+                      <p>Edit</p>
+                    </div>
+                    <a href="#">
+                      <div>
+                        <img src="/assets/icons/delete.svg" />
+                      </div>
+                      <p class="camp-dele-text">Delete</p>
+                    </a>
+                  </div>
+                </button>
+              </form>
               <!-- Item 2 End -->
             </div>
           </div>
@@ -486,7 +521,14 @@
                 />
                 <div class="radio-mark"></div>
                 <p>Organic Search</p>
-                <div><img src="/assets/icons/question-mark-rounded.svg" /></div>
+                <div class="detailtooltip">
+                          <img src="/assets/icons/question-mark-rounded.svg" />
+                          <span class="detailtooltiptext"
+                            >The percentage of searches you aim to direct to
+                            your website rather than a navigational search. We
+                            recommend aiming for 60-75%.</span
+                          >
+                        </div>
               </label>
               <label for="opt-two" class="create-camp-item">
                 <input
@@ -497,7 +539,14 @@
                 />
                 <div class="radio-mark"></div>
                 <p>Google Search</p>
-                <div><img src="/assets/icons/question-mark-rounded.svg" /></div>
+                <div class="detailtooltip">
+                          <img src="/assets/icons/question-mark-rounded.svg" />
+                          <span class="detailtooltiptext"
+                            >The percentage of searches you aim to direct to
+                            your website rather than a navigational search. We
+                            recommend aiming for 60-75%.</span
+                          >
+                        </div>
               </label>
             </div>
 
@@ -535,11 +584,109 @@
         </div>
       </div>
       <!-- Create Campaign Overlay End -->
+
+      <!-- Edit Keyword Overlay Start -->
+      <div id="edit-key-word-overlay" class="overlay">
+        <div
+          id="edit-key-word-dialog"
+          class="create-camp-container overlay-animate"
+        >
+          <div class="edit-key-word-hd">
+            <p>Edit Keyword</p>
+            <button id="close-overlay-key-word-btn">
+              <img src="/assets/icons/close-outline.svg" />
+            </button>
+          </div>
+          <form class="the-project-form create-project-form">
+            <div class="create-project-form-inner">
+              <div class="the-project-item-input">
+                <label for="ky-wrd-title">Key Word</label>
+                <input
+                  required
+                  id="ky-wrd-title"
+                  placeholder="Dentist Client"
+                />
+              </div>
+              <div
+                data-dropdown
+                class="dropdown-container the-project-item-input keyword-input-item aa"
+              >
+                <label for="country">Country</label>
+                <input
+                  type="text"
+                  required
+                  id="country"
+                  class="dropdown-input countryyyy"
+                  placeholder="Select Country."
+                  list="suggestions"
+                  oninput="filterOptions(event)"
+                />
+                <img
+                  src="/assets/icons/drop-down-line.svg"
+                  class="dropdown-icon"
+                  onclick="toggleDropdown(this)"
+                />
+                <div id="countryListContainer" class="datalist-container">
+                  <div onclick="selectOption(this,'Nigeria')">Nigeria</div>
+                  <div onclick="selectOption(this,'USA')">USA</div>
+                  <div onclick="selectOption(this,'Canada')">Canada</div>
+                </div>
+              </div>
+
+              <div
+                data-dropdown
+                class="add-location dropdown-container the-project-item-input keyword-input-item"
+              >
+                <label for="city">City</label>
+                <input
+                  type="text"
+                  required
+                  id="city"
+                  class="dropdown-input cityyyy"
+                  placeholder="Select City."
+                  list="suggestions"
+                  oninput="filterOptions(event)"
+                />
+                <img
+                  src="/assets/icons/drop-down-line.svg"
+                  class="dropdown-icon"
+                  onclick="toggleDropdown(this)"
+                />
+                <div id="cityListContainer" class="datalist-container">
+                  <div onclick="selectOption(this, 'Port Harcourt')">
+                    Port Harcourt
+                  </div>
+                  <div onclick="selectOption(this, 'Lagos')">Lagos</div>
+                  <div onclick="selectOption(this, 'Abuja')">Abuja</div>
+                </div>
+              </div>
+              <div class="the-project-item-input">
+                <label for="search-interval">Search for Inteval</label>
+                <input
+                  required
+                  type="text"
+                  id="search-interval"
+                  placeholder="1"
+                />
+                <select class="search-interval-sel">
+                  <option>Run Everyday</option>
+                </select>
+                
+                
+              </div>
+            </div>
+            <!-- This button leads to the "created-campaign.html" page -->
+            <button>Create Campaign</button>
+          </form>
+        </div>
+      </div>
+      <!-- Edit Keyword Overlay End -->
       <div class="chat">
         <img src="/assets/icons/chat-line-linear.svg" />
       </div>
     </div>
     <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/dashboard/createdcampaign.js"></script>
     <script src="/assets/js/dashboard/dashboard.js"></script>
   </body>
 </html>

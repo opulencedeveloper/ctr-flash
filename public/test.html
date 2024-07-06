@@ -1,73 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Check Button</title>
-    <style>
-      /* styles.css */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+<html>
+<style>
+.detailtooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
 }
 
-.custom-checkbox {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 18px;
-    user-select: none;
+.detailtooltip .detailtooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
-.custom-checkbox input {
-    display: none;
+.detailtooltip .detailtooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
 }
 
-.checkmark {
-    width: 25px;
-    height: 25px;
-    background-color: #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-    position: relative;
-    transition: background-color 0.2s;
+.detailtooltip:hover .detailtooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
+</style>
+<body style="text-align:center;">
 
-.custom-checkbox input:checked + .checkmark {
-    background-color: #4caf50;
-}
+<h2>Tooltip</h2>
+<p>Move the mouse over the text below:</p>
 
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
-}
+<div class="detailtooltip">Hover over me
+  <span class="detailtooltiptext">Tooltip text</span>
+</div>
 
-.custom-checkbox input:checked + .checkmark:after {
-    display: block;
-}
-
-    </style>
-</head>
-<body>
-    <label class="custom-checkbox">
-        <input type="checkbox" id="check-button">
-        <span class="checkmark"></span>
-        Check this box
-    </label>
-
-    <script src="script.js"></script>
 </body>
 </html>

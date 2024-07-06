@@ -1068,7 +1068,13 @@ body {
     background-color: var(--custom-twenty-seven);
 }
 
-.landing-subscription-card>div:first-child {
+
+.landing-subscription-card>div:first-child p, .landing-subscription-card>p:first-child {
+    margin: 0px;
+    font-family: 'DMSans_36pt-Bold';
+}
+
+.landing-subscription-card>div:first-child, .landing-subscription-card>p:first-child {
     margin-top: 16px;
     display: flex;
     flex-direction: row;
@@ -1076,14 +1082,9 @@ body {
     justify-content: space-between;
 }
 
-.landing-subscription-card>div:first-child p {
-    margin: 0px;
-    font-family: 'DMSans_36pt-Bold';
-}
-
-.landing-subscription-card>div:first-child>p:first-child {
+/* .landing-subscription-card>div:first-child>p:first-child {
     font-size: 20px !important;
-}
+} */
 
 .landing-subscription-card>div:first-child>p:last-child {
     color: var(--custom-twenty-eight);
@@ -1091,17 +1092,28 @@ body {
     font-size: 14px;
 }
 
-.landing-subscription-card>div:first-child>p:first-child {
-    background: linear-gradient(136.9deg, #05A4C7 2.3%, #1ADBD4 96.52%);
-    -webkit-background-clip: text;
-    background-clip: text;
+.landing-subscription-card-credits {
     color: transparent;
 }
 
+.landing-subscription-card-credits-recom {
+    color: var(--custom-seven);
+}
+
+.landing-subscription-card-credits,
+.landing-subscription-card-credits-recom {
+    font-family: 'DMSans_36pt-Bold';
+    background: linear-gradient(136.9deg, #05A4C7 2.3%, #1ADBD4 96.52%);
+    -webkit-background-clip: text;
+    font-size: 20px !important;
+    background-clip: text;
+    margin: 0px;
+    padding-top: 8px;
+}
 
 .landing-subscription-card>div:nth-child(2) {
     display: flex;
-    margin-top: 28px;
+    margin-top: 20px;
     gap: 8px;
 }
 
@@ -1140,7 +1152,7 @@ body {
     cursor: pointer;
     border-radius: 32px;
     border: 1px solid var(--custom-seven);
-    margin-top: 18px;
+    margin-top: 16px;
 }
 
 .landing-sub-amt {
@@ -2026,9 +2038,9 @@ body {
 @media only screen and (max-width: 500px) {
     .few-easy-sect-two-inner {
         padding: 24px 17px;
-    
+
     }
-    
+
     .not-found-container>p:nth-child(2) {
         font-size: 14px;
         padding-top: 32px;
