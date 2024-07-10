@@ -1,53 +1,94 @@
 <!DOCTYPE html>
 <html>
-<style>
-.detailtooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
+<head>
+  <title>Chart.js Example</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <style>
+    #searchChart {
+      max-width: 600px; /* Set maximum width */
+      margin: 0 auto; /* Center horizontally */
+    }
+  </style>
+</head>
+<body>
+  <canvas id="searchChart" width="400" height="300"></canvas>
+  <script>
+    const ctx = document.getElementById("searchChart").getContext("2d");
+    const gradient = ctx.createLinearGradient(0, 0, 0, 250);
+    gradient.addColorStop(0.0524, "rgba(4, 131, 159, 1)");
+    gradient.addColorStop(0.9127, "rgba(4, 131, 159, 0)");
 
-.detailtooltip .detailtooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
+    const data = {
+      labels: ["Apr 06", "Apr 10", "Apr 14", "Apr 18", "Apr 20", "Apr 22"],
+      datasets: [
+        {
+          data: [10, 13, 14, 7, 20, 10, 14], // Example data
+          fill: "start",
+          backgroundColor: gradient,
+          borderColor: "#04839F",
+          tension: 0.9,
+        },
+      ],
+    };
 
-.detailtooltip .detailtooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
+    const config = {
+      type: "line",
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+        layout: {
+          padding: {
+            left: 10,
+            right: 10,
+            top: 10,
+            bottom: 10,
+          },
+        },
+        scales: {
+          x: {
+            display: true,
+            grid: {
+              display: false, // Hide vertical grid lines
+            },
+            ticks: {
+              font: {
+                size: 14,
+                family: "DMSans_18pt-Medium",
+              },
+              color: "#404040",
+            },
+            title: {
+              display: false,
+              text: "Month",
+            },
+          },
+          y: {
+            beginAtZero: true,
+            ticks: {
+              font: {
+                size: 14,
+                family: "DMSans_18pt-Medium",
+              },
+              color: "#404040",
+            },
+            grid: {
+              display: true, // Display horizontal grid lines
+            },
+            title: {
+              display: false,
+              text: "Value",
+            },
+          },
+        },
+      },
+    };
 
-.detailtooltip:hover .detailtooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-</style>
-<body style="text-align:center;">
-
-<h2>Tooltip</h2>
-<p>Move the mouse over the text below:</p>
-
-<div class="detailtooltip">Hover over me
-  <span class="detailtooltiptext">Tooltip text</span>
-</div>
-
+    new Chart(ctx, config);
+  </script>
 </body>
 </html>

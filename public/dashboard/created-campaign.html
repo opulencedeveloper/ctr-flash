@@ -16,6 +16,7 @@
     <link href="/assets/css/font.css" rel="stylesheet" />
     <link href="/assets/css/dash/header.css" rel="stylesheet" />
     <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dash/project-details.css" rel="stylesheet" />
     <link href="/assets/css/dash/campaign.css" rel="stylesheet" />
   </head>
 
@@ -342,6 +343,19 @@
           <!-- Header End -->
 
           <div class="dashboard-content">
+            <div class="dash-warn-wrapper">
+              <div class="dash-warn">
+                <div class="dash-warn-img">
+                  <img src="/assets/icons/warning.svg" />
+                </div>
+                <p class="dash-warn-tle">
+                  You can only enter keywords where your site is already ranked
+                  in the top 100 results, or we won't find your site. If you are
+                  not sure, check your Google search console or use an SEO tool
+                  like Semrush or Ahrefs.
+                </p>
+              </div>
+            </div>
             <p class="projec-detail-title">
               <span>Campaign </span> <span>/</span> <span>Dentist Client</span>
               <span>/</span>
@@ -401,9 +415,7 @@
                         <div class="detailtooltip">
                           <img src="/assets/icons/question-mark-rounded.svg" />
                           <span class="detailtooltiptext"
-                            >The percentage of searches you aim to direct to
-                            your website rather than a navigational search. We
-                            recommend aiming for 60-75%.</span
+                            >Name of the campaign</span
                           >
                         </div>
                       </div>
@@ -419,8 +431,8 @@
                         <div class="detailtooltip">
                           <img src="/assets/icons/question-mark-rounded.svg" />
                           <span class="detailtooltiptext"
-                            >The percentage of searches you aim to direct to
-                            .</span
+                            >Enter your root domain only. Example:
+                            www.mydomain.com</span
                           >
                         </div>
                       </div>
@@ -437,8 +449,8 @@
                         <div class="detailtooltip">
                           <img src="/assets/icons/question-mark-rounded.svg" />
                           <span class="detailtooltiptext"
-                            >The percentage of searches you aim to direct to
-                            .</span
+                            >How many searches would you like to be from a
+                            mobile device? We recommend 60-80%</span
                           >
                         </div>
                       </div>
@@ -455,8 +467,8 @@
                         <div class="detailtooltip">
                           <img src="/assets/icons/question-mark-rounded.svg" />
                           <span class="detailtooltiptext"
-                            >The percentage of searches you aim to direct to
-                            .</span
+                            >How much percentage of your service would you like
+                            the bot to bouce? We recommend 25-40%</span
                           >
                         </div>
                       </div>
@@ -473,8 +485,8 @@
                         <div class="detailtooltip">
                           <img src="/assets/icons/question-mark-rounded.svg" />
                           <span class="detailtooltiptext"
-                            >The percentage 
-                            .</span
+                            >How many inner pages of your website would you like
+                            the bot to visit? We recommend 2-5</span
                           >
                         </div>
                       </div>
@@ -491,9 +503,8 @@
                         <div class="detailtooltip">
                           <img src="/assets/icons/question-mark-rounded.svg" />
                           <span class="detailtooltiptext"
-                            >The percentage of searches you aim to direct to
-                            your website rather than a navigational search. We
-                            recommend aiming for 60-75%.</span
+                            >How many seconds would you like the bolt to spend
+                            on your website? We recommend 70-350.</span
                           >
                         </div>
                       </div>
@@ -587,7 +598,7 @@
                               <td>1</td>
                               <td>
                                 <div class="kewrd-time-conatiner">
-                                  <p>1hr ago</p>
+                                  <p class="ti-gen-wi">1hr ago</p>
                                   <button class="info-button">
                                     <img
                                       src="/assets/icons/vertical-fill.svg"
@@ -610,14 +621,14 @@
                                             </div>
                                             <p>View</p>
                                           </a>
-                                          <a href="#">
+                                          <div class="open-edit-overlay-btn">
                                             <div>
                                               <img
                                                 src="/assets/icons/edit-outline-gray.svg"
                                               />
                                             </div>
                                             <p>Edit</p>
-                                          </a>
+                                          </div>
                                           <a href="#">
                                             <div>
                                               <img
@@ -641,14 +652,14 @@
                                         </div>
                                         <p>View</p>
                                       </a>
-                                      <a href="#">
-                                        <div>
+                                      <div class="open-edit-overlay-btn">
+                                        <div class="edit-ky-pop-up">
                                           <img
                                             src="/assets/icons/edit-outline-gray.svg"
                                           />
                                         </div>
                                         <p>Edit</p>
-                                      </a>
+                                      </div>
                                       <a href="#">
                                         <div>
                                           <img
@@ -669,7 +680,7 @@
                               <td>1</td>
                               <td>
                                 <div class="kewrd-time-conatiner">
-                                  <p>1hr ago</p>
+                                  <p class="ti-gen-wi">1hr ago</p>
                                   <button class="info-button">
                                     <img
                                       src="/assets/icons/vertical-fill.svg"
@@ -692,14 +703,14 @@
                                             </div>
                                             <p>View</p>
                                           </a>
-                                          <a href="#">
+                                          <div class="open-edit-overlay-btn">
                                             <div>
                                               <img
                                                 src="/assets/icons/edit-outline-gray.svg"
                                               />
                                             </div>
                                             <p>Edit</p>
-                                          </a>
+                                          </div>
                                           <a href="#">
                                             <div>
                                               <img
@@ -723,14 +734,14 @@
                                         </div>
                                         <p>View</p>
                                       </a>
-                                      <a href="#">
-                                        <div>
+                                      <div class="open-edit-overlay-btn">
+                                        <div class="edit-ky-pop-up">
                                           <img
                                             src="/assets/icons/edit-outline-gray.svg"
                                           />
                                         </div>
                                         <p>Edit</p>
-                                      </a>
+                                      </div>
                                       <a href="#">
                                         <div>
                                           <img
@@ -750,7 +761,7 @@
                               <td>1</td>
                               <td>
                                 <div class="kewrd-time-conatiner">
-                                  <p>1hr ago</p>
+                                  <p class="ti-gen-wi">1hr ago</p>
                                   <button class="info-button">
                                     <img
                                       src="/assets/icons/vertical-fill.svg"
@@ -773,14 +784,14 @@
                                             </div>
                                             <p>View</p>
                                           </a>
-                                          <a href="#">
+                                          <div class="open-edit-overlay-btn">
                                             <div>
                                               <img
                                                 src="/assets/icons/edit-outline-gray.svg"
                                               />
                                             </div>
                                             <p>Edit</p>
-                                          </a>
+                                          </div>
                                           <a href="#">
                                             <div>
                                               <img
@@ -804,14 +815,14 @@
                                         </div>
                                         <p>View</p>
                                       </a>
-                                      <a href="#">
-                                        <div>
+                                      <div class="open-edit-overlay-btn">
+                                        <div class="edit-ky-pop-up">
                                           <img
                                             src="/assets/icons/edit-outline-gray.svg"
                                           />
                                         </div>
                                         <p>Edit</p>
-                                      </a>
+                                      </div>
                                       <a href="#">
                                         <div>
                                           <img
@@ -832,7 +843,7 @@
                               <td>1</td>
                               <td>
                                 <div class="kewrd-time-conatiner">
-                                  <p>1hr ago</p>
+                                  <p class="ti-gen-wi">1hr ago</p>
                                   <button class="info-button">
                                     <img
                                       src="/assets/icons/vertical-fill.svg"
@@ -855,14 +866,14 @@
                                             </div>
                                             <p>View</p>
                                           </a>
-                                          <a href="#">
+                                          <div class="open-edit-overlay-btn">
                                             <div>
                                               <img
                                                 src="/assets/icons/edit-outline-gray.svg"
                                               />
                                             </div>
-                                            <p>Edit</p>
-                                          </a>
+                                            <p>Editt</p>
+                                          </div>
                                           <a href="#">
                                             <div>
                                               <img
@@ -886,14 +897,14 @@
                                         </div>
                                         <p>View</p>
                                       </a>
-                                      <a href="#">
-                                        <div>
+                                      <div class="open-edit-overlay-btn">
+                                        <div class="edit-ky-pop-up">
                                           <img
                                             src="/assets/icons/edit-outline-gray.svg"
                                           />
                                         </div>
                                         <p>Edit</p>
-                                      </a>
+                                      </div>
                                       <a href="#">
                                         <div>
                                           <img
@@ -1054,11 +1065,7 @@
                       </div>
                     </div>
                   </div>
-                  <button
-                    type="button"
-                    onclick="addKeyWord(event)"
-                    class="add-keyword-header-btn"
-                  >
+                  <button type="button" class="add-keyword-header-btn">
                     <img src="/assets/icons/slim-add.svg" />
                   </button>
                 </div>
@@ -1151,11 +1158,11 @@
 
                 <div class="add-keyword-raido-btn_II">
                   <label
-                    for="opt-four"
+                    for="world-wide"
                     class="add-keyword-radio-item add-keyword-radio-item-two"
                   >
                     <input
-                      id="opt-four"
+                      id="world-wide"
                       type="radio"
                       name="option-two"
                       value="Run Everyday"
@@ -1168,15 +1175,14 @@
                     </div>
                   </label>
                   <label
-                    for="opt-five"
+                    for="geo-target"
                     class="add-keyword-radio-item add-keyword-radio-item-two"
                   >
                     <input
-                      id="opt-five"
+                      id="geo-target"
                       type="radio"
                       name="option-two"
                       value="Run Everyday"
-                      checked
                     />
                     <div class="radio-mark"></div>
                     <div class="add-keyword-radio-item-inner">
@@ -1185,7 +1191,7 @@
                     </div>
                   </label>
                 </div>
-                <div id="campaign-address">
+                <div id="campaign-address" class="campaign-address">
                   <div
                     data-dropdown
                     class="dropdown-container the-project-item-input keyword-input-item aa"
@@ -1343,6 +1349,104 @@
         </div>
       </div>
       <!-- Edit Campaign Overlay End -->
+
+      <!-- Edit Keyword Overlay Start -->
+      <div id="edit-key-word-overlay" class="overlay">
+        <div
+          id="edit-key-word-dialog"
+          class="create-camp-container overlay-animate"
+        >
+          <div class="edit-key-word-hd">
+            <p>Edit Keyword</p>
+            <button id="close-overlay-key-word-btn">
+              <img src="/assets/icons/close-outline.svg" />
+            </button>
+          </div>
+          <form class="the-project-form create-project-form">
+            <div class="create-project-form-inner">
+              <div class="the-project-item-input">
+                <label for="ky-wrd-title">Key Word</label>
+                <input
+                  required
+                  id="ky-wrd-title"
+                  placeholder="Dentist Client"
+                />
+              </div>
+              <div
+                data-dropdown
+                style="z-index: 9999"
+                class="dropdown-container the-project-item-input keyword-input-item aa"
+              >
+                <label for="country">Country</label>
+                <input
+                  type="text"
+                  required
+                  id="country"
+                  class="dropdown-input countryyyy"
+                  placeholder="Select Country."
+                  list="suggestions"
+                  oninput="filterOptions(event)"
+                />
+                <img
+                  src="/assets/icons/drop-down-line.svg"
+                  class="dropdown-icon"
+                  onclick="toggleDropdown(this)"
+                />
+                <div id="countryListContainer" class="datalist-container">
+                  <div onclick="selectOption(this,'Nigeria')">Nigeria</div>
+                  <div onclick="selectOption(this,'USA')">USA</div>
+                  <div onclick="selectOption(this,'Canada')">Canada</div>
+                </div>
+              </div>
+
+              <div
+                data-dropdown
+                style="z-index: 999"
+                class="add-location dropdown-container the-project-item-input keyword-input-item"
+              >
+                <label for="city">City</label>
+                <input
+                  type="text"
+                  required
+                  id="city"
+                  class="dropdown-input cityyyy"
+                  placeholder="Select City."
+                  list="suggestions"
+                  oninput="filterOptions(event)"
+                />
+                <img
+                  src="/assets/icons/drop-down-line.svg"
+                  class="dropdown-icon"
+                  onclick="toggleDropdown(this)"
+                />
+                <div id="cityListContainer" class="datalist-container">
+                  <div onclick="selectOption(this, 'Port Harcourt')">
+                    Port Harcourt
+                  </div>
+                  <div onclick="selectOption(this, 'Lagos')">Lagos</div>
+                  <div onclick="selectOption(this, 'Abuja')">Abuja</div>
+                </div>
+              </div>
+              <div class="the-project-item-input">
+                <label for="search-interval">Search for Inteval</label>
+                <input
+                  required
+                  type="text"
+                  id="search-interval"
+                  placeholder="1"
+                />
+                <select class="search-interval-sel">
+                  <option value="Run Every day">Run Every day</option>
+                  <option value="Run Every week">Run Every week</option>
+                  <option value="Run Every month">Run Every month</option>
+                </select>
+              </div>
+            </div>
+            <button>Edit Keyword</button>
+          </form>
+        </div>
+      </div>
+      <!-- Edit Keyword Overlay End -->
 
       <div class="chat">
         <img src="/assets/icons/chat-line-linear.svg" />

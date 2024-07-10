@@ -560,18 +560,29 @@
                           </tbody>
                         </table>
                       </div>
+                      <div class="pagination-wrapper">
+                        <div class="pagination-container">
+                        <button class="btn-prev">Prev</button>
+                        <button class="pagination-numbers active-pagination-number">1</button>
+                        <button class="pagination-numbers">2</button>
+                          <button class="more-pagination-numbers">...</button>
+                        <button class="btn-next">Next</button>
+                      </div>
+                    </div>
                     </div>
                   </div>
                 </div>
 
-                <div class="dash-chart-container">
-                  <p class="rep-chat-title">Chart from 6th May 2024 - 7th June 2024</p>
-                 
-                  <p class="rep-chat-title-2">Position vs Date</p>
-                  <canvas id="searchChart"></canvas>
-                </div>
+                
                 <!--  Keywords Section End -->
               </div>
+              
+            </div>
+            <div class="dash-chart-container report-chart-container">
+              <p class="rep-chat-title">Chart from 6th May 2024 - 7th June 2024</p>
+             
+              <p class="rep-chat-title-2">Position vs Date</p>
+              <canvas class="report-chart" id="searchChart"></canvas>
             </div>
           </div>
         </div>
@@ -610,12 +621,12 @@
       const gradient = ctx.createLinearGradient(0, 0, 0, 250);
       gradient.addColorStop(0.0524, "rgba(4, 131, 159, 1)");
       gradient.addColorStop(0.9127, "rgba(4, 131, 159, 0)");
-
+  
       const data = {
         labels: ["Apr 06", "Apr 10", "Apr 14", "Apr 18", "Apr 20", "Apr 22"],
         datasets: [
           {
-            data: [10, 13, 14, 7, 20, 10, 14],
+            data: [10, 13, 14, 7, 20, 10, 14], // Example data
             fill: "start",
             backgroundColor: gradient,
             borderColor: "#04839F",
@@ -623,7 +634,7 @@
           },
         ],
       };
-
+  
       const config = {
         type: "line",
         data: data,
@@ -632,6 +643,14 @@
           plugins: {
             legend: {
               display: false,
+            },
+          },
+          layout: {
+            padding: {
+              left: 5,
+              right: 5,
+              top: 5,
+              bottom: 5,
             },
           },
           scales: {
@@ -654,11 +673,7 @@
             },
             y: {
               beginAtZero: true,
-              max: 20,
               ticks: {
-                // callback: function (value) {
-                //   return value + "K";
-                // },
                 font: {
                   size: 14,
                   family: "DMSans_18pt-Medium",
@@ -676,8 +691,7 @@
           },
         },
       };
-
+  
       new Chart(ctx, config);
-    </script>
-  </body>
+    </script>  </body>
 </html>

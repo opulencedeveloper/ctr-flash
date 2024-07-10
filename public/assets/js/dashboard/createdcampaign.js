@@ -1,6 +1,27 @@
 const button1 = document.getElementById("camp-overview-section-button-one");
 const button2 = document.getElementById("camp-overview-section-button-two");
 const toggleCheckbox = document.getElementById("toggle");
+const geoTargetCheckbox = document.getElementById("geo-target");
+const worldWideCheckbox = document.getElementById("world-wide");
+const campaignAddress = document.querySelector(".campaign-address")
+
+if (geoTargetCheckbox) {
+  geoTargetCheckbox.addEventListener("change", function () {
+    if (toggleCheckbox.checked) {
+    } else {
+      campaignAddress.style.display = "block";
+    }
+  });
+}
+
+if (worldWideCheckbox) {
+  worldWideCheckbox.addEventListener("change", function () {
+    if (toggleCheckbox.checked) {
+    } else {
+      campaignAddress.style.display = "none";
+    }
+  });
+}
 
 let countryCityPairs = [];
 
