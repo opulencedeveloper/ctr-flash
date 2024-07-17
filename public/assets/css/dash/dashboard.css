@@ -685,7 +685,7 @@ tr td {
 .dash-chart-container {
     background: #fff;
     padding: 30px;
-    height: 100px;
+    height: max-content;
     border-radius: 8px;
 }
 

@@ -522,7 +522,7 @@
               </div>
 
               
-              <div class="report-cont-sect-two">
+              <div  class="report-cont-sect-two">
                 <!--  Keywords Section Start -->
                 <div
                   id="camp-overview-section-two"
@@ -578,12 +578,40 @@
               </div>
               
             </div>
-            <div class="dash-chart-container report-chart-container">
-              <p class="rep-chat-title">Chart from 6th May 2024 - 7th June 2024</p>
-             
-              <p class="rep-chat-title-2">Position vs Date</p>
-              <canvas class="report-chart" id="searchChart"></canvas>
+
+            <div class="chart-grp-wrapper">
+              <div class="dash-chart-container report-chart-container">
+                <div class="chart-header-title">
+                  <div>
+                    <p class="rep-chat-title">Chart from 6th May 2024 - 7th June 2024</p>
+               
+                  <p class="rep-chat-title-2">Position vs Date</p>
+                  </div>
+                  
+  
+                  <div class="chat-indicate chat-indicate-one"></div>
+                </div>
+               
+                <canvas class="report-chart" id="searchChart1"></canvas>
+              </div>
+
+              <div class="dash-chart-container report-chart-container">
+                <div class="chart-header-title">
+                  <div>
+                    <p class="rep-chat-title">Chart from 6th May 2024 - 7th June 2024</p>
+               
+                  <p class="rep-chat-title-2">Position vs Date</p>
+                  </div>
+                  
+  
+                  <div class="chat-indicate chat-indicate-two"></div>
+                </div>
+               
+                <canvas class="report-chart" id="searchChart2"></canvas>
+              </div>
+
             </div>
+           
           </div>
         </div>
       </div>
@@ -617,7 +645,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script>
-      const ctx = document.getElementById("searchChart").getContext("2d");
+      // First graph
+      const ctx = document.getElementById("searchChart1").getContext("2d");
       const gradient = ctx.createLinearGradient(0, 0, 0, 250);
       gradient.addColorStop(0.0524, "rgba(4, 131, 159, 1)");
       gradient.addColorStop(0.9127, "rgba(4, 131, 159, 0)");
@@ -693,5 +722,87 @@
       };
   
       new Chart(ctx, config);
-    </script>  </body>
+
+      
+  //Second Chart
+  const ctx2 = document.getElementById("searchChart2").getContext("2d");
+const gradient2 = ctx2.createLinearGradient(0, 0, 0, 250);
+gradient2.addColorStop(0.0524, "#CC0000"); // 5.24% stop with solid color
+gradient2.addColorStop(0.9127, "rgba(204, 0, 0, 0)");
+
+const data2 = {
+  labels: ["Apr 06", "Apr 10", "Apr 14", "Apr 18", "Apr 20", "Apr 22"],
+  datasets: [
+    {
+      data: [10, 13, 14, 7, 20, 10, 14], // Example data
+      fill: "start",
+      backgroundColor: gradient2,
+      borderColor: "#CC0000",
+      tension: 0.9,
+    },
+  ],
+};
+
+const config2 = {
+  type: "line",
+  data: data2, // Make sure to reference the correct data variable
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+    layout: {
+      padding: {
+        left: 5,
+        right: 5,
+        top: 5,
+        bottom: 5,
+      },
+    },
+    scales: {
+      x: {
+        display: true,
+        grid: {
+          display: false, // Hide vertical grid lines
+        },
+        ticks: {
+          font: {
+            size: 14,
+            family: "DMSans_18pt-Medium",
+          },
+          color: "#404040",
+        },
+        title: {
+          display: false,
+          text: "Month",
+        },
+      },
+      y: {
+        beginAtZero: true,
+        ticks: {
+          font: {
+            size: 14,
+            family: "DMSans_18pt-Medium",
+          },
+          color: "#404040",
+        },
+        grid: {
+          display: true, // Display horizontal grid lines
+        },
+        title: {
+          display: false,
+          text: "Value",
+        },
+      },
+    },
+  },
+};
+
+new Chart(ctx2, config2);
+
+  </script>  
+  
+  </body>
 </html>
