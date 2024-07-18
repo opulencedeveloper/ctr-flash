@@ -367,9 +367,37 @@
 
             <div class="report-cont">
               <div class="report-cont-sect-one">
-                <div class="the-project-item-input keyword-input-item">
-                  <label for="pj-title">Project</label>
-                  <input required id="pj-title" placeholder="Dentist Client" />
+                <div
+                  data-dropdown
+                  style="z-index: 999999"
+                  class="dropdown-container the-project-item-input keyword-input-item"
+                >
+                  <label for="campaign-hd">Project</label>
+                  <input
+                    type="text"
+                    required
+                    id="campaign-hd"
+                    class="dropdown-input"
+                    placeholder="Bright Smile Clinic."
+                    list="suggestions"
+                    oninput="filterOptions(event)"
+                  />
+                  <img
+                    src="/assets/icons/drop-down-line.svg"
+                    class="dropdown-icon"
+                    onclick="toggleDropdown(this)"
+                  />
+                  <div id="cityListContainer" class="datalist-container">
+                    <div onclick="selectOption(this, 'Dentis Client')">
+                      Dentis Client
+                    </div>
+                    <div onclick="selectOption(this, 'Bright Smile Clinic')">
+                      Bright Smile Clinic
+                    </div>
+                    <div onclick="selectOption(this, 'Bright Smile Clinic')">
+                      Bright Smile Clinic
+                    </div>
+                  </div>
                 </div>
 
                 <div

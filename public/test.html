@@ -1,94 +1,310 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Chart.js Example</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-  <style>
-    #searchChart {
-      max-width: 600px; /* Set maximum width */
-      margin: 0 auto; /* Center horizontally */
-    }
-  </style>
-</head>
-<body>
-  <canvas id="searchChart" width="400" height="300"></canvas>
-  <script>
-    const ctx = document.getElementById("searchChart").getContext("2d");
-    const gradient = ctx.createLinearGradient(0, 0, 0, 250);
-    gradient.addColorStop(0.0524, "rgba(4, 131, 159, 1)");
-    gradient.addColorStop(0.9127, "rgba(4, 131, 159, 0)");
+\<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
+    <title>CTR Flash</title>
+    <meta name="robots" content="index, follow" />
 
-    const data = {
-      labels: ["Apr 06", "Apr 10", "Apr 14", "Apr 18", "Apr 20", "Apr 22"],
-      datasets: [
-        {
-          data: [10, 13, 14, 7, 20, 10, 14], // Example data
-          fill: "start",
-          backgroundColor: gradient,
-          borderColor: "#04839F",
-          tension: 0.9,
-        },
-      ],
-    };
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="CTR Flash" />
+    <meta property="og:description" content="" />
+    <link href="/assets/css/global.css" rel="stylesheet" />
+    <link href="/assets/css/variables.css" rel="stylesheet" />
+    <link href="/assets/css/font.css" rel="stylesheet" />
+    <link href="/assets/css/dash/header.css" rel="stylesheet" />
+    <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dash/campaign.css" rel="stylesheet" />
+  </head>
 
-    const config = {
-      type: "line",
-      data: data,
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            display: false,
-          },
-        },
-        layout: {
-          padding: {
-            left: 10,
-            right: 10,
-            top: 10,
-            bottom: 10,
-          },
-        },
-        scales: {
-          x: {
-            display: true,
-            grid: {
-              display: false, // Hide vertical grid lines
-            },
-            ticks: {
-              font: {
-                size: 14,
-                family: "DMSans_18pt-Medium",
-              },
-              color: "#404040",
-            },
-            title: {
-              display: false,
-              text: "Month",
-            },
-          },
-          y: {
-            beginAtZero: true,
-            ticks: {
-              font: {
-                size: 14,
-                family: "DMSans_18pt-Medium",
-              },
-              color: "#404040",
-            },
-            grid: {
-              display: true, // Display horizontal grid lines
-            },
-            title: {
-              display: false,
-              text: "Value",
-            },
-          },
-        },
-      },
-    };
+  <body>
+    <!-- Loading Spinner Start -->
+    <div id="spinner-body" class="spinner-body">
+      <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- Loading Spinner End -->
 
-    new Chart(ctx, config);
-  </script>
-</body>
+    <div id="content" style="display: none">
+      
+
+      <div class="dash-container proje-container">
+        <!-- Desktop Navigation Start -->
+        <div class="dash-nav">
+          <div class="dashboard-nav-header">
+            <div id="logo" class="logo">
+              <div class="logo-img-container">
+                <img src="/assets/logo/ctr-logo-colored.svg" />
+              </div>
+              <p id="dash-tle" class="dash-tle">ctr flash</p>
+            </div>
+
+            <button id="dash-nav-toggle" class="dash-nav-toggle"><img id="dash-arrow" src="/assets/icons/tabler-arrow-left.svg" /></button>
+          </div>
+          <nav id="desktop-nav" class="desktop-nav">
+            <a href="/dashboard/index.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/dashboard-inactive.svg" />
+              </div>
+              <p class="ds-item">dashboard</p>
+            </a>
+            <a href="/dashboard/projects.html" class="nav-item active-nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/projects-active.svg" />
+              </div>
+              <p class="ds-item">projects</p>
+            </a>
+            <a href="/dashboard/campaigns.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/campaign.svg" />
+              </div>
+              <p class="ds-item">campaigns</p>
+            </a>
+            <a href="/dashboard/subscription.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/subscription.svg" />
+              </div>
+              <p class="ds-item">my subscription</p>
+            </a>
+            <a href="/dashboard/settings/general.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/settings.svg" />
+              </div>
+              <p class="ds-item">Settings</p>
+            </a>
+          </nav>
+        </div>
+        <!-- Desktop Navigation End -->
+
+        <div>
+          <!-- Header Start -->
+          <header class="dash-head proj-header">
+            <div class="dash-head-container">
+              <div class="hamburger">
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+              </div>
+              <div class="dash-head-details">
+                <p>hello <span id="dashName">macdonald</span></p>
+                <p id="header-date-time">Saturday 23 Mar, 2024. 10:00am (GMT+1)</p>
+              </div>
+            </div>
+
+            <div class="dash-notify-container">
+              <div class="dash-head-notify-wrapper">
+                <a href="/signin.html" id="dash-head-notify" class="dash-head-notify">
+                  <div id="notifyOpenBtn" class="dash-head-notify-container">
+                    <img id="bell-icon" src="/assets/icons/mdi_logout.svg" />
+                  </div>
+                  <p>Log Out</p>
+                  <div class="notification-container">
+                    <div class="notification-header">
+                      <div class="notification-title">
+                        <p>Notification</p>
+                        <div>0</div>
+                      </div>
+                      <button>Mark all as Read</button>
+                    </div>
+                    <div class="notification-content">
+                      <!-- Empty Notification UI -->
+                      <div class="empty-notify-state">
+                        <div></div>
+                        <p>No New Notification</p>
+                        <div></div>
+                      </div>
+
+                      <!-- Has Notification UI -->
+                      <!-- <div class="notification-state-container">
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                     
+                    </div> -->
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+               <div class="profile-avatar">
+                <img src="/assets/images/profile-avatar.svg"/>
+              </div>
+            </div>
+          </header>
+          <!-- Header End -->
+
+          <div class="dashboard-content">
+            <p class="projec-detail-title">
+              <span> Projects</span> <span>/</span> <span>Dentist Client</span>
+              <span>/</span>
+              <span>Bright Smile Clinic</span>
+            </p>
+            <a
+              href="/dashboard/project-details.html"
+              class="projec-detail-bk-btn"
+            >
+              <div><img src="/assets/icons/back-icon.svg" /></div>
+              <p>Back</p>
+            </a>
+            <div class="view-camp-details-container">
+            
+
+              <!-- DashBoard Table Start -->
+              <div class="camp-kywrd-sect-wrapper">
+              <div class="activity-container">
+                
+
+                  <div class="camp-kywrd-sect-two">
+                    <div class="cam-kwy-header-II">
+                      <p>Statistics</p>
+                      <div>
+                        <button id="desktop-btn" class="cam-kwy-header-btn cam-kwy-header-btn-active">
+                          <div>
+                            <img src="/assets/icons/analytics-inactive.svg" />
+                          </div>
+                          <p>Desktop Search</p>
+                        </button>
+                        <button id="mobile-btn" class="cam-kwy-header-btn">
+                          <div>
+                            <img src="/assets/icons/analytics-inactive.svg" />
+                          </div>
+                          <p>Mobile Search</p>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div>
+                      <canvas id="activityCanvas"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- DashBoard Table End -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        document.getElementById("content").style.display = "block";
+        document.getElementById("spinner-body").style.display = "none";
+      });
+
+      var ctx = document.getElementById("activityCanvas").getContext("2d");
+
+      var dataDesktop = [2, 2.5, 4.5, 3.5, 4.5, 2.7, 3.8, 2.6, 1.7, 2.3, 1.5];
+      var dataMobile = [12, 5, 2.5, 1.5, 5, 1.7, 3.8, 2.6, 1.7, 2.3, 1.5];
+
+      var activityChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: [
+            "Sun",
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+            "Sun",
+            "Mon",
+            "Tue",
+            "Wed",
+          ],
+          datasets: [
+            {
+              label: "Activity",
+              data: dataDesktop,
+              backgroundColor: "rgba(75, 192, 192, 0.2)",
+              borderColor: "rgba(75, 192, 192, 1)",
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+
+      document.getElementById("desktop-btn").addEventListener("click", function () {
+        activityChart.data.datasets[0].data = dataDesktop;
+        activityChart.update();
+      });
+
+      document.getElementById("mobile-btn").addEventListener("click", function () {
+        activityChart.data.datasets[0].data = dataMobile;
+        activityChart.update();
+      });
+    </script>
+  </body>
 </html>

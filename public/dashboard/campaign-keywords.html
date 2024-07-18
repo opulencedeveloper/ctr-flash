@@ -462,13 +462,13 @@
                     <div class="cam-kwy-header-II">
                       <p>Statistics</p>
                       <div>
-                        <button class="cam-kwy-header-btn cam-kwy-header-btn-active">
+                        <button id="desktop-btn" class="cam-kwy-header-btn cam-kwy-header-btn-active">
                           <div>
                             <img src="/assets/icons/baseline-laptop.svg" />
                           </div>
                           <p>Desktop Search</p>
                         </button>
-                        <button class="cam-kwy-header-btn">
+                        <button id="mobile-btn" class="cam-kwy-header-btn">
                           <div>
                             <img src="/assets/icons/phone-mobile-solid.svg" />
                           </div>
@@ -502,6 +502,8 @@
     <script defer>
       document.addEventListener("DOMContentLoaded", function () {
         const ctx = document.getElementById("myChart").getContext("2d");
+        var dataDesktop = [2, 2.5, 4.5, 3.5, 4.5, 2.7, 3.8, 2.6, 1.7, 2.3, 1.5];
+      var dataMobile = [4, 1, 4.5, 2, 1, 2.7, 3.8, 2.6, 1.7];
         const data = {
           labels: [
             "January",
@@ -517,7 +519,7 @@
               label: "My First dataset",
               backgroundColor: "transparent",
               borderColor: "#65D6AD",
-              data: [2, 2.5, 4.5, 3.5, 4.5, 2.7, 3.8, 2.6, 1.7, 2.3, 1.5],
+              data: dataDesktop,
               fill: true,
             },
           ],
@@ -557,6 +559,25 @@
           },
         };
         const myChart = new Chart(ctx, config);
+
+        document.getElementById("desktop-btn").addEventListener("click", function () {
+        myChart.data.datasets[0].data = dataDesktop;
+        myChart.update();
+        toggleActiveClass(this);
+      });
+
+      document.getElementById("mobile-btn").addEventListener("click", function () {
+        myChart.data.datasets[0].data = dataMobile;
+        myChart.update();
+        toggleActiveClass(this);
+      });
+
+      function toggleActiveClass(activeButton) {
+        document.querySelectorAll(".cam-kwy-header-btn").forEach(button => {
+          button.classList.remove("cam-kwy-header-btn-active");
+        });
+        activeButton.classList.add("cam-kwy-header-btn-active");
+      }
 
         function adjustFontSize() {
         if (myChart.options.scales && myChart.options.scales.y && myChart.options.scales.y.ticks) {
