@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
+    <title>CTR Flash</title>
+    <meta name="robots" content="index, follow" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="CTR Flash" />
+    <meta property="og:description" content="" />
+    <link href="/assets/css/global.css" rel="stylesheet" />
+    <link href="/assets/css/variables.css" rel="stylesheet" />
+    <link href="/assets/css/font.css" rel="stylesheet" />
+    <link href="/assets/css/dash/header.css" rel="stylesheet" />
+    <link href="/assets/css/admin/header.css" rel="stylesheet" />
+    <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dash/settings.css" rel="stylesheet" />
+    <link href="/assets/css/dash/campaign.css" rel="stylesheet" />
+    <link href="/assets/css/admin/users.css" rel="stylesheet" />
+    <link href="/assets/css/admin/user-sub.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Loading Spinner Start -->
+    <div id="spinner-body" class="spinner-body">
+      <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- Loading Spinner End -->
+
+    <div id="content" style="display: none">
+      <!-- Mobile Navigation Start -->
+      <div class="nav-menu">
+        <div class="nav-container">
+          <div>
+            <div class="mobile-nav-logo">
+              <div class="logo-mobile">
+                <div class="logo-img-container-mobile">
+                  <img src="/assets/logo/ctr-logo-colored.svg" />
+                </div>
+                <p>ctr flash</p>
+              </div>
+              <button class="btn-nav-close">
+                <img src="/assets/icons/round-close.svg" />
+              </button>
+            </div>
+            <nav class="moblie-nav">
+              <a href="/admin/index.html" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/dashboard-inactive.svg" />
+                </div>
+                <p>dashboard</p>
+              </a>
+              <a href="/admin/users.html" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/admin/icons/users-inactive.svg" />
+                </div>
+                <p>users</p>
+              </a>
+              <a
+                href="/admin/users-subscription.html"
+                class="nav-item-mobile active-nav-item-mobile"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/subscription-active.svg" />
+                </div>
+                <p>user's subscriptions</p>
+              </a>
+              <a href="/admin/settings/general.html" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/settings.svg" />
+                </div>
+                <p>Settings</p>
+              </a>
+
+              <div
+                id="open-overlay-btn-logout-mb"
+                class="nav-item-mobile logout-sect"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/logout-white.svg" />
+                </div>
+                <p>Log Out</p>
+              </div>
+            </nav>
+          </div>
+          <p id="mobile-nav-footer" class="mobile-nav-footer"></p>
+        </div>
+      </div>
+      <!-- Mobile Navigation End -->
+
+      <div class="dash-container">
+        <!-- Desktop Navigation Start -->
+        <div class="dash-nav">
+          <div class="dashboard-nav-header">
+            <div id="logo" class="logo">
+              <div class="logo-img-container">
+                <img src="/assets/logo/ctr-logo-colored.svg" />
+              </div>
+              <p id="dash-tle" class="dash-tle">ctr flash</p>
+            </div>
+
+            <button id="dash-nav-toggle" class="dash-nav-toggle">
+              <img id="dash-arrow" src="/assets/icons/tabler-arrow-left.svg" />
+            </button>
+          </div>
+
+          <nav id="desktop-nav" class="desktop-nav">
+            <a href="/admin/index.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/dashboard-inactive.svg" />
+              </div>
+              <p class="ds-item">dashboard</p>
+            </a>
+            <a href="/admin/users.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/admin/icons/users-inactive.svg" />
+              </div>
+              <p class="ds-item">users</p>
+            </a>
+            <a
+              href="/admin/users-subscription.html"
+              class="nav-item active-nav-item"
+            >
+              <div class="nav-icon">
+                <img src="/assets/icons/subscription-active.svg" />
+              </div>
+              <p class="ds-item">user's subscriptions</p>
+            </a>
+            <a href="/admin/settings/general.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/settings.svg" />
+              </div>
+              <p class="ds-item">Settings</p>
+            </a>
+          </nav>
+        </div>
+        <!-- Desktop Navigation End -->
+
+        <div>
+          <!-- Header Start -->
+          <header class="dash-head">
+            <div class="dash-head-container">
+              <div class="hamburger">
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+              </div>
+              <div class="dash-head-details">
+                <p>hello <span id="dashName">macdonald</span></p>
+                <p id="header-date-time"></p>
+              </div>
+            </div>
+
+            <div class="dash-notify-container">
+              <div class="dash-head-notify-wrapper">
+                <div id="open-overlay-btn-logout" class="dash-head-notify">
+                  <div id="notifyOpenBtn" class="dash-head-notify-container">
+                    <img id="bell-icon" src="/assets/icons/mdi_logout.svg" />
+                  </div>
+                  <p>Log Out</p>
+                </div>
+              </div>
+
+              <div class="profile-avatar">
+                <img src="/assets/images/profile-avatar.svg" />
+              </div>
+            </div>
+          </header>
+          <!-- Header End -->
+
+          <div class="dashboard-content">
+            <h1 class="user-hd">User's Subscriptions</h1>
+            <div class="users-sub-grid">
+              <!-- Subscription Item Start -->
+              <div class="users-sub-grid-item">
+                <div class="users-sub-grid-item-sect1">
+                  <div class="users-sub-grid-item-sect1-innerone">
+                    <div class="users-sub-grid-item-sect1-innerone-hd">
+                      <p class="users-sub-grid-item-sect1-innerone-hd-tle">
+                        203,000
+                      </p>
+                      <p class="users-sub-grid-item-sect1-innerone-hd-stle">
+                        CF 100
+                      </p>
+                    </div>
+                    <p class="users-sub-grid-item-sect1-innerone-tle">
+                      Subscribers
+                    </p>
+                  </div>
+                  <button class="users-sub-grid-item-btn info-button">
+                    <img src="/assets/icons/more-vert.svg" />
+
+                    <div class="overlayy">
+                      <div id="mobile-drawup" class="mobile-drawup sub-drawup">
+                        <div></div>
+                        <p class="sub-drawup-tle">CF 1500</p>
+                        <p class="blocked-u-text sub-drawup-stle">Delete</p>
+                      </div>
+                    </div>
+
+                    <div class="tooltip">
+                      <div class="blocked-u-text">Delete</div>
+                    </div>
+                  </button>
+                </div>
+                <p class="users-sub-grid-item-sect2">
+                  100 Credits for the free plan
+                </p>
+              </div>
+              <!-- Subscription Item End -->
+
+              <!-- Subscription Item Start -->
+              <div class="users-sub-grid-item">
+                <div class="users-sub-grid-item-sect1">
+                  <div class="users-sub-grid-item-sect1-innerone">
+                    <div class="users-sub-grid-item-sect1-innerone-hd">
+                      <p class="users-sub-grid-item-sect1-innerone-hd-tle">
+                        345
+                      </p>
+                      <p class="users-sub-grid-item-sect1-innerone-hd-stle">
+                        CF 1500
+                      </p>
+                    </div>
+                    <p class="users-sub-grid-item-sect1-innerone-tle">
+                      Subscribers
+                    </p>
+                  </div>
+                  <button class="users-sub-grid-item-btn info-button">
+                    <img src="/assets/icons/more-vert.svg" />
+
+                    <div class="overlayy">
+                      <div id="mobile-drawup" class="mobile-drawup sub-drawup">
+                        <div></div>
+                        <p class="sub-drawup-tle">CF 1500</p>
+                        <p class="blocked-u-text sub-drawup-stle">Delete</p>
+                      </div>
+                    </div>
+
+                    <div class="tooltip">
+                      <div class="blocked-u-text">Delete</div>
+                    </div>
+                  </button>
+                </div>
+                <p class="users-sub-grid-item-sect2">
+                  100 Credits for the $50/month plan
+                </p>
+              </div>
+              <!-- Subscription Item End -->
+
+              <!-- Subscription Item Start -->
+              <div class="users-sub-grid-item">
+                <div class="users-sub-grid-item-sect1">
+                  <div class="users-sub-grid-item-sect1-innerone">
+                    <div class="users-sub-grid-item-sect1-innerone-hd">
+                      <p class="users-sub-grid-item-sect1-innerone-hd-tle">
+                        2,347
+                      </p>
+                      <p class="users-sub-grid-item-sect1-innerone-hd-stle">
+                        CF 5200
+                      </p>
+                    </div>
+                    <p class="users-sub-grid-item-sect1-innerone-tle">
+                      Subscribers
+                    </p>
+                  </div>
+                  <button class="users-sub-grid-item-btn info-button">
+                    <img src="/assets/icons/more-vert.svg" />
+
+                    <div class="overlayy">
+                      <div id="mobile-drawup" class="mobile-drawup sub-drawup">
+                        <div></div>
+                        <p class="sub-drawup-tle">CF 1500</p>
+                        <p class="blocked-u-text sub-drawup-stle">Delete</p>
+                      </div>
+                    </div>
+
+                    <div class="tooltip">
+                      <div class="blocked-u-text">Delete</div>
+                    </div>
+                  </button>
+                </div>
+                <p class="users-sub-grid-item-sect2">
+                  100 Credits for the $140/month plan
+                </p>
+              </div>
+              <!-- Subscription Item End -->
+
+              <!-- Subscription Item Start -->
+              <div class="users-sub-grid-item">
+                <div class="users-sub-grid-item-sect1">
+                  <div class="users-sub-grid-item-sect1-innerone">
+                    <div class="users-sub-grid-item-sect1-innerone-hd">
+                      <p class="users-sub-grid-item-sect1-innerone-hd-tle">
+                        77
+                      </p>
+                      <p class="users-sub-grid-item-sect1-innerone-hd-stle">
+                        CF 1500
+                      </p>
+                    </div>
+                    <p class="users-sub-grid-item-sect1-innerone-tle">
+                      Subscribers
+                    </p>
+                  </div>
+                  <button class="users-sub-grid-item-btn info-button">
+                    <img src="/assets/icons/more-vert.svg" />
+
+                    <div class="overlayy">
+                      <div id="mobile-drawup" class="mobile-drawup sub-drawup">
+                        <div></div>
+                        <p class="sub-drawup-tle">CF 1500</p>
+                        <p class="blocked-u-text sub-drawup-stle">Delete</p>
+                      </div>
+                    </div>
+
+                    <div class="tooltip">
+                      <div class="blocked-u-text">Delete</div>
+                    </div>
+                  </button>
+                </div>
+                <p class="users-sub-grid-item-sect2">
+                  100 Credits for the $50/month plan
+                </p>
+              </div>
+              <!-- Subscription Item End -->
+
+              <!-- Subscription Item Start -->
+              <div class="users-sub-grid-item">
+                <div class="users-sub-grid-item-sect1">
+                  <div class="users-sub-grid-item-sect1-innerone">
+                    <div class="users-sub-grid-item-sect1-innerone-hd">
+                      <p class="users-sub-grid-item-sect1-innerone-hd-tle">
+                        890
+                      </p>
+                      <p class="users-sub-grid-item-sect1-innerone-hd-stle">
+                        CF 100
+                      </p>
+                    </div>
+                    <p class="users-sub-grid-item-sect1-innerone-tle">
+                      Subscribers
+                    </p>
+                  </div>
+                  <button class="users-sub-grid-item-btn info-button">
+                    <img src="/assets/icons/more-vert.svg" />
+
+                    <div class="overlayy">
+                      <div id="mobile-drawup" class="mobile-drawup sub-drawup">
+                        <div></div>
+                        <p class="sub-drawup-tle">CF 1500</p>
+                        <p class="blocked-u-text sub-drawup-stle">Delete</p>
+                      </div>
+                    </div>
+
+                    <div class="tooltip">
+                      <div class="blocked-u-text">Delete</div>
+                    </div>
+                  </button>
+                </div>
+                <p class="users-sub-grid-item-sect2">
+                  100 Credits for the $50/month plan
+                </p>
+              </div>
+              <!-- Subscription Item End -->
+
+              <!-- Subscription Item Start -->
+              <div class="users-sub-grid-item">
+                <div class="users-sub-grid-item-sect1">
+                  <div class="users-sub-grid-item-sect1-innerone">
+                    <div class="users-sub-grid-item-sect1-innerone-hd">
+                      <p class="users-sub-grid-item-sect1-innerone-hd-tle">
+                        123
+                      </p>
+                      <p class="users-sub-grid-item-sect1-innerone-hd-stle">
+                        CF 100
+                      </p>
+                    </div>
+                    <p class="users-sub-grid-item-sect1-innerone-tle">
+                      Subscribers
+                    </p>
+                  </div>
+                  <button class="users-sub-grid-item-btn info-button">
+                    <img src="/assets/icons/more-vert.svg" />
+
+                    <div class="overlayy">
+                      <div id="mobile-drawup" class="mobile-drawup sub-drawup">
+                        <div></div>
+                        <p class="sub-drawup-tle">CF 1500</p>
+                        <p class="blocked-u-text sub-drawup-stle">Delete</p>
+                      </div>
+                    </div>
+
+                    <div class="tooltip">
+                      <div class="blocked-u-text">Delete</div>
+                    </div>
+                  </button>
+                </div>
+                <p class="users-sub-grid-item-sect2">
+                  100 Credits for the $50/month plan
+                </p>
+              </div>
+              <!-- Subscription Item End -->
+            </div>
+
+            <!-- All Users Start-->
+            <div
+              id="camp-overview-section-one"
+              class="cp-ow-stn-one-inr camp-overview-animate dvisible"
+            >
+              <div class="keywords-container">
+                <div class="keywords-sect-one">
+                  <div class="keywords-header">
+                    <p>230,000 Total Users</p>
+
+                    <div class="user-sect-inner">
+                      <div class="user-search-container">
+                        <input
+                          placeholder="Search for users"
+                          id="allUsersSearchInput"
+                        /><img
+                          id="togglePassword"
+                          src="/assets/icons/admin/icons/search.svg"
+                        />
+                      </div>
+                      <button class="keywords-header-button">
+                        <div class="header-img-cont">
+                          <img src="/assets/icons/filter.svg" />
+                        </div>
+                        <p>Latest</p>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="user-t-wrapper">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th class="leaded-th">Users</th>
+                          <th>Email</th>
+                          <th>Subscription</th>
+                          <th>Activities</th>
+                          <th>Status</th>
+                          <th>Date Joined</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody id="allUsersTableBody">
+                        <tr>
+                          <td>Macdonald Anyanwu</td>
+                          <td class="em-sec">macthedesigner@gmail.com</td>
+                          <td>CF 1500 - 1500</td>
+                          <td>8 Projects</td>
+                          <td>Active</td>
+                          <td>12 Nov. 2023</td>
+                          <td>
+                            <button class="info-button">
+                              <img src="/assets/icons/vertical-fill.svg" />
+                              <div class="overlayy">
+                                <div id="mobile-drawup" class="mobile-drawup">
+                                  <div></div>
+                                  <p>Macdonald Anyanwu</p>
+                                  <div class="mobile-tooltip">
+                                    <a href="/admin/user-profile.html">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/admin/icons/user-linear.svg"
+                                        />
+                                      </div>
+                                      <p>User Profile</p>
+                                    </a>
+                                    <div class="open-block-user-btn user-tt-tr">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/admin/icons/user-block-linear.svg"
+                                        />
+                                      </div>
+                                      <p class="blocked-u-text">Block user</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="tooltip">
+                                <a href="/admin/user-profile.html">
+                                  <div>
+                                    <img
+                                      src="/assets/icons/admin/icons/user-linear.svg"
+                                    />
+                                  </div>
+                                  <p>User Profile</p>
+                                </a>
+                                <div class="open-block-user-btn">
+                                  <div>
+                                    <img
+                                      src="/assets/icons/admin/icons/user-block-linear.svg"
+                                    />
+                                  </div>
+                                  <p class="blocked-u-text">Block user</p>
+                                </div>
+                              </div>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Victor Opulence</td>
+                          <td class="em-sec">victorkudos@gmail.com</td>
+                          <td>CF 1500 - 1500</td>
+                          <td>8 Projects</td>
+                          <td>Active</td>
+                          <td>12 Nov. 2023</td>
+                          <td>
+                            <button class="info-button">
+                              <img src="/assets/icons/vertical-fill.svg" />
+                              <div id="overlayy" class="overlayy">
+                                <div id="mobile-drawup" class="mobile-drawup">
+                                  <div></div>
+                                  <p>Victor Opulence</p>
+                                  <div class="mobile-tooltip">
+                                    <a href="/admin/user-profile.html">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/admin/icons/user-linear.svg"
+                                        />
+                                      </div>
+                                      <p>User Profile</p>
+                                    </a>
+                                    <div class="user-tt-tr open-block-user-btn">
+                                      <div>
+                                        <img
+                                          src="/assets/icons/admin/icons/user-block-linear.svg"
+                                        />
+                                      </div>
+                                      <p class="blocked-u-text">Block user</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="tooltip">
+                                <a href="/admin/user-profile.html">
+                                  <div>
+                                    <img
+                                      src="/assets/icons/admin/icons/user-linear.svg"
+                                    />
+                                  </div>
+                                  <p>User Profile</p>
+                                </a>
+                                <div class="open-block-user-btn">
+                                  <div>
+                                    <img
+                                      src="/assets/icons/admin/icons/user-block-linear.svg"
+                                    />
+                                  </div>
+                                  <p class="blocked-u-text">Block user</p>
+                                </div>
+                              </div>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="pagination-wrapper">
+                    <div class="pagination-container">
+                      <button class="btn-prev">Prev</button>
+                      <button
+                        class="pagination-numbers active-pagination-number"
+                      >
+                        1
+                      </button>
+                      <button class="pagination-numbers">2</button>
+                      <button class="more-pagination-numbers">...</button>
+                      <button class="btn-next">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- All Users End -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Block User Overlay Start -->
+      <div id="block-user-overlay" class="overlay">
+        <div
+          class="block-user-dialog-container user-dialog-container overlay-animate"
+        >
+          <form class="change-pass-dialog-wrapper">
+            <div class="user-block-dialog-icon">
+              <img src="/assets/icons/admin/icons/user-block-outline.svg" />
+            </div>
+            <p>Blocsk Macdonald Anyanwu?</p>
+            <p>Are you sure you want to proceed?.</p>
+            <button class="user-block-dialog-btnI">Yes, Block</button>
+            <button
+              id="block-user-overlay-close-btn"
+              class="user-block-dialog-btnII"
+              type="button"
+            >
+              No, Don't Block
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- Block User Overlay End -->
+
+      <!-- Logout Overlay Start -->
+      <div id="overlay-logout" class="overlay">
+        <div
+          id="overlay-dialog-logout"
+          class="change-pass-dialog-container overlay-animate"
+        >
+          <form id="overlay-dialog-logout" class="change-pass-dialog-wrapper">
+            <div>
+              <img src="/assets/icons/logout.svg" />
+            </div>
+            <p>Confirm Log Out?</p>
+            <p>Are you sure you want to log out? We would love you to stay</p>
+            <button>Logout</button>
+            <button id="close-overlay-btn-log-out" type="button">Cancel</button>
+          </form>
+        </div>
+      </div>
+      <!-- Logout Overlay End -->
+      <div class="chat">
+        <img src="/assets/icons/chat-line-linear.svg" />
+      </div>
+    </div>
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/dashboard/dashboard.js"></script>
+    <script src="/assets/js/dashboard/createdcampaign.js"></script>
+    <script src="/assets/js/admin/index.js"></script>
+    <script src="/assets/js/admin/users.js"></script>
+  </body>
+</html>

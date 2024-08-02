@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
+    <title>CTR Flash</title>
+    <meta name="robots" content="index, follow" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="CTR Flash" />
+    <meta property="og:description" content="" />
+    <link href="/assets/css/global.css" rel="stylesheet" />
+    <link href="/assets/css/variables.css" rel="stylesheet" />
+    <link href="/assets/css/font.css" rel="stylesheet" />
+    <link href="/assets/css/dash/header.css" rel="stylesheet" />
+    <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dash/settings.css" rel="stylesheet" />
+    <link href="/assets/css/admin/index.css" rel="stylesheet" />
+    <link href="/assets/css/admin/header.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Loading Spinner Start -->
+    <div id="spinner-body" class="spinner-body">
+      <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- Loading Spinner End -->
+
+    <div id="content" style="display: none">
+      <!-- Mobile Navigation Start -->
+      <div class="nav-menu">
+        <div class="nav-container">
+          <div>
+            <div class="mobile-nav-logo">
+              <div class="logo-mobile">
+                <div class="logo-img-container-mobile">
+                  <img src="/assets/logo/ctr-logo-colored.svg" />
+                </div>
+                <p>ctr flash</p>
+              </div>
+              <button class="btn-nav-close">
+                <img src="/assets/icons/round-close.svg" />
+              </button>
+            </div>
+            <nav class="moblie-nav">
+              <a
+                href="/admin/index.html"
+                class="nav-item-mobile active-nav-item-mobile"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/dashboard.svg" />
+                </div>
+                <p>dashboard</p>
+              </a>
+              <a href="/admin/users.html" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/admin/icons/users-inactive.svg" />
+                </div>
+                <p>users</p>
+              </a>
+              <a href="/admin/users-subscription.html" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/subscription.svg" />
+                </div>
+                <p>user's subscriptions</p>
+              </a>
+              <a
+                href="/admin/settings/general.html"
+                class="nav-item-mobile"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/settings.svg" />
+                </div>
+                <p>Settings</p>
+              </a>
+
+              <div
+              id="open-overlay-btn-logout-mb"
+                class="nav-item-mobile logout-sect"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/logout-white.svg" />
+                </div>
+                <p>Log Out</p>
+              </div>
+            </nav>
+          </div>
+          <p id="mobile-nav-footer" class="mobile-nav-footer"></p>
+        </div>
+      </div>
+      <!-- Mobile Navigation End -->
+
+      <div class="dash-container">
+        <!-- Desktop Navigation Start -->
+        <div class="dash-nav">
+          <div class="dashboard-nav-header">
+            <div id="logo" class="logo">
+              <div class="logo-img-container">
+                <img src="/assets/logo/ctr-logo-colored.svg" />
+              </div>
+              <p id="dash-tle" class="dash-tle">ctr flash</p>
+            </div>
+
+            <button id="dash-nav-toggle" class="dash-nav-toggle">
+              <img id="dash-arrow" src="/assets/icons/tabler-arrow-left.svg" />
+            </button>
+          </div>
+
+          <nav id="desktop-nav" class="desktop-nav">
+            <a href="/admin/index.html" class="nav-item active-nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/dashboard.svg" />
+              </div>
+              <p class="ds-item">dashboard</p>
+            </a>
+            <a href="/admin/users.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/admin/icons/users-inactive.svg" />
+              </div>
+              <p class="ds-item">users</p>
+            </a>
+            <a href="/admin/users-subscription.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/subscription.svg" />
+              </div>
+              <p class="ds-item">user's subscriptions</p>
+            </a>
+            <a href="/admin/settings/general.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/settings.svg" />
+              </div>
+              <p class="ds-item">Settings</p>
+            </a>
+          </nav>
+        </div>
+        <!-- Desktop Navigation End -->
+
+        <div>
+          <!-- Header Start -->
+          <header class="dash-head">
+            <div class="dash-head-container">
+              <div class="hamburger">
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+              </div>
+              <div class="dash-head-details">
+                <p>hello <span id="dashName">macdonald</span></p>
+                <p id="header-date-time">
+                  Saturday 23 Mar, 2024. 10:00am (GMT+1)
+                </p>
+              </div>
+            </div>
+
+            <div class="dash-notify-container">
+              <div class="dash-head-notify-wrapper">
+                <div id="open-overlay-btn-logout" class="dash-head-notify">
+                  <div id="notifyOpenBtn" class="dash-head-notify-container">
+                    <img id="bell-icon" src="/assets/icons/mdi_logout.svg" />
+                  </div>
+                  <p>Log Out</p>
+                </div>
+              </div>
+
+              <div class="profile-avatar">
+                <img src="/assets/images/profile-avatar.svg" />
+              </div>
+            </div>
+          </header>
+          <!-- Header End -->
+
+          <div class="dashboard-content">
+            <!-- DashBoard Title Start -->
+            <div class="dash-title home-dash-tle">
+              <div class="dash-title-inner">
+                <p>Dashboard</p>
+                <p>This is the overall view of everything on your account</p>
+              </div>
+            </div>
+            <!-- DashBoard Title End -->
+
+            <!-- DashBoard Card Start -->
+            <div class="dash-card-container">
+              <div class="dash-card">
+                <div class="dash-card-item">
+                  <div class="dash-card-icon-container">
+                    <img src="/assets/icons/admin/group.svg" />
+                  </div>
+                  <p>Total Users</p>
+                </div>
+                <p>230,000</p>
+              </div>
+
+              <div class="dash-card">
+                <div class="dash-card-item">
+                  <div class="dash-card-icon-container">
+                    <img src="/assets/icons/admin/fluent-people.svg" />
+                  </div>
+                  <p>Active Users</p>
+                </div>
+                <p>204,960</p>
+              </div>
+
+              <div class="dash-card">
+                <div class="dash-card-item">
+                  <div class="dash-card-icon-container blocked-users-bg">
+                    <img src="/assets/icons/admin/blocked-users.svg" />
+                  </div>
+                  <p>Blocked Users</p>
+                </div>
+                <p>5,040</p>
+              </div>
+            </div>
+            <!-- Dashboard card end -->
+
+            <!-- DashBoard Table Start -->
+            <div class="activity-container activity-container-ad">
+              <div class="activity-sect-one">
+                <div class="dash-chart-container">
+                  <p class="chat-title">CTR Flash User-base growth</p>
+                  <div class="statistics">
+                    <p>3,706</p>
+                    <div class="statistics-inner">
+                      <div><img src="/assets/icons/arrow-up.svg" /></div>
+                      <p>4.5%</p>
+                    </div>
+                  </div>
+                  <canvas id="searchChart"></canvas>
+                </div>
+              </div>
+
+              <div class="activity-sect-two">
+                <div class="activity-header activity-header-border">
+                  <p class="tsu-tle">Today's Sign Ups</p>
+                  <p class="tsu-stle">24</p>
+                </div>
+                <div class="activity-sect-two-inner-container">
+                  <div class="activity-sect-two-inner-item">
+                    <p class="tsu-nme">Macdonald Anyanwu</p>
+                    <p class="tsu-time">4:00 pm</p>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p class="tsu-nme">Victor Kudos</p>
+                    <p class="tsu-time">12:00 pm</p>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p class="tsu-nme">Kaylynn Baptista</p>
+                    <p class="tsu-time">4:00 pm</p>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p class="tsu-nme">Kaiya Calzoni</p>
+                    <p class="tsu-time">4:00 pm</p>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p class="tsu-nme">Carter Workman</p>
+                    <p class="tsu-time">4:00 pm</p>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p class="tsu-nme">Chance Rhiel Madsen</p>
+                    <p class="tsu-time">4:00 pm</p>
+                  </div>
+                  <div class="activity-sect-two-inner-item">
+                    <p class="tsu-nme">Cooper Stanton</p>
+                    <p class="tsu-time">4:00 pm</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- DashBoard Table End -->
+
+            <!-- Current Subscription Data Start -->
+            <div class="bar-chart-wrapper">
+              <div class="bar-chart-container">
+                <h2 class="csdata-header">Current subscription data</h2>
+                <div class="bar-container">
+                  <div class="bar-label">CF 100</div>
+                  <div class="bar-value" data-value="15000">15,000</div>
+                </div>
+                <div class="bar-container">
+                  <div class="bar-label">CF 1500</div>
+                  <div class="bar-value" data-value="12000">12,000</div>
+                </div>
+                <div class="bar-container">
+                  <div class="bar-label">CF 5200</div>
+                  <div class="bar-value" data-value="10000">10,000</div>
+                </div>
+                <div class="bar-container">
+                  <div class="bar-label">CF 100</div>
+                  <div class="bar-value" data-value="8000">8,000</div>
+                </div>
+                <div class="bar-container">
+                  <div class="bar-label">CF 100</div>
+                  <div class="bar-value" data-value="7000">7,000</div>
+                </div>
+                <!-- <div class="scale">
+                <div class="grid-line-one-x">0k</div>
+                <div class="grid-line-two-x">4k</div>
+                <div class="grid-line-three-x">8k</div>
+                <div class="grid-line-four-x">12k</div>
+                <div class="grid-line-five-x">16k</div>
+              </div> -->
+                <div class="grid-line grid-line-one"><p>0k</p></div>
+                <div class="grid-line grid-line-two"><p>4k</p></div>
+                <div class="grid-line grid-line-three"><p>8k</p></div>
+                <div class="grid-line grid-line-four"><p>12k</p></div>
+                <div class="grid-line grid-line-five"><p>16k</p></div>
+              </div>
+            </div>
+            <!-- Current Subscription Data End -->
+
+            <!-- Automation Server Start -->
+            <div class="as-wrapper">
+              <div class="as-container">
+                <div class="as-sect-one">
+                  <p class="as-sect-one-tle">Automation Server</p>
+                  <div class="as-sect-one-stle-wrapper">
+                    <p class="as-sect-one-stle">Run time:</p>
+                    <p class="as-sect-one-stle-one">128 hours</p>
+                    <p class="as-sect-one-stle-two">Active</p>
+                  </div>
+                </div>
+
+                <div class="all-cam-check-wrapper">
+                  <input
+                    type="checkbox"
+                    id="aut-ser-btn"
+                    class="toggle-checkbox all-camp-toggle"
+                  />
+                  <label
+                    for="aut-ser-btn"
+                    class="toggle-label all-camp-toggle-label"
+                  >
+                    <div class="toggle-circle"></div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <!-- Automation Server End -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- Logout Overlay Start -->
+      <div id="overlay-logout" class="overlay">
+        <div
+          id="overlay-dialog-logout"
+          class="change-pass-dialog-container overlay-animate"
+        >
+          <form id="overlay-dialog-logout" class="change-pass-dialog-wrapper">
+            <div>
+              <img src="/assets/icons/logout.svg" />
+            </div>
+            <p>Confirm Log Out?</p>
+            <p>Are you sure you want to log out? We would love you to stay</p>
+            <button>Logout</button>
+            <button id="close-overlay-btn-log-out" type="button">Cancel</button>
+          </form>
+        </div>
+      </div>
+      <!-- Logout Overlay End -->
+      <div class="chat">
+        <img src="/assets/icons/chat-line-linear.svg" />
+      </div>
+    </div>
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/dashboard/dashboard.js"></script>
+    <script src="/assets/js/admin/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script>
+      const ctx = document.getElementById("searchChart").getContext("2d");
+      // const gradient = ctx.createLinearGradient(0, 0, 0, 250);
+      // gradient.addColorStop(0.0524, "rgba(4, 131, 159, 1)");
+      // gradient.addColorStop(0.9127, "rgba(4, 131, 159, 0)");
+
+      const data = {
+        labels: ["Apr 06", "Apr 10", "Apr 14", "Apr 18", "Apr 20", "Apr 22"],
+        datasets: [
+          {
+            data: [10, 13, 14, 7, 20, 10, 14],
+            fill: "start",
+            //  backgroundColor: gradient,
+            backgroundColor: "transparent",
+            borderColor: "#04839F",
+            tension: 0.9,
+          },
+        ],
+      };
+
+      const config = {
+        type: "line",
+        data: data,
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+          scales: {
+            x: {
+              display: true,
+              grid: {
+                display: false, // Hide vertical grid lines
+              },
+              ticks: {
+                font: {
+                  size: 14,
+                  family: "DMSans_18pt-Medium",
+                },
+                color: "#404040",
+              },
+              title: {
+                display: false,
+                text: "Month",
+              },
+            },
+            y: {
+              beginAtZero: true,
+              max: 20,
+              ticks: {
+                callback: function (value) {
+                  return value + "K";
+                },
+                font: {
+                  size: 14,
+                  family: "DMSans_18pt-Medium",
+                },
+                color: "#404040",
+              },
+              grid: {
+                display: true, // Display horizontal grid lines
+              },
+              title: {
+                display: false,
+                text: "Value",
+              },
+            },
+          },
+        },
+      };
+
+      new Chart(ctx, config);
+    </script>
+  </body>
+</html>

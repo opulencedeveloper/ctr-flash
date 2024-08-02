@@ -6,7 +6,6 @@ function goBack() {
   window.history.back();
 }
 
-
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
@@ -43,17 +42,27 @@ const notifyOpenBtn = document.getElementById("notifyOpenBtn");
 const notifyCloseBtn = document.getElementById("notifyCloseBtn");
 const notifyCloseBtnII = document.getElementById("bell-icon");
 
-notifyCloseBtnII.addEventListener("click", () => {
-  mobileNotification.classList.toggle("active");
-});
+if (notifyCloseBtnII) {
+  notifyCloseBtnII.addEventListener("click", () => {
+    if (mobileNotification) {
+      mobileNotification.classList.toggle("active");
+    }
+  });
+}
 
-notifyOpenBtn.addEventListener("click", () => {
-  mobileNotification.classList.toggle("active");
-});
+if (notifyOpenBtn) {
+  notifyOpenBtn.addEventListener("click", () => {
+    if (mobileNotification) {
+      mobileNotification.classList.toggle("active");
+    }
+  });
+}
 
-notifyCloseBtn.addEventListener("click", () => {
-  mobileNotification.classList.toggle("active");
-});
+if (notifyCloseBtn) {
+  notifyCloseBtn.addEventListener("click", () => {
+    mobileNotification.classList.toggle("active");
+  });
+}
 // const dashhh = document.querySelector(".dash-head-notify");
 
 // dashhh.addEventListener("click", () => {
@@ -100,37 +109,32 @@ if (closeAddProjectDialogBtn) {
 
 let isExpanded = false;
 
-const dashBtnTgle = document.getElementById('dash-nav-toggle');
-const dashArrow = document.getElementById('dash-arrow');
-const navItem = document.querySelectorAll('.nav-item');
-const dashLogo = document.querySelector('.dashboard-nav-header');
-const dashNavB = document.querySelector('.dash-nav');
+const dashBtnTgle = document.getElementById("dash-nav-toggle");
+const dashArrow = document.getElementById("dash-arrow");
+const navItem = document.querySelectorAll(".nav-item");
+const dashLogo = document.querySelector(".dashboard-nav-header");
+const dashNavB = document.querySelector(".dash-nav");
 
-dashBtnTgle.addEventListener('click', () => {
-  const navBar = document.getElementById('desktop-nav');
-  const dashTitle = document.querySelector('.dash-tle');
-  let navTitle = document.querySelectorAll('.ds-item');
+dashBtnTgle.addEventListener("click", () => {
+  const navBar = document.getElementById("desktop-nav");
+  const dashTitle = document.querySelector(".dash-tle");
+  let navTitle = document.querySelectorAll(".ds-item");
 
- 
-  dashTitle.classList.toggle('hide-title')
-  navBar.classList.toggle('hidden');
-  dashLogo.classList.toggle('shrink');
- 
-  dashNavB.classList.toggle('mini');
-    const passwordIconSrc =
-    isExpanded
-      ? "/assets/icons/tabler-arrow-left.svg"
-      : "/assets/icons/tabler-arrow-right.svg";
+  dashTitle.classList.toggle("hide-title");
+  navBar.classList.toggle("hidden");
+  dashLogo.classList.toggle("shrink");
 
-      dashArrow.setAttribute("src", passwordIconSrc);
-  isExpanded = !isExpanded
+  dashNavB.classList.toggle("mini");
+  const passwordIconSrc = isExpanded
+    ? "/assets/icons/tabler-arrow-left.svg"
+    : "/assets/icons/tabler-arrow-right.svg";
+
+  dashArrow.setAttribute("src", passwordIconSrc);
+  isExpanded = !isExpanded;
   navItem.forEach((dashTle) => {
-    dashTle.classList.toggle('hiddenna');
+    dashTle.classList.toggle("hiddenna");
   });
   navTitle.forEach((dashTle) => {
-    dashTle.classList.toggle('hide-title')
+    dashTle.classList.toggle("hide-title");
   });
-
-  
-  
 });

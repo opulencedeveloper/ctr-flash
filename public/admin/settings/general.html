@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
+    <title>CTR Flash</title>
+    <meta name="robots" content="index, follow" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="CTR Flash" />
+    <meta property="og:description" content="" />
+    <link href="/assets/css/global.css" rel="stylesheet" />
+    <link href="/assets/css/variables.css" rel="stylesheet" />
+    <link href="/assets/css/font.css" rel="stylesheet" />
+    <link href="/assets/css/dash/header.css" rel="stylesheet" />
+    <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dash/project.css" rel="stylesheet" />
+    <link href="/assets/css/dash/settings.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Loading Spinner Start -->
+    <div id="spinner-body" class="spinner-body">
+      <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- Loading Spinner End -->
+
+    <div id="content" style="display: none">
+      <!-- Mobile Navigation Start -->
+      <div class="nav-menu">
+        <div class="nav-container">
+          <div>
+            <div class="mobile-nav-logo">
+              <div class="logo-mobile">
+                <div class="logo-img-container-mobile">
+                  <img src="/assets/logo/ctr-logo-colored.svg" />
+                </div>
+                <p>ctr flash</p>
+              </div>
+              <button class="btn-nav-close">
+                <img src="/assets/icons/round-close.svg" />
+              </button>
+            </div>
+            <nav class="moblie-nav">
+              <a href="/admin/index.html" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/dashboard-inactive.svg" />
+                </div>
+                <p>dashboard</p>
+              </a>
+              <a href="/admin/users.html" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/admin/icons/users-inactive.svg" />
+                </div>
+                <p>users</p>
+              </a>
+              <a href="/admin/users-subscription.html" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/subscription.svg" />
+                </div>
+                <p>user's subscriptions</p>
+              </a>
+              <a
+                href="/admin/settings/general.html"
+                class="nav-item-mobile active-nav-item-mobile"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/settings-active.svg" />
+                </div>
+                <p>Settings</p>
+              </a>
+
+              <div
+                id="open-overlay-btn-logout-mb"
+                class="nav-item-mobile logout-sect"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/logout-white.svg" />
+                </div>
+                <p>Log Out</p>
+              </div>
+            </nav>
+          </div>
+          <p id="mobile-nav-footer" class="mobile-nav-footer"></p>
+        </div>
+      </div>
+      <!-- Mobile Navigation End -->
+
+      <div class="dash-container proje-container">
+        <!-- Desktop Navigation Start -->
+        <div class="dash-nav">
+          <div class="dashboard-nav-header">
+            <div id="logo" class="logo">
+              <div class="logo-img-container">
+                <img src="/assets/logo/ctr-logo-colored.svg" />
+              </div>
+              <p id="dash-tle" class="dash-tle">ctr flash</p>
+            </div>
+
+            <button id="dash-nav-toggle" class="dash-nav-toggle">
+              <img id="dash-arrow" src="/assets/icons/tabler-arrow-left.svg" />
+            </button>
+          </div>
+
+          <nav id="desktop-nav" class="desktop-nav">
+            <a href="/admin/index.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/dashboard-inactive.svg" />
+              </div>
+              <p class="ds-item">dashboard</p>
+            </a>
+            <a href="/admin/users.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/admin/icons/users-inactive.svg" />
+              </div>
+              <p class="ds-item">users</p>
+            </a>
+            <a href="/admin/users-subscription.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/subscription.svg" />
+              </div>
+              <p class="ds-item">user's subscriptions</p>
+            </a>
+            <a
+              href="/admin/settings/general.html"
+              class="nav-item active-nav-item"
+            >
+              <div class="nav-icon">
+                <img src="/assets/icons/settings-active.svg" />
+              </div>
+              <p class="ds-item">Settings</p>
+            </a>
+          </nav>
+        </div>
+        <!-- Desktop Navigation End -->
+
+        <div>
+          <!-- Header Start -->
+          <header class="dash-head">
+            <div class="dash-head-container">
+              <div class="hamburger">
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+              </div>
+              <div class="dash-head-details">
+                <p>hello <span id="dashName">macdonald</span></p>
+                <p id="header-date-time">
+                  Saturday 23 Mar, 2024. 10:00am (GMT+1)
+                </p>
+              </div>
+            </div>
+
+            <div class="dash-notify-container">
+              <div class="dash-head-notify-wrapper">
+                <div id="open-overlay-btn-logout" class="dash-head-notify">
+                  <div id="notifyOpenBtn" class="dash-head-notify-container">
+                    <img id="bell-icon" src="/assets/icons/mdi_logout.svg" />
+                  </div>
+                  <p>Log Out</p>
+                </div>
+              </div>
+
+              <div class="profile-avatar">
+                <img src="/assets/images/profile-avatar.svg" />
+              </div>
+            </div>
+          </header>
+          <!-- Header End -->
+
+          <div class="dashboard-content settings-dashboard-content">
+            <!-- DashBoard Title Start -->
+            <div class="dash-title sub-title">
+              <div class="dash-title-inner">
+                <p>Settings</p>
+              </div>
+            </div>
+            <!-- DashBoard Title End -->
+
+            <div class="settings-wrapper">
+              <div class="settings-navigation">
+                <a
+                  class="active-settings-navigation"
+                  href="/admin/settings/general.html"
+                  >general</a
+                >
+                <a href="/admin/settings/change-password.html"
+                  >change password</a
+                >
+              </div>
+              <div class="settings-nav-content">
+                <form class="personal-info-form">
+                  <div class="personal-info-section">
+                    <div class="the-project-item-input personal-info-item">
+                      <label for="first-name">First Name</label>
+                      <input required id="first-name" placeholder="Victor" />
+                    </div>
+                    <div class="the-project-item-input personal-info-item">
+                      <label for="last-name">Last Name</label>
+                      <input required id="last-name" placeholder="Opulence" />
+                    </div>
+                  </div>
+                  <div class="personal-info-section">
+                    <div class="the-project-item-input personal-info-item">
+                      <label for="email">Email</label>
+                      <input
+                        required
+                        id="email"
+                        placeholder="Example: xyz@gmail.com"
+                      />
+                    </div>
+                    <div class="the-project-item-input personal-info-item">
+                      <label for="phone-number">Phone Number</label>
+                      <input
+                        type="tel"
+                        required
+                        id="phone-number"
+                        placeholder="+2348123456789"
+                      />
+                    </div>
+                  </div>
+
+                  <button class="comm-btn-style form-info-btn">Save</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logout Overlay Start -->
+      <div id="overlay-logout" class="overlay">
+        <div
+          id="overlay-dialog-logout"
+          class="change-pass-dialog-container overlay-animate"
+        >
+          <form id="overlay-dialog-logout" class="change-pass-dialog-wrapper">
+            <div>
+              <img src="/assets/icons/logout.svg" />
+            </div>
+            <p>Confirm Log Out?</p>
+            <p>Are you sure you want to log out? We would love you to stay</p>
+            <button>Logout</button>
+            <button id="close-overlay-btn-log-out" type="button">Cancel</button>
+          </form>
+        </div>
+      </div>
+      <!-- Logout Overlay End -->
+
+      <div class="chat">
+        <img src="/assets/icons/chat-line-linear.svg" />
+      </div>
+    </div>
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/dashboard/dashboard.js"></script>
+    <script src="/assets/js/dashboard/settings.js"></script>
+    <script src="/assets/js/admin/index.js"></script>
+  </body>
+</html>

@@ -1,5 +1,6 @@
 .dashboard-content {
     padding: 44.5px 44px 74px 20px;
+    box-sizing: content-box;
 }
 
 .dash-title {

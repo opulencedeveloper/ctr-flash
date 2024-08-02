@@ -305,6 +305,7 @@ body {
     border-top: 0.3px solid var(--custom-six);
     padding-top: 24px !important;
     border-radius: 0 !important;
+    cursor: pointer;
 }
 
 .nav-item-mobile {
@@ -611,7 +612,7 @@ body {
 }
 
 .dash-nav {
-    width: 200px;
+    width: 220px;
     transition: width 0.4s ease;
 }
 

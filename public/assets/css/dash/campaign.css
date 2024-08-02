@@ -467,17 +467,18 @@
     height: 35px;
     text-align: center;
     font-size: 16px;
+    white-space: nowrap;
     border: none;
     background-color: transparent;
     cursor: pointer;
-    border-bottom: 2px solid var(--custom-six);
+    border-bottom: 0.2px solid var(--custom-fouty-three);
     color: var(--custom-six);
     font-family: 'DMSans_18pt-Medium';
     transition: all 0.2s ease;
 }
 
 .camp-overview-section-active-button {
-    border-bottom: 3px solid var(--tertiary-color);
+    border-bottom: 2px solid var(--tertiary-color) !important;
     color: var(--tertiary-color);
     font-family: 'DMSans_36pt-Bold';
 }
@@ -698,6 +699,7 @@
     font-size: 16px;
     font-family: 'DMSans_36pt-Bold';
     color: var(--custom-five);
+    white-space: nowrap;
 }
 
 .keywords-header-button {
@@ -738,7 +740,7 @@
 .camp-overview-animate {
     display: none;
     opacity: 0;
-    transition: opacity 0.5s ease, height 0.5s ease;
+    transition: opacity 0.1s ease, height 0.7s ease;
 }
 
 .camp-overview-animate.dvisible {
@@ -1202,7 +1204,7 @@
     right: -20px;
     width: 120px;
     transform: translateY(-50%);
-    padding: 20px;
+    padding: 20px 20px 5px 20px;
     background-color: var(--custom-seven);
     color: var(--custom-seventeen);
     font-family: 'DMSans-Regular';
@@ -2027,6 +2029,12 @@ body {
     gap: 17px;
     justify-content: space-between;
 }
+
+.info-button:hover .tooltip {
+    display: block; /* Ensure the tooltip is displayed */
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
 
 
 @media (min-width: 768px) {

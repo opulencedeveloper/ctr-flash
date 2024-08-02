@@ -1,5 +1,6 @@
 const button1 = document.getElementById("camp-overview-section-button-one");
 const button2 = document.getElementById("camp-overview-section-button-two");
+const button3 = document.getElementById("camp-overview-section-button-three");
 const toggleCheckbox = document.getElementById("toggle");
 const geoTargetCheckbox = document.getElementById("geo-target");
 const worldWideCheckbox = document.getElementById("world-wide");
@@ -42,15 +43,35 @@ document.querySelectorAll(".all-camp-toggle").forEach((toggle) => {
   });
 });
 
-if (button1 && button2) {
+if (button1 && button2 && !button3) {
   button1.addEventListener("click", function () {
     button2.classList.remove("camp-overview-section-active-button");
     button1.classList.add("camp-overview-section-active-button");
   });
 
   button2.addEventListener("click", function () {
+    button2.classList.add("camp-overview-section-active-button");
+    button1.classList.remove("camp-overview-section-active-button");
+  }); }
+
+if (button1 && button2 && button3) {
+  button1.addEventListener("click", function () {
+    button2.classList.remove("camp-overview-section-active-button");
+    button3.classList.remove("camp-overview-section-active-button");
+    button1.classList.add("camp-overview-section-active-button");
+  });
+
+  button2.addEventListener("click", function () {
     button1.classList.remove("camp-overview-section-active-button");
     button2.classList.add("camp-overview-section-active-button");
+    button3.classList.remove("camp-overview-section-active-button");
+  });
+
+  button3.addEventListener("click", function () {
+    console.log("just clckeddd");
+    button1.classList.remove("camp-overview-section-active-button");
+    button2.classList.remove("camp-overview-section-active-button");
+    button3.classList.add("camp-overview-section-active-button");
   });
 }
 

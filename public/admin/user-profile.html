@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
+    <title>CTR Flash</title>
+    <meta name="robots" content="index, follow" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="CTR Flash" />
+    <meta property="og:description" content="" />
+    <link href="/assets/css/global.css" rel="stylesheet" />
+    <link href="/assets/css/variables.css" rel="stylesheet" />
+    <link href="/assets/css/font.css" rel="stylesheet" />
+    <link href="/assets/css/dash/header.css" rel="stylesheet" />
+    <link href="/assets/css/admin/header.css" rel="stylesheet" />
+    <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dash/settings.css" rel="stylesheet" />
+    <link href="/assets/css/dash/campaign.css" rel="stylesheet" />
+    <link href="/assets/css/admin/index.css" rel="stylesheet" />
+    <link href="/assets/css/admin/users.css" rel="stylesheet" />
+    <link href="/assets/css/admin/user-profile.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Loading Spinner Start -->
+    <div id="spinner-body" class="spinner-body">
+      <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- Loading Spinner End -->
+
+    <div id="content" style="display: none">
+      <!-- Mobile Navigation Start -->
+      <div class="nav-menu">
+        <div class="nav-container">
+          <div>
+            <div class="mobile-nav-logo">
+              <div class="logo-mobile">
+                <div class="logo-img-container-mobile">
+                  <img src="/assets/logo/ctr-logo-colored.svg" />
+                </div>
+                <p>ctr flash</p>
+              </div>
+              <button class="btn-nav-close">
+                <img src="/assets/icons/round-close.svg" />
+              </button>
+            </div>
+            <nav class="moblie-nav">
+              <a href="/admin/index.html" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/dashboard-inactive.svg" />
+                </div>
+                <p>dashboard</p>
+              </a>
+              <a
+                href="/admin/users.html"
+                class="nav-item-mobile active-nav-item-mobile"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/admin/icons/users-active.svg" />
+                </div>
+                <p>users</p>
+              </a>
+              <a href="/admin/users-subscription.html" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/subscription.svg" />
+                </div>
+                <p>user's subscriptions</p>
+              </a>
+              <a
+                href="/admin/settings/general.html"
+                class="nav-item-mobile"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/settings.svg" />
+                </div>
+                <p>Settings</p>
+              </a>
+
+              <div
+                id="open-overlay-btn-logout-mb"
+                class="nav-item-mobile logout-sect"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/logout-white.svg" />
+                </div>
+                <p>Log Out</p>
+              </div>
+            </nav>
+          </div>
+          <p id="mobile-nav-footer" class="mobile-nav-footer"></p>
+        </div>
+      </div>
+      <!-- Mobile Navigation End -->
+
+      <div class="dash-container">
+        <!-- Desktop Navigation Start -->
+        <div class="dash-nav">
+          <div class="dashboard-nav-header">
+            <div id="logo" class="logo">
+              <div class="logo-img-container">
+                <img src="/assets/logo/ctr-logo-colored.svg" />
+              </div>
+              <p id="dash-tle" class="dash-tle">ctr flash</p>
+            </div>
+
+            <button id="dash-nav-toggle" class="dash-nav-toggle">
+              <img id="dash-arrow" src="/assets/icons/tabler-arrow-left.svg" />
+            </button>
+          </div>
+
+          <nav id="desktop-nav" class="desktop-nav">
+            <a href="/admin/index.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/dashboard-inactive.svg" />
+              </div>
+              <p class="ds-item">dashboard</p>
+            </a>
+            <a href="/admin/users.html" class="nav-item active-nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/admin/icons/users-active.svg" />
+              </div>
+              <p class="ds-item">users</p>
+            </a>
+            <a href="/admin/users-subscription.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/subscription.svg" />
+              </div>
+              <p class="ds-item">user's subscriptions</p>
+            </a>
+            <a href="/admin/settings/general.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/settings.svg" />
+              </div>
+              <p class="ds-item">Settings</p>
+            </a>
+          </nav>
+        </div>
+        <!-- Desktop Navigation End -->
+
+        <div>
+          <!-- Header Start -->
+          <header class="dash-head">
+            <div class="dash-head-container">
+              <div class="hamburger">
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+              </div>
+              <div class="dash-head-details">
+                <p>hello <span id="dashName">macdonald</span></p>
+                <p id="header-date-time"></p>
+              </div>
+            </div>
+
+            <div class="dash-notify-container">
+              <div class="dash-head-notify-wrapper">
+                <div id="open-overlay-btn-logout" class="dash-head-notify">
+                  <div id="notifyOpenBtn" class="dash-head-notify-container">
+                    <img id="bell-icon" src="/assets/icons/mdi_logout.svg" />
+                  </div>
+                  <p>Log Out</p>
+                </div>
+              </div>
+
+              <div class="profile-avatar">
+                <img src="/assets/images/profile-avatar.svg" />
+              </div>
+            </div>
+          </header>
+          <!-- Header End -->
+
+          <div class="dashboard-content">
+            <div class="view-camp-details-continer">
+              <button onclick="goBack()" class="projec-detail-bk-btn">
+                <div>
+                  <img src="/assets/icons/admin/icons/back-outlined.svg" />
+                </div>
+                <p>Back</p>
+              </button>
+              <div class="user-prof-hd">
+                <p class="user-prof-hd-one">Macdonald Anyanwu</p>
+                <button class="open-block-user-btn user-prof-hd-two">
+                  Block User
+                </button>
+              </div>
+
+              <p class="user-prof-hd-sta">
+                User's Status:
+                <span class="user-prof-hd-sta-active">Active</span>
+              </p>
+              <p class="user-prof-hd-sub">
+                Subscription:
+                <span class="user-prof-hd-sub-inner">CF 1500</span>
+              </p>
+
+              <!-- User Profile Card Start -->
+              <div class="dash-card-container">
+                <div class="dash-card">
+                  <p>Total Projects Created</p>
+                  <p>12</p>
+                </div>
+
+                <div class="dash-card">
+                  <p>Total Campaigns Created</p>
+                  <p>36</p>
+                </div>
+
+                <div class="dash-card">
+                  <p>Total Keyword Created</p>
+                  <p>25</p>
+                </div>
+              </div>
+              <!-- User Profile card end -->
+
+              <div class="camp-overview-section">
+                <div class="camp-overview-section-header">
+                  <button
+                    onclick="showContent('camp-overview-section-one')"
+                    class="camp-overview-section-button camp-overview-section-active-button camp-overview-section-button-pj"
+                    id="camp-overview-section-button-one"
+                  >
+                    Projects
+                  </button>
+                  <button
+                    onclick="showContent('camp-overview-section-two')"
+                    class="camp-overview-section-button camp-overview-section-button-sh"
+                    id="camp-overview-section-button-two"
+                  >
+                    Subscription History
+                  </button>
+                </div>
+
+                <!-- Projects Start-->
+                <div
+                  id="camp-overview-section-one"
+                  class="cp-ow-stn-one-inr camp-overview-animate dvisible"
+                >
+                  <div class="user-profile-proj">
+                    <p class="user-profile-proj-tle">
+                      Macdonald have a total of 3 projects
+                    </p>
+                    <div class="user-profile-proj-container">
+                      <div class="user-profile-proj-item">
+                        <div class="user-profile-proj-item-sect-one">
+                          <p class="user-profile-proj-item-sect-one-inner-one">
+                            Dentist Client
+                          </p>
+                          <p class="user-profile-proj-item-sect-one-inner-two">
+                            Here is a short test description on the dentist
+                            client project
+                          </p>
+                        </div>
+
+                        <div class="user-profile-proj-item-sect-two-wrapper">
+                          <div class="user-profile-proj-item-sect-two">
+                            <div class="user-profile-proj-item-sect-two-inner">
+                              <p
+                                class="user-profile-proj-item-sect-two-inner-inner-one"
+                              >
+                                Total Campaigns
+                              </p>
+                              <p
+                                class="user-profile-proj-item-sect-two-inner-inner-two"
+                              >
+                                24
+                              </p>
+                            </div>
+                            <div class="user-profile-proj-item-sect-two-inner">
+                              <p
+                                class="user-profile-proj-item-sect-two-inner-inner-one"
+                              >
+                                Total Keywords
+                              </p>
+                              <p
+                                class="user-profile-proj-item-sect-two-inner-inner-two"
+                              >
+                                890
+                              </p>
+                            </div>
+                          </div>
+                          <button
+                            class="user-profile-proj-item-link user-activities-openBtn"
+                          >
+                            View Activites
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="user-profile-proj-item">
+                        <div class="user-profile-proj-item-sect-one">
+                          <p class="user-profile-proj-item-sect-one-inner-one">
+                            Test Project 1
+                          </p>
+                          <p class="user-profile-proj-item-sect-one-inner-two">
+                            Here is a short test description on the dentist
+                            client project
+                          </p>
+                        </div>
+
+                        <div class="user-profile-proj-item-sect-two-wrapper">
+                          <div class="user-profile-proj-item-sect-two">
+                            <div class="user-profile-proj-item-sect-two-inner">
+                              <p
+                                class="user-profile-proj-item-sect-two-inner-inner-one"
+                              >
+                                Total Campaigns
+                              </p>
+                              <p
+                                class="user-profile-proj-item-sect-two-inner-inner-two"
+                              >
+                                24
+                              </p>
+                            </div>
+                            <div class="user-profile-proj-item-sect-two-inner">
+                              <p
+                                class="user-profile-proj-item-sect-two-inner-inner-one"
+                              >
+                                Total Keywords
+                              </p>
+                              <p
+                                class="user-profile-proj-item-sect-two-inner-inner-two"
+                              >
+                                890
+                              </p>
+                            </div>
+                          </div>
+                          <button
+                            class="user-profile-proj-item-link user-activities-openBtn"
+                          >
+                            View Activites
+                          </button>
+                        </div>
+                      </div>
+
+
+
+
+                      <div class="user-profile-proj-item">
+                        <div class="user-profile-proj-item-sect-one">
+                          <p class="user-profile-proj-item-sect-one-inner-one">
+                            Test Project 2
+                          </p>
+                          <p class="user-profile-proj-item-sect-one-inner-two">
+                            Here is a short test description on the dentist
+                            client project
+                          </p>
+                        </div>
+
+                        <div class="user-profile-proj-item-sect-two-wrapper">
+                          <div class="user-profile-proj-item-sect-two">
+                            <div class="user-profile-proj-item-sect-two-inner">
+                              <p
+                                class="user-profile-proj-item-sect-two-inner-inner-one"
+                              >
+                                Total Campaigns
+                              </p>
+                              <p
+                                class="user-profile-proj-item-sect-two-inner-inner-two"
+                              >
+                                24
+                              </p>
+                            </div>
+                            <div class="user-profile-proj-item-sect-two-inner">
+                              <p
+                                class="user-profile-proj-item-sect-two-inner-inner-one"
+                              >
+                                Total Keywords
+                              </p>
+                              <p
+                                class="user-profile-proj-item-sect-two-inner-inner-two"
+                              >
+                                890
+                              </p>
+                            </div>
+                          </div>
+                          <button
+                            class="user-profile-proj-item-link user-activities-openBtn"
+                          >
+                            View Activites
+                          </button>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+                <!-- Projects End -->
+
+                <!-- Active Users Start -->
+                <div
+                  id="camp-overview-section-two"
+                  class="keywords-container-wrapper cp-ow-stn-one-inr camp-overview-section-two camp-overview-animate"
+                >
+                  <div class="keywords-container">
+                    <div class="user-t-wrapper">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th class="leaded-th">Subscription</th>
+                            <th>Amount</th>
+                            <th>Date Subscribed</th>
+                            <th>Due Date</th>
+                            <th>Auto Renewal</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>CF 1500</td>
+                            <td class="em-sec">N2,000</td>
+                            <td>12 Nov. 2023</td>
+                            <td>12 Dec. 2023</td>
+                            <td>Enable</td>
+                          </tr>
+                          <tr>
+                            <td>CF 1500</td>
+                            <td class="em-sec">N2,000</td>
+                            <td>12 Nov. 2023</td>
+                            <td>12 Dec. 2023</td>
+                            <td>Enable</td>
+                          </tr>
+                          <tr>
+                            <td>CF 1500</td>
+                            <td class="em-sec">N2,000</td>
+                            <td>12 Nov. 2023</td>
+                            <td>12 Dec. 2023</td>
+                            <td>Enable</td>
+                          </tr>
+                          <tr>
+                            <td>CF 1500</td>
+                            <td class="em-sec">N2,000</td>
+                            <td>12 Nov. 2023</td>
+                            <td>12 Dec. 2023</td>
+                            <td>Enable</td>
+                          </tr>
+                          <tr>
+                            <td>CF 1500</td>
+                            <td class="em-sec">N2,000</td>
+                            <td>12 Nov. 2023</td>
+                            <td>12 Dec. 2023</td>
+                            <td>Enable</td>
+                          </tr>
+                          <tr>
+                            <td>CF 1500</td>
+                            <td class="em-sec">N2,000</td>
+                            <td>12 Nov. 2023</td>
+                            <td>12 Dec. 2023</td>
+                            <td>Enable</td>
+                          </tr>
+                          <tr>
+                            <td>CF 1500</td>
+                            <td class="em-sec">N2,000</td>
+                            <td>12 Nov. 2023</td>
+                            <td>12 Dec. 2023</td>
+                            <td>Enable</td>
+                          </tr>
+                          <tr>
+                            <td>CF 1500</td>
+                            <td class="em-sec">N2,000</td>
+                            <td>12 Nov. 2023</td>
+                            <td>12 Dec. 2023</td>
+                            <td>Enable</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="sub-contain">
+                      <div class="sub-contain-hd">
+                        <p class="sub-contain-hd-sct1">Remaining credits</p>
+                        <p class="sub-contain-hd-sct2">50</p>
+                      </div>
+                      <div class="prog-sect">
+                        <div
+                          role="progressbar"
+                          aria-valuenow="30"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="--value: 30"
+                        ></div>
+                        <div class="proge-indcator">
+                          <p>30%</p>
+                          <p>Used</p>
+                        </div>
+                      </div>
+                      <div class="prog-footer">
+                        <div class="prog-item">
+                          <div></div>
+                          <p>Used Credits - 40</p>
+                        </div>
+                        <div class="prog-item">
+                          <div></div>
+                          <p>Total Credits - 90</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Active Users End -->
+              </div>
+              <!-- Overview Section End -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- User Activities Overlay Start -->
+      <div class="user-activities-overlay" id="user-activities-overlay"></div>
+      <div class="user-activities-modal" id="user-activities-modal">
+        <div class="user-activities-modal-hd">
+          <div class="user-activities-modal-hd-sect-one">
+            <p class="user-activities-modal-hd-sect-one-tle">Dentist Client</p>
+            <p class="user-activities-modal-hd-sect-one-stle">
+              Here is a short test description on the dentist client project
+            </p>
+            <p class="user-activities-modal-hd-sect-one-stle-one">
+              Created on:
+              <span class="user-activities-modal-hd-sect-one-stle-one-inner"
+                >2nd June, 2024.</span
+              >
+            </p>
+          </div>
+          <button class="user-activities-closeBtn">
+            <img src="/assets/icons/close-outline.svg" />
+          </button>
+        </div>
+
+        <div class="user-activities-modal-card-container">
+          <div class="user-activities-modal-card">
+            <p class="user-activities-modal-card-tle">Total Campaigns</p>
+            <p class="user-activities-modal-card-stle">24</p>
+          </div>
+          <div class="user-activities-modal-card">
+            <p class="user-activities-modal-card-tle">Total Campaigns</p>
+            <p class="user-activities-modal-card-stle">24</p>
+          </div>
+        </div>
+
+        <div class="user-activities-modal-tble">
+          <div class="activity-header">
+            <p>My Activities on Dentist Client</p>
+            <button class="header-button">
+              <div class="header-img-cont">
+                <img src="/assets/icons/filter.svg" />
+              </div>
+              <p>March 2024</p>
+            </button>
+          </div>
+
+          <div style="overflow-x: auto" class="user-activities-modal-main-tble">
+            <table>
+              <thead class="t-head">
+                <tr>
+                  <th>Campaign</th>
+                  <th style="width: 2000px" class="sec-tb-head">Ranks</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody class="t-body">
+                <tr class="tb-row">
+                  <td>
+                    Dental Clinic Campaign found the keyword
+                    <span class="td-bold">Dentist</span>
+                  </td>
+                  <td>8th Position</td>
+                  <td>Today</td>
+                </tr>
+                <tr class="tb-row">
+                  <td>
+                    Dental Clinic Campaign found the keyword
+                    <span class="td-bold">Dentist</span>
+                  </td>
+                  <td>8th Position</td>
+                  <td>2 days ago</td>
+                </tr>
+                <tr class="tb-row">
+                  <td>
+                    Dental Clinic Campaign found the keyword
+                    <span class="td-bold">Dentist</span>
+                  </td>
+                  <td>8th Position</td>
+                  <td>Today</td>
+                </tr>
+                <tr class="tb-row">
+                  <td>
+                    Dental Clinic Campaign found the keyword
+                    <span class="td-bold">Dentist</span>
+                  </td>
+                  <td>8th Position</td>
+                  <td>Today</td>
+                </tr>
+                <tr class="tb-row">
+                  <td>
+                    Dental Clinic Campaign found the keyword
+                    <span class="td-bold">Dentist</span>
+                  </td>
+                  <td>8th Position</td>
+                  <td>Today</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- User Activities Overlay End -->
+
+      <!-- Block User Overlay Start -->
+      <div id="block-user-overlay" class="overlay">
+        <div
+          class="block-user-dialog-container user-dialog-container overlay-animate"
+        >
+          <form class="change-pass-dialog-wrapper">
+            <div class="user-block-dialog-icon">
+              <img src="/assets/icons/admin/icons/user-block-outline.svg" />
+            </div>
+            <p>Block Macdonald Anyanwu?</p>
+            <p>Are you sure you want to proceed?.</p>
+            <button class="user-block-dialog-btnI">Yes, Block</button>
+            <button
+              id="block-user-overlay-close-btn"
+              class="user-block-dialog-btnII"
+              type="button"
+            >
+              No, Don't Block
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- Block User Overlay End -->
+
+      <!-- Logout Overlay Start -->
+      <div id="overlay-logout" class="overlay">
+        <div
+          id="overlay-dialog-logout"
+          class="change-pass-dialog-container overlay-animate"
+        >
+          <form  class="change-pass-dialog-wrapper">
+            <div>
+              <img src="/assets/icons/logout.svg" />
+            </div>
+            <p>Confirm Log Out?</p>
+            <p>Are you sure you want to log out? We would love you to stay</p>
+            <button>Logout</button>
+            <button id="close-overlay-btn-log-out" type="button">Cancel</button>
+          </form>
+        </div>
+      </div>
+      <!-- Logout Overlay End -->
+      <div class="chat">
+        <img src="/assets/icons/chat-line-linear.svg" />
+      </div>
+    </div>
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/dashboard/dashboard.js"></script>
+    <script src="/assets/js/dashboard/createdcampaign.js"></script>
+    <script src="/assets/js/admin/index.js"></script>
+    <script src="/assets/js/admin/users.js"></script>
+    <script src="/assets/js/admin/user-profile.js"></script>
+  </body>
+</html>

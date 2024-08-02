@@ -11,9 +11,21 @@ const editKeywordDialog  = document.getElementById("edit-key-word-dialog");
 
 const closeOverLayBtnLogout = document.getElementById("close-overlay-btn-log-out");
 const openOverLayBtnLogout = document.getElementById("open-overlay-btn-logout");
+const openOverLayBtnLogoutMobile = document.getElementById("open-overlay-btn-logout-mb");
 
 const overlayLogout = document.getElementById("overlay-logout");
 const overlayDialogLogout = document.getElementById("overlay-dialog-logout");
+
+if(openOverLayBtnLogoutMobile) {
+ 
+  openOverLayBtnLogoutMobile.addEventListener("click", () => {
+    console.log("cl")
+    overlayLogout.style.display = "flex";
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+  
+}
 
 function startProgress() {}
 // function startProgress() {
@@ -90,7 +102,6 @@ if(editKeyWordOverlay) {
   }
 }
 
-if (overlay) {
   if (openOverLayBtn) {
     openOverLayBtn.addEventListener("click", () => {
       overlay.style.display = "flex";
@@ -100,6 +111,8 @@ if (overlay) {
   if(closeOverLayBtnLogout) {
     closeOverLayBtnLogout.addEventListener("click", () => {
       overlayDialogLogout.classList.add("fadeOut");
+
+      console.log("clickedd")
   
       overlayDialogLogout.addEventListener(
         "animationend",
@@ -128,7 +141,7 @@ if (overlay) {
       );
     });
   }
-}
+
 
 function getFormattedDateTime() {
   const date = new Date();
