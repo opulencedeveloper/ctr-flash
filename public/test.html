@@ -1,106 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sliding Modal</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            overflow: hidden;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Donut Chart In HTML CSS</title>
+  <style>
+    /* (A) PIE CHART */
+    #donut {
+      /* (A1) CIRCLE */
+      position: relative;
+      width: 300px; height: 300px;
+      border-radius: 50%;
 
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            box-sizing: content-box;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.5s ease;
-        }
+      /* (A2) SEGMENTS */
+      background: conic-gradient(
+        red 0deg 0deg, /* These values will be updated by JavaScript */
+        green 0deg 0deg
+      );
+    }
 
-        .modal {
-            position: fixed;
-            box-sizing: border-box;
-            top: 50%;
-            left: -100%; /* Start off-screen to the left */
-            width: 300px;
-            height: 200px;
-            background: white;
-            transform: translateY(-50%);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            transition: left 0.5s ease;
-        }
+    /* (B) DONUT "CONVERSION" */
+    /* (B1) SMALLER CIRCLE */
+    #donut::before {
+      content: "";
+      position: absolute;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: #fff;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-        .modal h2 {
-            margin-top: 0;
-        }
+    /* (B2) CENTER SMALLER CIRCLE */
+    #donut {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        button {
-            padding: 10px 20px;
-            border: none;
-            background: #007bff;
-            color: white;
-            cursor: pointer;
-        }
+    /* (B3) PERCENTAGES */
+    .percentage-label {
+      position: absolute;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #000; /* Change to a contrasting color if needed */
+      background: #fff; /* Background color to make text more readable */
+      padding: 2px 5px;
+      border-radius: 5px;
+      transform: translate(-50%, -50%);
+    }
 
-        button:hover {
-            background: #0056b3;
-        }
+    /* (C) LEGEND */
+    /* (C1) LEGEND CONTAINER */
+    #legend {
+      display: flex;
+      margin-top: 30px;
+      justify-content: center;
+    }
 
-        .modal.show {
-            left: calc(100% - 300px); /* Stop at the right edge */
-        }
+    /* (C2) SEGMENTS */
+    #legend div { padding: 0 10px; display: flex; align-items: center; }
+    #segment1 { background: red; width: 20px; height: 20px; margin-right: 5px; }
+    #segment2 { background: green; width: 20px; height: 20px; margin-right: 5px; }
 
-        .overlay.show {
-            opacity: 1;
-            visibility: visible;
-        }
-    </style>
+    /* (X) NOT IMPORTANT */
+    body {
+      background: url(https://images.unsplash.com/photo-1604854391668-1beacc48417b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDIzNTgwNjN8&ixlib=rb-4.0.3&q=85);
+      background-size: cover;
+      background-position: center;
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #cbwrap {
+      background: rgba(255, 255, 255, .9);
+      width: 600px;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    * {
+      box-sizing: border-box;
+      font-family: arial, sans-serif;
+    }
+    #cbtitle {
+      margin: 0 0 30px;
+      padding: 0;
+      text-transform: uppercase;
+    }
+  </style>
 </head>
 <body>
-    <div class="overlay" id="overlay"></div>
-    <div class="modal" id="modal">
-        <h2>Modal Content</h2>
-        <p>This is a sliding modal.</p>
-        <button id="closeBtn">Close</button>
+  <div id="cbwrap">
+    <!-- (X) NOT IMPORTANT -->
+    <h1 id="cbtitle">Simple Donut Chart In HTML CSS</h1>
+
+    <!-- (A) DONUT CHART -->
+    <div id="donut" data-segment1="10" data-segment2="90">
+      <div class="percentage-label" id="label1"></div>
+      <div class="percentage-label" id="label2"></div>
     </div>
-    <button id="openBtn">Open Modal</button>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const openBtn = document.getElementById('openBtn');
-            const closeBtn = document.getElementById('closeBtn');
-            const modal = document.getElementById('modal');
-            const overlay = document.getElementById('overlay');
+    <!-- (B) LEGEND -->
+    <div id="legend">
+      <div id="segment1"></div> <div>First</div>
+      <div id="segment2"></div> <div>Second</div>
+    </div>
+  </div>
 
-            openBtn.addEventListener('click', function() {
-                modal.classList.add('show');
-                overlay.classList.add('show');
-            });
+  <script>
+    window.onload = function() {
+      const donut = document.getElementById('donut');
+      const segment1 = parseFloat(donut.getAttribute('data-segment1'));
+      const segment2 = parseFloat(donut.getAttribute('data-segment2'));
 
-            closeBtn.addEventListener('click', function() {
-                modal.classList.remove('show');
-                overlay.classList.remove('show');
-            });
+      const total = segment1 + segment2;
+      const segment1Angle = (segment1 / total) * 360;
+      const segment2Angle = (segment2 / total) * 360;
 
-            overlay.addEventListener('click', function() {
-                modal.classList.remove('show');
-                overlay.classList.remove('show');
-            });
-        });
-    </script>
+      // Change the colors here
+      const color1 = 'red';
+      const color2 = 'green';
+
+      donut.style.background = `conic-gradient(
+        ${color1} 0deg ${segment1Angle}deg,
+        ${color2} ${segment1Angle}deg ${segment1Angle + segment2Angle}deg
+      )`;
+
+      document.getElementById('label1').textContent = segment1 + '%';
+      document.getElementById('label2').textContent = segment2 + '%';
+
+      // Position the labels
+      const label1 = document.getElementById('label1');
+      const label2 = document.getElementById('label2');
+
+      const radius = 150; // Radius of the outer circle
+      const labelRadius = 100; // Radius for label positioning within the donut
+
+      // Calculate positions based on middle angles of segments
+      const angle1 = ((segment1Angle / 2) - 90) * (Math.PI / 180); // Middle angle of the first segment
+      const angle2 = ((segment1Angle + segment2Angle / 2) - 90) * (Math.PI / 180); // Middle angle of the second segment
+
+      label1.style.top = `${150 + labelRadius * Math.sin(angle1)}px`;
+      label1.style.left = `${150 + labelRadius * Math.cos(angle1)}px`;
+
+      label2.style.top = `${150 + labelRadius * Math.sin(angle2)}px`;
+      label2.style.left = `${150 + labelRadius * Math.cos(angle2)}px`;
+    };
+  </script>
 </body>
 </html>

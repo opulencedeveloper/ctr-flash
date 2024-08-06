@@ -1,0 +1,127 @@
+.documentation-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: var(--max-width);
+    margin: auto;
+    margin-top: 88px;
+    margin-bottom: 88px;
+    padding-left: var(--global-desktop-padding);
+    padding-right: var(--global-desktop-padding);
+}
+
+.documentation-item p {
+    margin: 0px;
+}
+
+.documentation-item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--custom-eleven);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.documentation-item-img>img {
+    width: 100%;
+    height: 100%;
+}
+
+.documentation-item-tle{
+    font-size: 28px;
+    font-family: 'DMSans_36pt-Bold';
+    line-height: 33.6px;
+    padding-bottom: 8px;
+}
+
+.documentation-item-stle {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 25.6px;
+    
+    font-size: 16px;
+    color: var(--custom-six);
+}
+
+
+.documentation-item-lnk{
+    text-decoration: none;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 8px;
+}
+
+.documentation-item-btn-tle {
+    font-size: 16px;
+    font-family: 'DMSans_36pt-Bold';
+    color: var(--tertiary-color);
+    line-height: 25.6px;
+}
+
+.documentation-item-btn-icon {
+    height: 20px;
+    width: 20px;
+    padding-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.documentation-item-btn-icon>img {
+    height: auto;
+    width: auto;
+}
+
+.privacy-policy-header {
+    padding-bottom: 120px;
+}
+
+.privacy-content-nav {
+   width: 1000px;
+}
+
+@media only screen and (max-width: 630px) {
+    
+    .privacy-content-nav {
+        width: 100%;
+     }
+
+}
+
+@media only screen and (max-width: 800px) {
+    .documentation-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    .documentation-content {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding-left: var(--global-mobile-padding);
+        padding-right: var(--global-mobile-padding);
+    }
+
+    .documentation-item-tle{
+        font-size: 16px;
+        line-height: 19.2px;
+       
+    }
+    
+    .documentation-item-stle {
+        font-size: 12px;
+        line-height: 19.2px;
+    }
+}

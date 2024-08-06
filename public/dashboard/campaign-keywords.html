@@ -17,6 +17,7 @@
     <link href="/assets/css/dash/header.css" rel="stylesheet" />
     <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
     <link href="/assets/css/dash/campaign.css" rel="stylesheet" />
+    <link href="/assets/css/dash/campaign-keywords.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -155,14 +156,20 @@
                 </div>
                 <p>my subscription</p>
               </a>
-              <a href="/dashboard/settings/general.html" class="nav-item-mobile">
+              <a
+                href="/dashboard/settings/general.html"
+                class="nav-item-mobile"
+              >
                 <div class="nav-icon-mobile">
                   <img src="/assets/icons/settings.svg" />
                 </div>
                 <p>Settings</p>
               </a>
 
-              <a href="/dashboard/settings/general.html" class="nav-item-mobile logout-sect">
+              <a
+                href="/dashboard/settings/general.html"
+                class="nav-item-mobile logout-sect"
+              >
                 <div class="nav-icon-mobile">
                   <img src="/assets/icons/logout-white.svg" />
                 </div>
@@ -170,9 +177,7 @@
               </a>
             </nav>
           </div>
-          <p id="mobile-nav-footer" class="mobile-nav-footer">
-            
-      </p>
+          <p id="mobile-nav-footer" class="mobile-nav-footer"></p>
         </div>
       </div>
       <!-- Mobile Navigation End -->
@@ -188,7 +193,9 @@
               <p id="dash-tle" class="dash-tle">ctr flash</p>
             </div>
 
-            <button id="dash-nav-toggle" class="dash-nav-toggle"><img id="dash-arrow" src="/assets/icons/tabler-arrow-left.svg" /></button>
+            <button id="dash-nav-toggle" class="dash-nav-toggle">
+              <img id="dash-arrow" src="/assets/icons/tabler-arrow-left.svg" />
+            </button>
           </div>
           <nav id="desktop-nav" class="desktop-nav">
             <a href="/dashboard/index.html" class="nav-item">
@@ -236,13 +243,19 @@
               </div>
               <div class="dash-head-details">
                 <p>hello <span id="dashName">macdonald</span></p>
-                <p id="header-date-time">Saturday 23 Mar, 2024. 10:00am (GMT+1)</p>
+                <p id="header-date-time">
+                  Saturday 23 Mar, 2024. 10:00am (GMT+1)
+                </p>
               </div>
             </div>
 
             <div class="dash-notify-container">
               <div class="dash-head-notify-wrapper">
-                <a href="/signin.html" id="dash-head-notify" class="dash-head-notify">
+                <a
+                  href="/signin.html"
+                  id="dash-head-notify"
+                  class="dash-head-notify"
+                >
                   <div id="notifyOpenBtn" class="dash-head-notify-container">
                     <img id="bell-icon" src="/assets/icons/mdi_logout.svg" />
                   </div>
@@ -322,8 +335,8 @@
                 </a>
               </div>
 
-               <div class="profile-avatar">
-                <img src="/assets/images/profile-avatar.svg"/>
+              <div class="profile-avatar">
+                <img src="/assets/images/profile-avatar.svg" />
               </div>
             </div>
           </header>
@@ -392,77 +405,15 @@
 
               <!-- DashBoard Table Start -->
               <div class="camp-kywrd-sect-wrapper">
-              <div class="activity-container">
+                <div class="activity-container">
                   <div class="camp-kywrd-sect">
-                    <div class="activity-header cam-kwy-header">
-                      <p>Activities</p>
-                      <button class="header-button">
-                        <div class="header-img-cont">
-                          <img src="/assets/icons/filter.svg" />
-                        </div>
-                        <p>March 2024</p>
-                      </button>
-                    </div>
-                    <table>
-                      <thead class="t-head">
-                        <tr>
-                          <th>Campaign</th>
-                          <th style="width: 2000px" class="sec-tb-head">
-                            Ranks
-                          </th>
-                          <th>Date</th>
-                        </tr>
-                      </thead>
-                      <tbody class="t-body">
-                        <tr class="tb-row">
-                          <td>
-                            Dental Clinic Campaign found the keyword
-                            <span class="td-bold">Dentist</span>
-                          </td>
-                          <td>8th Position</td>
-                          <td>Today</td>
-                        </tr>
-                        <tr class="tb-row">
-                          <td>
-                            Dental Clinic Campaign found the keyword
-                            <span class="td-bold">Dentist</span>
-                          </td>
-                          <td>8th Position</td>
-                          <td>2 days ago</td>
-                        </tr>
-                        <tr class="tb-row">
-                          <td>
-                            Dental Clinic Campaign found the keyword
-                            <span class="td-bold">Dentist</span>
-                          </td>
-                          <td>8th Position</td>
-                          <td>Today</td>
-                        </tr>
-                        <tr class="tb-row">
-                          <td>
-                            Dental Clinic Campaign found the keyword
-                            <span class="td-bold">Dentist</span>
-                          </td>
-                          <td>8th Position</td>
-                          <td>Today</td>
-                        </tr>
-                        <tr class="tb-row">
-                          <td>
-                            Dental Clinic Campaign found the keyword
-                            <span class="td-bold">Dentist</span>
-                          </td>
-                          <td>8th Position</td>
-                          <td>Today</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-
-                  <div class="camp-kywrd-sect-two">
                     <div class="cam-kwy-header-II">
                       <p>Statistics</p>
                       <div>
-                        <button id="desktop-btn" class="cam-kwy-header-btn cam-kwy-header-btn-active">
+                        <button
+                          id="desktop-btn"
+                          class="cam-kwy-header-btn cam-kwy-header-btn-active"
+                        >
                           <div>
                             <img src="/assets/icons/baseline-laptop.svg" />
                           </div>
@@ -477,14 +428,98 @@
                       </div>
                     </div>
                     <p>Recent Searches</p>
-                    <div class="chart-container">
+                    <div  class="chart-container">
                       <canvas id="myChart"></canvas>
                     </div>
-                    <p>Number of Searches</p>
+                    <p class="cmk-nofse">Number of Searches</p>
                   </div>
-               
+
+                  <div class="camp-kywrd-sect-two">
+                    <p class="don-cha-hd">Statistics</p>
+                    <div id="donut" data-segment1="35" data-segment2="65">
+                      <div class="percentage-label1" id="label1"></div>
+                      <div class="percentage-label2" id="label2"></div>
+                    </div>
+                    <div class="do-chat-lg-cont">
+                      <div class="do-chat-lg-item">
+                        <div class="do-chat-lg-item1-ind"></div>
+                        <p class="do-chat-lg-item-tle">
+                          Desktop search (14,000)
+                        </p>
+                      </div>
+
+                      <div class="do-chat-lg-item">
+                        <div class="do-chat-lg-item2-ind"></div>
+                        <p class="do-chat-lg-item-tle">
+                          Desktop search (14,000)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ckeywrd-tb-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>S/N</th>
+                        <th>Keyword</th>
+                        <th>Postion</th>
+                        <th>Search Interval</th>
+                        <th>Country/Region</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody class="t-body">
+                      <tr class="tb-row cktbda">
+                        <td>1</td>
+                        <td>Smile</td>
+                        <td>27th Position</td>
+                        <td>12</td>
+                        <td>Nigeria/Lagos</td>
+                        <td>12-08-2024</td>
+                        <td>Not found</td>
+                      </tr>
+                      <tr class="tb-row cktbda">
+                        <td>2</td>
+                        <td>Smile</td>
+                        <td>27th Position</td>
+                        <td>12</td>
+                        <td>Nigeria/Lagos</td>
+                        <td>12-08-2024</td>
+                        <td>Not found</td>
+                      </tr>
+                      <tr class="tb-row cktbda">
+                        <td>3</td>
+                        <td>Smile</td>
+                        <td>27th Position</td>
+                        <td>12</td>
+                        <td>Nigeria/Lagos</td>
+                        <td>12-08-2024</td>
+                        <td>Not found</td>
+                      </tr>
+                      <tr class="tb-row cktbda">
+                        <td>4</td>
+                        <td>Smile</td>
+                        <td>27th Position</td>
+                        <td>12</td>
+                        <td>Nigeria/Lagos</td>
+                        <td>12-08-2024</td>
+                        <td>Not found</td>
+                      </tr>
+                      <tr class="tb-row cktbda">
+                        <td>5</td>
+                        <td>Smile</td>
+                        <td>27th Position</td>
+                        <td>12</td>
+                        <td>Nigeria/Lagos</td>
+                        <td>12-08-2024</td>
+                        <td>Not found</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
-            </div>
               <!-- DashBoard Table End -->
             </div>
           </div>
@@ -499,11 +534,12 @@
     <script src="/assets/js/global.js"></script>
     <script src="/assets/js/dashboard/dashboard.js"></script>
     <script src="/assets/js/dashboard/createdcampaign.js"></script>
+    <script src="/assets/js/dashboard/campaignkeywords.js"></script>
     <script defer>
       document.addEventListener("DOMContentLoaded", function () {
         const ctx = document.getElementById("myChart").getContext("2d");
         var dataDesktop = [2, 2.5, 4.5, 3.5, 4.5, 2.7, 3.8, 2.6, 1.7, 2.3, 1.5];
-      var dataMobile = [4, 1, 4.5, 2, 1, 2.7, 3.8, 2.6, 1.7];
+        var dataMobile = [4, 1, 4.5, 2, 1, 2.7, 3.8, 2.6, 1.7];
         const data = {
           labels: [
             "January",
@@ -560,39 +596,47 @@
         };
         const myChart = new Chart(ctx, config);
 
-        document.getElementById("desktop-btn").addEventListener("click", function () {
-        myChart.data.datasets[0].data = dataDesktop;
-        myChart.update();
-        toggleActiveClass(this);
-      });
+        document
+          .getElementById("desktop-btn")
+          .addEventListener("click", function () {
+            myChart.data.datasets[0].data = dataDesktop;
+            myChart.update();
+            toggleActiveClass(this);
+          });
 
-      document.getElementById("mobile-btn").addEventListener("click", function () {
-        myChart.data.datasets[0].data = dataMobile;
-        myChart.update();
-        toggleActiveClass(this);
-      });
+        document
+          .getElementById("mobile-btn")
+          .addEventListener("click", function () {
+            myChart.data.datasets[0].data = dataMobile;
+            myChart.update();
+            toggleActiveClass(this);
+          });
 
-      function toggleActiveClass(activeButton) {
-        document.querySelectorAll(".cam-kwy-header-btn").forEach(button => {
-          button.classList.remove("cam-kwy-header-btn-active");
-        });
-        activeButton.classList.add("cam-kwy-header-btn-active");
-      }
+        function toggleActiveClass(activeButton) {
+          document.querySelectorAll(".cam-kwy-header-btn").forEach((button) => {
+            button.classList.remove("cam-kwy-header-btn-active");
+          });
+          activeButton.classList.add("cam-kwy-header-btn-active");
+        }
 
         function adjustFontSize() {
-        if (myChart.options.scales && myChart.options.scales.y && myChart.options.scales.y.ticks) {
-          if (window.innerWidth <= 600) {
-            myChart.options.scales.y.ticks.font.size = 10;
-          } else {
-            myChart.options.scales.y.ticks.font.size = 16;
+          if (
+            myChart.options.scales &&
+            myChart.options.scales.y &&
+            myChart.options.scales.y.ticks
+          ) {
+            if (window.innerWidth <= 600) {
+              myChart.options.scales.y.ticks.font.size = 10;
+            } else {
+              myChart.options.scales.y.ticks.font.size = 16;
+            }
+            myChart.update();
           }
-          myChart.update();
         }
-      }
-      adjustFontSize();
+        adjustFontSize();
 
-      window.addEventListener('resize', adjustFontSize);
-    });
+        window.addEventListener("resize", adjustFontSize);
+      });
     </script>
   </body>
 </html>

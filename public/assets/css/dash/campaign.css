@@ -1476,10 +1476,16 @@ body {
 }
 
 .camp-kywrd-sect-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.camp-kywrd-sect-two, .camp-kywrd-sect {
     background-color: white;
     border-radius: 8px;
     padding: 20px;
-    height: max-content;
     box-shadow: 0px 8px 16px -6px #18274B14, 0px 6px 8px -6px #18274B1F;
 }
 
@@ -1539,6 +1545,7 @@ body {
 
 .cam-kwy-header-btn-active {
     border: 1px solid var(--tertiary-color);
+    color: var(--tertiary-color);
 }
 
 .cam-kwy-header-btn>div {
@@ -1557,6 +1564,7 @@ body {
     margin: 0px;
     font-size: 14px;
     font-family: 'DMSans-Regular';
+    white-space: nowrap;
 }
 
 .chart-container {
@@ -2068,10 +2076,12 @@ body {
 
     .camp-kywrd-sect {
         width: 100%;
+        box-sizing: border-box;
     }
 
     .camp-kywrd-sect-two {
-        width: max-content;
+        width: 100%;
+        box-sizing: border-box;
     }
 }
 
@@ -2096,6 +2106,14 @@ body {
     .camp-overview-ky-wrd {
         flex-direction: column;
         gap: 24px;
+    }
+
+    .cam-kwy-header-II>div {
+        gap: 3px;
+    }
+
+    .cam-kwy-header-btn>p {
+        font-size: 11px;
     }
 
 
