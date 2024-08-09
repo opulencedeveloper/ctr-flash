@@ -1587,15 +1587,17 @@ body {
 
 .custom-select {
     font-family: 'DMSans_18pt-Medium';
-    width: 60px;
+    width: auto;
     cursor: pointer;
     font-size: 16px;
     height: max-content;
     margin: 0px;
     padding: 0px;
+    padding-right: 20px;
     appearance: none;
     background-color: transparent;
     border: none;
+    outline: none;
     border-radius: 4px;
     background-image: url('/assets/icons/drop-down-line.svg');
     background-repeat: no-repeat;

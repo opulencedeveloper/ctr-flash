@@ -1,23 +1,23 @@
-/* (A) PIE CHART */
+/* Donut Chart */
 #donut {
-  /* (A1) CIRCLE */
   position: relative;
-  width: 285px; height: 285px;
+  width: 285px; 
+  height: 285px;
   border-radius: 50%;
-
-  /* (A2) SEGMENTS */
   background: conic-gradient(
-    yellow 0deg 0deg, /* These values will be updated by JavaScript */
+    yellow 0deg 0deg,
     green 0deg 0deg
   );
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* (B) DONUT "CONVERSION" */
-/* (B1) SMALLER CIRCLE */
 #donut::before {
   content: "";
   position: absolute;
-  width: 165px; height: 165px;
+  width: 165px; 
+  height: 165px;
   border-radius: 50%;
   background: #fff;
   top: 50%;
@@ -25,14 +25,6 @@
   transform: translate(-50%, -50%);
 }
 
-/* (B2) CENTER SMALLER CIRCLE */
-#donut {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* (B3) PERCENTAGES */
 .percentage-label1, .percentage-label2 {
   position: absolute;
   font-size: 20px;
@@ -41,20 +33,12 @@
   font-family: 'DMSans_36pt-Bold';
   padding: 2px 5px;
   border-radius: 5px;
+  white-space: nowrap;
+  transform: translate(-50%, -50%); /* Ensures the label is centered at its calculated position */
 }
 
-.percentage-label1 {
-  transform: translate(-20px, -50%);
-}
 
-.percentage-label2 {
-  transform: translate(-50%, -5px);
-}
 
-/* (C2) SEGMENTS */
-#legend div { padding: 0 10px; display: flex; align-items: center; }
-/* #segment1 { background: yellow; width: 20px; height: 20px; margin-right: 5px; }
-#segment2 { background: green; width: 20px; height: 20px; margin-right: 5px; } */
 
 .cmk-nofse {
   display: flex;

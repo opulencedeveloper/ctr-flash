@@ -367,7 +367,7 @@
                       <p>Keywords:</p>
                       <select class="custom-select">
                         <option value="option1">Smile</option>
-                        <option value="option2">Smile</option>
+                        <option value="option2">Smileaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</option>
                         <option value="option3">Smile</option>
                         <option value="option4">Smile</option>
                       </select>
@@ -428,7 +428,7 @@
                       </div>
                     </div>
                     <p>Recent Searches</p>
-                    <div  class="chart-container">
+                    <div class="chart-container">
                       <canvas id="myChart"></canvas>
                     </div>
                     <p class="cmk-nofse">Number of Searches</p>
@@ -436,7 +436,7 @@
 
                   <div class="camp-kywrd-sect-two">
                     <p class="don-cha-hd">Statistics</p>
-                    <div id="donut" data-segment1="35" data-segment2="65">
+                    <div id="donut" data-segment1="100" data-segment2="0">
                       <div class="percentage-label1" id="label1"></div>
                       <div class="percentage-label2" id="label2"></div>
                     </div>
@@ -540,16 +540,10 @@
         const ctx = document.getElementById("myChart").getContext("2d");
         var dataDesktop = [2, 2.5, 4.5, 3.5, 4.5, 2.7, 3.8, 2.6, 1.7, 2.3, 1.5];
         var dataMobile = [4, 1, 4.5, 2, 1, 2.7, 3.8, 2.6, 1.7];
+        var dataDesktopLabel = ["Apr 06", "Apr 10", "Apr 14", "Apr 18", "Apr 20", "Apr 22"];
+        var dataMobileLabel = ["Apr 06", "Apr 11", "Apr 14", "Apr 18", "Apr 20", "Apr 22"];
         const data = {
-          labels: [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-          ],
+          labels: dataDesktopLabel,
           datasets: [
             {
               label: "My First dataset",
@@ -572,11 +566,19 @@
             },
             scales: {
               x: {
-                display: false,
+                display: true,
                 title: {
-                  display: true,
+                  display: false,
                   text: "Month",
                 },
+                ticks: {
+                
+                font: {
+                  size: 14,
+                  family: "DMSans_18pt-Medium",
+                },
+                color: "#404040",
+              },
               },
               y: {
                 display: true,
@@ -600,6 +602,7 @@
           .getElementById("desktop-btn")
           .addEventListener("click", function () {
             myChart.data.datasets[0].data = dataDesktop;
+            myChart.data.labels = dataDesktopLabel;
             myChart.update();
             toggleActiveClass(this);
           });
@@ -608,6 +611,7 @@
           .getElementById("mobile-btn")
           .addEventListener("click", function () {
             myChart.data.datasets[0].data = dataMobile;
+            myChart.data.labels = dataMobileLabel;
             myChart.update();
             toggleActiveClass(this);
           });

@@ -124,4 +124,18 @@
         font-size: 12px;
         line-height: 19.2px;
     }
+
+    .documentation-item-btn-icon {
+        padding-top: 0px;
+    }
+    
+    .documentation-item-btn-tle {
+        font-size: 14px;
+        line-height: 25.4px;
+    }
+
+    .documentation-item-btn-icon>img {
+        height: 13.3px;
+        width: 11.12px;
+    }
 }
