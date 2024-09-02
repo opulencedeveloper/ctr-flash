@@ -1,155 +1,118 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Donut Chart In HTML CSS</title>
-  <style>
-    /* (A) PIE CHART */
-    #donut {
-      /* (A1) CIRCLE */
-      position: relative;
-      width: 300px; height: 300px;
-      border-radius: 50%;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Sliders</title>
+    <style>
+ 
+ input[type="range"] {
+  accent-color: green;
+  border: none;
+  outline: none;
+}
 
-      /* (A2) SEGMENTS */
-      background: conic-gradient(
-        red 0deg 0deg, /* These values will be updated by JavaScript */
-        green 0deg 0deg
-      );
-    }
+input[type="range"]:focus {
+  border: none;
+  outline: none;
+  border-color: transparent;
+            color: transparent;
+}
 
-    /* (B) DONUT "CONVERSION" */
-    /* (B1) SMALLER CIRCLE */
-    #donut::before {
-      content: "";
-      position: absolute;
-      width: 180px; height: 180px;
-      border-radius: 50%;
-      background: #fff;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
 
-    /* (B2) CENTER SMALLER CIRCLE */
-    #donut {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+input[type="range"]::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background: #ff4500;
+  cursor: ew-resize;
+  transition: background .3s ease-in-out;
+  border-color: transparent;
+            color: transparent;
+}
 
-    /* (B3) PERCENTAGES */
-    .percentage-label {
-      position: absolute;
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #000; /* Change to a contrasting color if needed */
-      background: #fff; /* Background color to make text more readable */
-      padding: 2px 5px;
-      border-radius: 5px;
-      transform: translate(-50%, -50%);
-    }
+.slider {
+  width: 100%;
+  height: 10px;
+  background: green; /* Slider background color */
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  border-color: transparent;
+            color: transparent;
+}
 
-    /* (C) LEGEND */
-    /* (C1) LEGEND CONTAINER */
-    #legend {
-      display: flex;
-      margin-top: 30px;
-      justify-content: center;
-    }
+input[type=range] {
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+  border-color: transparent;
+            color: transparent;
+}
 
-    /* (C2) SEGMENTS */
-    #legend div { padding: 0 10px; display: flex; align-items: center; }
-    #segment1 { background: red; width: 20px; height: 20px; margin-right: 5px; }
-    #segment2 { background: green; width: 20px; height: 20px; margin-right: 5px; }
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
 
-    /* (X) NOT IMPORTANT */
-    body {
-      background: url(https://images.unsplash.com/photo-1604854391668-1beacc48417b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDIzNTgwNjN8&ixlib=rb-4.0.3&q=85);
-      background-size: cover;
-      background-position: center;
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    #cbwrap {
-      background: rgba(255, 255, 255, .9);
-      width: 600px;
-      padding: 30px;
-      border-radius: 10px;
-    }
-    * {
-      box-sizing: border-box;
-      font-family: arial, sans-serif;
-    }
-    #cbtitle {
-      margin: 0 0 30px;
-      padding: 0;
-      text-transform: uppercase;
-    }
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+} 
+
   </style>
 </head>
 <body>
-  <div id="cbwrap">
-    <!-- (X) NOT IMPORTANT -->
-    <h1 id="cbtitle">Simple Donut Chart In HTML CSS</h1>
-
-    <!-- (A) DONUT CHART -->
-    <div id="donut" data-segment1="10" data-segment2="90">
-      <div class="percentage-label" id="label1"></div>
-      <div class="percentage-label" id="label2"></div>
+  
+    <div class="slider-container">
+        <div class="slider-label">Average Session <span>95secs</span></div>
+        <input type="range" min="0" max="100" value="95" class="slider" id="sessionRange">
+        
+        <div class="slider-label">Mobile Search % <span>95%</span></div>
+        <input type="range" min="0" max="100" value="95" class="slider" id="mobileRange">
+        
+        <div class="slider-label">Bounce Rate <span>50%</span></div>
+        <input type="range" min="0" max="100" value="50" class="slider" id="bounceRange">
+        
+        <div class="slider-label">Page Per Session <span>30</span></div>
+        <input type="range" min="0" max="100" value="30" class="slider" id="pageRange">
+        
+        <div class="slider-label">Status</div>
+        <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider-switch"></span>
+        </label>
     </div>
+    <script>
+      document.querySelectorAll('.slider').forEach(slider => {
+    slider.addEventListener('input', function() {
+        let value = this.value;
+        let label = this.previousElementSibling.querySelector('span');
+        
+        if (this.id === 'sessionRange') {
+            label.textContent = value + 'secs';
+        } else if (this.id === 'mobileRange') {
+            label.textContent = value + '%';
+        } else if (this.id === 'bounceRange') {
+            label.textContent = value + '%';
+        } else if (this.id === 'pageRange') {
+            label.textContent = value;
+        }
+    });
+});
 
-    <!-- (B) LEGEND -->
-    <div id="legend">
-      <div id="segment1"></div> <div>First</div>
-      <div id="segment2"></div> <div>Second</div>
-    </div>
-  </div>
-
-  <script>
-    window.onload = function() {
-      const donut = document.getElementById('donut');
-      const segment1 = parseFloat(donut.getAttribute('data-segment1'));
-      const segment2 = parseFloat(donut.getAttribute('data-segment2'));
-
-      const total = segment1 + segment2;
-      const segment1Angle = (segment1 / total) * 360;
-      const segment2Angle = (segment2 / total) * 360;
-
-      // Change the colors here
-      const color1 = 'red';
-      const color2 = 'green';
-
-      donut.style.background = `conic-gradient(
-        ${color1} 0deg ${segment1Angle}deg,
-        ${color2} ${segment1Angle}deg ${segment1Angle + segment2Angle}deg
-      )`;
-
-      document.getElementById('label1').textContent = segment1 + '%';
-      document.getElementById('label2').textContent = segment2 + '%';
-
-      // Position the labels
-      const label1 = document.getElementById('label1');
-      const label2 = document.getElementById('label2');
-
-      const radius = 150; // Radius of the outer circle
-      const labelRadius = 100; // Radius for label positioning within the donut
-
-      // Calculate positions based on middle angles of segments
-      const angle1 = ((segment1Angle / 2) - 90) * (Math.PI / 180); // Middle angle of the first segment
-      const angle2 = ((segment1Angle + segment2Angle / 2) - 90) * (Math.PI / 180); // Middle angle of the second segment
-
-      label1.style.top = `${150 + labelRadius * Math.sin(angle1)}px`;
-      label1.style.left = `${150 + labelRadius * Math.cos(angle1)}px`;
-
-      label2.style.top = `${150 + labelRadius * Math.sin(angle2)}px`;
-      label2.style.left = `${150 + labelRadius * Math.cos(angle2)}px`;
-    };
-  </script>
+    </script>
 </body>
-</html>
+</html> 

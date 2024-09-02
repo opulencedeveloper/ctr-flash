@@ -405,10 +405,57 @@
                 <!-- Overview Section Start -->
                 <div
                   id="camp-overview-section-one"
-                  class="cp-ow-stn-one-inr camp-overview-animate dvisible"
+                  class="cp-ow-stn-one-inr camp-overview-animate dvisible crcp"
                 >
+                  <div class="ove-camp_container">
+                    <div class="ove-camp_container_item">
+                      <div class="ove-camp_container_item_img_cont">
+                        <img src="/assets/icons/crcp.svg" alt="" />
+                      </div>
+                      <div class="ove-camp_container_item_inner">
+                        <p class="ove-camp_container_item_inner_item_one">
+                          Campaign Type:
+                        </p>
+                        <p class="ove-camp_container_item_inner_item_two">
+                          Google Search
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="ove-camp_container_item">
+                      <div class="ove-camp_container_item_img_cont">
+                        <img
+                          src="/assets/icons/clarity_world-line.svg"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ove-camp_container_item_inner">
+                        <p class="ove-camp_container_item_inner_item_one">
+                          Website URL:
+                        </p>
+                        <p class="ove-camp_container_item_inner_item_two">
+                          https://inboxlane.com
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="ove-camp_container_item">
+                      <div class="ove-camp_container_item_img_cont">
+                        <img src="/assets/icons/crcp.svg" alt="" />
+                      </div>
+                      <div class="ove-camp_container_item_inner">
+                        <p class="ove-camp_container_item_inner_item_one">
+                          Campaign Title:
+                        </p>
+                        <p class="ove-camp_container_item_inner_item_two">
+                          Bright Smile Clinic
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
                   <form class="cp-ow-stn-one-inr-one">
-                    <p>Overview</p>
+                    <p>Edit Overview</p>
                     <div class="campaign-overview-item">
                       <div>
                         <label for="campaign-name">Campaign Name</label>
@@ -443,63 +490,9 @@
                         placeholder="www.opulencedeveloper.com"
                       />
                     </div>
-                    <div class="campaign-overview-item">
+                    <div class="campaign-overview-item-range campaign-overview-item-range-top">
                       <div>
-                        <label for="mobile-search">Mobile Search %</label>
-                        <div class="detailtooltip">
-                          <img src="/assets/icons/question-mark-rounded.svg" />
-                          <span class="detailtooltiptext"
-                            >How many searches would you like to be from a
-                            mobile device? We recommend 60-80%</span
-                          >
-                        </div>
-                      </div>
-                      <input
-                        required
-                        id="mobile-search"
-                        type="number"
-                        placeholder="30"
-                      />
-                    </div>
-                    <div class="campaign-overview-item">
-                      <div>
-                        <label for="bounce-rate">Bounce Rate</label>
-                        <div class="detailtooltip">
-                          <img src="/assets/icons/question-mark-rounded.svg" />
-                          <span class="detailtooltiptext"
-                            >How much percentage of your service would you like
-                            the bot to bouce? We recommend 25-40%</span
-                          >
-                        </div>
-                      </div>
-                      <input
-                        required
-                        type="number"
-                        id="bounce-rate"
-                        placeholder="Dentist Client"
-                      />
-                    </div>
-                    <div class="campaign-overview-item">
-                      <div>
-                        <label for="page-per-session">Page Per Session</label>
-                        <div class="detailtooltip">
-                          <img src="/assets/icons/question-mark-rounded.svg" />
-                          <span class="detailtooltiptext"
-                            >How many inner pages of your website would you like
-                            the bot to visit? We recommend 2-5</span
-                          >
-                        </div>
-                      </div>
-                      <input
-                        required
-                        id="page-per-session"
-                        type="number"
-                        placeholder="1"
-                      />
-                    </div>
-                    <div class="campaign-overview-item">
-                      <div>
-                        <label for="page-per-session">Average Session</label>
+                        <label for="sessionRange">Average Session</label>
                         <div class="detailtooltip">
                           <img src="/assets/icons/question-mark-rounded.svg" />
                           <span class="detailtooltiptext"
@@ -508,29 +501,100 @@
                           >
                         </div>
                       </div>
-                      <input
-                        required
-                        id="page-per-session"
-                        type="number"
-                        placeholder="Session duration"
-                      />
+                      <div class="slider-cont">
+                        <input
+                          type="range"
+                          min="0"
+                          max="100"
+                          value="95"
+                          class="slider"
+                          id="sessionRange"
+                        />
+                        <div class="slider-label">95secs</div>
+                      </div>
                     </div>
-                    <div class="campaign-overview-item">
+
+                    <div class="campaign-overview-item-range">
                       <div>
-                        <label for="page-per-session"
-                          >Campaign Description</label
-                        >
+                        <label for="mobileRange">Mobile Search %</label>
                         <div class="detailtooltip">
                           <img src="/assets/icons/question-mark-rounded.svg" />
                           <span class="detailtooltiptext"
-                            >The percentage of searches you aim to direct to
-                            your website rather than a navigational search. We
-                            recommend aiming for 60-75%.</span
+                            >How many searches would you like to be from a
+                            mobile device? We recommend 60-80%</span
                           >
                         </div>
                       </div>
-                      <textarea required id="page-per-session"></textarea>
+                      <div class="slider-cont">
+                        <input
+                          type="range"
+                          min="0"
+                          max="100"
+                          value="95"
+                          class="slider"
+                          id="mobileRange"
+                        />
+                        <div class="slider-label">95%</div>
+                      </div>
                     </div>
+
+                    <div class="campaign-overview-item-range">
+                      <div>
+                        <label for="bounceRange">Bounce Rate</label>
+                        <div class="detailtooltip">
+                          <img src="/assets/icons/question-mark-rounded.svg" />
+                          <span class="detailtooltiptext"
+                            >How much percentage of your service would you like
+                            the bot to bouce? We recommend 25-40%</span
+                          >
+                        </div>
+                      </div>
+                      <div class="slider-cont">
+                        <input
+                          type="range"
+                          min="0"
+                          max="100"
+                          value="50"
+                          class="slider"
+                          id="bounceRange"
+                        />
+                        <div class="slider-label">50%</div>
+                      </div>
+                    </div>
+
+                    <div class="campaign-overview-item-range">
+                      <div>
+                        <label for="pageRange">Page Per Session</label>
+                        <div class="detailtooltip">
+                          <img src="/assets/icons/question-mark-rounded.svg" />
+                          <span class="detailtooltiptext"
+                            >How many inner pages of your website would you like
+                            the bot to visit? We recommend 2-5</span
+                          >
+                        </div>
+                      </div>
+                      <div class="slider-cont">
+                        <input
+                          type="range"
+                          min="0"
+                          max="100"
+                          value="30"
+                          class="slider"
+                          id="pageRange"
+                        />
+                        <div class="slider-label">30</div>
+                      </div>
+                    </div>
+                   
+                    <!-- <div class="slider-label">Mobile Search % <span>95%</span></div>
+                      <input type="range" min="0" max="100" value="95" class="slider" id="mobileRange">
+                      
+                      <div class="slider-label">Bounce Rate <span>50%</span></div>
+                      <input type="range" min="0" max="100" value="50" class="slider" id="bounceRange">
+                      
+                      <div class="slider-label">Page Per Session <span>30</span></div>
+                      <input type="range" min="0" max="100" value="30" class="slider" id="pageRange"> -->
+
                     <div class="checkbox-conatiner">
                       <p>Status</p>
                       <div class="checkbox-wrapper">
@@ -547,21 +611,21 @@
                     </div>
                     <button>Save Changes</button>
                   </form>
-                  <div class="cp-ow-stn-one-inr-two">
-                    <p>
-                      Date Created:
-                      <span class="cp-ow-stn-one-inr-bld"
-                        >March 21st 2024.</span
-                      >
-                    </p>
-                    <p>
-                      Total Searches:
-                      <span class="cp-ow-stn-one-inr-bld">0</span>
-                    </p>
-                    <p>
-                      Keywords: <span class="cp-ow-stn-one-inr-bld">0</span>
-                    </p>
-                  </div>
+                  <!-- <div class="cp-ow-stn-one-inr-two">
+                      <p>
+                        Date Created:
+                        <span class="cp-ow-stn-one-inr-bld"
+                          >March 21st 2024.</span
+                        >
+                      </p>
+                      <p>
+                        Total Searches:
+                        <span class="cp-ow-stn-one-inr-bld">0</span>
+                      </p>
+                      <p>
+                        Keywords: <span class="cp-ow-stn-one-inr-bld">0</span>
+                      </p>
+                    </div> -->
                 </div>
                 <!-- Overview Section End -->
 
@@ -1455,5 +1519,21 @@
     <script src="/assets/js/global.js"></script>
     <script src="/assets/js/dashboard/dashboard.js"></script>
     <script src="/assets/js/dashboard/createdcampaign.js"></script>
+    <script>
+      document.querySelectorAll(".slider").forEach((slider) => {
+        slider.addEventListener("input", function () {
+          let value = this.value;
+          let label = this.nextElementSibling; // Corrected: select the next sibling, which is the label
+
+          if (this.id === "sessionRange") {
+            label.textContent = value + "secs";
+          } else if (this.id === "mobileRange" || this.id === "bounceRange") {
+            label.textContent = value + "%";
+          } else if (this.id === "pageRange") {
+            label.textContent = value;
+          }
+        });
+      });
+    </script>
   </body>
 </html>

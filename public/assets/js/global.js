@@ -27,37 +27,40 @@ if(openOverLayBtnLogoutMobile) {
   
 }
 
-function startProgress() {}
-// function startProgress() {
-//   let progressBar = document.getElementById('progress-bar');
-//   let progressBarMobile = document.getElementById('progress-bar-mobile');
-//   let progressValue = progressBar.getAttribute('progress');
-//   progressValue = parseInt(progressValue);
+//function startProgress() {}
+let progressBar = document.getElementById('progress-bar');
+function startProgress() {
+  
+  let progressBarMobile = document.getElementById('progress-bar-mobile');
+  let progressValue = progressBar.getAttribute('progress');
+  progressValue = parseInt(progressValue);
 
-//   if (isNaN(progressValue) || progressValue < 0 || progressValue > 100) {
-//       alert('Please set a valid progress value between 0 and 100 in the HTML.');
-//       return;
-//   }
+  if (isNaN(progressValue) || progressValue < 0 || progressValue > 100) {
+      alert('Please set a valid progress value between 0 and 100 in the HTML.');
+      return;
+  }
 
-//   let width = 0;
-//   let interval = setInterval(frame, 20);
+  let width = 0;
+  let interval = setInterval(frame, 20);
 
-//   function frame() {
-//       if (width >= progressValue) {
-//           clearInterval(interval);
-//       } else {
-//           width++;
-//           progressBarMobile.style.width = width + '%';
-//           progressBar.style.width = width + '%';
-//       }
-//   }
-// }
+  function frame() {
+      if (width >= progressValue) {
+          clearInterval(interval);
+      } else {
+          width++;
+          progressBarMobile.style.width = width + '%';
+          progressBar.style.width = width + '%';
+      }
+  }
+}
 
 window.addEventListener("load", function () {
   document.getElementById("spinner-body").style.display = "none";
 
   document.getElementById("content").style.display = "block";
+  if(progressBar) {
   startProgress();
+  }
 });
 
 if(openOverlayBtns) {
