@@ -29,7 +29,7 @@
     height: 100%;
 }
 
-.documentation-item-tle{
+.documentation-item-tle {
     font-size: 28px;
     font-family: 'DMSans_36pt-Bold';
     line-height: 33.6px;
@@ -43,13 +43,13 @@
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 25.6px;
-    
+
     font-size: 16px;
     color: var(--custom-six);
 }
 
 
-.documentation-item-lnk{
+.documentation-item-lnk {
     text-decoration: none;
     border: none;
     outline: none;
@@ -80,27 +80,125 @@
     width: auto;
 }
 
-.privacy-policy-header {
+.privacy-policy-header,
+.start-guide-header {
     padding-bottom: 120px;
 }
 
-.privacy-content-nav {
-   width: 1000px;
+.start-guide-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 65px;
 }
 
-@media only screen and (max-width: 630px) {
-    
-    .privacy-content-nav {
-        width: 100%;
-     }
+.start-guide-sect1-tle {
+    font-size: 48px;
+    line-height: 57.6px;
+    font-family: 'Fontspring-DEMO-criteriacf-bold';
+    margin: 0px;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
 
+.start-guide-sect1-stle {
+    font-size: 16px;
+    line-height: 25.6px;
+    font-family: 'DMSans_18pt-Medium';
+    margin: 0px;
+}
+
+.start-guide-sect1,
+.start-guide-sect2 {
+    flex: 1;
+}
+
+.start-guide-sect2>img {
+    width: 100%;
+    height: 100%;
+}
+
+.privacy-content-nav {
+    width: 1000px;
+}
+
+.start-guide-one-tle {
+    font-size: 32px;
+    color: var(--custom-five);
+    margin: 0px;
+    font-family: 'DMSans_36pt-Bold';
+    margin-bottom: 30px;
+    line-height: 38.4px;
+}
+
+.start-guide-one-stle {
+    font-size: 20px;
+    color: var(--custom-five);
+    margin: 0px;
+    font-family: 'DMSans_18pt-Medium';
+    margin-bottom: -1px;
+    line-height: 24px;
+}
+
+.start-guide-one-stle-img-cont {
+    width: 100%;
+    height: 551.06px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start-guide-one-foot {
+    margin: 0px;
+    color: var(--custom-five);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    line-height: 25.6px;
+    margin-top: -16px;
+    font-size: 16px;
+    border-bottom: 1px solid var(--custom-eleven);
+}
+
+.start-guide-one-stle-img-cont>img:hover {
+    transform: none;
+}
+
+.start-guide-one-stle-img-cont>img {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 1091px) {
+    .start-guide-one-stle-img-cont {
+        height: 490.06px;
+    }
+}
+
+@media only screen and (max-width: 888px) {
+    .start-guide-one-stle-img-cont {
+        height: 370.06px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
     .documentation-content {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
+    .start-guide-header {
+        flex-direction: column;
+        gap: 65px;
+    }
+
+}
+
+@media only screen and (max-width: 630px) {
+
+    .privacy-content-nav {
+        width: 100%;
+    }
+
 }
 
 
@@ -114,12 +212,12 @@
         padding-right: var(--global-mobile-padding);
     }
 
-    .documentation-item-tle{
+    .documentation-item-tle {
         font-size: 16px;
         line-height: 19.2px;
-       
+
     }
-    
+
     .documentation-item-stle {
         font-size: 12px;
         line-height: 19.2px;
@@ -128,7 +226,7 @@
     .documentation-item-btn-icon {
         padding-top: 0px;
     }
-    
+
     .documentation-item-btn-tle {
         font-size: 14px;
         line-height: 25.4px;
@@ -137,5 +235,48 @@
     .documentation-item-btn-icon>img {
         height: 13.3px;
         width: 11.12px;
+    }
+
+    .start-guide-one-tle {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .start-guide-one-stle {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 12px;
+    }
+
+    .start-guide-one-stle-img-cont {
+        height: 230.06px;
+    }
+
+    .start-guide-one-foot {
+        margin-top: -5px;
+        font-size: 12px;
+    }
+
+    .start-guide-header {
+        padding-right: var(--global-mobile-padding);
+        padding-left: var(--global-mobile-padding);
+        max-width: 100%;
+    }
+
+    .start-guide-sect1-tle {
+        font-size: 28px;
+        line-height: 37.6px;
+        margin-top: 10px;
+        margin-bottom: 17px;
+    }
+
+    .start-guide-sect1-stle {
+        font-size: 14px;
+        line-height: 25.6px;
+        margin: 0px;
+    }
+
+    .start-guide-header {
+        padding-bottom: 50px;
     }
 }

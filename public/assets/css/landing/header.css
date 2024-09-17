@@ -100,6 +100,7 @@ nav a {
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 40px;
+    text-wrap: nowrap;
 }
 
 .auth-container>a:nth-child(1) {
@@ -286,7 +287,7 @@ nav a {
     margin: 0px;
 }
 
-@media only screen and (max-width: 797px) {
+@media only screen and (max-width: 870px) {
     nav,
     .auth-container {
         display: none;
