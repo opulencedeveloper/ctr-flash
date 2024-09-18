@@ -85,6 +85,7 @@ document.querySelectorAll(".privacyScrollButton").forEach((button) => {
 
     // Scroll the target item into view
     const targetId = this.getAttribute("policy-data-target");
+    
     document.getElementById(targetId).scrollIntoView({
       behavior: "smooth",
       block: "start",

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
+    <title>CTR Flash</title>
+    <meta name="robots" content="index, follow" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="CTR Flash" />
+    <meta property="og:description" content="" />
+    <link href="/assets/css/global.css" rel="stylesheet" />
+    <link href="/assets/css/variables.css" rel="stylesheet" />
+    <link href="/assets/css/font.css" rel="stylesheet" />
+    <link href="/assets/css/dash/header.css" rel="stylesheet" />
+    <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dash/settings.css" rel="stylesheet" />
+    <link href="/assets/css/landing/home.css" rel="stylesheet" />
+    <link href="/assets/css/landing/documentation.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Loading Spinner Start -->
+    <div id="spinner-body" class="spinner-body">
+      <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- Loading Spinner End -->
+
+    <div id="content" style="display: none">
+      <!-- Mobile Notification Start -->
+      <div id="mobile-notification" class="mobile-notification">
+        <div class="mobile-notification-wrapper">
+          <button id="notifyCloseBtn" class="close-notify">
+            <div><img src="/assets/icons/back-icon.svg" /></div>
+            <p>Back</p>
+          </button>
+          <div class="notification-header">
+            <div class="notification-title">
+              <p>Notification</p>
+              <div>0</div>
+            </div>
+            <button>Mark all as Read</button>
+          </div>
+          <div class="notification-content notification-content-mobile">
+            <!-- Empty Notification UI -->
+            <div class="empty-notify-state">
+              <div></div>
+              <p>No New Notification</p>
+              <div></div>
+            </div>
+
+            <!-- Has Notification UI -->
+            <!-- <div class="notification-state-container">
+          <div class="notification-item">
+            <div class="notification-item-inner">
+              <p>New Activity</p>
+              <div class="notify-time">
+                <p>2h ago</p>
+                <div></div>
+              </div>
+            </div>
+            <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+          </div>
+          <div class="notification-item">
+            <div class="notification-item-inner">
+              <p>New Activity</p>
+              <div class="notify-time">
+                <p>2h ago</p>
+                <div></div>
+              </div>
+            </div>
+            <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+          </div>
+          <div class="notification-item">
+            <div class="notification-item-inner">
+              <p>New Activity</p>
+              <div class="notify-time">
+                <p>2h ago</p>
+                <div></div>
+              </div>
+            </div>
+            <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+          </div>
+          <div class="notification-item">
+            <div class="notification-item-inner">
+              <p>New Activity</p>
+              <div class="notify-time">
+                <p>2h ago</p>
+                <div></div>
+              </div>
+            </div>
+            <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+          </div>
+          <div class="notification-item">
+            <div class="notification-item-inner">
+              <p>New Activity</p>
+              <div class="notify-time">
+                <p>2h ago</p>
+                <div></div>
+              </div>
+            </div>
+            <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+          </div>
+         
+        </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Notification End -->
+
+      <!-- Mobile Navigation Start -->
+      <div class="nav-menu">
+        <div class="nav-container">
+          <div>
+            <div class="mobile-nav-logo">
+              <div class="logo-mobile">
+                <div class="logo-img-container-mobile">
+                  <img src="/assets/logo/ctr-logo-colored.svg" />
+                </div>
+                <p>ctr flash</p>
+              </div>
+              <button class="btn-nav-close">
+                <img src="/assets/icons/round-close.svg" />
+              </button>
+            </div>
+            <nav class="moblie-nav">
+              <a href="/dashboard/index.html" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/dashboard-inactive.svg" />
+                </div>
+                <p>dashboard</p>
+              </a>
+              <a href="/dashboard/projects.html" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/projects.svg" />
+                </div>
+                <p>projects</p>
+              </a>
+              <a href="/dashboard/campaigns.html" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/campaign.svg" />
+                </div>
+                <p>campaigns</p>
+              </a>
+              <a
+                href="/dashboard/reports.html"
+                class="nav-item-mobile nav-item-mobile"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/reports-inactive.svg" />
+                </div>
+                <p>reports</p>
+              </a>
+              <a
+                href="/dashboard/ctr-guide.html"
+                class="nav-item-mobile nav-item-mobile active-nav-item-mobile"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/ctr-guide-active.svg" />
+                </div>
+                <p>CTR Guide</p>
+              </a>
+              <a href="/dashboard/subscription.html" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/subscription.svg" />
+                </div>
+                <p>my subscription</p>
+              </a>
+              <a
+                href="/dashboard/settings/general.html"
+                class="nav-item-mobile"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/settings.svg" />
+                </div>
+                <p>Settings</p>
+              </a>
+
+              <a
+                href="/dashboard/settings/general.html"
+                class="nav-item-mobile logout-sect"
+              >
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/logout-white.svg" />
+                </div>
+                <p>Log Out</p>
+              </a>
+            </nav>
+          </div>
+          <!-- Credit Start -->
+          <div class="dash-cred-container-mobile">
+            <div class="dash-cred-sectone">
+              <p>Credits</p>
+              <p><span>25</span> Remaining</p>
+            </div>
+            <div class="progress-container-mobile">
+              <div
+                class="progress-mobile"
+                id="progress-bar-mobile"
+                progress="30"
+              ></div>
+            </div>
+          </div>
+          <!-- Credit End -->
+          <p id="mobile-nav-footer" class="mobile-nav-footer"></p>
+        </div>
+      </div>
+      <!-- Mobile Navigation End -->
+
+      <div class="dash-container">
+        <!-- Desktop Navigation Start -->
+        <div class="dash-nav">
+          <div class="dashboard-nav-header">
+            <div id="logo" class="logo">
+              <div class="logo-img-container">
+                <img src="/assets/logo/ctr-logo-colored.svg" />
+              </div>
+              <p id="dash-tle" class="dash-tle">ctr flash</p>
+            </div>
+
+            <button id="dash-nav-toggle" class="dash-nav-toggle">
+              <img id="dash-arrow" src="/assets/icons/tabler-arrow-left.svg" />
+            </button>
+          </div>
+
+          <nav id="desktop-nav" class="desktop-nav">
+            <a href="/dashboard/index.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/dashboard-inactive.svg" />
+              </div>
+              <p class="ds-item">dashboard</p>
+            </a>
+            <a href="/dashboard/projects.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/projects.svg" />
+              </div>
+              <p class="ds-item">projects</p>
+            </a>
+            <a href="/dashboard/campaigns.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/campaign.svg" />
+              </div>
+              <p class="ds-item">campaigns</p>
+            </a>
+            <a href="/dashboard/reports.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/reports-inactive.svg" />
+              </div>
+              <p class="ds-item">reports</p>
+            </a>
+            <a
+              href="/dashboard/ctr-guide.html"
+              class="nav-item active-nav-item"
+            >
+              <div class="nav-icon">
+                <img src="/assets/icons/ctr-guide-active.svg" />
+              </div>
+              <p class="ds-item">CTR Guide</p>
+            </a>
+            <a href="/dashboard/subscription.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/subscription.svg" />
+              </div>
+              <p class="ds-item">my subscription</p>
+            </a>
+            <a href="/dashboard/settings/general.html" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/settings.svg" />
+              </div>
+              <p class="ds-item">Settings</p>
+            </a>
+          </nav>
+        </div>
+        <!-- Desktop Navigation End -->
+
+        <div>
+          <!-- Header Start -->
+          <header style="position: static" class="dash-head">
+            <!-- Warning Message Start -->
+            <div class="dash-head-container">
+              <div class="hamburger">
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+              </div>
+              <div class="dash-head-details">
+                <p>hello <span id="dashName">macdonald</span></p>
+                <p id="header-date-time">
+                  Saturday 23 Mar, 2024. 10:00am (GMT+1)
+                </p>
+              </div>
+            </div>
+            <!-- Warning Message End  -->
+
+            <!-- Credit Start -->
+            <div class="dash-cred-container">
+              <div class="dash-cred-sectone">
+                <p>Credits</p>
+                <p><span>25</span> Remaining</p>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" id="progress-bar" progress="30"></div>
+              </div>
+            </div>
+            <!-- Credit End -->
+
+            <div class="dash-notify-container">
+              <div class="dash-head-notify-wrapper">
+                <div id="open-overlay-btn-logout" class="dash-head-notify">
+                  <div id="notifyOpenBtn" class="dash-head-notify-container">
+                    <img id="bell-icon" src="/assets/icons/mdi_logout.svg" />
+                  </div>
+                  <p>Log Out</p>
+                  <div class="notification-container">
+                    <div class="notification-header">
+                      <div class="notification-title">
+                        <p>Notification</p>
+                        <div>0</div>
+                      </div>
+                      <button>Mark all as Read</button>
+                    </div>
+                    <div class="notification-content">
+                      <!-- Empty Notification UI -->
+                      <div class="empty-notify-state">
+                        <div></div>
+                        <p>No New Notification</p>
+                        <div></div>
+                      </div>
+
+                      <!-- Has Notification UI -->
+                      <!-- <div class="notification-state-container">
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                      <div class="notification-item">
+                        <div class="notification-item-inner">
+                          <p>New Activity</p>
+                          <div class="notify-time">
+                            <p>2h ago</p>
+                            <div></div>
+                          </div>
+                        </div>
+                        <p>Dental Clinic Campaign found the keyword Dentist and Ranked 8th Position</p>
+                      </div>
+                     
+                    </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile-avatar">
+                <img src="/assets/images/profile-avatar.svg" />
+              </div>
+            </div>
+          </header>
+          <!-- Header End -->
+
+          <div class="dashboard-content">
+            <div class="start-guide-header">
+              <div class="start-guide-sect1">
+                <p class="start-guide-sect1-tle">
+                  Quick start guide on CTR Flash
+                </p>
+                <p class="start-guide-sect1-stle">
+                  This guide will help you set up and start using CTR Flash
+                  efficiently, covering key features and best practices.
+                </p>
+              </div>
+
+              <div class="start-guide-sect2">
+                <img src="/assets/images/guide-hero.svg" alt="" />
+              </div>
+            </div>
+            <div class="privacy-content-container">
+              <p>Table of contents</p>
+              <div class="privacy-content-inner">
+                <div class="privacy-content-nav">
+                  <button
+                    policy-data-target="privacy-item1"
+                    class="privacyScrollButton active-privacy-list-item"
+                  >
+                    How to create a project
+                  </button>
+                  <button
+                    policy-data-target="privacy-item2"
+                    class="privacyScrollButton"
+                  >
+                    How to create campaigns
+                  </button>
+                  <button
+                    policy-data-target="privacy-item3"
+                    class="privacyScrollButton"
+                  >
+                    How to add keywords
+                  </button>
+                </div>
+                <div class="privacy-content-list">
+                  <div id="privacy-item1" class="start-guide-one">
+                    <p class="start-guide-one-tle">How to create a project</p>
+                    <p class="start-guide-one-stle">
+                      To add a new project, first navigate to the "Project" tab
+                      on the platform. Once you're there, find and click the
+                      "Add Project" button to begin setting up your new project.
+                    </p>
+                    <div class="start-guide-one-stle-img-cont">
+                      <img src="/assets/images/st-gd-one.svg" />
+                    </div>
+                    <p class="start-guide-one-foot">
+                      You can add as much project as you want
+                    </p>
+                    <p class="start-guide-one-stle">
+                      Enter a unique name for your project and provide a
+                      detailed description to clarify its purpose. Once you've
+                      customized these fields, simply click the "Create Project"
+                      button to finalize and set up your project.
+                    </p>
+                    <div class="start-guide-one-stle-img-cont">
+                      <img src="/assets/images/st-gd-two.svg" />
+                    </div>
+                    <p class="start-guide-one-stle">
+                      Finally, your project is created successfully
+                    </p>
+                    <div class="start-guide-one-stle-img-cont">
+                      <img src="/assets/images/st-gd-three.svg" />
+                    </div>
+                  </div>
+                  <div id="privacy-item2" class="privacy-conten-item-two">
+                    <p class="start-guide-one-tle">How to create campaigns</p>
+                    <p class="start-guide-one-stle">
+                      Find the "Campaign" tab on your dashboard, then click the
+                      "Create Campaign" button to begin setting up your new
+                      campaign.
+                    </p>
+                    <div class="start-guide-one-stle-img-cont">
+                      <img src="/assets/images/st-gd-four.svg" />
+                    </div>
+                    <p class="start-guide-one-foot">
+                      You can add as much project as you want
+                    </p>
+                    <p class="start-guide-one-stle">
+                      Select your desired campaign type, then fill in the title
+                      and website information. Once completed, click the "Create
+                      Campaign" button to finalize your setup.
+                    </p>
+                    <div class="start-guide-one-stle-img-cont">
+                      <img src="/assets/images/st-gd-five.svg" />
+                    </div>
+                    <p class="start-guide-one-stle">
+                      Finally, proceed to set up your campign
+                    </p>
+                    <div class="start-guide-one-stle-img-cont">
+                      <img src="/assets/images/st-gd-six.svg" />
+                    </div>
+                  </div>
+                  <div id="privacy-item3">
+                    <p class="start-guide-one-tle">How to add keywords</p>
+                    <p class="start-guide-one-stle">
+                      For each individual campaign, locate and click on the "Add
+                      Keywords" button to include relevant keywords for that
+                      specific campaign.
+                    </p>
+                    <div class="start-guide-one-stle-img-cont">
+                      <img src="/assets/images/st-gd-nine.svg" />
+                    </div>
+                    <p class="start-guide-one-foot">
+                      You can add as much project as you want
+                    </p>
+                    <p class="start-guide-one-stle">
+                      Next, move forward to set up your keywords in this
+                      section. You can add as many keywords as you want to
+                      optimize your campaign.
+                    </p>
+                    <div class="start-guide-one-stle-img-cont">
+                      <img src="/assets/images/st-gd-seven.svg" />
+                    </div>
+                    <p class="start-guide-one-stle">
+                      You can view the performance of each individual keyword by
+                      clicking on the three dots next to the keyword and then
+                      selecting “View.”
+                    </p>
+                    <div class="start-guide-one-stle-img-cont">
+                      <img src="/assets/images/st-gd-eight.svg" />
+                    </div>
+                    <div class="start-guide-one-stle-img-cont">
+                      <img src="/assets/images/st-gd-ten.svg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logout Overlay Start -->
+      <div id="overlay-logout" class="overlay">
+        <div
+          id="overlay-dialog-logout"
+          class="change-pass-dialog-container overlay-animate"
+        >
+          <form id="overlay-dialog-logout" class="change-pass-dialog-wrapper">
+            <div>
+              <img src="/assets/icons/logout.svg" />
+            </div>
+            <p>Confirm Log Out?</p>
+            <p>Are you sure you want to log out? We would love you to stay</p>
+            <button>Logout</button>
+            <button id="close-overlay-btn-log-out" type="button">Cancel</button>
+          </form>
+        </div>
+      </div>
+      <!-- Logout Overlay End -->
+      <div class="chat">
+        <img src="/assets/icons/chat-line-linear.svg" />
+      </div>
+    </div>
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/dashboard/ctrguide.js"></script>
+    <script src="/assets/js/dashboard/dashboard.js"></script>
+  </body>
+</html>
