@@ -1,118 +1,738 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progress Sliders</title>
-    <style>
- 
- input[type="range"] {
-  accent-color: green;
-  border: none;
-  outline: none;
-}
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Favicon -->
+    <!-- Favicon -->
+    <link href="/assets/logo/ctr-logo-colored.svg" rel="icon" />
+    <title>All Campaigns CTR Flash</title>
+    <meta name="robots" content="index, follow" />
 
-input[type="range"]:focus {
-  border: none;
-  outline: none;
-  border-color: transparent;
-            color: transparent;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="CTR Flash" />
+    <meta property="og:description" content="" />
+    <link href="/assets/css/global.css" rel="stylesheet" />
+    <link href="/assets/css/variables.css" rel="stylesheet" />
+    <link href="/assets/css/font.css" rel="stylesheet" />
+    <link href="/assets/css/dash/header.css" rel="stylesheet" />
+    <link href="/assets/css/dash/dashboard.css" rel="stylesheet" />
+    <link href="/assets/css/dash/settings.css" rel="stylesheet" />
+    <link href="/assets/css/dash/project-details.css" rel="stylesheet" />
+    <link href="/assets/css/dash/project.css" rel="stylesheet" />
+    <link href="/assets/css/dash/campaign.css" rel="stylesheet" />
+    <link href="/assets/css/landing/auth.css" rel="stylesheet" />
+    <link href="/assets/css/dash/campaign.css" rel="tooltip.css" />
+    <link href="/assets/css/dash/campaign-keywords.css" rel="stylesheet" />
+    <link href="/assets/css/landing/home.css" rel="stylesheet" />
+    <link href="/assets/css/landing/documentation.css" rel="stylesheet" />
 
-
-input[type="range"]::-webkit-slider-thumb {
-  height: 20px;
-  width: 20px;
-  border: none;
-  outline: none;
-  border-radius: 50%;
-  background: #ff4500;
-  cursor: ew-resize;
-  transition: background .3s ease-in-out;
-  border-color: transparent;
-            color: transparent;
-}
-
-.slider {
-  width: 100%;
-  height: 10px;
-  background: green; /* Slider background color */
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-  border-color: transparent;
-            color: transparent;
-}
-
-input[type=range] {
-  width: 100%; /* Specific width is required for Firefox. */
-  background: transparent; /* Otherwise white in Chrome */
-  border-color: transparent;
-            color: transparent;
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-
-input[type=range]:focus {
-  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-}
-
-input[type=range]::-ms-track {
-  width: 100%;
-  cursor: pointer;
-
-
-  /* Hides the slider so custom styles can be added */
-  background: transparent; 
-  border-color: transparent;
-  color: transparent;
-} 
-
-  </style>
-</head>
-<body>
-  
-    <div class="slider-container">
-        <div class="slider-label">Average Session <span>95secs</span></div>
-        <input type="range" min="0" max="100" value="95" class="slider" id="sessionRange">
-        
-        <div class="slider-label">Mobile Search % <span>95%</span></div>
-        <input type="range" min="0" max="100" value="95" class="slider" id="mobileRange">
-        
-        <div class="slider-label">Bounce Rate <span>50%</span></div>
-        <input type="range" min="0" max="100" value="50" class="slider" id="bounceRange">
-        
-        <div class="slider-label">Page Per Session <span>30</span></div>
-        <input type="range" min="0" max="100" value="30" class="slider" id="pageRange">
-        
-        <div class="slider-label">Status</div>
-        <label class="switch">
-            <input type="checkbox" checked>
-            <span class="slider-switch"></span>
-        </label>
-    </div>
-    <script>
-      document.querySelectorAll('.slider').forEach(slider => {
-    slider.addEventListener('input', function() {
-        let value = this.value;
-        let label = this.previousElementSibling.querySelector('span');
-        
-        if (this.id === 'sessionRange') {
-            label.textContent = value + 'secs';
-        } else if (this.id === 'mobileRange') {
-            label.textContent = value + '%';
-        } else if (this.id === 'bounceRange') {
-            label.textContent = value + '%';
-        } else if (this.id === 'pageRange') {
-            label.textContent = value;
-        }
-    });
-});
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.css"
+    />
+    <script type="text/javascript">
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "c86790d0-1ea2-4b78-94b4-1e7a93a2e0ba";
+      (function () {
+        d = document;
+        s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
     </script>
-</body>
-</html> 
+  </head>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <body>
+    <!-- Loading Spinner Start -->
+    <div id="spinner-body" class="spinner-body">
+      <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- Loading Spinner End -->
+
+    <div id="content" style="display: none">
+      <!-- Mobile Notification Start -->
+      <div id="mobile-notification" class="mobile-notification">
+        <div class="mobile-notification-wrapper">
+          <button id="notifyCloseBtn" class="close-notify">
+            <div><img src="/assets/icons/back-icon.svg" /></div>
+            <p>Back</p>
+          </button>
+
+          <div class="notification-header">
+            <div class="notification-title">
+              <p>Notification</p>
+              <div>0</div>
+            </div>
+            <button>Mark all as Read</button>
+          </div>
+          <div class="notification-content notification-content-mobile">
+            <!-- Empty Notification UI -->
+            <div class="empty-notify-state">
+              <div></div>
+              <p>No New Notification</p>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Notification End -->
+
+      <!-- Mobile Navigation Start -->
+      <div class="nav-menu">
+        <div class="nav-container">
+          <div>
+            <div class="mobile-nav-logo">
+              <div class="logo-mobile">
+                <div class="logo-img-container-mobile">
+                  <img src="/assets/logo/ctr-logo-colored.svg" />
+                </div>
+                <p>ctr flash</p>
+              </div>
+              <button class="btn-nav-close">
+                <img src="/assets/icons/round-close.svg" />
+              </button>
+            </div>
+            <nav class="moblie-nav">
+              <a href="/dashboard/index.php" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/dashboard.svg" />
+                </div>
+                <p>dashboard</p>
+              </a>
+
+              <a href="/dashboard/projects.php" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/projects.svg" />
+                </div>
+                <p>projects</p>
+              </a>
+              <a href="/dashboard/campaigns.php" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/campaign.svg" />
+                </div>
+                <p>campaigns</p>
+              </a>
+
+              <a href="/dashboard/reports.php" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/reports-active.svg" />
+                </div>
+                <p>reports</p>
+              </a>
+
+              <a href="/dashboard/subscription.php" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/settings.svg" />
+                </div>
+                <p>Settings</p>
+              </a>
+              <a href="/dashboard/admin/index.php" class="nav-item-mobile">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/settings.svg" />
+                </div>
+                <p>Admin</p>
+              </a>
+              <a href="../signin.php" class="nav-item-mobile logout-sect">
+                <div class="nav-icon-mobile">
+                  <img src="/assets/icons/logout-white.svg" />
+                </div>
+                <p>Log Out</p>
+              </a>
+            </nav>
+          </div>
+          <!-- Credit Start -->
+          <div class="dash-cred-container-mobile">
+            <div class="dash-cred-sectone">
+              <p>Credits</p>
+              <p><span>35.5%</span> Remaining</p>
+            </div>
+            <div class="progress-container-mobile">
+              <div
+                class="progress-mobile"
+                id="progress-bar-mobile"
+                progress="35.5"
+              ></div>
+            </div>
+          </div>
+          <!-- Credit End -->
+          <p id="mobile-nav-footer" class="mobile-nav-footer"></p>
+        </div>
+      </div>
+      <!-- Mobile Navigation End -->
+
+      <div class="dash-container">
+        <!-- Desktop Navigation Start -->
+        <div class="dash-nav">
+          <div class="dashboard-nav-header">
+            <div id="logo" class="logo">
+              <div class="logo-img-container">
+                <img src="/assets/logo/ctr-logo-colored.svg" />
+              </div>
+              <p id="dash-tle" class="dash-tle">ctr flash</p>
+            </div>
+
+            <button id="dash-nav-toggle" class="dash-nav-toggle">
+              <img id="dash-arrow" src="/assets/icons/tabler-arrow-left.svg" />
+            </button>
+          </div>
+
+          <nav id="desktop-nav" class="desktop-nav">
+            <!-- sidbar nav desktop-->
+
+            <a href="/dashboard/index.php" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/dashboard.svg" />
+              </div>
+              <p class="ds-item">dashboard</p>
+            </a>
+
+            <a href="/dashboard/projects.php" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/projects.svg" />
+              </div>
+              <p class="ds-item">projects</p>
+            </a>
+            <a href="/dashboard/campaigns.php" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/campaign.svg" />
+              </div>
+              <p class="ds-item">campaigns</p>
+            </a>
+
+            <a href="/dashboard/reports.php" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/reports-active.svg" />
+              </div>
+              <p class="ds-item">reports</p>
+            </a>
+
+            <a href="/dashboard/quick_start_guide.php" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/ctr-guide-active.svg" />
+              </div>
+              <p class="ds-item">Documentation</p>
+            </a>
+
+            <a href="/dashboard/subscription.php" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/subscription.svg" />
+              </div>
+              <p class="ds-item">my subscription</p>
+            </a>
+
+            <a href="/dashboard/general.php" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/settings.svg" />
+              </div>
+              <p class="ds-item">Settings</p>
+            </a>
+            <a href="/dashboard/admin/index.php" class="nav-item">
+              <div class="nav-icon">
+                <img src="/assets/icons/settings.svg" />
+              </div>
+              <p class="ds-item">Admin</p>
+            </a>
+          </nav>
+        </div>
+        <!-- Desktop Navigation End -->
+
+        <div>
+          <!-- Header Start -->
+          <header class="dash-head">
+            <!-- Warning Message Start -->
+            <div class="dash-head-container">
+              <div class="hamburger">
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+                <span class="bar bar_home"></span>
+              </div>
+              <div class="dash-head-details">
+                <p>hello <span id="dashName">nana</span></p>
+                <p id="header-date-time">
+                  Friday, 20 Sep, 2024. 10:35am (GMT+0100)
+                </p>
+              </div>
+            </div>
+            <!-- Warning Message End  -->
+
+            <!-- Credit Start -->
+            <div class="dash-cred-container">
+              <div class="dash-cred-sectone">
+                <p>Credits</p>
+                <p><span>35.5%</span> Remaining</p>
+              </div>
+              <div class="progress-container">
+                <div
+                  class="progress-bar"
+                  id="progress-bar"
+                  progress="35.5"
+                ></div>
+              </div>
+            </div>
+            <!-- Credit End -->
+
+            <div class="dash-notify-container">
+              <div class="dash-head-notify-wrapper">
+                <div id="open-overlay-btn-logout" class="dash-head-notify">
+                  <div id="notifyOpenBtn" class="dash-head-notify-container">
+                    <img id="bell-icon" src="/assets/icons/mdi_logout.svg" />
+                  </div>
+                  <p>Log Out</p>
+                  <div class="notification-container">
+                    <div class="notification-header">
+                      <div class="notification-title">
+                        <p>Notification</p>
+                        <div>0</div>
+                      </div>
+                      <button>Mark all as Read</button>
+                    </div>
+                    <div class="notification-content">
+                      <!-- Empty Notification UI -->
+                      <div class="empty-notify-state">
+                        <div></div>
+                        <p>No New Notification</p>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile-avatar">
+                <a href="general.php">
+                  <img src="/assets/images/profile-avatar.svg"
+                /></a>
+              </div>
+            </div>
+          </header>
+          <br />
+          <!-- Header End -->
+
+          <div class="dashboard-content">
+            <p class="projec-detail-title">
+              <span> Projects</span> <span>/</span> <span>Carpenters</span>
+              <span>/</span>
+              <span>View all Campaigns</span>
+            </p>
+            <button onclick="goBack()" class="projec-detail-bk-btn">
+              <div><img src="/assets/icons/back-icon.svg" /></div>
+              <p>Back</p>
+            </button>
+            <div class="campaign-inner-one create-camp-hd">
+              <p>2 Campaign(s) Created</p>
+
+              <button class="open-overlay-btn camp-overview-btn">
+                <div class="add-icon">
+                  <img src="/assets/icons/circle-add.svg" />
+                </div>
+                <p class="create-camp-hd-txt">Create Campaign</p>
+              </button>
+            </div>
+            <div class="view-camp-container">
+              <!-- Item Start -->
+              <form class="campaign-item">
+                <div>
+                  <img src="/assets/icons/google-maps.svg" />
+                </div>
+                <p>Carpenters in New York</p>
+                <p>Google map</p>
+
+                <div class="campa-state campa-state-error">
+                  <p>Not Active</p>
+                  <div class="all-cam-check-wrapper">
+                    <input
+                      type="checkbox"
+                      name="Activate_Or_Deactivate_Campaign"
+                      id="all-camp-toggle-63"
+                      class="toggle-checkbox all-camp-toggle"
+                      data-campaign-id="63"
+                      data-useremail="telim4real@gmail.com"
+                      data-campaign-name="Carpenters in New York"
+                      data-project-name="Carpenters"
+                    />
+                    <label
+                      for="all-camp-toggle-63"
+                      class="toggle-label all-camp-toggle-label"
+                    >
+                      <div class="toggle-circle"></div>
+                    </label>
+                  </div>
+                </div>
+
+                <div>
+                  <p>Date Created:</p>
+                  <p>August 15th 2024.</p>
+                </div>
+
+                <div>
+                  <p>Total Searches:</p>
+                  <p>2</p>
+                </div>
+
+                <div class="campaign-total-search">
+                  <p>Keywords:</p>
+                  <p>3</p>
+                </div>
+                <a
+                  href="campaign-activities.php?e=Q2FycGVudGVycw==&campaign=Q2FycGVudGVycyBpbiBOZXcgWW9yaw==&url_location=YWxsLWNhbXBhaWduLnBocA==&search=R29vZ2xlIG1hcA=="
+                  style="color: inherit; text-decoration: none"
+                  >Activities</a
+                >
+                <div class="view-campaign-button-wrapper">
+                  <a
+                    href="create-campaign.php?e=dGVsaW00cmVhbEBnbWFpbC5jb20=&campaign=Q2FycGVudGVycyBpbiBOZXcgWW9yaw==&projectname=Q2FycGVudGVycw==&search=R29vZ2xlIG1hcA=="
+                    style="color: inherit; text-decoration: none"
+                    >View Campaign</a
+                  >
+                </div>
+
+                <button type="button" class="all-camp-item-btn info-button">
+                  <img src="/assets/icons/more-vert.svg" />
+                  <div class="tooltip prog-cardtooltip">
+                    <div class="open-edit-overlay-btn">
+                      <a
+                        href="edit-campaign.php?e=dGVsaW00cmVhbEBnbWFpbC5jb20=&campaign=Q2FycGVudGVycyBpbiBOZXcgWW9yaw==&campiagn_id=NjM="
+                      >
+                        <div>
+                          <img src="/assets/icons/edit-outline-gray.svg" />
+                        </div>
+                        <p>Edit</p>
+                      </a>
+                    </div>
+
+                    <form>
+                      <a href="#" class="delete-camp">
+                        <div>
+                          <img src="/assets/icons/delete.svg" />
+                        </div>
+                        <p class="camp-dele-text">Delete</p>
+                      </a>
+                      <input
+                        type="hidden"
+                        name="cam_name"
+                        value="Carpenters in New York"
+                      />
+                      <input type="hidden" name="cam_id" value="63" />
+                    </form>
+                  </div>
+                </button>
+              </form>
+              <!-- Item End -->
+              <!-- Item Start -->
+              <form class="campaign-item">
+                <div>
+                  <img src="/assets/icons/google-icon.svg" />
+                </div>
+                <p>test now</p>
+                <p>Organic Search</p>
+
+                <div class="campa-state campa-state-error">
+                  <p>Not Active</p>
+                  <div class="all-cam-check-wrapper">
+                    <input
+                      type="checkbox"
+                      name="Activate_Or_Deactivate_Campaign"
+                      id="all-camp-toggle-66"
+                      class="toggle-checkbox all-camp-toggle"
+                      data-campaign-id="66"
+                      data-useremail="telim4real@gmail.com"
+                      data-campaign-name="test now"
+                      data-project-name="Carpenters"
+                    />
+                    <label
+                      for="all-camp-toggle-66"
+                      class="toggle-label all-camp-toggle-label"
+                    >
+                      <div class="toggle-circle"></div>
+                    </label>
+                  </div>
+                </div>
+
+                <div>
+                  <p>Date Created:</p>
+                  <p>August 21st 2024.</p>
+                </div>
+
+                <div>
+                  <p>Total Searches:</p>
+                  <p>0</p>
+                </div>
+
+                <div class="campaign-total-search">
+                  <p>Keywords:</p>
+                  <p>0</p>
+                </div>
+                <a
+                  href="campaign-activities.php?e=Q2FycGVudGVycw==&campaign=dGVzdCBub3c=&url_location=YWxsLWNhbXBhaWduLnBocA==&search=T3JnYW5pYyBTZWFyY2g="
+                  style="color: inherit; text-decoration: none"
+                  class="camp-item-act"
+                  >Activitis</a
+                >
+                <div class="view-campaign-button-wrapper">
+                  <a
+                    href="create-campaign.php?e=dGVsaW00cmVhbEBnbWFpbC5jb20=&campaign=dGVzdCBub3c=&projectname=Q2FycGVudGVycw==&search=T3JnYW5pYyBTZWFyY2g="
+                 
+                    >View Campaign</a
+                  >
+                </div>
+
+                <button type="button" class="all-camp-item-btn info-button">
+                  <img src="/assets/icons/more-vert.svg" />
+                  <div class="tooltip prog-cardtooltip">
+                    <div class="open-edit-overlay-btn">
+                      <a
+                        href="edit-campaign.php?e=dGVsaW00cmVhbEBnbWFpbC5jb20=&campaign=dGVzdCBub3c=&campiagn_id=NjY="
+                      >
+                        <div>
+                          <img src="/assets/icons/edit-outline-gray.svg" />
+                        </div>
+                        <p>Edit</p>
+                      </a>
+                    </div>
+
+                    <form>
+                      <a href="#" class="delete-camp">
+                        <div>
+                          <img src="/assets/icons/delete.svg" />
+                        </div>
+                        <p class="camp-dele-text">Delete</p>
+                      </a>
+                      <input type="hidden" name="cam_name" value="test now" />
+                      <input type="hidden" name="cam_id" value="66" />
+                    </form>
+                  </div>
+                </button>
+              </form>
+              <!-- Item End -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Create Campaign Overlay Start -->
+    <div id="overlay" class="overlay">
+      <div id="overlay-dialog" class="create-camp-container overlay-animate">
+        <div>
+          <p>Create New Campaign</p>
+          <button id="close-overlay-btn">
+            <img src="/assets/icons/close-outline.svg" />
+          </button>
+        </div>
+        <p>Campaign Type</p>
+        <form
+          class="the-project-form create-project-form"
+          method="post"
+          action="process_user_entries.php"
+        >
+          <input type="hidden" name="email" value="telim4real@gmail.com" />
+          <input
+            type="hidden"
+            id="project_name"
+            name="project_name"
+            value="Carpenters"
+          />
+          <div class="create-camp-radio-btn">
+            <label for="opt-one" class="create-camp-item">
+              <input
+                id="opt-one"
+                type="radio"
+                name="option"
+                value="Organic Search"
+                checked
+              />
+              <div class="radio-mark"></div>
+              <p>Organic Search</p>
+              <div>
+                <img
+                  src="/assets/icons/question-mark-rounded.svg"
+                  title="Increase Traffic Insights"
+                />
+              </div>
+            </label>
+            <label for="opt-two" class="create-camp-item">
+              <input
+                id="opt-two"
+                type="radio"
+                name="option"
+                value="Google map"
+              />
+              <div class="radio-mark"></div>
+              <p>Google Map</p>
+              <div>
+                <img
+                  src="/assets/icons/question-mark-rounded.svg"
+                  title="Increase Geolocation Insights"
+                />
+              </div>
+            </label>
+          </div>
+
+          <div class="create-project-form-inner">
+            <div class="the-project-item-input">
+              <label for="campaign-title">Campaign Title</label>
+              <input
+                required
+                id="campaign-title"
+                placeholder="CTRFlash"
+                name="campaign_name"
+              />
+            </div>
+            <div class="the-project-item-input">
+              <label for="web-url">Website Url</label>
+              <input
+                required
+                type="url"
+                id="web-url"
+                placeholder="https://ctrflash.com"
+                name="website_url"
+              />
+            </div>
+            <div class="the-project-item-input" id="business-name-field">
+              <label for="business-name">Business Name</label>
+              <input
+                type="text"
+                id="business-name"
+                placeholder="CTRFlash Inc"
+                name="business_name"
+              />
+            </div>
+          </div>
+          <button name="create_campaign" type="submit">Create Campaign</button>
+        </form>
+
+        <script>
+          function updateBusinessNameField() {
+            const isOrganicSearchSelected =
+              document.getElementById("opt-one").checked;
+            const businessNameField = document.getElementById(
+              "business-name-field"
+            );
+            const businessNameInput = document.getElementById("business-name");
+
+            if (isOrganicSearchSelected) {
+              businessNameInput.removeAttribute("required");
+              businessNameField.classList.add("hidden");
+            } else {
+              businessNameInput.setAttribute("required", "required");
+              businessNameField.classList.remove("hidden");
+            }
+          }
+
+          document
+            .getElementById("opt-one")
+            .addEventListener("click", updateBusinessNameField);
+          document
+            .getElementById("opt-two")
+            .addEventListener("click", updateBusinessNameField);
+
+          document.querySelectorAll(".open-overlay-btn").forEach((button) => {
+            button.addEventListener("click", function () {
+              const projectName = this.closest(
+                ".campaign-container"
+              ).querySelector(".campaign-inner-one p").innerText;
+              document.getElementById("project_name").value = projectName;
+            });
+          });
+
+          // Ensure the initial state is correct
+          window.addEventListener("load", function () {
+            updateBusinessNameField();
+          });
+        </script>
+      </div>
+    </div>
+    <!-- Create Campaign Overlay End -->
+
+    <!-- Create Campaign Overlay End -->
+
+    <!-- <div class="chat">
+        <img src="/assets/icons/chat-line-linear.svg"/>
+    </div> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll(".toggle-checkbox").forEach((checkbox) => {
+          checkbox.addEventListener("change", function () {
+            const campaignId = this.dataset.campaignId;
+            const useremail = this.dataset.useremail;
+            const campaignName = this.dataset.campaignName;
+            const projectName = this.dataset.projectName;
+            const isActive = this.checked ? 1 : 0;
+
+            updateCampaignStatus(
+              campaignId,
+              isActive,
+              campaignName,
+              projectName,
+              useremail
+            );
+          });
+        });
+      });
+
+      function updateCampaignStatus(
+        campaignId,
+        isActive,
+        campaignName,
+        projectName,
+        useremail
+      ) {
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "process_user_entries.php", true);
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded"
+        );
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            if (response.status === "error") {
+              alert(response.message);
+              location.reload(); // Refresh the page after user clicks "OK"
+            } else {
+              console.log(response.message);
+              // Optionally, refresh the page on success as well
+              // location.reload();
+            }
+          }
+        };
+        xhr.send(
+          `Activate_Or_Deactivate_Campaign=${isActive}&campaignId=${campaignId}&campaignName=${campaignName}&projectName=${projectName}&useremail=${useremail}`
+        );
+      }
+    </script>
+
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/dashboard/createdcampaign.js"></script>
+    <script src="/assets/js/dashboard/dashboard.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      $(".delete-camp").on("click", function () {
+        if (confirm("Are you sure you want to delete this campaign?")) {
+          var form = $(this).closest("form");
+          $.ajax({
+            method: "post",
+            url: "/dashboard/all-campaign.php?delete",
+            data: $(form).serialize(),
+            success: function (res) {
+              alert("deleted");
+              window.location.reload();
+            },
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
