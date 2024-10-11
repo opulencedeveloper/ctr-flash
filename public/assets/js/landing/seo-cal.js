@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll(".slider").forEach((slider) => {
     slider.addEventListener("input", function () {
-      let value = this.value === -1 ? 0 :parseInt(value);
+      let value = this.value;
       let label = this.nextElementSibling;
 
       if (this.id === "currentRankingPosition") {
@@ -148,7 +148,8 @@ document.addEventListener("DOMContentLoaded", function () {
           monthlyEstimatedTagetPostion - monthlyEstimatedCurrentPostionCTR;
         estimatedMonthlyBudgetRequired.innerHTML =
           "$" + estimatedMonthlyBudgetRequiredHandler(requiredMonthlyClicks);
-        estimatedDailyClicks.innerHTML = Math.ceil(requiredMonthlyClicks / 30);
+          const estimatedDailyClicksVal = Math.ceil(requiredMonthlyClicks / 30);
+        estimatedDailyClicks.innerHTML = estimatedDailyClicksVal < 0 ? 0 : estimatedDailyClicksVal;
       } else if (this.id === "targetRankingPosition") {
         label.textContent = value;
         let retrivedCurrentRankingPostion = document.getElementById(
@@ -192,7 +193,8 @@ document.addEventListener("DOMContentLoaded", function () {
           monthlyEstimatedTagetPostion - monthlyEstimatedCurrentPostionCTR;
         estimatedMonthlyBudgetRequired.innerHTML =
           "$" + estimatedMonthlyBudgetRequiredHandler(requiredMonthlyClicks);
-        estimatedDailyClicks.innerHTML = Math.ceil(requiredMonthlyClicks / 30);
+          const estimatedDailyClicksVal = Math.ceil(requiredMonthlyClicks / 30);
+          estimatedDailyClicks.innerHTML = estimatedDailyClicksVal < 0 ? 0 : estimatedDailyClicksVal;
       } else if (this.id === "monthlySearchesForTargetKeyword") {
         label.textContent = value;
 
@@ -235,7 +237,8 @@ document.addEventListener("DOMContentLoaded", function () {
           monthlyEstimatedTagetPostion - monthlyEstimatedCurrentPostionCTR;
         estimatedMonthlyBudgetRequired.innerHTML =
           "$" + estimatedMonthlyBudgetRequiredHandler(requiredMonthlyClicks);
-        estimatedDailyClicks.innerHTML = Math.ceil(requiredMonthlyClicks / 30);
+          const estimatedDailyClicksVal = Math.ceil(requiredMonthlyClicks / 30);
+          estimatedDailyClicks.innerHTML = estimatedDailyClicksVal < 0 ? 0 : estimatedDailyClicksVal;
       }
     });
   });
