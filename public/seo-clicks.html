@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
+    <title>CTR Flash</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="CTR Flash" />
+    <meta property="og:description" content="" />
+    <link href="assets/css/global.css" rel="stylesheet" />
+    <link href="assets/css/font.css" rel="stylesheet" />
+    <link href="assets/css/landing/home.css" rel="stylesheet" />
+    <link href="assets/css/variables.css" rel="stylesheet" />
+    <link href="assets/css/landing/header.css" rel="stylesheet" />
+    <link href="assets/css/landing/seo-clicks.css" rel="stylesheet" />
+    <link href="assets/css/dash/campaign.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.css"
+      integrity="sha512-DIW4FkYTOxjCqRt7oS9BFO+nVOwDL4bzukDyDtMO7crjUZhwpyrWBFroq+IqRe6VnJkTpRAS6nhDvf0w+wHmxg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Loading Spinner Start -->
+    <div id="spinner-body" class="spinner-body">
+      <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- Loading Spinner End -->
+
+    <div id="content" style="display: none">
+      <!-- Mobile Navigation Start -->
+      <div class="nav-menu">
+        <div class="nav-menu-inner">
+          <div>
+            <a class="mobile-logo" href="/">
+              <img src="assets/logo/ctr-logo.svg" />
+              <p>ctr flash</p>
+            </a>
+
+            <div class="hamburger-2">
+              <span class="bar bar_home"></span>
+              <span class="bar bar_home"></span>
+              <span class="bar bar_home"></span>
+            </div>
+          </div>
+          <nav>
+            <a href="/products.html">Products</a>
+            <a class="active-nav-item" href="/pricing.html">Pricing</a>
+            <a href="/documentation.html">Documentation</a>
+            <a href="/contact.html">Contact</a>
+          </nav>
+          <a href="/signin.html">Sign In</a>
+          <a href="/signup.html">Get Started</a>
+        </div>
+      </div>
+      <!-- Mobile Navigation End -->
+      <header class="other-header-container">
+        <!-- Header Start -->
+        <div>
+          <div class="logo-container">
+            <a href="/" class="logo">
+              <img src="assets/logo/ctr-logo.svg" />
+              <p>ctr flash</p>
+            </a>
+            <nav>
+              <a href="/products.html">Products</a>
+              <a href="/pricing.html">Pricing</a>
+              <a href="/documentation.html">Documentation</a>
+              <a href="/contact.html">Contact</a>
+            </nav>
+          </div>
+          <div class="hamburger">
+            <span class="bar bar_home"></span>
+            <span class="bar bar_home"></span>
+            <span class="bar bar_home"></span>
+          </div>
+          <div class="auth-container">
+            <a href="/signin.html">Sign in</a>
+            <a href="/signup.html">Get Started</a>
+          </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Hero Start -->
+        <div class="landing-pricing-container">
+          <div class="box animation4">
+            <h1 class="no-of-click-hd">
+              What is the required number of SEO clicks?
+            </h1>
+            <h2 class="no-of-click-tle">
+              Estimate the expense to improve SEO performance.
+            </h2>
+
+            <div class="est-cont">
+              <div class="est-cont-sct1">
+                <div class="est-cont-sct1-inner1">
+                  <p class="est-cont-sct1-inner1-tle">Estimated daily clicks</p>
+                  <p id="est-dail-clicks" class="est-cont-sct1-inner1-stle">2</p>
+                </div>
+                <div class="est-cont-sct1-inner2">
+                  <p class="est-cont-sct1-inner1-tle">
+                    Estimated monthly budget required
+                  </p>
+                  <p id="est-month-budg" class="est-cont-sct1-inner2-stle">$29.99</p>
+                </div>
+              </div>
+
+              <div class="est-cont-sct2">
+                <div class="campaign-overview-item-range est-cont-sct2-inner1">
+                  <div>
+                    <label for="rank-range" class="est-label"
+                      >Current Ranking Position</label
+                    >
+                    <div class="detailtooltip">
+                      <img
+                        src="/assets/icons/question-mark-rounded-white.svg"
+                      />
+                      <span class="detailtooltiptext"
+                        >How many seconds would you like the bolt to spend on
+                        your website? We recommend 70-350.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="slider-cont est-inp-cont">
+                    <input
+                      type="range"
+                      min="0"
+                      class="slider"
+                          id="currentRankingPosition"
+                      max="13"
+                      value="10"
+                    />
+                    <div id="currentRankingPostionLabel" class="est-count">10</div>
+                  </div>
+                </div>
+
+                <div class="campaign-overview-item-range est-cont-sct2-inner1">
+                  <div>
+                    <label for="rank-range" class="est-label"
+                      >Target Ranking Position</label
+                    >
+                    <div class="detailtooltip">
+                      <img
+                        src="/assets/icons/question-mark-rounded-white.svg"
+                      />
+                      <span class="detailtooltiptext"
+                        >How many seconds would you like the bolt to spend on
+                        your website? We recommend 70-350.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="slider-cont est-inp-cont">
+                    <input
+                      type="range"
+                      min="0"
+                      class="slider"
+                      id="targetRankingPosition"
+                      max="13"
+                      value="1"
+                    />
+                    <div id="targetRankingPositionLabel" class="est-count">1</div>
+                  </div>
+                </div>
+
+                <div class="campaign-overview-item-range est-cont-sct2-inner1">
+                  <div>
+                    <label for="rank-range" class="est-label"
+                      >Monthly Searches for Target Keyword</label
+                    >
+                    <div class="detailtooltip">
+                      <img
+                        src="/assets/icons/question-mark-rounded-white.svg"
+                      />
+                      <span class="detailtooltiptext"
+                        >How many seconds would you like the bolt to spend on
+                        your website? We recommend 70-350.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="slider-cont est-inp-cont">
+                    <input
+                      type="range"
+                      min="0"
+                      class="slider"
+                      id="monthlySearchesForTargetKeyword"
+                      max="1000"
+                      value="250"
+                    />
+                    <div id="monthlySearchesForTargetKeyWordLabel" class="est-count">250</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <h3 class="est-desc">
+              These numbers are merely estimates based on average click-through
+              rates for different positions on Google. They are provided for
+              planning purposes only and assume that the SerpClix service is
+              complemented with a normal on-site and off-site search engine
+              optimization approach. There are no guarantees in SEO, and you
+              certainly won't find any here.
+            </h3>
+            <a href="/signup.html" class="smft-btn">Start My Free Trail</a>
+          </div>
+        </div>
+        <!-- Hero End -->
+      </header>
+
+      <!-- BOOST YOUR SEO RANKING START -->
+      <section class="bysr-wrapper box animation1">
+        <div class="bysr-cont">
+          <div class="bysr-sect1">
+            <p class="bysr-sect1-tle">
+              Boost your SEO rankings with traffic driven by crowd clicks!
+            </p>
+            <p class="bysr-sect1-stle">
+              Maximise your SEO potential by driving quality clicks to your
+              site—effortlessly improve your ranking with strategic, targeted
+              traffic.
+            </p>
+          </div>
+
+          <div class="bysr-sect2">
+            <img src="/assets/images/boost-your-seo-img.svg" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- BOOST YOUR SEO RANKING END -->
+
+      <!-- SEO FEATURES SECTION START -->
+      <section class="seofs-wrapper">
+        <div class="seofs-grid">
+          <div class="box animation2">
+            <div class="seofs-ico">
+              <img src="/assets/icons/cash-outline.svg" alt="" />
+            </div>
+            <p class="seofs-cont-tle">Affordable, DIY Solution</p>
+            <p class="seofs-cont-stle">
+              Take control of your SEO strategy without breaking the bank. Our
+              affordable solution lets you manage everything on your own terms,
+              no extra costs or hidden fees.
+            </p>
+          </div>
+          <div class="box animation3">
+            <div class="seofs-ico">
+              <img src="/assets/icons/streamline-startup.svg" alt="" />
+            </div>
+            <p class="seofs-cont-tle">Get Started Easily</p>
+            <p class="seofs-cont-stle">
+              Getting started has never been easier. Set up your campaign in
+              under a minute with our intuitive interface, designed for quick
+              and seamless navigation.
+            </p>
+          </div>
+          <div class="box animation1">
+            <div class="seofs-ico">
+              <img src="/assets/icons/click.svg" alt="" />
+            </div>
+            <p class="seofs-cont-tle">No Fake Traffic</p>
+            <p class="seofs-cont-stle">
+              Experience authentic engagement from real users, ensuring organic
+              traffic growth and credible SEO results with zero reliance on
+              automated systems.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- SEO FEATURES SECTION END -->
+
+      <!-- START USING CTR FLASH START -->
+      <section class="sufs-wrapper">
+        <div class="sufs-cont box animation1">
+          <div class="sufs-sct1">
+            <p class="sufs-tle">Start using CTR Flash today!</p>
+            <p class="sufs-stle">Get started in just 60 seconds.</p>
+          </div>
+          <a class="sufs-lnk" href="/signup.html">Get Started</a>
+
+        </div>
+      </section>
+<!-- START USING CTR FLASH END -->
+
+      <!-- FAGS Start -->
+      <div class="fags-wrapper">
+        <div class="fags-container box animation1">
+          <p>Frequently Asked Questions</p>
+          <p>
+            We're here to assist you! Feel free to contact our support team with
+            any inquiries or concerns you may have.
+          </p>
+          <div class="all-fags">
+            <div class="faq-item">
+              <div class="faq-question">
+                <p>1. What is CTR</p>
+                <button class="fag-button">
+                  <img src="/assets/icons/blue-drop-down.svg" />
+                </button>
+              </div>
+              <p class="faq-answer">
+                CTR (Click-Through Rate) refers to the percentage of users who
+                click on your website's link in the search engine results page
+                (SERP) compared to the total number of users who see your link.
+                It indicates how compelling and relevant your website appears to
+                users based on the search query they entered.
+              </p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <p>2. What is CTR Flash for?</p>
+                <button class="fag-button">
+                  <img src="/assets/icons/blue-drop-down.svg" />
+                </button>
+              </div>
+              <p class="faq-answer">
+                CTRFlash is designed to improve the click-through rates (CTR) of
+                websites. It uses advanced algorithms to mimic human-like
+                clicks, helping websites increase their visibility in search
+                engine results pages (SERPs), attract more traffic, and
+                ultimately improve their online presence and performance.
+              </p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <p>3. Does CTR show analytics?</p>
+                <button class="fag-button">
+                  <img src="/assets/icons/blue-drop-down.svg" />
+                </button>
+              </div>
+              <p class="faq-answer">
+                CTRFlash provides human-like click counts through our automation
+                system. Additionally, you can monitor click rates using your
+                Google Search Console account.
+              </p>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <p>4. What features does CTRFlash offer to optimize CTR?</p>
+                <button class="fag-button">
+                  <img src="/assets/icons/blue-drop-down.svg" />
+                </button>
+              </div>
+              <p class="faq-answer">
+                CTRFlash offers a range of features designed to optimize CTR,
+                including advanced click algorithms, customizable campaigns,
+                real-time monitoring, and analytics tools. These features
+                empower users to tailor their CTR optimization strategies and
+                track performance effectively.
+              </p>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <p>
+                  5. How can CTRFlash help improve my website's performance?
+                </p>
+                <button class="fag-button">
+                  <img src="/assets/icons/blue-drop-down.svg" />
+                </button>
+              </div>
+              <p class="faq-answer">
+                CTRFlash utilizes advanced algorithms to mimic human-like
+                clicks, boosting your website's CTR. By increasing CTR, your
+                website may achieve higher rankings in search results, attract
+                more organic traffic, and ultimately improve its online
+                visibility and performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- FAGS End -->
+
+      <!-- Newsletter Start -->
+      <div class="newsletter-wrapper">
+        <div class="newsletter-container">
+          <div class="news-letter-img">
+            <img src="/assets/images/news-letter.svg" />
+          </div>
+          <form class="news-letter-form box animation1">
+            <p>Sign up to our Newsletter</p>
+            <p>Get important messages straight to your inbox</p>
+            <input required type="email" placeholder="Email" id="email" />
+            <div>
+              <label for="term-condition" class="custom-checkbox">
+                <input required type="checkbox" id="term-condition" />
+                <span class="checkmark"></span>
+                I accept all the
+                <a href="#" class="teandcd">Terms and Conditions</a>
+              </label>
+            </div>
+            <button class="tnc-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+      <!-- Newsletter End -->
+
+      <footer class="footer-wrapper">
+        <div class="footer-container">
+          <div class="footer-item">
+            <p>CTR Flash</p>
+            <p>
+              Lörem ipsum berade pav kaktigt i mandatpingis. Tågenat intrangen
+              poras. Semibåment post en nyde om isesk bemol. Satugisk infrade,
+              medelfas dekall.
+            </p>
+          </div>
+          <div class="footer-link">
+            <a href="/products.html">Products</a>
+            <a href="/pricing.html">Pricing</a>
+            <a href="/contact.html">Contact</a>
+          </div>
+
+          <div class="footer-link">
+            <a href="#">Terms and Conditions</a>
+            <a href="/privacy-policy.html">Privacy Policy</a>
+          </div>
+        </div>
+        <p class="footer-btm-txt">
+          Copyright <span id="footerYear"></span> All Rights Reserved
+        </p>
+      </footer>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"
+      integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/landing/home.js"></script>
+    <script src="/assets/js/landing/seo-cal.js"></script>
+    <script>
+    
+      // document.querySelectorAll(".slider").forEach((slider) => {
+      //   slider.addEventListener("input", function () {
+      //     let value = this.value;
+      //     let label = this.nextElementSibling; // Corrected: select the next sibling, which is the label
+
+      //     if (this.id === "sessionRange") {
+      //       label.textContent = value + "secs";
+      //     } else if (this.id === "mobileRange" || this.id === "bounceRange") {
+      //       label.textContent = value + "%";
+      //     } else if (this.id === "pageRange") {
+      //       label.textContent = value;
+      //     }
+      //   });
+      // });
+    </script>
+  </body>
+</html>
