@@ -18,7 +18,7 @@ function estimatedMonthlyBudgetRequiredHandler(requiredMonthlyClicks) {
   if (requiredMonthlyClicks > 2880) {
     price = 0.167 * requiredMonthlyClicks;
   }
-  return price;
+  return price.toFixed(2);
 }
 
 function estimatedDailyClicksHandler(position, monthlySearchForTargetKeyword) {
