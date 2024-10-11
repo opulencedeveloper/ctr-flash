@@ -18,7 +18,6 @@ function estimatedMonthlyBudgetRequiredHandler(requiredMonthlyClicks) {
   if (requiredMonthlyClicks > 2880) {
     price = 0.167 * requiredMonthlyClicks;
   }
-  console.log("price", price, "input", requiredMonthlyClicks);
   return price;
 }
 
@@ -105,12 +104,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll(".slider").forEach((slider) => {
     slider.addEventListener("input", function () {
-      let value = this.value;
+      let value = this.value === -1 ? 0 :parseInt(value);
       let label = this.nextElementSibling;
 
       if (this.id === "currentRankingPosition") {
         label.textContent = value;
-        let currentRankingPostion = parseInt(value);
+        let currentRankingPostion = parseInt(value) ;
 
         let retrivedTargetRankingPostion = document.getElementById(
           "targetRankingPosition"
